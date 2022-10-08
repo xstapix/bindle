@@ -124,13 +124,39 @@ function App() {
             </button>
           </div>
           <div className='tile'>
-            <section>
+            <section style={{gridArea: 'East'}}>
               <img alt='popular' src='./image/popular/Rectangle 22.png'/>
+              <div className='blure'>
+                <h1>East Coast, America</h1>
+                <p>146,786 properties</p>
+              </div>
+            </section>
+            <section style={{gridArea: 'Chicago'}}>
+              <img alt='popular' src='./image/popular/Rectangle 9.png'/>
+              <div className='blure'>
+                <h1>Chicago, America</h1>
+                <p>146,786 properties</p>
+              </div>
+            </section>
+            <section style={{gridArea: 'Texas'}}>
+              <img alt='popular' src='./image/popular/Rectangle 17.png'/>
+              <div className='blure'>
+                <h1>Texas, America</h1>
+                <p>146,786 properties</p>
+              </div>
+            </section>
+            <section style={{gridArea: 'Florida'}}>
+              <img alt='popular' src='./image/popular/Rectangle 30.png'/>
+              <div className='blure'>
+                <h1>Florida, America</h1>
+                <p>146,786 properties</p>
+              </div>
             </section>
           </div>
         </div>
-        <div>
-
+        <div className='container'>
+          <h1 className='table_of_contents'>Featured homes recommended for you</h1>
+          <p className='text'>Because you viewed vacation homes in this city</p>
         </div>
       </main>
     </div>

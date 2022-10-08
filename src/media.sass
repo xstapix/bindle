@@ -16,7 +16,7 @@ $fontSizeHeaders: 40px
     background: url('./image/Rectangle.jpg')
     background-size: cover
     margin-left: -45vw
-    height: 59vh
+    height: 110vw
 
   .profile
     display: flex
@@ -148,10 +148,37 @@ $fontSizeHeaders: 40px
 
   .tile
     display: grid
-    grid-template-columns: 100%
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: 1fr 0.5fr 0.5fr
+    grid-template-areas: 'East East' 'Chicago Texas' 'Florida Florida'
+    grid-gap: 11px
     padding: 17px 10px
-    margin: 37px 0
+    margin: 37px 0 0
     background-color: #F6F6F6
     border-radius: 8px
 
-  .tile section 
+  .tile section
+    position: relative
+
+  .tile img
+    width: 100%
+
+  .blure
+    position: absolute
+    bottom: 0
+    width: 100%
+    padding: 11px 
+    border-bottom-left-radius: 8px 
+    border-bottom-right-radius: 8px 
+    background: rgba(255, 255, 255, 0.2)
+    backdrop-filter: blur(36.4865px)
+    color: #fff
+
+  .blure h1
+    margin: 0 0 4px
+    font-size: 16px
+    line-height: 20px
+
+  .blure p
+    font-size: 13px
+    line-height: 14px
