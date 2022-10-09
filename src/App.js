@@ -87,28 +87,28 @@ function App() {
         </div>
         <div className='more_travel'>
           <section>
-            <img alt='more_travel' src='./image/more_travel/Rectangle 3.png'/>
+            <img className='plug_more' alt='more_travel' src='./image/more_travel/Rectangle 3.png'/>
             <div>
               <h1>Entire homes</h1>
               <p>156,786 properties</p>
             </div>
           </section>
           <section>
-            <img alt='more_travel' src='./image/more_travel/Rectangle 4.png'/>
+            <img className='plug_more' alt='more_travel' src='./image/more_travel/Rectangle 4.png'/>
             <div>
               <h1>Cabins and cottages</h1>
               <p>156,786 properties</p>
             </div>
           </section>
           <section>
-            <img alt='more_travel' src='./image/more_travel/Rectangle 5.png'/>
+            <img className='plug_more' alt='more_travel' src='./image/more_travel/Rectangle 5.png'/>
             <div>
               <h1>Unique stays</h1>
               <p>156,786 properties</p>
             </div>
           </section>
           <section>
-            <img alt='more_travel' src='./image/more_travel/Rectangle 6.png'/>
+            <img className='plug_more' alt='more_travel' src='./image/more_travel/Rectangle 6.png'/>
             <div>
               <h1>Pets welcome</h1>
               <p>156,786 properties</p>
@@ -157,6 +157,51 @@ function App() {
         <div className='container'>
           <h1 className='table_of_contents'>Featured homes recommended for you</h1>
           <p className='text'>Because you viewed vacation homes in this city</p>
+        </div>
+        <div className='recommended'>
+          <section>
+            <img className='plug_hotel' alt='hotel' src='./image/Image.png'/>
+            <p className='hotel_rating'>
+              <img className='start_rating' alt='star' src='./image/Star 5.svg'/>
+              4.60 (280)</p>
+            <h1 className='hotel_name'>Luxury 3 Bedroom Apartment at Epicentrum</h1>
+            <p className='hotel_local'>Entire house | Florida</p>
+            <h1 className='hotel_prise'>$ 350/ night</h1>
+          </section>
+          <section>
+            <img className='plug_hotel' alt='hotel' src='./image/Image.png'/>
+            <p className='hotel_rating'>
+              <img className='start_rating' alt='star' src='./image/Star 5.svg'/>
+              4.60 (280)</p>
+            <h1 className='hotel_name'>Luxury 3 Bedroom Apartment at Epicentrum</h1>
+            <p className='hotel_local'>Entire house | Florida</p>
+            <h1 className='hotel_prise'>$ 350/ night</h1>
+          </section>
+        </div>
+        <div className='container'>
+          <h1 className='table_of_contents'>Testimonials & Gallery</h1>
+        </div>
+        <div className='gallery'>
+          <section>
+            <img className='desert' alt='gallery' src='./image/gallery/Rectangle 1.png'/>
+            <div className='blure_gallery'>
+              <p>I’ve spent a wonderful time here. Will come back for sure next year together with my family and friends.</p>
+            </div>
+          </section>
+          <section>
+            <img className='desert' alt='gallery' src='./image/gallery/Rectangle 1.png'/>
+            <div className='blure_gallery'>
+              <p>I’ve spent a wonderful time here. Will come back for sure next year together with my family and friends.</p>
+            </div>
+          </section>
+        </div>
+        <div className='container'>
+          <section className='callForRegistration'>
+            <h1>Get the best discounts for your family vacation.</h1>
+            <p><img className='check' alt='check' src='./image/bi_check-circle.svg'/>Best discounts ever</p>
+            <p><img className='check' alt='check' src='./image/bi_check-circle.svg'/>Free offers</p>
+            <p><img className='check' alt='check' src='./image/bi_check-circle.svg'/>Fast & secure payments</p>
+          </section>
         </div>
       </main>
     </div>

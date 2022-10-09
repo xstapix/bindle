@@ -3,6 +3,8 @@ $fontRegular: 400
 $fontSizeHeaders: 40px
 
 @media (max-width: 428px) 
+  .list-stays::-webkit-scrollbar, .more_travel::-webkit-scrollbar, .gallery::-webkit-scrollbar, .recommended::-webkit-scrollbar
+    width: 0
 
   .logo
     font-size: 16px
@@ -71,9 +73,10 @@ $fontSizeHeaders: 40px
   .table_of_contents
     font-size: 20px  
     line-height: 24px
+    color: #304659
   
   .text
-    margin: 5px 0 0
+    margin: 7px 0 0
     line-height: 24px
     color: #696F8C
 
@@ -94,6 +97,8 @@ $fontSizeHeaders: 40px
     padding: 11px 0 11px 21px
 
   .plug
+    width: 68px
+    height: 68px
     margin: 0 11px 0 0
   
   .place-text h1
@@ -106,7 +111,7 @@ $fontSizeHeaders: 40px
     line-height: 16px
     color: #696F8C
 
-  .more_travel
+  .more_travel, .recommended, .gallery
     display: flex
     overflow: scroll
     margin: 10px 0 40px 31px
@@ -115,11 +120,16 @@ $fontSizeHeaders: 40px
     margin: 0 24px 0 0
     text-align: center
 
+  .plug_more
+    width: 199px
+    height: 199px
+
   .more_travel h1
     margin: 11px 0 0
     font-weight: $fontBold
     font-size: 17.0644px
     line-height: 23px
+    color: #304659
 
   .more_travel p
     margin: 5px 0 0
@@ -171,7 +181,7 @@ $fontSizeHeaders: 40px
     border-bottom-left-radius: 8px 
     border-bottom-right-radius: 8px 
     background: rgba(255, 255, 255, 0.2)
-    backdrop-filter: blur(36.4865px)
+    backdrop-filter: blur(16.4865px)
     color: #fff
 
   .blure h1
@@ -182,3 +192,87 @@ $fontSizeHeaders: 40px
   .blure p
     font-size: 13px
     line-height: 14px
+
+  .recommended section
+    width: 206px
+    margin: 0 23px 0 0
+
+  .plug_hotel
+    width: 206px
+    height: 154px
+    border-radius: 14.7091px
+
+  .hotel_rating
+    margin: 15px 0 0
+    font-size: 12px
+    line-height: 16px
+    color: #696F8C
+  
+  .start_rating
+    margin: 0 6px 0 0
+
+  .hotel_name
+    margin: 6px 0 0
+    font-weight: $fontBold
+    font-size: 18px
+    line-height: 24px
+    color: #304659
+
+  .hotel_local
+    margin: 6px 0 0
+    font-weight: $fontRegular
+    font-size: 14px
+    line-height: 20px
+    color: #696F8C
+
+  .hotel_prise
+    margin: 6px 0 0
+    font-weight: $fontBold
+    font-size: 18px
+    line-height: 24px
+    color: #3A6AD5
+
+  .desert
+    width: 222px
+    height: 170px
+
+  .gallery section
+    position: relative
+    margin: 0 9px 0 0
+
+  .blure_gallery
+    position: absolute
+    bottom: -40px
+    left: 0
+    right: 0
+    width: 85%
+    padding: 23px 9px 11px
+    background: rgba(255, 255, 255, 0.2)
+    backdrop-filter: blur(34.0929px)
+    border-radius: 8.52323px
+    font-weight: $fontRegular
+    font-size: 13px
+    line-height: 14px
+    text-align: center
+    color: #304659
+
+  .callForRegistration
+    padding: 22px
+    background: url('./image/Newsletter.png') no-repeat
+    background-size: cover
+    border-radius: 8px
+
+  .callForRegistration h1
+    text-align: center
+    margin: 0 0 18px 0
+
+  .callForRegistration p
+    margin: 8px 0 0
+    font-size: 14px
+    line-height: 16px
+    color: #304659
+
+  .check
+    margin: 0 18px 0 0
+
+  
