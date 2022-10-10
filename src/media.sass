@@ -192,7 +192,6 @@ $fontSizeHeaders: 40px
   .blure p
     font-size: 13px
     line-height: 14px
-<<<<<<< HEAD
 
   .recommended section
     width: 206px
@@ -233,19 +232,28 @@ $fontSizeHeaders: 40px
     line-height: 24px
     color: #3A6AD5
 
-  .desert
-    width: 222px
-    height: 170px
+  .gallery 
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    grid-template-rows: 2fr 3.1fr 
+    grid-gap: 9px
+    grid-template-areas: 'desert water urac' 'desert water mountains'
 
   .gallery section
     position: relative
-    margin: 0 9px 0 0
+
+  .desert
+    width: 222px
+    height: 170px
+  
+  .water
+    height: 170px
+
+  .long
+    height: 81px
 
   .blure_gallery
-    position: absolute
-    bottom: -40px
-    left: 0
-    right: 0
+    margin: -50px auto 0 
     width: 85%
     padding: 23px 9px 11px
     background: rgba(255, 255, 255, 0.2)
@@ -263,6 +271,10 @@ $fontSizeHeaders: 40px
     background-size: cover
     border-radius: 8px
 
+  .callForRegistration div
+    width: 180px
+    margin: 0 auto
+
   .callForRegistration h1
     text-align: center
     margin: 0 0 18px 0
@@ -276,6 +288,89 @@ $fontSizeHeaders: 40px
   .check
     margin: 0 18px 0 0
 
+  .signUpNow
+    display: flex
+    margin: 18px auto 0
+    padding: 9px 28px
+    background: #3A6AD5
+    box-shadow: 0px 5.68814px 11.3763px rgba(58, 106, 213, 0.2)
+    border-radius: 2.84407px
+    border: 0
+    font-size: 12px
+    line-height: 16px
+    color: #FFFFFF
+
+  footer
+    width: 100%
+    background-color: #304659
+    text-align: center
+    color: #fff
+
+  .logo_footer
+    justify-content: center
+
+  footer article h1
+    margin: 28px 0 0
+    font-size: 20px
+    line-height: 24px
+
+  footer article p
+    margin: 24px 0 0
+    font-weight: $fontRegular
+    font-size: 14px
+    line-height: 24px
   
-=======
->>>>>>> a6ac73ac04cf49ca218a003b804a42063f5f849a
+  .footer_line
+    width: 100%
+    height: 1px
+    margin: 24px 0 0
+    background-color: #8F95B2
+
+  footer nav
+    margin: 24px 0 0
+
+  footer nav p 
+    margin: 16px 0 0
+    font-size: 14px
+  
+  .footer_sub
+    margin: 24px 0 0
+    font-size: 14px
+  
+  .sub_to_news
+    display: flex
+    margin: 24px 0 0
+    padding: 7px 7px 7px 12px
+    border: 1px solid grey
+    background-color: #f6f6f638
+    border-radius: 6.14321px
+    border: none
+    font-size: 10px
+    line-height: 14px
+
+  .sub_to_news input
+    width: 100%
+    background: none
+    flex-grow: 2
+    border: none
+    color: #fff
+
+  .sub_to_news input::placeholder
+    font-weight: $fontRegular
+    font-size: 10px
+    line-height: 14px
+    color: #fff
+
+  .sub_to_news button
+    display: flex
+    align-items: center
+    padding: 6px 13px
+    background: #FF6647
+    border-radius: 3.0716px
+    border: none
+    color: #fff
+
+  .sub_to_news button p
+    margin: 0 6px 0 0
+
+

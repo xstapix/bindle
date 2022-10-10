@@ -182,28 +182,69 @@ function App() {
           <h1 className='table_of_contents'>Testimonials & Gallery</h1>
         </div>
         <div className='gallery'>
-          <section>
+          <section style={{gridArea: 'desert'}}>
             <img className='desert' alt='gallery' src='./image/gallery/Rectangle 1.png'/>
             <div className='blure_gallery'>
               <p>I’ve spent a wonderful time here. Will come back for sure next year together with my family and friends.</p>
             </div>
           </section>
-          <section>
-            <img className='desert' alt='gallery' src='./image/gallery/Rectangle 1.png'/>
+          <section style={{gridArea: 'water'}}>
+            <img className='water' alt='gallery' src='./image/gallery/Rectangle 2.png'/>
             <div className='blure_gallery'>
-              <p>I’ve spent a wonderful time here. Will come back for sure next year together with my family and friends.</p>
+              <p>I absolutely love the beach and water here. Everything was wonderful.</p>
             </div>
+          </section>
+          <section style={{gridArea: 'urac'}}>
+            <img className='long' alt='gallery' src='./image/gallery/Rectangle 3.png'/>
+          </section>
+          <section style={{gridArea: 'mountains'}}>
+            <img className='long' alt='gallery' src='./image/gallery/Rectangle 4.png'/>
           </section>
         </div>
         <div className='container'>
           <section className='callForRegistration'>
             <h1>Get the best discounts for your family vacation.</h1>
-            <p><img className='check' alt='check' src='./image/bi_check-circle.svg'/>Best discounts ever</p>
-            <p><img className='check' alt='check' src='./image/bi_check-circle.svg'/>Free offers</p>
-            <p><img className='check' alt='check' src='./image/bi_check-circle.svg'/>Fast & secure payments</p>
+            <div>
+              <p><img className='check' alt='check' src='./image/bi_check-circle.svg'/>Best discounts ever</p>
+              <p><img className='check' alt='check' src='./image/bi_check-circle.svg'/>Free offers</p>
+              <p><img className='check' alt='check' src='./image/bi_check-circle.svg'/>Fast & secure payments</p>
+            </div>
+            <button className='signUpNow'>Sign Up Now</button>
           </section>
         </div>
       </main>
+      <footer>
+        <div className='container'>
+          <div className='logo logo_footer'>
+            <picture>
+              <source  srcSet='./image/logo-mobile.svg' media='(max-width: 428px)'/>
+              <img alt='logo' src='./image/logo-desktop.svg'/>
+            </picture>
+            <p className='logo_name'>Bindle</p>
+          </div>
+          <article>
+            <h1>Explore the world with Bindle!</h1>
+            <p>We offer tailored services for all your traveling needs. Our host are wonderful, ready to accommodate your stay as you enjoy your vacation without worries.</p>
+          </article>
+          <div className='footer_line'></div>
+          <nav>
+            <p>About us</p>
+            <p>Blog</p>
+            <p>Help center</p>
+            <p>Privacy policy</p>
+            <p>Contact us</p>
+          </nav>
+          <div className='footer_line'></div>
+          <p className='footer_sub'>Subscribe to our newsletter</p>
+          <form className='sub_to_news'>
+            <input type='text' placeholder='Enter your email address'/>
+            <button>
+              <p>Send</p>
+              <img alt='send' src='./image/carbon_send-alt.svg'/>
+            </button>
+          </form>
+        </div>
+      </footer>
     </div>
   );
 }
