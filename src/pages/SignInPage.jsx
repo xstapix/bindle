@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import './Sign.sass'
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { setUser } from '../store/slice/userSlice';
@@ -7,20 +7,66 @@ import { useState } from 'react';
 
 const SignInPage = () => {
   const dispatch = useDispatch()
-  const [email, setEmail] = useState()
-  const [pass, setPass] = useState()
+  const navigate = useNavigate()
+
+  const [email, setEmail] = useState('')
+  const [pass, setPass] = useState('')
+  const [emailActive, setEmailActive] = useState(false)
+  const [passActive, setPassActive] = useState(false)
+  const [emailError, setEmailError] = useState('Email cannot be empty')
+  const [passError, setPassError] = useState('Password cannot be empty')
+  const [errorSignInWithEmail, setErrorSignInWithEmail] = useState(false)
 
   const handleSignIn = () => {
-    const auth = getAuth();
-    signInWithEmailAndPassword(auth, email, pass)
-      .then(({user}) => {
-        dispatch(setUser({
-          email: user.email,
-          token: user.accessToken,
-          id: user.uid
-        }))
-      })
-      .catch(console.error)
+    if (!emailError && !passError) {
+      const auth = getAuth();
+      signInWithEmailAndPassword(auth, email, pass)
+        .then(({user}) => {
+          dispatch(setUser({
+            email: user.email,
+            token: user.accessToken,
+            id: user.uid
+          }))
+          navigate('/')
+        })
+        .catch(setErrorSignInWithEmail(true))
+    }
+  }
+
+  const handlerBlure = (e) => {
+    switch (e.target.name) {
+      case 'email':
+        setEmailActive(true)
+        setErrorSignInWithEmail(false)
+        break;
+      
+      case 'password':
+        setPassActive(true)
+        setErrorSignInWithEmail(false)
+        break;
+    }
+  }
+
+  const handlerEmail = (e) => {
+    setEmail(e.target.value)
+
+    const re = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    
+    if(!re.test(String(e.target.value).toLowerCase())){
+     setEmailError('Email not correct') 
+    } else {
+      setEmailError('') 
+    }
+  }
+
+  const handlerPassword = (e) => {
+    setPass(e.target.value)
+    
+    if (e.target.value.length < 6) {
+      setPassError('Password must contain more than 6 digits')
+    } else {
+      setPassError('')
+    }
   }
 
   return (
@@ -28,20 +74,31 @@ const SignInPage = () => {
       <h1 className='signIn_hello'>Hello Again!</h1>
       <p className='signIn_text'>We're glad to see you</p>
       <div className='container'>
-      <input 
-          className='inputEmail' 
+        {(emailActive && emailError) && <p style={{color: '#FF5E60'}}>{emailError}</p>}
+        <input 
+          className='inputEmail'
+          name='email'
           type='email' 
           placeholder='Type your email address'
           value={email}
-          onChange={(e) => setEmail(e.target.value)}/>
+          onBlur={e => handlerBlure(e)}
+          onChange={handlerEmail}/>
+          
+        {(passActive && passError) && <p style={{color: '#FF5E60'}}>{passError}</p>}
         <input 
           className='inputPassword' 
+          name='password'
           type='password' 
           placeholder='Type your password'
           value={pass}
-          onChange={(e) => setPass(e.target.value)}/>
+          onBlur={e => handlerBlure(e)}
+          onChange={e => handlerPassword(e)}/>
         <p className='recovery'>Recovery password</p>
-        <button className='button_signin' onClick={handleSignIn}>Sign In</button>
+
+        {errorSignInWithEmail ? <p style={{color: '#FF5E60'}}>Incorrect credentials</p> : <></>}
+        {(!passError && !emailError) ? 
+          <button className='button_signin button_signin-active' onClick={handleSignIn}>Sign Up</button>
+        : <button className='button_signin button_signin-disable' onClick={handleSignIn}>Sign Up</button>}
         <div className='footer_line'></div>
         <p className='havenotAcc'>Don’t have an account? <Link className="signup" to='/signup'>Sign up</Link></p>
       </div>

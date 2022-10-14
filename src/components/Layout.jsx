@@ -1,9 +1,12 @@
 import React from 'react'
 import { Link, Outlet } from "react-router-dom";
+import {useAuth} from '../hook/useAuth'
 import './Layout.sass';
 
 
 const Layout = () => {
+  const {isAuth} = useAuth()
+
   return (
     <>
       <header>
@@ -18,14 +21,18 @@ const Layout = () => {
                 <p className='logo_name'>Bindle</p>
               </div>
             </Link>
-            {/* <div className='profile'> */}
-              {/* <div>
+            {isAuth ?
+            <div className='profile'>
+              <div>
                 <img className='menu' alt='menu-profile' src='./image/svg/menu.svg'/>
-              </div> */}
-              <Link to='/signin'>
-                <img className='noLogin' alt='profile' src='./image/svg/noLogin.svg'/>
-              </Link>
-            {/* </div> */}
+              </div>
+              <Link to='/account'>
+                <img alt='profile' src='./image/Ellipse 16.png'/>
+              </Link>  
+            </div> :
+            <Link to='/signin'>
+              <img className='noLogin' alt='profile' src='./image/svg/noLogin.svg'/>
+            </Link>}
           </nav>
         </div>
       </header>

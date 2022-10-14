@@ -1,6 +1,6 @@
 import {Routes, Route} from 'react-router-dom'
 
- import './App.sass';
+import './App.sass';
 
 import { Layout } from './components/Layout'
 import { HomePage } from './pages/HomePage'
@@ -18,6 +18,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path='signin' element={<SignInPage />} />
           <Route path='signup' element={<SignUpPage />} />
+          <Route path='account' element={<Account />} />
         </Route>
       </Routes>
       
