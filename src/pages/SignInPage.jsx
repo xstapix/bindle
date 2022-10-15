@@ -13,6 +13,7 @@ const SignInPage = () => {
   const [pass, setPass] = useState('')
   const [emailActive, setEmailActive] = useState(false)
   const [passActive, setPassActive] = useState(false)
+  const [passVisible, setPassVisible] = useState(false)
   const [emailError, setEmailError] = useState('Email cannot be empty')
   const [passError, setPassError] = useState('Password cannot be empty')
   const [errorSignInWithEmail, setErrorSignInWithEmail] = useState(false)
@@ -69,6 +70,10 @@ const SignInPage = () => {
     }
   }
 
+  const handlerVisible = () => {
+    passVisible ? setPassVisible(false) : setPassVisible(true)
+  }
+  
   return (
     <div className='signIn'>
       <h1 className='signIn_hello'>Hello Again!</h1>
@@ -82,23 +87,27 @@ const SignInPage = () => {
           placeholder='Type your email address'
           value={email}
           onBlur={e => handlerBlure(e)}
-          onChange={handlerEmail}/>
+          onChange={e => handlerEmail(e)}/>
           
         {(passActive && passError) && <p style={{color: '#FF5E60'}}>{passError}</p>}
-        <input 
-          className='inputPassword' 
-          name='password'
-          type='password' 
-          placeholder='Type your password'
-          value={pass}
-          onBlur={e => handlerBlure(e)}
-          onChange={e => handlerPassword(e)}/>
+        <form className="passForm">
+          <input 
+            className='inputPassword' 
+            name='password'
+            type={passVisible ? 'text' : 'password'} 
+            placeholder='Type your password'
+            value={pass}
+            onBlur={e => handlerBlure(e)}
+            onChange={e => handlerPassword(e)}/>
+
+          <img onClick={handlerVisible} alt="visibility" src="./image/svg/passVisi.svg"/>
+        </form>
         <p className='recovery'>Recovery password</p>
 
         {errorSignInWithEmail ? <p style={{color: '#FF5E60'}}>Incorrect credentials</p> : <></>}
         {(!passError && !emailError) ? 
-          <button className='button_signin button_signin-active' onClick={handleSignIn}>Sign Up</button>
-        : <button className='button_signin button_signin-disable' onClick={handleSignIn}>Sign Up</button>}
+          <button className='button_signin button_signin-active' onClick={handleSignIn}>Sign In</button>
+        : <button className='button_signin button_signin-disable' onClick={handleSignIn}>Sign In</button>}
         <div className='footer_line'></div>
         <p className='havenotAcc'>Don’t have an account? <Link className="signup" to='/signup'>Sign up</Link></p>
       </div>

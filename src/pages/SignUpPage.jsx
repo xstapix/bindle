@@ -1,5 +1,5 @@
 import './Sign.sass'
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { setUser } from '../store/slice/userSlice';
 import {useDispatch} from 'react-redux'
@@ -13,6 +13,7 @@ const SignUpPage = () => {
   const [pass, setPass] = useState('')
   const [emailActive, setEmailActive] = useState(false)
   const [passActive, setPassActive] = useState(false)
+  const [passVisible, setPassVisible] = useState(false)
   const [emailError, setEmailError] = useState('Email cannot be empty')
   const [passError, setPassError] = useState('Password cannot be empty')
   const [errorCreateUser, setErrorCreateUser] = useState(false)
@@ -68,6 +69,10 @@ const SignUpPage = () => {
     }
   }
 
+  const handlerVisible = () => {
+    passVisible ? setPassVisible(false) : setPassVisible(true)
+  }
+
   return (
     <div className='signIn'>
       <h1 className='signIn_hello'>Get Started!</h1>
@@ -84,19 +89,24 @@ const SignUpPage = () => {
           onChange={handlerEmail}/>
           
         {(passActive && passError) && <p style={{color: '#FF5E60'}}>{passError}</p>}
-        <input 
-          className='inputPassword' 
-          name='password'
-          type='password' 
-          placeholder='Type your password'
-          value={pass}
-          onBlur={e => handlerBlure(e)}
-          onChange={e => handlerPassword(e)}/>
+        <form className="passForm">
+          <input 
+            className='inputPassword' 
+            name='password'
+            type={passVisible ? 'text' : 'password'} 
+            placeholder='Type your password'
+            value={pass}
+            onBlur={e => handlerBlure(e)}
+            onChange={e => handlerPassword(e)}/>
 
+          <img onClick={handlerVisible} alt="visibility" src="./image/svg/passVisi.svg"/>
+        </form>
         {errorCreateUser ? <p style={{color: '#FF5E60'}}>User with this email already exists</p> : <></>}
         {(!passError && !emailError) ? 
           <button className='button_signin button_signin-active' onClick={handleSignUp}>Sign Up</button>
         : <button className='button_signin button_signin-disable' onClick={handleSignUp}>Sign Up</button>}
+        <div className='footer_line'></div>
+        <p className='havenotAcc'>Already have an account? <Link className="signup" to='/signin'>Sign in</Link></p>
       </div>
     </div>
   )
