@@ -15,8 +15,8 @@ const Layout = () => {
             <Link to='/'>
               <div className='logo'>
                 <picture>
-                  <source  srcSet='./image/svg/logo-mobile.svg' media='(max-width: 428px)'/>
-                  <img alt='logo' src='./image/svg/logo-desktop.svg'/>
+                  <source  srcSet='../image/svg/logo-mobile.svg' media='(max-width: 428px)'/>
+                  <img alt='logo' src='../image/svg/logo-desktop.svg'/>
                 </picture>
                 <p className='logo_name'>Bindle</p>
               </div>
@@ -24,14 +24,14 @@ const Layout = () => {
             {isAuth ?
             <div className='profile'>
               <div>
-                <img className='menu' alt='menu-profile' src='./image/svg/menu.svg'/>
+                <img className='menu' alt='menu-profile' src='../image/svg/menu.svg'/>
               </div>
               <Link to='/account'>
-                <img alt='profile' src='./image/Ellipse 16.png'/>
+                <img alt='profile' src='../image/Ellipse 16.png'/>
               </Link>  
             </div> :
             <Link to='/signin'>
-              <img className='noLogin' alt='profile' src='./image/svg/noLogin.svg'/>
+              <img className='noLogin' alt='profile' src='../image/svg/noLogin.svg'/>
             </Link>}
           </nav>
         </div>
@@ -43,8 +43,8 @@ const Layout = () => {
         <div className='container'>
           <div className='logo logo_footer'>
             <picture>
-              <source  srcSet='./image/svg/logo-mobile.svg' media='(max-width: 428px)'/>
-              <img alt='logo' src='./image/svg/logo-desktop.svg'/>
+              <source  srcSet='../image/svg/logo-mobile.svg' media='(max-width: 428px)'/>
+              <img alt='logo' src='../image/svg/logo-desktop.svg'/>
             </picture>
             <p className='logo_name'>Bindle</p>
           </div>
@@ -66,13 +66,13 @@ const Layout = () => {
             <input type='text' placeholder='Enter your email address'/>
             <button>
               <p>Send</p>
-              <img alt='send' src='./image/svg/carbon_send-alt.svg'/>
+              <img alt='send' src='../image/svg/carbon_send-alt.svg'/>
             </button>
           </form>
           <div className='social'>
-            <div className='footer_circle'><img alt='social' src='./image/svg/twitter.svg'/></div>
-            <div className='footer_circle'><img alt='social' src='./image/svg/facebook.svg'/></div>
-            <div className='footer_circle'><img alt='social' src='./image/svg/inst.svg'/></div>
+            <div className='footer_circle'><img alt='social' src='../image/svg/twitter.svg'/></div>
+            <div className='footer_circle'><img alt='social' src='../image/svg/facebook.svg'/></div>
+            <div className='footer_circle'><img alt='social' src='../image/svg/inst.svg'/></div>
           </div>
           <p className='copyrightSign'>© 2022  Bindle.</p>
         </div>

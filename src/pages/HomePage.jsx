@@ -1,6 +1,23 @@
+import { useState } from 'react';
+import { useNavigate, Link } from "react-router-dom";
 import './HomePage.sass';
 
 const HomePage = () => {
+  const [searchInput, setSearchInput] = useState('')
+  const navigate = useNavigate()
+
+  const handlerSearch = (event) => {
+    const documentSearchInput = document.getElementById('searchInput')
+
+    setSearchInput(event.target.value)
+
+    documentSearchInput.addEventListener('keydown', function(e) {
+      if (e.code === 'Enter') {
+        navigate(`/${e.target.value}`)
+      }
+    })
+  }
+
   return (
     <>
       <div className='background'></div>
@@ -8,7 +25,13 @@ const HomePage = () => {
         <div className='container'>
           <h1>Discover New Destination</h1>
           <p>This modern trend looks nice and all, but we fell into the same trap again.</p>
-          <input type='text' placeholder='Where are you going?' className='hello-search'/>
+          <input 
+            onChange={e => handlerSearch(e)}
+            type='text' 
+            value={searchInput}
+            placeholder='Where are you going?' 
+            className='hello-search'
+            id='searchInput'/>
         </div>
       </div>
       <main>
@@ -185,7 +208,9 @@ const HomePage = () => {
               <p><img className='check' alt='check' src='./image/svg/bi_check-circle.svg'/>Free offers</p>
               <p><img className='check' alt='check' src='./image/svg/bi_check-circle.svg'/>Fast & secure payments</p>
             </div>
-            <button className='signUpNow'>Sign Up Now</button>
+            <Link to='/signup'>
+              <button className='signUpNow'>Sign Up Now</button>
+            </Link>
           </section>
         </div>
       </main>

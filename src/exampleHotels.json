@@ -1,0 +1,2825 @@
+{
+  "result": "OK",
+  "data": {
+    "body": {
+      "header": "New York, New York, United States Of America",
+      "query": {
+        "destination": {
+          "id": "1506246",
+          "value": "New York, New York, United States Of America",
+          "resolvedLocation": "CITY:1506246:UNKNOWN:UNKNOWN"
+        }
+      },
+      "searchResults": {
+        "totalCount": 1435,
+        "results": [
+          {
+            "id": 634418464,
+            "name": "The Grand NYC",
+            "thumbnailUrl": "https://exp.cdn-hotels.com/hotels/20000000/19800000/19794400/19794327/b02255b8_l.jpg",
+            "starRating": 2,
+            "address": {
+              "streetAddress": "38 West 31st Street",
+              "extendedAddress": "",
+              "locality": "New York",
+              "postalCode": "10001",
+              "region": "NY",
+              "countryName": "United States",
+              "countryCode": "us"
+            },
+            "welcomeRewards": {
+              "collect": true
+            },
+            "guestReviews": {
+              "unformattedRating": 5.6,
+              "rating": "5.6",
+              "total": 139,
+              "scale": 10
+            },
+            "tripAdvisorGuestReviews": {
+              "rating": 1.5,
+              "total": 68
+            },
+            "landmarks": [
+              {
+                "label": "City center",
+                "distance": "0.7 miles"
+              },
+              {
+                "label": "Times Square",
+                "distance": "0.6 miles"
+              }
+            ],
+            "ratePlan": {
+              "price": {
+                "current": "$41",
+                "exactCurrent": 41.29,
+                "old": "$199",
+                "info": "nightly price per unit",
+                "additionalInfo": "This is the average nightly price for your dates.",
+                "totalPricePerStay": "(<strong>$289</strong> for 7 nights)"
+              },
+              "features": {
+                "freeCancellation": false,
+                "paymentPreference": false,
+                "noCCRequired": false
+              },
+              "type": "EC"
+            },
+            "neighbourhood": "NoMad",
+            "deals": {
+              "greatRate": true,
+              "priceReasoning": "GR"
+            },
+            "messaging": {
+              "scarcity": "1 left on our app"
+            },
+            "badging": {},
+            "pimmsAttributes": "D13|TESCO",
+            "coupon": "MOB5",
+            "coordinate": {
+              "lat": 40.74725,
+              "lon": -73.98776
+            },
+            "roomsLeft": 1,
+            "providerType": "LOCAL",
+            "supplierHotelId": 19794327
+          },
+          {
+            "id": 476997,
+            "name": "Howard Johnson by Wyndham Long Island City",
+            "thumbnailUrl": "https://exp.cdn-hotels.com/hotels/10000000/9070000/9062600/9062555/53c7638c_l.jpg",
+            "starRating": 2,
+            "address": {
+              "streetAddress": "38-61 12th Street",
+              "extendedAddress": "",
+              "locality": "Long Island City",
+              "postalCode": "11101",
+              "region": "NY",
+              "countryName": "United States",
+              "countryCode": "us"
+            },
+            "welcomeRewards": {
+              "collect": true
+            },
+            "guestReviews": {
+              "unformattedRating": 7.4,
+              "rating": "7.4",
+              "total": 575,
+              "scale": 10,
+              "badge": "good",
+              "badgeText": "Good"
+            },
+            "tripAdvisorGuestReviews": {
+              "rating": 3.5,
+              "total": 1059
+            },
+            "landmarks": [
+              {
+                "label": "City center",
+                "distance": "2.3 miles"
+              },
+              {
+                "label": "Times Square",
+                "distance": "2.3 miles"
+              }
+            ],
+            "ratePlan": {
+              "price": {
+                "current": "$56",
+                "exactCurrent": 56,
+                "old": "$80",
+                "info": "nightly price per room",
+                "additionalInfo": "This is the average nightly price for your dates.",
+                "totalPricePerStay": "(<strong>$392</strong> for 7 nights)"
+              },
+              "features": {
+                "freeCancellation": true,
+                "paymentPreference": true,
+                "noCCRequired": false
+              },
+              "type": "Dual"
+            },
+            "neighbourhood": "Long Island City",
+            "deals": {
+              "specialDeal": {
+                "dealText": "Special deal: save 20%"
+              },
+              "priceReasoning": "DRR-442"
+            },
+            "messaging": {},
+            "badging": {},
+            "pimmsAttributes": "TESCO",
+            "coordinate": {
+              "lat": 40.756674,
+              "lon": -73.942238
+            },
+            "providerType": "LOCAL",
+            "supplierHotelId": 9062555
+          },
+          {
+            "id": 452703,
+            "name": "Riviera Hotel",
+            "thumbnailUrl": "https://exp.cdn-hotels.com/hotels/9000000/8090000/8081700/8081652/70f4ff31_l.jpg",
+            "starRating": 2,
+            "address": {
+              "streetAddress": "169 Clinton Ave",
+              "extendedAddress": "",
+              "locality": "Newark",
+              "postalCode": "07108",
+              "region": "NJ",
+              "countryName": "United States",
+              "countryCode": "us"
+            },
+            "welcomeRewards": {
+              "collect": true
+            },
+            "guestReviews": {
+              "unformattedRating": 4.8,
+              "rating": "4.8",
+              "total": 578,
+              "scale": 10
+            },
+            "tripAdvisorGuestReviews": {
+              "rating": 1.5,
+              "total": 169
+            },
+            "landmarks": [
+              {
+                "label": "City center",
+                "distance": "11 miles"
+              },
+              {
+                "label": "Times Square",
+                "distance": "11 miles"
+              }
+            ],
+            "ratePlan": {
+              "price": {
+                "current": "$59",
+                "exactCurrent": 58.56,
+                "old": "$75",
+                "info": "nightly price per room",
+                "additionalInfo": "This is the average nightly price for your dates.",
+                "totalPricePerStay": "(<strong>$410</strong> for 7 nights)"
+              },
+              "features": {
+                "freeCancellation": false,
+                "paymentPreference": false,
+                "noCCRequired": false
+              },
+              "type": "EC"
+            },
+            "neighbourhood": "Newark",
+            "deals": {
+              "secretPrice": {
+                "dealText": "Save more with Secret Prices"
+              },
+              "priceReasoning": "DRR-445"
+            },
+            "messaging": {},
+            "badging": {},
+            "pimmsAttributes": "priceRangeCA|D13|TESCO",
+            "coupon": "MOB5",
+            "coordinate": {
+              "lat": 40.724332,
+              "lon": -74.184373
+            },
+            "providerType": "LOCAL",
+            "supplierHotelId": 8081652
+          },
+          {
+            "id": 256601,
+            "name": "Lexington Inn at JFK Airport",
+            "thumbnailUrl": "https://exp.cdn-hotels.com/hotels/2000000/1710000/1705900/1705822/744a2280_l.jpg",
+            "starRating": 2.5,
+            "address": {
+              "streetAddress": "138 05 Jamaica Ave",
+              "extendedAddress": "",
+              "locality": "Jamaica",
+              "postalCode": "11435",
+              "region": "NY",
+              "countryName": "United States",
+              "countryCode": "us"
+            },
+            "welcomeRewards": {
+              "collect": true
+            },
+            "guestReviews": {
+              "unformattedRating": 5.2,
+              "rating": "5.2",
+              "total": 266,
+              "scale": 10
+            },
+            "tripAdvisorGuestReviews": {
+              "rating": 3,
+              "total": 266
+            },
+            "landmarks": [
+              {
+                "label": "City center",
+                "distance": "9.7 miles"
+              },
+              {
+                "label": "Times Square",
+                "distance": "9.7 miles"
+              }
+            ],
+            "ratePlan": {
+              "price": {
+                "current": "$64",
+                "exactCurrent": 64.35,
+                "old": "$99",
+                "info": "nightly price per room",
+                "additionalInfo": "This is the average nightly price for your dates.",
+                "totalPricePerStay": "(<strong>$450</strong> for 7 nights)"
+              },
+              "features": {
+                "freeCancellation": true,
+                "paymentPreference": true,
+                "noCCRequired": false
+              },
+              "type": "Dual"
+            },
+            "neighbourhood": "Queens",
+            "deals": {
+              "secretPrice": {
+                "dealText": "Save more with Secret Prices"
+              },
+              "priceReasoning": "DRR-445"
+            },
+            "messaging": {},
+            "badging": {},
+            "pimmsAttributes": "D13|TESCO",
+            "coupon": "MOB5",
+            "coordinate": {
+              "lat": 40.702502,
+              "lon": -73.815059
+            },
+            "providerType": "LOCAL",
+            "supplierHotelId": 1705822
+          },
+          {
+            "id": 693909,
+            "name": "Giorgio Hotel",
+            "thumbnailUrl": "https://exp.cdn-hotels.com/hotels/19000000/18380000/18380000/18379930/319991ca_l.jpg",
+            "starRating": 2.5,
+            "address": {
+              "streetAddress": "38-60 13th Street",
+              "extendedAddress": "",
+              "locality": "Long Island City",
+              "postalCode": "11101",
+              "region": "NY",
+              "countryName": "United States",
+              "countryCode": "us"
+            },
+            "welcomeRewards": {
+              "collect": true
+            },
+            "guestReviews": {
+              "unformattedRating": 7.8,
+              "rating": "7.8",
+              "total": 316,
+              "scale": 10,
+              "badge": "good",
+              "badgeText": "Good"
+            },
+            "tripAdvisorGuestReviews": {
+              "rating": 3,
+              "total": 64
+            },
+            "landmarks": [
+              {
+                "label": "City center",
+                "distance": "2.4 miles"
+              },
+              {
+                "label": "Times Square",
+                "distance": "2.4 miles"
+              }
+            ],
+            "ratePlan": {
+              "price": {
+                "current": "$65",
+                "exactCurrent": 65,
+                "old": "$199",
+                "info": "nightly price per room",
+                "additionalInfo": "This is the average nightly price for your dates.",
+                "totalPricePerStay": "(<strong>$455</strong> for 7 nights)"
+              },
+              "features": {
+                "freeCancellation": true,
+                "paymentPreference": true,
+                "noCCRequired": false
+              },
+              "type": "Dual"
+            },
+            "neighbourhood": "Long Island City",
+            "deals": {
+              "greatRate": true,
+              "priceReasoning": "GR"
+            },
+            "messaging": {
+              "scarcity": "2 left on our app"
+            },
+            "badging": {},
+            "pimmsAttributes": "D13|TESCO",
+            "coupon": "MOB5",
+            "coordinate": {
+              "lat": 40.756257,
+              "lon": -73.941538
+            },
+            "roomsLeft": 2,
+            "providerType": "LOCAL",
+            "supplierHotelId": 18379930
+          },
+          {
+            "id": 697336448,
+            "name": "Queens County Inn & Suites",
+            "thumbnailUrl": "https://exp.cdn-hotels.com/hotels/22000000/21770000/21760600/21760514/23b46997_l.jpg",
+            "starRating": 2.5,
+            "address": {
+              "streetAddress": "40-34 crescent st",
+              "extendedAddress": "",
+              "locality": "Long Island City",
+              "postalCode": "11101",
+              "region": "NY",
+              "countryName": "United States",
+              "countryCode": "us"
+            },
+            "welcomeRewards": {
+              "collect": true
+            },
+            "guestReviews": {
+              "unformattedRating": 7.2,
+              "rating": "7.2",
+              "total": 444,
+              "scale": 10,
+              "badge": "good",
+              "badgeText": "Good"
+            },
+            "tripAdvisorGuestReviews": {
+              "rating": 3.5,
+              "total": 2062
+            },
+            "landmarks": [
+              {
+                "label": "City center",
+                "distance": "2.5 miles"
+              },
+              {
+                "label": "Times Square",
+                "distance": "2.5 miles"
+              }
+            ],
+            "ratePlan": {
+              "price": {
+                "current": "$68",
+                "exactCurrent": 67.99,
+                "old": "$80",
+                "info": "nightly price per room",
+                "additionalInfo": "This is the average nightly price for your dates.",
+                "totalPricePerStay": "(<strong>$476</strong> for 7 nights)"
+              },
+              "features": {
+                "freeCancellation": true,
+                "paymentPreference": false,
+                "noCCRequired": false
+              },
+              "type": "EC"
+            },
+            "neighbourhood": "Long Island City",
+            "deals": {
+              "specialDeal": {
+                "dealText": "Book now and save!"
+              },
+              "priceReasoning": "DRR-446"
+            },
+            "messaging": {},
+            "badging": {},
+            "pimmsAttributes": "D13|TESCO",
+            "coupon": "MOB5",
+            "coordinate": {
+              "lat": 40.75274,
+              "lon": -73.93895
+            },
+            "providerType": "LOCAL",
+            "supplierHotelId": 21760514
+          },
+          {
+            "id": 367796,
+            "name": "Hotel Vetiver",
+            "thumbnailUrl": "https://exp.cdn-hotels.com/hotels/5000000/4120000/4116400/4116370/bcc80d94_l.jpg",
+            "starRating": 3.5,
+            "address": {
+              "streetAddress": "29-11 39th Avenue",
+              "extendedAddress": "",
+              "locality": "Long Island City",
+              "postalCode": "11101",
+              "region": "NY",
+              "countryName": "United States",
+              "countryCode": "us"
+            },
+            "welcomeRewards": {
+              "collect": true
+            },
+            "guestReviews": {
+              "unformattedRating": 7.2,
+              "rating": "7.2",
+              "total": 362,
+              "scale": 10,
+              "badge": "good",
+              "badgeText": "Good"
+            },
+            "tripAdvisorGuestReviews": {
+              "rating": 4,
+              "total": 1247
+            },
+            "landmarks": [
+              {
+                "label": "City center",
+                "distance": "2.8 miles"
+              },
+              {
+                "label": "Times Square",
+                "distance": "2.8 miles"
+              }
+            ],
+            "ratePlan": {
+              "price": {
+                "current": "$69",
+                "exactCurrent": 69,
+                "old": "$199",
+                "info": "nightly price per room",
+                "additionalInfo": "This is the average nightly price for your dates.",
+                "totalPricePerStay": "(<strong>$483</strong> for 7 nights)"
+              },
+              "features": {
+                "freeCancellation": true,
+                "paymentPreference": true,
+                "noCCRequired": false
+              },
+              "type": "Dual"
+            },
+            "neighbourhood": "Long Island City",
+            "deals": {
+              "greatRate": true,
+              "priceReasoning": "GR"
+            },
+            "messaging": {},
+            "badging": {},
+            "pimmsAttributes": "D13|TESCO",
+            "coupon": "MOB5",
+            "coordinate": {
+              "lat": 40.753289,
+              "lon": -73.934011
+            },
+            "providerType": "LOCAL",
+            "supplierHotelId": 4116370
+          },
+          {
+            "id": 340668,
+            "name": "Rodeway Inn Meadowlands",
+            "thumbnailUrl": "https://exp.cdn-hotels.com/hotels/4000000/3410000/3402500/3402469/89f044a6_l.jpg",
+            "starRating": 2,
+            "address": {
+              "streetAddress": "155 Route 3 East",
+              "extendedAddress": "",
+              "locality": "Secaucus",
+              "postalCode": "07094",
+              "region": "NJ",
+              "countryName": "United States",
+              "countryCode": "us"
+            },
+            "welcomeRewards": {
+              "collect": true
+            },
+            "guestReviews": {
+              "unformattedRating": 6.8,
+              "rating": "6.8",
+              "total": 208,
+              "scale": 10,
+              "badge": "good",
+              "badgeText": "Good"
+            },
+            "tripAdvisorGuestReviews": {
+              "rating": 3,
+              "total": 164
+            },
+            "landmarks": [
+              {
+                "label": "City center",
+                "distance": "4.5 miles"
+              },
+              {
+                "label": "Times Square",
+                "distance": "4.5 miles"
+              }
+            ],
+            "ratePlan": {
+              "price": {
+                "current": "$71",
+                "exactCurrent": 71.1,
+                "old": "$149",
+                "info": "nightly price per room",
+                "additionalInfo": "This is the average nightly price for your dates.",
+                "totalPricePerStay": "(<strong>$498</strong> for 7 nights)"
+              },
+              "features": {
+                "freeCancellation": true,
+                "paymentPreference": true,
+                "noCCRequired": false
+              },
+              "type": "Dual"
+            },
+            "neighbourhood": "Secaucus",
+            "deals": {
+              "greatRate": true,
+              "priceReasoning": "GR"
+            },
+            "messaging": {},
+            "badging": {},
+            "pimmsAttributes": "TESCO",
+            "coordinate": {
+              "lat": 40.793268,
+              "lon": -74.057289
+            },
+            "providerType": "LOCAL",
+            "supplierHotelId": 3402469
+          },
+          {
+            "id": 205823,
+            "name": "Knights Inn South Hackensack",
+            "thumbnailUrl": "https://exp.cdn-hotels.com/hotels/1000000/900000/894700/894631/0443d16b_l.jpg",
+            "starRating": 2,
+            "address": {
+              "streetAddress": "410 Rt 46 West I 80 Exit 64",
+              "extendedAddress": "",
+              "locality": "South Hackensack",
+              "postalCode": "07606",
+              "region": "NJ",
+              "countryName": "United States",
+              "countryCode": "us"
+            },
+            "welcomeRewards": {
+              "collect": true
+            },
+            "guestReviews": {
+              "unformattedRating": 5.4,
+              "rating": "5.4",
+              "total": 62,
+              "scale": 10
+            },
+            "tripAdvisorGuestReviews": {
+              "rating": 2,
+              "total": 91
+            },
+            "landmarks": [
+              {
+                "label": "City center",
+                "distance": "7.6 miles"
+              },
+              {
+                "label": "Times Square",
+                "distance": "7.6 miles"
+              }
+            ],
+            "ratePlan": {
+              "price": {
+                "current": "$73",
+                "exactCurrent": 72.86,
+                "old": "$80",
+                "info": "nightly price per room",
+                "additionalInfo": "This is the average nightly price for your dates.",
+                "totalPricePerStay": "(<strong>$510</strong> for 7 nights)"
+              },
+              "features": {
+                "freeCancellation": true,
+                "paymentPreference": true,
+                "noCCRequired": false
+              },
+              "type": "Dual"
+            },
+            "neighbourhood": "South Hackensack",
+            "deals": {
+              "greatRate": true,
+              "priceReasoning": "GR"
+            },
+            "messaging": {},
+            "badging": {},
+            "pimmsAttributes": "priceRangeCA|D13|TESCO",
+            "coupon": "MOB5",
+            "coordinate": {
+              "lat": 40.85608,
+              "lon": -74.04726
+            },
+            "providerType": "LOCAL",
+            "supplierHotelId": 894631
+          },
+          {
+            "id": 593247,
+            "name": "Travelodge by Wyndham South Hackensack",
+            "thumbnailUrl": "https://exp.cdn-hotels.com/hotels/16000000/15130000/15124600/15124578/1ce2f11d_l.jpg",
+            "starRating": 2,
+            "address": {
+              "streetAddress": "636 Huyler St",
+              "extendedAddress": "",
+              "locality": "South Hackensack",
+              "postalCode": "07606",
+              "region": "NJ",
+              "countryName": "United States",
+              "countryCode": "us"
+            },
+            "welcomeRewards": {
+              "collect": true
+            },
+            "guestReviews": {
+              "unformattedRating": 6.6,
+              "rating": "6.6",
+              "total": 196,
+              "scale": 10,
+              "badge": "good",
+              "badgeText": "Good"
+            },
+            "tripAdvisorGuestReviews": {
+              "rating": 2.5,
+              "total": 70
+            },
+            "landmarks": [
+              {
+                "label": "City center",
+                "distance": "7.8 miles"
+              },
+              {
+                "label": "Times Square",
+                "distance": "7.8 miles"
+              }
+            ],
+            "ratePlan": {
+              "price": {
+                "current": "$73",
+                "exactCurrent": 73.46,
+                "old": "$126",
+                "info": "nightly price per room",
+                "additionalInfo": "This is the average nightly price for your dates.",
+                "totalPricePerStay": "(<strong>$514</strong> for 7 nights)"
+              },
+              "features": {
+                "freeCancellation": false,
+                "paymentPreference": false,
+                "noCCRequired": false
+              },
+              "type": "EC"
+            },
+            "neighbourhood": "South Hackensack",
+            "deals": {
+              "greatRate": true,
+              "priceReasoning": "GR"
+            },
+            "messaging": {},
+            "badging": {},
+            "pimmsAttributes": "TESCO",
+            "coordinate": {
+              "lat": 40.858354,
+              "lon": -74.051069
+            },
+            "providerType": "LOCAL",
+            "supplierHotelId": 15124578
+          },
+          {
+            "id": 222985,
+            "name": "The Solita Soho Hotel, Ascend Hotel Collection",
+            "thumbnailUrl": "https://exp.cdn-hotels.com/hotels/2000000/1110000/1107500/1107496/9ab453f0_l.jpg",
+            "starRating": 3,
+            "address": {
+              "streetAddress": "159 Grand St",
+              "extendedAddress": "",
+              "locality": "New York",
+              "postalCode": "10013",
+              "region": "NY",
+              "countryName": "United States",
+              "countryCode": "us"
+            },
+            "welcomeRewards": {
+              "collect": true
+            },
+            "guestReviews": {
+              "unformattedRating": 7.6,
+              "rating": "7.6",
+              "total": 150,
+              "scale": 10,
+              "badge": "good",
+              "badgeText": "Good"
+            },
+            "tripAdvisorGuestReviews": {
+              "rating": 4,
+              "total": 544
+            },
+            "landmarks": [
+              {
+                "label": "City center",
+                "distance": "2.6 miles"
+              },
+              {
+                "label": "Times Square",
+                "distance": "2.6 miles"
+              }
+            ],
+            "ratePlan": {
+              "price": {
+                "current": "$75",
+                "exactCurrent": 74.53,
+                "old": "$99",
+                "info": "nightly price per room",
+                "additionalInfo": "This is the average nightly price for your dates.",
+                "totalPricePerStay": "(<strong>$522</strong> for 7 nights)"
+              },
+              "features": {
+                "freeCancellation": false,
+                "paymentPreference": false,
+                "noCCRequired": false
+              },
+              "type": "HC"
+            },
+            "neighbourhood": "Manhattan",
+            "deals": {
+              "specialDeal": {
+                "dealText": "Special deal: save 24%"
+              },
+              "priceReasoning": "DRR-442"
+            },
+            "messaging": {},
+            "badging": {},
+            "pimmsAttributes": "TESCO",
+            "coordinate": {
+              "lat": 40.719813,
+              "lon": -73.99894
+            },
+            "providerType": "LOCAL",
+            "supplierHotelId": 1107496
+          },
+          {
+            "id": 133946,
+            "name": "Howard Johnson Hotel by Wyndham Newark Airport",
+            "thumbnailUrl": "https://exp.cdn-hotels.com/hotels/1000000/20000/14100/14035/2ab065ff_l.jpg",
+            "starRating": 2,
+            "address": {
+              "streetAddress": "20 Frontage Rd",
+              "extendedAddress": "",
+              "locality": "Newark",
+              "postalCode": "07114",
+              "region": "NJ",
+              "countryName": "United States",
+              "countryCode": "us"
+            },
+            "welcomeRewards": {
+              "collect": true
+            },
+            "guestReviews": {
+              "unformattedRating": 6.4,
+              "rating": "6.4",
+              "total": 798,
+              "scale": 10,
+              "badge": "good",
+              "badgeText": "Good"
+            },
+            "tripAdvisorGuestReviews": {
+              "rating": 2.5,
+              "total": 1522
+            },
+            "landmarks": [
+              {
+                "label": "City center",
+                "distance": "9.4 miles"
+              },
+              {
+                "label": "Times Square",
+                "distance": "9.4 miles"
+              }
+            ],
+            "ratePlan": {
+              "price": {
+                "current": "$75",
+                "exactCurrent": 74.55,
+                "old": "$83",
+                "info": "nightly price per room",
+                "additionalInfo": "This is the average nightly price for your dates.",
+                "totalPricePerStay": "(<strong>$522</strong> for 7 nights)"
+              },
+              "features": {
+                "freeCancellation": true,
+                "paymentPreference": true,
+                "noCCRequired": false
+              },
+              "type": "Dual"
+            },
+            "neighbourhood": "Newark",
+            "deals": {
+              "secretPrice": {
+                "dealText": "Save more with Secret Prices"
+              },
+              "priceReasoning": "DRR-443"
+            },
+            "messaging": {
+              "scarcity": "3 left on our app"
+            },
+            "badging": {},
+            "pimmsAttributes": "TESCO",
+            "coordinate": {
+              "lat": 40.7104,
+              "lon": -74.15603
+            },
+            "roomsLeft": 3,
+            "providerType": "LOCAL",
+            "supplierHotelId": 14035
+          },
+          {
+            "id": 116796,
+            "name": "Holiday Inn Newark Airport",
+            "thumbnailUrl": "https://exp.cdn-hotels.com/hotels/1000000/20000/15700/15651/bb878191_l.jpg",
+            "starRating": 3.5,
+            "address": {
+              "streetAddress": "450 US Highway One and Nine South",
+              "extendedAddress": "",
+              "locality": "Newark",
+              "postalCode": "07114",
+              "region": "NJ",
+              "countryName": "United States",
+              "countryCode": "us"
+            },
+            "welcomeRewards": {
+              "collect": true
+            },
+            "guestReviews": {
+              "unformattedRating": 8.4,
+              "rating": "8.4",
+              "total": 730,
+              "scale": 10,
+              "badge": "very-good",
+              "badgeText": "Very Good"
+            },
+            "tripAdvisorGuestReviews": {
+              "rating": 4,
+              "total": 1119
+            },
+            "landmarks": [
+              {
+                "label": "City center",
+                "distance": "11 miles"
+              },
+              {
+                "label": "Times Square",
+                "distance": "11 miles"
+              }
+            ],
+            "ratePlan": {
+              "price": {
+                "current": "$75",
+                "exactCurrent": 74.95,
+                "old": "$100",
+                "info": "nightly price per room",
+                "additionalInfo": "This is the average nightly price for your dates.",
+                "totalPricePerStay": "(<strong>$525</strong> for 7 nights)"
+              },
+              "features": {
+                "freeCancellation": false,
+                "paymentPreference": false,
+                "noCCRequired": false
+              },
+              "type": "EC"
+            },
+            "neighbourhood": "Newark",
+            "deals": {
+              "secretPrice": {
+                "dealText": "Save more with Secret Prices"
+              },
+              "priceReasoning": "DRR-443"
+            },
+            "messaging": {},
+            "badging": {},
+            "pimmsAttributes": "priceRangeUS|TESCO",
+            "coordinate": {
+              "lat": 40.69895,
+              "lon": -74.186984
+            },
+            "providerType": "LOCAL",
+            "supplierHotelId": 15651
+          },
+          {
+            "id": 200301,
+            "name": "Comfort Suites Newark - Harrison",
+            "thumbnailUrl": "https://exp.cdn-hotels.com/hotels/1000000/860000/859300/859293/5b861c8c_l.jpg",
+            "starRating": 2.5,
+            "address": {
+              "streetAddress": "1348 Mccarter Hwy",
+              "extendedAddress": "",
+              "locality": "Newark",
+              "postalCode": "07104",
+              "region": "NJ",
+              "countryName": "United States",
+              "countryCode": "us"
+            },
+            "welcomeRewards": {
+              "collect": true
+            },
+            "guestReviews": {
+              "unformattedRating": 8.4,
+              "rating": "8.4",
+              "total": 515,
+              "scale": 10,
+              "badge": "very-good",
+              "badgeText": "Very Good"
+            },
+            "tripAdvisorGuestReviews": {
+              "rating": 3.5,
+              "total": 379
+            },
+            "landmarks": [
+              {
+                "label": "City center",
+                "distance": "9.4 miles"
+              },
+              {
+                "label": "Times Square",
+                "distance": "9.4 miles"
+              }
+            ],
+            "ratePlan": {
+              "price": {
+                "current": "$75",
+                "exactCurrent": 75.19,
+                "old": "$84",
+                "info": "nightly price per room",
+                "additionalInfo": "This is the average nightly price for your dates.",
+                "totalPricePerStay": "(<strong>$526</strong> for 7 nights)"
+              },
+              "features": {
+                "freeCancellation": true,
+                "paymentPreference": true,
+                "noCCRequired": false
+              },
+              "type": "Dual"
+            },
+            "neighbourhood": "Newark",
+            "deals": {
+              "secretPrice": {
+                "dealText": "Save more with Secret Prices"
+              },
+              "priceReasoning": "DRR-443"
+            },
+            "messaging": {},
+            "badging": {},
+            "pimmsAttributes": "TESCO",
+            "coordinate": {
+              "lat": 40.754952,
+              "lon": -74.166608
+            },
+            "providerType": "LOCAL",
+            "supplierHotelId": 859293
+          },
+          {
+            "id": 674505152,
+            "name": "Hotel Nirvana",
+            "thumbnailUrl": "https://exp.cdn-hotels.com/hotels/22000000/21050000/21047100/21047036/5dba8052_l.jpg",
+            "starRating": 2.5,
+            "address": {
+              "streetAddress": "12-02 37th Avenue",
+              "extendedAddress": "",
+              "locality": "Long Island City",
+              "postalCode": "11101",
+              "region": "NY",
+              "countryName": "United States",
+              "countryCode": "us"
+            },
+            "welcomeRewards": {
+              "collect": true
+            },
+            "guestReviews": {
+              "unformattedRating": 7.8,
+              "rating": "7.8",
+              "total": 196,
+              "scale": 10,
+              "badge": "good",
+              "badgeText": "Good"
+            },
+            "tripAdvisorGuestReviews": {
+              "rating": 3,
+              "total": 109
+            },
+            "landmarks": [
+              {
+                "label": "City center",
+                "distance": "2.4 miles"
+              },
+              {
+                "label": "Times Square",
+                "distance": "2.5 miles"
+              }
+            ],
+            "ratePlan": {
+              "price": {
+                "current": "$77",
+                "exactCurrent": 77.39,
+                "old": "$90",
+                "info": "nightly price per room",
+                "additionalInfo": "This is the average nightly price for your dates.",
+                "totalPricePerStay": "(<strong>$542</strong> for 7 nights)"
+              },
+              "features": {
+                "freeCancellation": true,
+                "paymentPreference": false,
+                "noCCRequired": false
+              },
+              "type": "EC"
+            },
+            "neighbourhood": "Long Island City",
+            "deals": {
+              "secretPrice": {
+                "dealText": "Save more with Secret Prices"
+              },
+              "priceReasoning": "DRR-443"
+            },
+            "messaging": {},
+            "badging": {},
+            "pimmsAttributes": "D13|TESCO",
+            "coupon": "MOB5",
+            "coordinate": {
+              "lat": 40.75914,
+              "lon": -73.93988
+            },
+            "providerType": "LOCAL",
+            "supplierHotelId": 21047036
+          },
+          {
+            "id": 216337,
+            "name": "Howard Johnson by Wyndham North Bergen",
+            "thumbnailUrl": "https://exp.cdn-hotels.com/hotels/1000000/970000/967300/967211/b7299a11_l.jpg",
+            "starRating": 2,
+            "address": {
+              "streetAddress": "1300 Tonnelle Ave",
+              "extendedAddress": "",
+              "locality": "North Bergen",
+              "postalCode": "07047",
+              "region": "NJ",
+              "countryName": "United States",
+              "countryCode": "us"
+            },
+            "welcomeRewards": {
+              "collect": true
+            },
+            "guestReviews": {
+              "unformattedRating": 5.8,
+              "rating": "5.8",
+              "total": 397,
+              "scale": 10
+            },
+            "tripAdvisorGuestReviews": {
+              "rating": 2.5,
+              "total": 561
+            },
+            "landmarks": [
+              {
+                "label": "City center",
+                "distance": "3.3 miles"
+              },
+              {
+                "label": "Times Square",
+                "distance": "3.2 miles"
+              }
+            ],
+            "ratePlan": {
+              "price": {
+                "current": "$79",
+                "exactCurrent": 78.74,
+                "old": "$105",
+                "info": "nightly price per room",
+                "additionalInfo": "This is the average nightly price for your dates.",
+                "totalPricePerStay": "(<strong>$551</strong> for 7 nights)"
+              },
+              "features": {
+                "freeCancellation": true,
+                "paymentPreference": true,
+                "noCCRequired": false
+              },
+              "type": "Dual"
+            },
+            "neighbourhood": "North Bergen",
+            "deals": {
+              "specialDeal": {
+                "dealText": "Book early and save 25%"
+              },
+              "priceReasoning": "DRR-448"
+            },
+            "messaging": {},
+            "badging": {},
+            "pimmsAttributes": "TESCO",
+            "coordinate": {
+              "lat": 40.765792,
+              "lon": -74.047456
+            },
+            "providerType": "LOCAL",
+            "supplierHotelId": 967211
+          },
+          {
+            "id": 256047,
+            "name": "Days Inn by Wyndham Long Island City",
+            "thumbnailUrl": "https://exp.cdn-hotels.com/hotels/2000000/1810000/1810000/1809968/7331e630_l.jpg",
+            "starRating": 2,
+            "address": {
+              "streetAddress": "31-36 Queens Blvd",
+              "extendedAddress": "",
+              "locality": "Long Island City",
+              "postalCode": "11101",
+              "region": "NY",
+              "countryName": "United States",
+              "countryCode": "us"
+            },
+            "welcomeRewards": {
+              "collect": true
+            },
+            "guestReviews": {
+              "unformattedRating": 6.6,
+              "rating": "6.6",
+              "total": 208,
+              "scale": 10,
+              "badge": "good",
+              "badgeText": "Good"
+            },
+            "tripAdvisorGuestReviews": {
+              "rating": 3,
+              "total": 633
+            },
+            "landmarks": [
+              {
+                "label": "City center",
+                "distance": "2.9 miles"
+              },
+              {
+                "label": "Times Square",
+                "distance": "2.9 miles"
+              }
+            ],
+            "ratePlan": {
+              "price": {
+                "current": "$79",
+                "exactCurrent": 79.2,
+                "info": "nightly price per room",
+                "additionalInfo": "This is the average nightly price for your dates.",
+                "totalPricePerStay": "(<strong>$554</strong> for 7 nights)"
+              },
+              "features": {
+                "freeCancellation": true,
+                "paymentPreference": true,
+                "noCCRequired": false
+              },
+              "type": "Dual"
+            },
+            "neighbourhood": "Long Island City",
+            "deals": {
+              "specialDeal": {
+                "dealText": "Stay 3 nights and save 20% off your stay!"
+              },
+              "priceReasoning": "DRR-3"
+            },
+            "messaging": {
+              "scarcity": "3 left on our app"
+            },
+            "badging": {},
+            "pimmsAttributes": "TESCO",
+            "coordinate": {
+              "lat": 40.745186,
+              "lon": -73.933638
+            },
+            "roomsLeft": 3,
+            "providerType": "LOCAL",
+            "supplierHotelId": 1809968
+          },
+          {
+            "id": 422980,
+            "name": "Nesva Hotel",
+            "thumbnailUrl": "https://exp.cdn-hotels.com/hotels/6000000/5530000/5522800/5522763/3a44f294_l.jpg",
+            "starRating": 2.5,
+            "address": {
+              "streetAddress": "39-12 29th Street",
+              "extendedAddress": "",
+              "locality": "Long Island City",
+              "postalCode": "11101",
+              "region": "NY",
+              "countryName": "United States",
+              "countryCode": "us"
+            },
+            "welcomeRewards": {
+              "collect": true
+            },
+            "guestReviews": {
+              "unformattedRating": 8.4,
+              "rating": "8.4",
+              "total": 91,
+              "scale": 10,
+              "badge": "very-good",
+              "badgeText": "Very Good"
+            },
+            "tripAdvisorGuestReviews": {
+              "rating": 4,
+              "total": 599
+            },
+            "landmarks": [
+              {
+                "label": "City center",
+                "distance": "2.7 miles"
+              },
+              {
+                "label": "Times Square",
+                "distance": "2.7 miles"
+              }
+            ],
+            "ratePlan": {
+              "price": {
+                "current": "$80",
+                "exactCurrent": 80.25,
+                "old": "$107",
+                "info": "nightly price per room",
+                "additionalInfo": "This is the average nightly price for your dates.",
+                "totalPricePerStay": "(<strong>$562</strong> for 7 nights)"
+              },
+              "features": {
+                "freeCancellation": false,
+                "paymentPreference": false,
+                "noCCRequired": false
+              },
+              "type": "EC"
+            },
+            "neighbourhood": "Long Island City",
+            "deals": {
+              "specialDeal": {
+                "dealText": "Special deal: save 24%"
+              },
+              "priceReasoning": "DRR-442"
+            },
+            "messaging": {
+              "scarcity": "3 left on our app"
+            },
+            "badging": {},
+            "pimmsAttributes": "D13|TESCO",
+            "coupon": "MOB5",
+            "coordinate": {
+              "lat": 40.753197,
+              "lon": -73.934758
+            },
+            "roomsLeft": 3,
+            "providerType": "LOCAL",
+            "supplierHotelId": 5522763
+          },
+          {
+            "id": 201844,
+            "name": "Super 8 by Wyndham North Bergen NJ/NYC Area",
+            "thumbnailUrl": "https://exp.cdn-hotels.com/hotels/1000000/860000/856100/856099/466cd4ad_l.jpg",
+            "starRating": 2,
+            "address": {
+              "streetAddress": "2800 Columbia Ave",
+              "extendedAddress": "",
+              "locality": "North Bergen",
+              "postalCode": "07047",
+              "region": "NJ",
+              "countryName": "United States",
+              "countryCode": "us"
+            },
+            "welcomeRewards": {
+              "collect": true
+            },
+            "guestReviews": {
+              "unformattedRating": 7.4,
+              "rating": "7.4",
+              "total": 662,
+              "scale": 10,
+              "badge": "good",
+              "badgeText": "Good"
+            },
+            "tripAdvisorGuestReviews": {
+              "rating": 3.5,
+              "total": 1395
+            },
+            "landmarks": [
+              {
+                "label": "City center",
+                "distance": "3.0 miles"
+              },
+              {
+                "label": "Times Square",
+                "distance": "3.0 miles"
+              }
+            ],
+            "ratePlan": {
+              "price": {
+                "current": "$82",
+                "exactCurrent": 81.7,
+                "old": "$92",
+                "info": "nightly price per room",
+                "additionalInfo": "This is the average nightly price for your dates.",
+                "totalPricePerStay": "(<strong>$572</strong> for 7 nights)"
+              },
+              "features": {
+                "freeCancellation": false,
+                "paymentPreference": false,
+                "noCCRequired": false
+              },
+              "type": "EC"
+            },
+            "neighbourhood": "North Bergen",
+            "deals": {
+              "secretPrice": {
+                "dealText": "Save more with Secret Prices"
+              },
+              "priceReasoning": "DRR-443"
+            },
+            "messaging": {},
+            "badging": {},
+            "pimmsAttributes": "TESCO",
+            "coordinate": {
+              "lat": 40.77487,
+              "lon": -74.038477
+            },
+            "providerType": "LOCAL",
+            "supplierHotelId": 856099
+          },
+          {
+            "id": 292787,
+            "name": "The Hotel @ Fifth Avenue",
+            "thumbnailUrl": "https://exp.cdn-hotels.com/hotels/1000000/30000/28300/28291/dab6f2e3_l.jpg",
+            "starRating": 3.5,
+            "address": {
+              "streetAddress": "17 West 32nd St",
+              "extendedAddress": "",
+              "locality": "New York",
+              "postalCode": "10001",
+              "region": "NY",
+              "countryName": "United States",
+              "countryCode": "us"
+            },
+            "welcomeRewards": {
+              "collect": true
+            },
+            "guestReviews": {
+              "unformattedRating": 8,
+              "rating": "8.0",
+              "total": 250,
+              "scale": 10,
+              "badge": "very-good",
+              "badgeText": "Very Good"
+            },
+            "tripAdvisorGuestReviews": {
+              "rating": 4,
+              "total": 2986
+            },
+            "landmarks": [
+              {
+                "label": "City center",
+                "distance": "0.6 miles"
+              },
+              {
+                "label": "Times Square",
+                "distance": "0.6 miles"
+              }
+            ],
+            "ratePlan": {
+              "price": {
+                "current": "$84",
+                "exactCurrent": 83.55,
+                "old": "$139",
+                "info": "nightly price per room",
+                "additionalInfo": "This is the average nightly price for your dates.",
+                "totalPricePerStay": "(<strong>$585</strong> for 7 nights)"
+              },
+              "features": {
+                "freeCancellation": false,
+                "paymentPreference": false,
+                "noCCRequired": false
+              },
+              "type": "EC"
+            },
+            "neighbourhood": "Koreatown",
+            "deals": {
+              "specialDeal": {
+                "dealText": "Special deal: save 39%"
+              },
+              "priceReasoning": "DRR-442"
+            },
+            "messaging": {},
+            "badging": {},
+            "pimmsAttributes": "XMPV2|TESCO",
+            "coordinate": {
+              "lat": 40.74777,
+              "lon": -73.98655
+            },
+            "providerType": "LOCAL",
+            "supplierHotelId": 28291
+          },
+          {
+            "id": 630346,
+            "name": "Hotel RL Brooklyn",
+            "thumbnailUrl": "https://exp.cdn-hotels.com/hotels/17000000/16250000/16241600/16241516/38832c9a_l.jpg",
+            "starRating": 3,
+            "address": {
+              "streetAddress": "1080 Broadway",
+              "extendedAddress": "",
+              "locality": "Brooklyn",
+              "postalCode": "11221",
+              "region": "NY",
+              "countryName": "United States",
+              "countryCode": "us"
+            },
+            "welcomeRewards": {
+              "collect": true
+            },
+            "guestReviews": {
+              "unformattedRating": 8.2,
+              "rating": "8.2",
+              "total": 501,
+              "scale": 10,
+              "badge": "very-good",
+              "badgeText": "Very Good"
+            },
+            "tripAdvisorGuestReviews": {
+              "rating": 4,
+              "total": 195
+            },
+            "landmarks": [
+              {
+                "label": "City center",
+                "distance": "5.2 miles"
+              },
+              {
+                "label": "Times Square",
+                "distance": "5.2 miles"
+              }
+            ],
+            "ratePlan": {
+              "price": {
+                "current": "$84",
+                "exactCurrent": 83.68,
+                "old": "$93",
+                "info": "nightly price per room",
+                "additionalInfo": "This is the average nightly price for your dates.",
+                "totalPricePerStay": "(<strong>$586</strong> for 7 nights)"
+              },
+              "features": {
+                "freeCancellation": false,
+                "paymentPreference": false,
+                "noCCRequired": false
+              },
+              "type": "EC"
+            },
+            "neighbourhood": "Bedford-Stuyvesant",
+            "deals": {
+              "secretPrice": {
+                "dealText": "Save more with Secret Prices"
+              },
+              "priceReasoning": "DRR-443"
+            },
+            "messaging": {},
+            "badging": {
+              "hotelBadge": {
+                "type": "vipBasic",
+                "label": "VIP"
+              }
+            },
+            "pimmsAttributes": "D13|TESCO",
+            "coupon": "MOB5",
+            "coordinate": {
+              "lat": 40.69429,
+              "lon": -73.93105
+            },
+            "providerType": "LOCAL",
+            "supplierHotelId": 16241516
+          },
+          {
+            "id": 650836736,
+            "name": "Feather Factory",
+            "thumbnailUrl": "https://exp.cdn-hotels.com/hotels/21000000/20310000/20307400/20307398/6749ae3f_l.jpg",
+            "starRating": 2.5,
+            "address": {
+              "streetAddress": "26-32 Skillman Ave",
+              "extendedAddress": "",
+              "locality": "Long Island City",
+              "postalCode": "11101",
+              "region": "NY",
+              "countryName": "United States",
+              "countryCode": "us"
+            },
+            "welcomeRewards": {
+              "collect": true
+            },
+            "guestReviews": {
+              "unformattedRating": 8.4,
+              "rating": "8.4",
+              "total": 338,
+              "scale": 10,
+              "badge": "very-good",
+              "badgeText": "Very Good"
+            },
+            "tripAdvisorGuestReviews": {
+              "rating": 4,
+              "total": 64
+            },
+            "landmarks": [
+              {
+                "label": "City center",
+                "distance": "2.5 miles"
+              },
+              {
+                "label": "Times Square",
+                "distance": "2.5 miles"
+              }
+            ],
+            "ratePlan": {
+              "price": {
+                "current": "$84",
+                "exactCurrent": 84,
+                "old": "$140",
+                "info": "nightly price per room",
+                "additionalInfo": "This is the average nightly price for your dates.",
+                "totalPricePerStay": "(<strong>$588</strong> for 7 nights)"
+              },
+              "features": {
+                "freeCancellation": false,
+                "paymentPreference": false,
+                "noCCRequired": false
+              },
+              "type": "EC"
+            },
+            "neighbourhood": "Long Island City",
+            "deals": {
+              "specialDeal": {
+                "dealText": "Limited time offer:  save 39%"
+              },
+              "priceReasoning": "DRR-461"
+            },
+            "messaging": {},
+            "badging": {},
+            "pimmsAttributes": "D13|TESCO",
+            "coupon": "MOB5",
+            "coordinate": {
+              "lat": 40.74404,
+              "lon": -73.94099
+            },
+            "providerType": "LOCAL",
+            "supplierHotelId": 20307398
+          },
+          {
+            "id": 273442,
+            "name": "Rodeway Inn Capri",
+            "thumbnailUrl": "https://exp.cdn-hotels.com/hotels/3000000/2230000/2223600/2223555/cb428927_l.jpg",
+            "starRating": 2,
+            "address": {
+              "streetAddress": "1 Valley Road",
+              "extendedAddress": "",
+              "locality": "Little Ferry",
+              "postalCode": "07643",
+              "region": "NJ",
+              "countryName": "United States",
+              "countryCode": "us"
+            },
+            "welcomeRewards": {
+              "collect": true
+            },
+            "guestReviews": {
+              "unformattedRating": 6.2,
+              "rating": "6.2",
+              "total": 104,
+              "scale": 10,
+              "badge": "good",
+              "badgeText": "Good"
+            },
+            "tripAdvisorGuestReviews": {
+              "rating": 2.5,
+              "total": 55
+            },
+            "landmarks": [
+              {
+                "label": "City center",
+                "distance": "7.2 miles"
+              },
+              {
+                "label": "Times Square",
+                "distance": "7.2 miles"
+              }
+            ],
+            "ratePlan": {
+              "price": {
+                "current": "$85",
+                "exactCurrent": 85,
+                "old": "$139",
+                "info": "nightly price per room",
+                "additionalInfo": "This is the average nightly price for your dates.",
+                "totalPricePerStay": "(<strong>$595</strong> for 7 nights)"
+              },
+              "features": {
+                "freeCancellation": true,
+                "paymentPreference": true,
+                "noCCRequired": false
+              },
+              "type": "Dual"
+            },
+            "neighbourhood": "Little Ferry",
+            "deals": {
+              "greatRate": true,
+              "priceReasoning": "GR"
+            },
+            "messaging": {},
+            "badging": {},
+            "pimmsAttributes": "TESCO",
+            "coordinate": {
+              "lat": 40.854608,
+              "lon": -74.033352
+            },
+            "providerType": "LOCAL",
+            "supplierHotelId": 2223555
+          },
+          {
+            "id": 629429,
+            "name": "Phoenix Hotel",
+            "thumbnailUrl": "https://exp.cdn-hotels.com/hotels/17000000/16240000/16239800/16239789/fce403eb_l.jpg",
+            "starRating": 2.5,
+            "address": {
+              "streetAddress": "517 39th Street",
+              "extendedAddress": "",
+              "locality": "Brooklyn",
+              "postalCode": "11232",
+              "region": "NY",
+              "countryName": "United States",
+              "countryCode": "us"
+            },
+            "welcomeRewards": {
+              "collect": true
+            },
+            "guestReviews": {
+              "unformattedRating": 5.2,
+              "rating": "5.2",
+              "total": 151,
+              "scale": 10
+            },
+            "tripAdvisorGuestReviews": {
+              "rating": 2,
+              "total": 18
+            },
+            "landmarks": [
+              {
+                "label": "City center",
+                "distance": "7.3 miles"
+              },
+              {
+                "label": "Times Square",
+                "distance": "7.3 miles"
+              }
+            ],
+            "ratePlan": {
+              "price": {
+                "current": "$85",
+                "exactCurrent": 85,
+                "old": "$100",
+                "info": "nightly price per room",
+                "additionalInfo": "This is the average nightly price for your dates.",
+                "totalPricePerStay": "(<strong>$595</strong> for 7 nights)"
+              },
+              "features": {
+                "freeCancellation": false,
+                "paymentPreference": false,
+                "noCCRequired": false
+              },
+              "type": "HC"
+            },
+            "neighbourhood": "Brooklyn",
+            "deals": {
+              "specialDeal": {
+                "dealText": "Save 15%"
+              },
+              "priceReasoning": "DRR-446"
+            },
+            "messaging": {
+              "scarcity": "3 left on our app"
+            },
+            "badging": {},
+            "coordinate": {
+              "lat": 40.65107,
+              "lon": -74.00323
+            },
+            "roomsLeft": 3,
+            "providerType": "LOCAL",
+            "supplierHotelId": 16239789
+          },
+          {
+            "id": 464655,
+            "name": "Green Point YMCA",
+            "thumbnailUrl": "https://exp.cdn-hotels.com/hotels/9000000/8430000/8422100/8422014/39545e92_l.jpg",
+            "starRating": 2,
+            "address": {
+              "streetAddress": "99 Meserole Avenue",
+              "extendedAddress": "",
+              "locality": "Brooklyn",
+              "postalCode": "11222",
+              "region": "NY",
+              "countryName": "United States",
+              "countryCode": "us"
+            },
+            "welcomeRewards": {
+              "collect": true
+            },
+            "guestReviews": {
+              "unformattedRating": 5.8,
+              "rating": "5.8",
+              "total": 127,
+              "scale": 10
+            },
+            "tripAdvisorGuestReviews": {
+              "rating": 2.5,
+              "total": 132
+            },
+            "landmarks": [
+              {
+                "label": "City center",
+                "distance": "2.7 miles"
+              },
+              {
+                "label": "Times Square",
+                "distance": "2.7 miles"
+              }
+            ],
+            "ratePlan": {
+              "price": {
+                "current": "$85",
+                "exactCurrent": 85,
+                "old": "$129",
+                "info": "nightly price per room",
+                "additionalInfo": "This is the average nightly price for your dates.",
+                "totalPricePerStay": "(<strong>$595</strong> for 7 nights)"
+              },
+              "features": {
+                "freeCancellation": false,
+                "paymentPreference": false,
+                "noCCRequired": false
+              },
+              "type": "EC"
+            },
+            "neighbourhood": "Brooklyn",
+            "deals": {
+              "greatRate": true,
+              "priceReasoning": "GR"
+            },
+            "messaging": {
+              "scarcity": "4 left on our app"
+            },
+            "badging": {},
+            "pimmsAttributes": "D13|TESCO",
+            "coupon": "MOB5",
+            "coordinate": {
+              "lat": 40.72695,
+              "lon": -73.953183
+            },
+            "roomsLeft": 4,
+            "providerType": "LOCAL",
+            "supplierHotelId": 8422014
+          }
+        ],
+        "pagination": {
+          "currentPage": 1,
+          "pageGroup": "EXPEDIA_IN_POLYGON",
+          "nextPageNumber": 2,
+          "nextPageGroup": "EXPEDIA_IN_POLYGON"
+        }
+      },
+      "sortResults": {
+        "options": [
+          {
+            "label": "Featured",
+            "itemMeta": "popular",
+            "choices": [
+              {
+                "label": "Featured",
+                "value": "BEST_SELLER",
+                "selected": false
+              }
+            ],
+            "enhancedChoices": []
+          },
+          {
+            "label": "Star rating",
+            "itemMeta": "star",
+            "choices": [
+              {
+                "label": "Stars (high to low)",
+                "value": "STAR_RATING_HIGHEST_FIRST",
+                "selected": false
+              },
+              {
+                "label": "Stars (low to high)",
+                "value": "STAR_RATING_LOWEST_FIRST",
+                "selected": false
+              }
+            ],
+            "enhancedChoices": []
+          },
+          {
+            "label": "Distance",
+            "itemMeta": "distance",
+            "choices": [
+              {
+                "label": "Distance to city center",
+                "value": "DISTANCE_FROM_LANDMARK",
+                "selected": false
+              }
+            ],
+            "enhancedChoices": [
+              {
+                "label": "Landmarks",
+                "itemMeta": "landmarks",
+                "choices": [
+                  {
+                    "label": "City center",
+                    "id": 1506246
+                  },
+                  {
+                    "label": "Barclays Center Brooklyn",
+                    "id": 1734673
+                  },
+                  {
+                    "label": "Broadway",
+                    "id": 1651810
+                  },
+                  {
+                    "label": "Central Park",
+                    "id": 1707357
+                  },
+                  {
+                    "label": "Citi Field",
+                    "id": 1633874
+                  },
+                  {
+                    "label": "Coney Island",
+                    "id": 1689734
+                  },
+                  {
+                    "label": "Empire State Building",
+                    "id": 1651828
+                  },
+                  {
+                    "label": "Grand Central Terminal",
+                    "id": 1651811
+                  },
+                  {
+                    "label": "Jacob K. Javits Convention Center",
+                    "id": 1409839
+                  },
+                  {
+                    "label": "Madison Square Garden",
+                    "id": 124
+                  },
+                  {
+                    "label": "Manhattan Cruise Terminal",
+                    "id": 1767568
+                  },
+                  {
+                    "label": "MetLife Stadium",
+                    "id": 1693213
+                  },
+                  {
+                    "label": "Museum of Modern Art",
+                    "id": 1638426
+                  },
+                  {
+                    "label": "National September 11 Memorial",
+                    "id": 1702545
+                  },
+                  {
+                    "label": "Penn Station",
+                    "id": 1634222
+                  },
+                  {
+                    "label": "Rockefeller Center",
+                    "id": 1651803
+                  },
+                  {
+                    "label": "Theater District",
+                    "id": 1634459
+                  },
+                  {
+                    "label": "Times Square",
+                    "id": 1409835
+                  },
+                  {
+                    "label": "USTA Billie Jean King National Tennis Center",
+                    "id": 1748493
+                  },
+                  {
+                    "label": "Williamsburg",
+                    "id": 1689740
+                  }
+                ]
+              },
+              {
+                "label": "Stations",
+                "itemMeta": "stations",
+                "choices": [
+                  {
+                    "label": "34 St. - Penn Station",
+                    "id": 1725609
+                  },
+                  {
+                    "label": "42 St. - Port Authority Bus Terminal Station",
+                    "id": 1725640
+                  },
+                  {
+                    "label": "Brooklyn Flatbush Avenue Station",
+                    "id": 1730722
+                  },
+                  {
+                    "label": "Coney Island Stillwell Av. Station",
+                    "id": 1729923
+                  },
+                  {
+                    "label": "Flushing Main St. Station",
+                    "id": 1730671
+                  },
+                  {
+                    "label": "Grand Central - 42 St. Station",
+                    "id": 1730041
+                  },
+                  {
+                    "label": "Hoboken Station",
+                    "id": 1730712
+                  },
+                  {
+                    "label": "Jersey City Exchange Place Station",
+                    "id": 1730710
+                  },
+                  {
+                    "label": "Jersey City Newport Station",
+                    "id": 1730713
+                  },
+                  {
+                    "label": "New York Grand Central Terminal Station",
+                    "id": 1730444
+                  },
+                  {
+                    "label": "New York Penn Station",
+                    "id": 1730462
+                  },
+                  {
+                    "label": "New York W 32nd St. Station",
+                    "id": 1730472
+                  },
+                  {
+                    "label": "New York World Trade Center Station",
+                    "id": 1730732
+                  },
+                  {
+                    "label": "Newark Liberty Airport Station",
+                    "id": 1752192
+                  },
+                  {
+                    "label": "Newark Pennsylvania Station",
+                    "id": 1732689
+                  },
+                  {
+                    "label": "Port Authority Bus Terminal",
+                    "id": 1767961
+                  },
+                  {
+                    "label": "Queens Plaza Station",
+                    "id": 1730202
+                  },
+                  {
+                    "label": "Queensboro Plaza Station",
+                    "id": 1730203
+                  },
+                  {
+                    "label": "Times Sq. - 42 St. Station",
+                    "id": 1730334
+                  },
+                  {
+                    "label": "World Trade Center Station",
+                    "id": 1730356
+                  }
+                ]
+              },
+              {
+                "label": "Airports",
+                "itemMeta": "airports",
+                "choices": [
+                  {
+                    "label": "Caldwell, NJ (CDW-Essex County)",
+                    "id": 1661600
+                  },
+                  {
+                    "label": "John F. Kennedy International Airport (JFK)",
+                    "id": 1662393
+                  },
+                  {
+                    "label": "LaGuardia Airport (LGA)",
+                    "id": 1412655
+                  },
+                  {
+                    "label": "Linden, NJ (LDJ)",
+                    "id": 1767899
+                  },
+                  {
+                    "label": "Morristown, NJ (MMU-Morristown Municipal)",
+                    "id": 1661606
+                  },
+                  {
+                    "label": "New York, NY (JRB-Downtown Manhattan Heliport)",
+                    "id": 1662396
+                  },
+                  {
+                    "label": "Newark, NJ (EWR-Liberty Intl.)",
+                    "id": 1438803
+                  },
+                  {
+                    "label": "Teterboro, NJ (TEB)",
+                    "id": 1661609
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "Guest rating",
+            "itemMeta": "rating",
+            "choices": [
+              {
+                "label": "Guest rating",
+                "value": "GUEST_RATING",
+                "selected": false
+              }
+            ],
+            "enhancedChoices": []
+          },
+          {
+            "label": "Price",
+            "itemMeta": "price",
+            "selectedChoiceLabel": "Price (low to high)",
+            "choices": [
+              {
+                "label": "Price (high to low)",
+                "value": "PRICE_HIGHEST_FIRST",
+                "selected": false
+              },
+              {
+                "label": "Price (low to high)",
+                "value": "PRICE",
+                "selected": true
+              }
+            ],
+            "enhancedChoices": []
+          }
+        ],
+        "distanceOptionLandmarkId": 1506246
+      },
+      "filters": {
+        "applied": true,
+        "name": {
+          "item": {
+            "value": ""
+          },
+          "autosuggest": {
+            "additionalUrlParams": {
+              "resolved-location": "CITY:1506246:UNKNOWN:UNKNOWN",
+              "q-destination": "New York, New York, United States Of America",
+              "destination-id": "1506246"
+            }
+          }
+        },
+        "starRating": {
+          "applied": true,
+          "items": [
+            {
+              "value": 5
+            },
+            {
+              "value": 4
+            },
+            {
+              "value": 3,
+              "applied": true
+            },
+            {
+              "value": 2,
+              "applied": true
+            },
+            {
+              "value": 1
+            }
+          ]
+        },
+        "guestRating": {
+          "range": {
+            "min": {
+              "defaultValue": 0
+            },
+            "max": {
+              "defaultValue": 10
+            }
+          }
+        },
+        "landmarks": {
+          "selectedOrder": [],
+          "items": [
+            {
+              "label": "City center",
+              "value": "1506246"
+            },
+            {
+              "label": "Times Square",
+              "value": "1409835"
+            },
+            {
+              "label": "John F. Kennedy International Airport (JFK)",
+              "value": "1662393"
+            },
+            {
+              "label": "Central Park",
+              "value": "1707357"
+            },
+            {
+              "label": "LaGuardia Airport (LGA)",
+              "value": "1412655"
+            },
+            {
+              "label": "Penn Station",
+              "value": "1634222"
+            },
+            {
+              "label": "National September 11 Memorial",
+              "value": "1702545"
+            },
+            {
+              "label": "Newark, NJ (EWR-Liberty Intl.)",
+              "value": "1438803"
+            },
+            {
+              "label": "Broadway",
+              "value": "1651810"
+            },
+            {
+              "label": "Port Authority Bus Terminal",
+              "value": "1767961"
+            },
+            {
+              "label": "Museum of Modern Art",
+              "value": "1638426"
+            },
+            {
+              "label": "Rockefeller Center",
+              "value": "1651803"
+            },
+            {
+              "label": "Times Sq. - 42 St. Station",
+              "value": "1730334"
+            },
+            {
+              "label": "Grand Central Terminal",
+              "value": "1651811"
+            },
+            {
+              "label": "Barclays Center Brooklyn",
+              "value": "1734673"
+            },
+            {
+              "label": "Jacob K. Javits Convention Center",
+              "value": "1409839"
+            },
+            {
+              "label": "Madison Square Garden",
+              "value": "124"
+            },
+            {
+              "label": "Theater District",
+              "value": "1634459"
+            },
+            {
+              "label": "Empire State Building",
+              "value": "1651828"
+            },
+            {
+              "label": "Williamsburg",
+              "value": "1689740"
+            }
+          ],
+          "distance": []
+        },
+        "neighbourhood": {
+          "applied": false,
+          "items": [
+            {
+              "label": "Manhattan",
+              "value": 1535616
+            },
+            {
+              "label": "Central New York City",
+              "value": 10819060
+            },
+            {
+              "label": "Queens",
+              "value": 1633594
+            },
+            {
+              "label": "Midtown",
+              "value": 1737998
+            },
+            {
+              "label": "SoHo",
+              "value": 1662303
+            },
+            {
+              "label": "Chelsea",
+              "value": 1689733
+            },
+            {
+              "label": "Upper West Side",
+              "value": 1497254
+            },
+            {
+              "label": "Financial District",
+              "value": 10795144
+            },
+            {
+              "label": "Upper East Side",
+              "value": 1421960
+            },
+            {
+              "label": "Lower East Side",
+              "value": 10789547
+            },
+            {
+              "label": "East New York",
+              "value": 1748361
+            },
+            {
+              "label": "Hell's Kitchen",
+              "value": 1737990
+            },
+            {
+              "label": "Greenwich Village",
+              "value": 1098
+            },
+            {
+              "label": "Chinatown",
+              "value": 1405436
+            },
+            {
+              "label": "Tribeca",
+              "value": 10781536
+            },
+            {
+              "label": "East Harlem",
+              "value": 10819101
+            },
+            {
+              "label": "East Village",
+              "value": 1705326
+            },
+            {
+              "label": "Midtown East",
+              "value": 1707375
+            },
+            {
+              "label": "Union Square",
+              "value": 1635517
+            },
+            {
+              "label": "Flushing Chinatown",
+              "value": 10790628
+            },
+            {
+              "label": "West Village",
+              "value": 1772685
+            },
+            {
+              "label": "NoMad",
+              "value": 1912146
+            },
+            {
+              "label": "Brooklyn Heights",
+              "value": 1425089
+            },
+            {
+              "label": "Battery Park City",
+              "value": 1750689,
+              "disabled": true
+            },
+            {
+              "label": "Upper Manhattan",
+              "value": 11047376
+            },
+            {
+              "label": "Newport",
+              "value": 10819073
+            },
+            {
+              "label": "Midtown West",
+              "value": 1662024
+            },
+            {
+              "label": "Flatiron District",
+              "value": 1749875
+            },
+            {
+              "label": "Koreatown",
+              "value": 1912145
+            },
+            {
+              "label": "Gramercy",
+              "value": 10819103
+            },
+            {
+              "label": "Bushwick",
+              "value": 10518043
+            },
+            {
+              "label": "Downtown Newark",
+              "value": 10517933
+            },
+            {
+              "label": "Bay Ridge",
+              "value": 11047364
+            },
+            {
+              "label": "Crown Heights",
+              "value": 10518042
+            },
+            {
+              "label": "Red Hook",
+              "value": 1693509
+            },
+            {
+              "label": "Gowanus",
+              "value": 10819092
+            },
+            {
+              "label": "NoHo",
+              "value": 1749751
+            },
+            {
+              "label": "East Bronx",
+              "value": 10819059
+            },
+            {
+              "label": "Bedford-Stuyvesant",
+              "value": 1693537
+            },
+            {
+              "label": "Flatbush - Ditmas Park",
+              "value": 11047304
+            },
+            {
+              "label": "Kips Bay",
+              "value": 1912148
+            },
+            {
+              "label": "Nolita",
+              "value": 1912144
+            },
+            {
+              "label": "Cobble Hill",
+              "value": 1746595
+            },
+            {
+              "label": "Fort Greene",
+              "value": 1693508
+            },
+            {
+              "label": "Borough Park",
+              "value": 11047412
+            },
+            {
+              "label": "Canarsie",
+              "value": 11047361
+            },
+            {
+              "label": "West Bronx",
+              "value": 10819058
+            },
+            {
+              "label": "Boerum Hill",
+              "value": 1912143
+            },
+            {
+              "label": "Paulus Hook",
+              "value": 11426008
+            },
+            {
+              "label": "Cypress Hills",
+              "value": 1734811
+            },
+            {
+              "label": "Stone Street Historic District",
+              "value": 1812211
+            },
+            {
+              "label": "Bloomfield",
+              "value": 1711184
+            },
+            {
+              "label": "Commons Historic District",
+              "value": 1750691
+            }
+          ]
+        },
+        "accommodationType": {
+          "applied": false,
+          "items": [
+            {
+              "label": "All inclusive",
+              "value": "6",
+              "disabled": true
+            },
+            {
+              "label": "Apart-hotel",
+              "value": "20"
+            },
+            {
+              "label": "Apartment",
+              "value": "15"
+            },
+            {
+              "label": "Bed and Breakfast",
+              "value": "5"
+            },
+            {
+              "label": "Caravan Park",
+              "value": "21"
+            },
+            {
+              "label": "Cottages",
+              "value": "11"
+            },
+            {
+              "label": "Guest House",
+              "value": "30"
+            },
+            {
+              "label": "Hostel",
+              "value": "12"
+            },
+            {
+              "label": "Hotel",
+              "value": "1"
+            },
+            {
+              "label": "Inn",
+              "value": "8"
+            },
+            {
+              "label": "Motel",
+              "value": "7"
+            },
+            {
+              "label": "Vacation home / Condo",
+              "value": "4"
+            },
+            {
+              "label": "Villa",
+              "value": "14",
+              "disabled": true
+            }
+          ]
+        },
+        "facilities": {
+          "applied": false,
+          "items": [
+            {
+              "label": "Airport transfers",
+              "value": "513"
+            },
+            {
+              "label": "Bar",
+              "value": "515"
+            },
+            {
+              "label": "Bathtub in room",
+              "value": "517"
+            },
+            {
+              "label": "Business facilities",
+              "value": "519"
+            },
+            {
+              "label": "Car charging point",
+              "value": "1073743315"
+            },
+            {
+              "label": "Childcare",
+              "value": "521"
+            },
+            {
+              "label": "Connecting rooms available",
+              "value": "523"
+            },
+            {
+              "label": "Cribs available",
+              "value": "525"
+            },
+            {
+              "label": "Free Breakfast",
+              "value": "2048"
+            },
+            {
+              "label": "Free Parking",
+              "value": "134234112"
+            },
+            {
+              "label": "Free WiFi",
+              "value": "527"
+            },
+            {
+              "label": "Gym",
+              "value": "2"
+            },
+            {
+              "label": "Internet Access",
+              "value": "8"
+            },
+            {
+              "label": "Kitchen",
+              "value": "32"
+            },
+            {
+              "label": "Meeting Facilities",
+              "value": "1"
+            },
+            {
+              "label": "Non-smoking",
+              "value": "529"
+            },
+            {
+              "label": "Parking available",
+              "value": "16384"
+            },
+            {
+              "label": "Pet Friendly",
+              "value": "64"
+            },
+            {
+              "label": "Pool",
+              "value": "128"
+            },
+            {
+              "label": "Restaurant",
+              "value": "256"
+            },
+            {
+              "label": "Smoking areas",
+              "value": "537"
+            },
+            {
+              "label": "Spa",
+              "value": "539"
+            }
+          ]
+        },
+        "accessibility": {
+          "applied": false,
+          "items": [
+            {
+              "label": "Accessibility equipment for the deaf",
+              "value": "2097152"
+            },
+            {
+              "label": "Accessible bathroom",
+              "value": "131072"
+            },
+            {
+              "label": "Accessible path of travel",
+              "value": "65536"
+            },
+            {
+              "label": "Braille or raised signage",
+              "value": "4194304"
+            },
+            {
+              "label": "Handicapped parking",
+              "value": "524288"
+            },
+            {
+              "label": "In-room accessibility",
+              "value": "1048576"
+            },
+            {
+              "label": "Roll-in shower",
+              "value": "262144"
+            },
+            {
+              "label": "Wheelchair accessible rooms",
+              "value": "541"
+            }
+          ]
+        },
+        "themesAndTypes": {
+          "applied": false,
+          "items": [
+            {
+              "label": "Adventure",
+              "value": "18"
+            },
+            {
+              "label": "Beach",
+              "value": "6"
+            },
+            {
+              "label": "Boutique",
+              "value": "4"
+            },
+            {
+              "label": "Business",
+              "value": "14"
+            },
+            {
+              "label": "Family-friendly",
+              "value": "25"
+            },
+            {
+              "label": "Golf",
+              "value": "26"
+            },
+            {
+              "label": "Historic",
+              "value": "2",
+              "disabled": true
+            },
+            {
+              "label": "LGBT Welcoming",
+              "value": "21"
+            },
+            {
+              "label": "Luxury",
+              "value": "15",
+              "disabled": true
+            },
+            {
+              "label": "Romantic",
+              "value": "1"
+            },
+            {
+              "label": "Shopping",
+              "value": "17"
+            },
+            {
+              "label": "Spa Hotel",
+              "value": "27"
+            }
+          ]
+        },
+        "price": {
+          "label": "Nightly Price",
+          "range": {
+            "min": {
+              "defaultValue": 0
+            },
+            "max": {
+              "defaultValue": 500
+            },
+            "increments": 5
+          },
+          "multiplier": 1
+        },
+        "paymentPreference": {
+          "items": [
+            {
+              "label": "Free cancellation",
+              "value": "fc"
+            },
+            {
+              "label": "Pay with Hotels.com gift card",
+              "value": "gc"
+            }
+          ]
+        },
+        "welcomeRewards": {
+          "label": "Hotels.com® Rewards",
+          "items": [
+            {
+              "label": "Collect nights",
+              "value": "collect"
+            },
+            {
+              "label": "Redeem reward* nights",
+              "value": "redeem"
+            }
+          ]
+        }
+      },
+      "pointOfSale": {
+        "currency": {
+          "code": "USD",
+          "symbol": "$",
+          "separators": ",.",
+          "format": "${0}"
+        }
+      },
+      "miscellaneous": {
+        "pageViewBeaconUrl": "https://beam.koddi.com/travel?deviceType=App-Phone&sort-order=PRICE&rooms=1&destRegionID=1506246&hotelIds=634418464,476997,569468,452703,256601,693909,697336448,367796,340668,205823,492816864,593247,222985,133946,116796,200301,674505152,216337,256047,422980,201844,292787,630346,650836736,273442,629429,464655&adults=1&userAgent=Hotels.com/Android%2048.2.1.1.release-48_2%20(48020377)%20okhttp/3.8.1&pageName=Hotel-Search&slots=HSR_A,HSR_B,HSR_C,HSR_D&checkIn=2020-01-08&publisherUserGuid=642c731e-ae76-48e2-ace1-e9207e3cc592&children=2&culture=en_US&domain=www.hotels.com&tac=true&filteredBystarrating=true&userIP=104.237.9.8&action=pageview&publisher=expedia&checkOut=2020-01-15&programId=1"
+      },
+      "pageInfo": {
+        "pageType": "dateful"
+      }
+    },
+    "common": {
+      "pointOfSale": {
+        "numberSeparators": ",.",
+        "brandName": "Hotels.com"
+      },
+      "tracking": {
+        "omniture": {
+          "s.products": "LOCAL;19794327,LOCAL;9062555,LOCAL;13372013",
+          "s.eVar40": "D=v0",
+          "s.eVar41": "USD",
+          "s.eVar42": "36|7|20200108|20200115",
+          "s.eVar4": "|SI:anonymous|VS:returnVisitor|HCR:notApplicable|FC:notApplicable|NS:unknown|TI:notApplicable|SM:notApplicable|IR:anonymous|",
+          "s.eVar43": "en_US|HCOM_US|www.hotels.com",
+          "s.eVar3": "1|2",
+          "s.eVar2": "New York, New York, United States Of America",
+          "s.eVar7": "36",
+          "s.server": "www.hotels.com",
+          "s.eVar6": "1506246",
+          "s.eVar5": "1",
+          "s.eVar9": "Price - low to high",
+          "s.prop22": "Star rating - 2,3",
+          "s.prop21": "2",
+          "s.prop20": "1",
+          "s.currencyCode": "USD",
+          "s.prop9": "1018",
+          "s.prop8": "0",
+          "s.eVar95": "Unknown",
+          "s.prop7": "1018",
+          "s.eVar10": "Star rating - 2,3",
+          "s.eVar13": "389367",
+          "s.prop19": "1",
+          "s.prop18": "D=v6",
+          "s.prop5": "389367",
+          "s.prop15": "7",
+          "s.prop3": "New York, New York, United States Of America",
+          "s.prop14": "D=v7",
+          "s.eVar93": "aws.us-west-2.unknown",
+          "s.prop2": "Price - low to high",
+          "s.prop33": "D=v33",
+          "s.prop32": "D=v43",
+          "s.prop74": "search result with dates | ms shown | N",
+          "s.eVar16": "Mob :: aApp",
+          "s.eVar63": "fb55521f-8af0-463a-9280-855cb4234d5e",
+          "s.eVar22": "1|USD|24:634418464:199.00:41.2857:0|24:476997:80.0000:56.0000:1|24:569468:::0|24:452703:75.0729:58.5586:0|24:256601:99.0000:64.3500:0",
+          "s.eVar23": "1|USD|24:693909:199.00:65.0000:0|24:697336448:79.9900:67.9900:1|24:367796:199.00:69.0000:0|24:340668:149.00:71.1000:0|24:205823:80.00:72.8571:0",
+          "s.eVar24": "MCTC=20;TU=NA;PDID=NULL;MVT=",
+          "s.prop29": "D=v42",
+          "s.prop27": "642c731e-ae76-48e2-ace1-e9207e3cc592",
+          "s.eVar69": "Mob :: aApp",
+          "s.eVar29": "Mob :: aApp",
+          "s.eVar105": "Child 1 :: 5 , Child 2 :: 11",
+          "s.eVar31": "D=v0",
+          "s.eVar32": "D=v0",
+          "s.eVar33": "search result with dates",
+          "s.eVar34": "H277:017.002,H1423:009.099,H1871:007.002,H4516:001.000,H4517:001.000,H4518:003.000,H4519.0,M904:000.000,M3736:000.000,M4200:000.000,M4440.2,M4869:001.000,M4952:014.000,M4961:001.000,M5342:000.000,M5663:000.000,M6388:000.000,M6775:000.000,M6779:000.000,M6990:000.000,M6991:000.000,M7015.1,M7066:000.000,M7192:000.000,M7296:000.000,M7305:000.000,M7353:000.000,M7362:000.000,M7384:000.000,M7405:000.000,M7436:000.000,M7552:023.001,M7604:000.000,M7740:000.000,M7763:000.000,M7787:000.000,M7867:000.000,M7870:000.000,M7895:000.000,M8032:000.000,M8075:000.000,M8130:000.000,M8237:000.000,M8258:000.000,M8269:000.000,M8272:000.000,M8323:000.000,M8336:000.000,M8434:000.000,M8483:000.000,M8485:000.000,M8692:000.000,M8708:000.000,M8718:000.000,M8928:000.000",
+          "s.prop36": "|SI:anonymous|VS:returnVisitor|HCR:notApplicable|FC:notApplicable|NS:unknown|TI:notApplicable|SM:notApplicable|IR:anonymous|"
+        }
+      }
+    }
+  }
+}
