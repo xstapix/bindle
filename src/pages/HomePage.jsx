@@ -40,46 +40,60 @@ const HomePage = () => {
           <p className='text'>Because you viewed vacation homes in this city</p>
         </div>
         <div className='list-stays'>
-          <section>
-            <img className='plug' alt='stays' src='./image/stays/Rectangle 23.png'/>
-            <div className='place-text'>
-              <h1>Florida</h1>
-              <p>156,786 properties</p>
-            </div>
-          </section>
-          <section> 
-            <img className='plug' alt='stays' src='./image/stays/Rectangle 25.png'/>
-            <div className='place-text'>
-              <h1>Texas</h1>
-              <p>156,786 properties</p>
-            </div>
-          </section> <section>
-            <img className='plug' alt='stays' src='./image/stays/Rectangle 26.png'/>
-            <div className='place-text'>
-              <h1>Miami</h1>
-              <p>156,786 properties</p>
-            </div>
-          </section>
-          <section> 
-            <img className='plug' alt='stays' src='./image/stays/Rectangle 27.png'/>
-            <div className='place-text'>
-              <h1>Chicago</h1>
-              <p>156,786 properties</p>
-            </div>
-          </section> <section>
-            <img className='plug' alt='stays' src='./image/stays/Rectangle 22.png'/>
-            <div className='place-text'>
-              <h1>New York</h1>
-              <p>156,786 properties</p>
-            </div>
-          </section>
-          <section> 
-            <img className='plug' alt='stays' src='./image/stays/Rectangle 24.png'/>
-            <div className='place-text'>
-              <h1>Toronto</h1>
-              <p>156,786 properties</p>
-            </div>
-          </section>
+          <Link to='/florida'>
+            <section>
+              <img className='plug' alt='stays' src='./image/stays/Rectangle 23.png'/>
+              <div className='place-text'>
+                <h1>Florida</h1>
+                <p>156,786 properties</p>
+              </div>
+            </section>
+          </Link>
+          <Link to='/chicago'>
+            <section> 
+              <img className='plug' alt='stays' src='./image/stays/Rectangle 25.png'/>
+              <div className='place-text'>
+                <h1>Texas</h1>
+                <p>156,786 properties</p>
+              </div>
+            </section>
+          </Link>
+          <Link to='/miami'>
+            <section>
+              <img className='plug' alt='stays' src='./image/stays/Rectangle 26.png'/>
+              <div className='place-text'>
+                <h1>Miami</h1>
+                <p>156,786 properties</p>
+              </div>
+            </section>
+          </Link>
+          <Link to='/chicago'>
+            <section> 
+              <img className='plug' alt='stays' src='./image/stays/Rectangle 27.png'/>
+              <div className='place-text'>
+                <h1>Chicago</h1>
+                <p>156,786 properties</p>
+              </div>
+            </section>
+          </Link>
+          <Link to='/newyork'>
+            <section>
+              <img className='plug' alt='stays' src='./image/stays/Rectangle 22.png'/>
+              <div className='place-text'>
+                <h1>New York</h1>
+                <p>156,786 properties</p>
+              </div>
+            </section>
+          </Link>
+          <Link to='/toronto'>
+            <section> 
+              <img className='plug' alt='stays' src='./image/stays/Rectangle 24.png'/>
+              <div className='place-text'>
+                <h1>Toronto</h1>
+                <p>156,786 properties</p>
+              </div>
+            </section>
+          </Link>
         </div>
         <div className='container'>
           <h1 className='table_of_contents'>Explore more travel vacation rentals</h1>
@@ -165,7 +179,7 @@ const HomePage = () => {
               4.60 (280)</p>
             <h1 className='hotel_name'>Luxury 3 Bedroom Apartment at Epicentrum</h1>
             <p className='hotel_local'>Entire house | Florida</p>
-            <h1 className='hotel_prise'>$ 350/ night</h1>
+            <h1 className='hotel_price'>$ 350/ night</h1>
           </section>
           <section>
             <img className='plug_hotel' alt='hotel' src='./image/Image.png'/>
@@ -174,7 +188,7 @@ const HomePage = () => {
               4.60 (280)</p>
             <h1 className='hotel_name'>Luxury 3 Bedroom Apartment at Epicentrum</h1>
             <p className='hotel_local'>Entire house | Florida</p>
-            <h1 className='hotel_prise'>$ 350/ night</h1>
+            <h1 className='hotel_price'>$ 350/ night</h1>
           </section>
         </div>
         <div className='container'>

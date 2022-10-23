@@ -85,6 +85,7 @@ const SignInPage = () => {
           name='email'
           type='email' 
           placeholder='Type your email address'
+          autocomplete="on"
           value={email}
           onBlur={e => handlerBlure(e)}
           onChange={e => handlerEmail(e)}/>
@@ -96,6 +97,7 @@ const SignInPage = () => {
             name='password'
             type={passVisible ? 'text' : 'password'} 
             placeholder='Type your password'
+            autocomplete="on"
             value={pass}
             onBlur={e => handlerBlure(e)}
             onChange={e => handlerPassword(e)}/>

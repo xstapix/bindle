@@ -9,6 +9,7 @@ import { Account } from './pages/Account'
 import { SignInPage } from './pages/SignInPage'
 import { SignUpPage } from './pages/SignUpPage'
 import { Hotels } from './pages/Hotels'
+import { SingleHotel } from './pages/SingleHotel'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
           <Route path='signup' element={<SignUpPage />} />
           <Route path='account' element={<Account />} />
           <Route path=':localSearch' element={<Hotels />} />
+          <Route path=':localSearch/:IDHotel' element={<SingleHotel />} />
         </Route>
       </Routes>
       

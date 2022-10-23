@@ -1,6 +1,6 @@
 import './Hotels.sass'
 
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
 import DB from '../exampleHotels.json'
@@ -9,8 +9,12 @@ import FilterSetting from '../components/FilterSetting'
 
 const Hotels = () => {
   const {localSearch} = useParams()
-  const [sort, setSort] = useState(false)
+  const initialDB = DB.data.body.searchResults.results
+  const [hotelsList, setHotelsList] = useState(initialDB)
+
   // const [DB, setDB] = useState()
+  
+  // if(!DB) return <>Loading...</>
 
   // useEffect(() => {
   //   const options = {
@@ -46,6 +50,12 @@ const Hotels = () => {
 
   }
 
+  const handlerAppliedFilter = (modifiedPrice, star) => {
+    const newList = initialDB.filter(item => item.ratePlan.price.exactCurrent <= modifiedPrice)
+    setHotelsList(newList)
+    document.getElementById("filter").classList.toggle("S_Active")
+  }
+
   const handleSort = () => {
     document.getElementById("sort").classList.toggle("S_Active")
   }
@@ -66,28 +76,30 @@ const Hotels = () => {
           <img onClick={handlerFilter} className='setting filter' alt='filter' src='../image/svg/tune.svg'/>
         </div>
         <div className='hotels_list'> 
-        {DB ? DB.data.body.searchResults.results.map((item) => (
-          <section key={item.id}>
-            <img onClick={handlerFavorite} id={item.id} className='favorite' alt='favorite' src='../image/svg/favorite_black_24dp.svg'/>
-            <img className='plug_hotel singleItemInList' alt='hotel' src={item.thumbnailUrl}/>
-            <div className='hotel_info'>
-              <p className='hotel_rating'>
-                <img className='start_rating' alt='star' src='../image/svg/Star 5.svg'/>
-                {item.guestReviews.rating} ({item.guestReviews.total})
-              </p>
-              <h1 className='hotel_name'>{item.name}</h1>
-              <p className='hotel_local'>{item.address.streetAddress} | {item.address.locality} </p>
-              <div>
-                <h1 className='hotel_prise'>{item.ratePlan.price.current} / night</h1>
-                <button>Book Now</button>
+        {hotelsList.length ? hotelsList.map((item) => (
+          <Link to={`/${localSearch}/${item.id}`}>
+            <section key={item.id}>
+              <img onClick={handlerFavorite} id={item.id} className='favorite' alt='favorite' src='../image/svg/favorite_black_24dp.svg'/>
+              <img className='plug_hotel singleItemInList' alt='hotel' src={item.thumbnailUrl}/>
+              <div className='hotel_info'>
+                <p className='hotel_rating'>
+                  <img className='start_rating' alt='star' src='../image/svg/Star 5.svg'/>
+                  {item.starRating} ({item.guestReviews.total})
+                </p>
+                <h1 className='hotel_name'>{item.name}</h1>
+                <p className='hotel_local'>{item.address.streetAddress} | {item.address.locality} </p>
+                <div>
+                  <h1 className='hotel_price'>{item.ratePlan.price.current} / night</h1>
+                  <button className='bookNow'>Book Now</button>
+                </div>
               </div>
-            </div>
-          </section>
-        )) : <>loading...</>}
+            </section>
+          </Link>
+        )) : <p className='NothingFound'>Nothing found</p>}
         </div>
       </div>
       <SortSetting/>
-      <FilterSetting/>
+      <FilterSetting hAppliedFilter={handlerAppliedFilter}/>
     </div>
   )
 }

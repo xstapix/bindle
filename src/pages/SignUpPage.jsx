@@ -84,6 +84,7 @@ const SignUpPage = () => {
           name='email'
           type='email' 
           placeholder='Type your email address'
+          autocomplete="on"
           value={email}
           onBlur={e => handlerBlure(e)}
           onChange={handlerEmail}/>
@@ -95,6 +96,7 @@ const SignUpPage = () => {
             name='password'
             type={passVisible ? 'text' : 'password'} 
             placeholder='Type your password'
+            autocomplete="on"
             value={pass}
             onBlur={e => handlerBlure(e)}
             onChange={e => handlerPassword(e)}/>
