@@ -26,7 +26,6 @@ function App() {
           <Route path=':localSearch/:IDHotel' element={<SingleHotel />} />
         </Route>
       </Routes>
-      
     </div>
   );
 }

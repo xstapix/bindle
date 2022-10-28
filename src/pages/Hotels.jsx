@@ -11,6 +11,8 @@ const Hotels = () => {
   const {localSearch} = useParams()
   const initialDB = DB.data.body.searchResults.results
   const [hotelsList, setHotelsList] = useState(initialDB)
+  
+  document.title = `Bindle | Hotels in ${localSearch}`
 
   // const [DB, setDB] = useState()
   

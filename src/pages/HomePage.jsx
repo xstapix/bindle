@@ -5,6 +5,8 @@ import './HomePage.sass';
 const HomePage = () => {
   const [searchInput, setSearchInput] = useState('')
   const navigate = useNavigate()
+  
+  document.title = 'Bindle'
 
   const handlerSearch = (event) => {
     const documentSearchInput = document.getElementById('searchInput')
@@ -40,7 +42,7 @@ const HomePage = () => {
           <p className='text'>Because you viewed vacation homes in this city</p>
         </div>
         <div className='list-stays'>
-          <Link to='/florida'>
+          <Link to='/Florida'>
             <section>
               <img className='plug' alt='stays' src='./image/stays/Rectangle 23.png'/>
               <div className='place-text'>
@@ -49,7 +51,7 @@ const HomePage = () => {
               </div>
             </section>
           </Link>
-          <Link to='/chicago'>
+          <Link to='/Texas'>
             <section> 
               <img className='plug' alt='stays' src='./image/stays/Rectangle 25.png'/>
               <div className='place-text'>
@@ -58,7 +60,7 @@ const HomePage = () => {
               </div>
             </section>
           </Link>
-          <Link to='/miami'>
+          <Link to='/Miami'>
             <section>
               <img className='plug' alt='stays' src='./image/stays/Rectangle 26.png'/>
               <div className='place-text'>
@@ -67,7 +69,7 @@ const HomePage = () => {
               </div>
             </section>
           </Link>
-          <Link to='/chicago'>
+          <Link to='/Chicago'>
             <section> 
               <img className='plug' alt='stays' src='./image/stays/Rectangle 27.png'/>
               <div className='place-text'>
@@ -76,7 +78,7 @@ const HomePage = () => {
               </div>
             </section>
           </Link>
-          <Link to='/newyork'>
+          <Link to='/New York'>
             <section>
               <img className='plug' alt='stays' src='./image/stays/Rectangle 22.png'/>
               <div className='place-text'>
@@ -85,7 +87,7 @@ const HomePage = () => {
               </div>
             </section>
           </Link>
-          <Link to='/toronto'>
+          <Link to='/Toronto'>
             <section> 
               <img className='plug' alt='stays' src='./image/stays/Rectangle 24.png'/>
               <div className='place-text'>
@@ -138,32 +140,40 @@ const HomePage = () => {
           </div>
           <div className='tile'>
             <section style={{gridArea: 'East'}}>
-              <img alt='popular' src='./image/popular/Rectangle 22.png'/>
-              <div className='blure'>
-                <h1>East Coast, America</h1>
-                <p>146,786 properties</p>
-              </div>
+              <Link to='/East Coast'>
+                <img alt='popular' src='./image/popular/Rectangle 22.png'/>
+                <div className='blure'>
+                  <h1>East Coast, America</h1>
+                  <p>146,786 properties</p>
+                </div>
+              </Link>
             </section>
             <section style={{gridArea: 'Chicago'}}>
-              <img alt='popular' src='./image/popular/Rectangle 9.png'/>
-              <div className='blure'>
-                <h1>Chicago, America</h1>
-                <p>146,786 properties</p>
-              </div>
+              <Link to='/Chicago'>
+                <img alt='popular' src='./image/popular/Rectangle 9.png'/>
+                <div className='blure'>
+                  <h1>Chicago, America</h1>
+                  <p>146,786 properties</p>
+                </div>
+              </Link>
             </section>
             <section style={{gridArea: 'Texas'}}>
-              <img alt='popular' src='./image/popular/Rectangle 17.png'/>
-              <div className='blure'>
-                <h1>Texas, America</h1>
-                <p>146,786 properties</p>
-              </div>
+              <Link to='/Texas'>
+                <img alt='popular' src='./image/popular/Rectangle 17.png'/>
+                <div className='blure'>
+                  <h1>Texas, America</h1>
+                  <p>146,786 properties</p>
+                </div>
+              </Link>
             </section>
             <section style={{gridArea: 'Florida'}}>
-              <img alt='popular' src='./image/popular/Rectangle 30.png'/>
-              <div className='blure'>
-                <h1>Florida, America</h1>
-                <p>146,786 properties</p>
-              </div>
+              <Link to='/Florida'>
+                <img alt='popular' src='./image/popular/Rectangle 30.png'/>
+                <div className='blure'>
+                  <h1>Florida, America</h1>
+                  <p>146,786 properties</p>
+                </div>
+              </Link>
             </section>
           </div>
         </div>

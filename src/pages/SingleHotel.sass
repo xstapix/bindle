@@ -3,6 +3,11 @@ $fontRegular: 400
 $fontSizeHeaders: 40px
 
 @media (max-width: 428px)
+  .favoriteHotel
+    position: absolute
+    top: 119px
+    right: 27px
+
   .singleHotelPhoto
     width: 100%
     height: 260px
@@ -45,6 +50,7 @@ $fontSizeHeaders: 40px
 
   .amenity
     display: inline-block
+    flex-shrink: 0
     margin: 10px 7px 0 0
     padding: 5px 8px
     background: #F9FAFC
@@ -113,7 +119,7 @@ $fontSizeHeaders: 40px
     color: #FFFFFF
 
   .atAGlance
-    margin: 0 0 10px
+    margin: 10px 0 0
     padding: 8px 15px
     border: 0.863547px solid #3A6AD5
     border-radius: 3.30769px
@@ -121,3 +127,59 @@ $fontSizeHeaders: 40px
     font-size: 14px
     line-height: 13px
     color: #304659
+
+  .activeAtAGlance
+    display: block !important
+
+  .dropDown
+    display: none
+    width: 100%
+    padding: 10px 0 0
+    font-weight: $fontBold
+    font-size: 14px
+    line-height: 13px
+    color: #696F8C
+
+  .dropDown p 
+    margin: 7px 0 0
+
+  .moreGlance
+    transform: rotate(180deg)
+
+  .activeAmenitiesPopUp
+    display: block !important
+
+  .amenitiesPopUp
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 102
+    overflow-y: auto
+    display: none
+    width: 100%
+    height: 100vh
+    background-color: #ffffff
+
+  .amenitiesHeader
+    padding: 24px 32px
+    background-color: #3A6AD5
+
+  .rotate90 
+    margin: -4px 0 0
+    transform: rotate(90deg)
+
+  .Amenities_name
+    text-align: center
+    font-weight: $fontBold
+    font-size: 17px
+    line-height: 20px
+    color: #fff
+
+  .Amenities_body
+    margin: 24px 32px
+    
+  .categoryText
+    margin: 24px 0 0 
+    font-weight: $fontBold
+    font-size: 15px
+    line-height: 24px

@@ -1,15 +1,16 @@
 import React from 'react'
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import {useAuth} from '../hook/useAuth'
 import './Layout.sass';
 
 
 const Layout = () => {
   const {isAuth} = useAuth()
+  const location = useLocation()
 
   return (
     <>
-      <header>
+      <header className={location.pathname === '/' ? 'headerTransparent' : 'headerBlue'}>
         <div className='container'>
           <nav>
             <Link to='/'>
