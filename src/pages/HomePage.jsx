@@ -14,7 +14,7 @@ const HomePage = () => {
     setSearchInput(event.target.value)
 
     documentSearchInput.addEventListener('keydown', function(e) {
-      if (e.code === 'Enter') {
+      if (e.key === 'Enter') {
         navigate(`/${e.target.value}`)
       }
     })
