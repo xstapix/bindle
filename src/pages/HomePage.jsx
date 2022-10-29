@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useNavigate, Link } from "react-router-dom";
+
 import './HomePage.sass';
+import CalendarComponent from '../components/Calendar'
 
 const HomePage = () => {
   const [searchInput, setSearchInput] = useState('')
@@ -14,11 +16,12 @@ const HomePage = () => {
     setSearchInput(event.target.value)
 
     documentSearchInput.addEventListener('keydown', function(e) {
-      if (e.code === 'Enter') {
+      if (e.key === 'Enter') {
         navigate(`/${e.target.value}`)
       }
     })
   }
+
 
   return (
     <>
@@ -29,11 +32,21 @@ const HomePage = () => {
           <p>This modern trend looks nice and all, but we fell into the same trap again.</p>
           <input 
             onChange={e => handlerSearch(e)}
-            type='text' 
+            type="text"
             value={searchInput}
             placeholder='Where are you going?' 
             className='hello-search'
             id='searchInput'/>
+          <div className='DF_JS_AC'>
+            <CalendarComponent/>
+            <input 
+              onChange={e => handlerSearch(e)}
+              type="text"
+              value={searchInput}
+              placeholder='How many people?' 
+              className='date-search marginLeft'
+              id='searchInput'/>
+          </div>
         </div>
       </div>
       <main>

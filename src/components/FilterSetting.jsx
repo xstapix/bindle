@@ -16,7 +16,7 @@ const FilterSetting = ({hAppliedFilter}) => {
 
 
   return (
-    <div className='settingBody' id='filter'>
+    <div className='S_None' id='filter'>
       <div onClick={handlerFilter} className='settingBackground'></div>
       <div className='filterS'>
         <div className='container'>

@@ -5,7 +5,7 @@ const SortSetting = () => {
     document.getElementById("sort").classList.toggle("S_Active")
   }
   return (
-    <div className='settingBody' id='sort'>
+    <div className='S_None' id='sort'>
       <div onClick={handleSort} className='settingBackground'></div>
       <div className='sortS'>
         <div className='container'>

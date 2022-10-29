@@ -7,6 +7,8 @@ import DB from '../exampleHotels.json'
 import SortSetting from '../components/SortSetting'
 import FilterSetting from '../components/FilterSetting'
 
+import CalendarComponent from '../components/Calendar'
+
 const Hotels = () => {
   const {localSearch} = useParams()
   const initialDB = DB.data.body.searchResults.results
@@ -73,6 +75,16 @@ const Hotels = () => {
           <img alt='search' src='../image/svg/search.svg'/>
           <input type='text' placeholder='Where are you going?' defaultValue={localSearch}/>
         </form>
+        <div className='DF_JS_AC'>
+          <CalendarComponent/>
+          <input 
+            // onChange={e => handlerSearch(e)}
+            type="text"
+            // value={searchInput}
+            placeholder='How many people?' 
+            className='graySearch marginLeft'
+            id='searchInput'/>
+        </div>
         <div className='hotels_settings'>
           <img onClick={handleSort} className='setting' alt='sort' src='../image/svg/sort.svg'/>
           <img onClick={handlerFilter} className='setting filter' alt='filter' src='../image/svg/tune.svg'/>
