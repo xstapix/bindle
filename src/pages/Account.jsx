@@ -27,7 +27,7 @@ const Account = () => {
           <Link to='/myBooking'>
             <section>
               <div>
-                <img className='pint_bcg' alt='pint_icon' src='../image/svg/.svg'/>
+                <img className='pint_bcg' alt='pint_icon' src='../image/svg/flight.svg'/>
                 <p className='account_pints_text'>Booking</p>
               </div>
               <img alt='arrow_right' src='../image/svg/chevron_right_black_24dp.svg'/>

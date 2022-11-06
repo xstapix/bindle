@@ -30,7 +30,7 @@ const SignInPage = () => {
           }))
           navigate('/')
         })
-        .catch(setErrorSignInWithEmail(true))
+        .catch(() => setErrorSignInWithEmail(true))
     }
   }
 
@@ -109,8 +109,10 @@ const SignInPage = () => {
         {errorSignInWithEmail ? <p style={{color: '#FF5E60'}}>Incorrect credentials</p> : <></>}
         {(!passError && !emailError) ? 
           <button className='button_signin button_signin-active' onClick={handleSignIn}>Sign In</button>
-        : <button className='button_signin button_signin-disable' onClick={handleSignIn}>Sign In</button>}
+        : <button className='button_signin button_signin-disable'>Sign In</button>}
+        
         <div className='footer_line'></div>
+       
         <p className='havenotAcc'>Don’t have an account? <Link className="signup" to='/signup'>Sign up</Link></p>
       </div>
     </div>

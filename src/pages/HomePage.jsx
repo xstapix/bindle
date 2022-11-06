@@ -3,6 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 
 import './HomePage.sass';
 import CalendarComponent from '../components/Calendar'
+import Guest from '../components/Guest'
 
 const HomePage = () => {
   const [searchInput, setSearchInput] = useState('')
@@ -29,7 +30,7 @@ const HomePage = () => {
       <div className='hello'>
         <div className='container'>
           <h1>Discover New Destination</h1>
-          <p>This modern trend looks nice and all, but we fell into the same trap again.</p>
+          <p className='fz-16 fw-Reg lh-24 color-fff TA_C margin-0_0_24'>This modern trend looks nice and all, but we fell into the same trap again.</p>
           <input 
             onChange={e => handlerSearch(e)}
             type="text"
@@ -39,13 +40,7 @@ const HomePage = () => {
             id='searchInput'/>
           <div className='DF_JS_AC'>
             <CalendarComponent/>
-            <input 
-              onChange={e => handlerSearch(e)}
-              type="text"
-              value={searchInput}
-              placeholder='How many people?' 
-              className='date-search marginLeft'
-              id='searchInput'/>
+            <Guest/>
           </div>
         </div>
       </div>

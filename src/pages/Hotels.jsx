@@ -6,8 +6,8 @@ import { useEffect, useState } from 'react'
 import DB from '../exampleHotels.json'
 import SortSetting from '../components/SortSetting'
 import FilterSetting from '../components/FilterSetting'
-
 import CalendarComponent from '../components/Calendar'
+import Guest from '../components/Guest'
 
 const Hotels = () => {
   const {localSearch} = useParams()
@@ -54,18 +54,68 @@ const Hotels = () => {
 
   }
 
-  const handlerAppliedFilter = (modifiedPrice, star) => {
-    const newList = initialDB.filter(item => item.ratePlan.price.exactCurrent <= modifiedPrice)
-    setHotelsList(newList)
-    document.getElementById("filter").classList.toggle("S_Active")
+  const handlerAppliedPrice = ({priceMin, priceMax}) => {
+
+    if(priceMin === '') {
+      priceMin = 0
+    }
+
+    if(priceMax === '') {
+      priceMax = 0
+    }
+
+    if (priceMax === 0 & priceMin === 0) {
+      console.log('return initialDB');
+      setHotelsList(initialDB)
+    } else if (priceMin > priceMax) {
+      const newList = initialDB.filter(item => 
+        item.ratePlan.price.exactCurrent >= priceMin)
+        setHotelsList(newList)
+    } else {
+      const newList = initialDB.filter(item => 
+        (item.ratePlan.price.exactCurrent >= priceMin) & 
+        (item.ratePlan.price.exactCurrent <= priceMax))
+        setHotelsList(newList)
+    }
   }
 
-  const handleSort = () => {
-    document.getElementById("sort").classList.toggle("S_Active")
+  const handlerAppliedStar = (starList) => {
+    let collectedHotels = []
+
+    const appliedStarFilter = (key) => {
+      if (key === 'five') {
+        const newList = initialDB.filter(item => item.starRating === 5)
+        collectedHotels = collectedHotels.concat(newList)
+      }
+      if (key === 'four') {
+        const newList = initialDB.filter(item => item.starRating === 4)
+        collectedHotels = collectedHotels.concat(newList)
+      }
+      if (key === 'three') {
+        const newList = initialDB.filter(item => item.starRating === 3)
+        collectedHotels = collectedHotels.concat(newList)
+      }
+      if (key === 'two') {
+        const newList = initialDB.filter(item => item.starRating === 2)
+        collectedHotels = collectedHotels.concat(newList)
+      }
+    }
+
+    if (Object.values(starList).includes(true)) {
+
+      for (const key in starList) {
+        if(starList[key]) {
+          appliedStarFilter(key)
+        }
+      }
+      setHotelsList(collectedHotels)
+    } else {
+      setHotelsList(initialDB)
+    }
   }
-  
-  const handlerFilter = () => {
-    document.getElementById("filter").classList.toggle("S_Active")
+
+  const handlerAppliedSort = () => {
+
   }
 
   return (
@@ -77,17 +127,13 @@ const Hotels = () => {
         </form>
         <div className='DF_JS_AC'>
           <CalendarComponent/>
-          <input 
-            // onChange={e => handlerSearch(e)}
-            type="text"
-            // value={searchInput}
-            placeholder='How many people?' 
-            className='graySearch marginLeft'
-            id='searchInput'/>
+          <Guest/>
         </div>
         <div className='hotels_settings'>
-          <img onClick={handleSort} className='setting' alt='sort' src='../image/svg/sort.svg'/>
-          <img onClick={handlerFilter} className='setting filter' alt='filter' src='../image/svg/tune.svg'/>
+          <SortSetting hAppliedSort={handlerAppliedSort}/>
+          <FilterSetting 
+            hAppliedPrice={handlerAppliedPrice} 
+            hAppliedStar={handlerAppliedStar}/>
         </div>
         <div className='hotels_list'> 
         {hotelsList.length ? hotelsList.map((item) => (
@@ -112,8 +158,6 @@ const Hotels = () => {
         )) : <p className='NothingFound'>Nothing found</p>}
         </div>
       </div>
-      <SortSetting/>
-      <FilterSetting hAppliedFilter={handlerAppliedFilter}/>
     </div>
   )
 }

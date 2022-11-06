@@ -30,7 +30,7 @@ const SignUpPage = () => {
           }))
           navigate('/')
         })
-        .catch(setErrorCreateUser(true))
+        .catch(() => setErrorCreateUser(true))
     }
   }
 
@@ -106,7 +106,7 @@ const SignUpPage = () => {
         {errorCreateUser ? <p style={{color: '#FF5E60'}}>User with this email already exists</p> : <></>}
         {(!passError && !emailError) ? 
           <button className='button_signin button_signin-active' onClick={handleSignUp}>Sign Up</button>
-        : <button className='button_signin button_signin-disable' onClick={handleSignUp}>Sign Up</button>}
+        : <button className='button_signin button_signin-disable'>Sign Up</button>}
         <div className='footer_line'></div>
         <p className='havenotAcc'>Already have an account? <Link className="signup" to='/signin'>Sign in</Link></p>
       </div>

@@ -1,22 +1,48 @@
+import { useEffect } from 'react'
 import {useState} from 'react'
 
-const FilterSetting = ({hAppliedFilter}) => {
-  const [priceMax, setPriceMax] = useState(500)
-  const [priceMin, setPriceMin] = useState(0)
-  const [star, setStar] = useState()
+const FilterSetting = ({hAppliedPrice, hAppliedStar}) => {
+  const [priceMax, setPriceMax] = useState('')
+  const [priceMin, setPriceMin] = useState('')
+  const [starList, setStarList] = useState({
+    five: false,
+    four: false,
+    three: false,
+    two: false})
+  const [filterActive, setFilterActive] = useState(false)
+
+  useEffect(() => {
+    hAppliedPrice({priceMin, priceMax})
+  }, [priceMin, priceMax])
+
+  
   
   const handlerFilter = () => {
-    document.getElementById("filter").classList.toggle("S_Active")
+    if (filterActive) {
+      setFilterActive(false)
+      document.body.style.overflow = 'visible'
+    } else {
+      setFilterActive(true)
+      document.body.style.overflow = 'hidden'
+    }
   }
 
   const handlerReset = () => {
-    // setPrice(500)
-    document.getElementById('price').value = 500;
+    setPriceMax('')
+    setPriceMin('')
   }
 
+  const handlerCheckbox = (e) => {
+    const newList = starList
+    newList[e.target.value] = e.target.checked 
+    setStarList(newList)
+    hAppliedStar(starList)
+  }
 
   return (
-    <div className='S_None' id='filter'>
+    <>
+    <img onClick={handlerFilter} className='setting filter' alt='filter' src='../image/svg/tune.svg'/>
+    <div className={filterActive ? 'S_Active' : 'S_None'} id='filter'>
       <div onClick={handlerFilter} className='settingBackground'></div>
       <div className='filterS'>
         <div className='container'>
@@ -26,15 +52,21 @@ const FilterSetting = ({hAppliedFilter}) => {
             <p className='filter_reset' onClick={handlerReset}>Reset</p>
           </div>
           <div className='priseS'>
-            <label htmlFor='prise'>Price</label>
-            <p>${priceMin} - {priceMax}</p>
-          </div>
-          <div className='rangeContainer'>
-            <div className='slider-track'></div>
-            <input type="range" id="slider-1" onChange={e => setPriceMax(e.target.value)}
-              min="0" max='500' defaultValue={priceMax}/>
-            <input type="range" id="slider-2" onChange={e => setPriceMin(e.target.value)}
-              min="0" max='500' defaultValue={priceMin}/>
+            <p>Price</p>
+            <div className='DF_JS_AC'>
+              <input 
+                onChange={e => setPriceMin(e.target.value)}
+                type='number'
+                placeholder='Of'
+                value={priceMin}
+                className='graySearch marginRight'/>
+              <input
+                onChange={e => setPriceMax(e.target.value)}
+                type='number'
+                placeholder='To'
+                value={priceMax}
+                className='graySearch marginLeft'/>
+            </div>
           </div>
           <p className='paragraph'>Property class</p>
           <div className='starProperty'>
@@ -45,7 +77,12 @@ const FilterSetting = ({hAppliedFilter}) => {
               <img alt='star' src='../image/svg/Star 5.svg'/>
               <img alt='star' src='../image/svg/Star 5.svg'/>
             </label>
-            <input onClick={() => setStar(5)} className='custom_checkbox' type="checkbox" id="five"/>
+            <input 
+              className='custom_checkbox' 
+              type="checkbox" 
+              value='five'
+              onChange={handlerCheckbox}
+              />
           </div>
           <div className='starProperty'>
             <label >
@@ -54,7 +91,11 @@ const FilterSetting = ({hAppliedFilter}) => {
               <img alt='star' src='../image/svg/Star 5.svg'/>
               <img alt='star' src='../image/svg/Star 5.svg'/>
             </label>
-            <input onClick={() => setStar(4)} className='custom_checkbox' type="checkbox" id="four" name="four"/>
+            <input 
+              className='custom_checkbox' 
+              type="checkbox" 
+              onChange={handlerCheckbox}
+              value="four"/>
           </div>
           <div className='starProperty'>
             <label>
@@ -62,19 +103,31 @@ const FilterSetting = ({hAppliedFilter}) => {
               <img alt='star' src='../image/svg/Star 5.svg'/>
               <img alt='star' src='../image/svg/Star 5.svg'/>
             </label>
-            <input onClick={() => setStar(3)} className='custom_checkbox' type="checkbox" id="three" name="three"/>
+            <input 
+              className='custom_checkbox' 
+              type="checkbox" 
+              onChange={handlerCheckbox}
+              value="three"/>
           </div>
           <div className='starProperty'>
             <label >
               <img alt='star' src='../image/svg/Star 5.svg'/>
               <img alt='star' src='../image/svg/Star 5.svg'/>
             </label>
-            <input onClick={() => setStar(2)} className='custom_checkbox' type="checkbox" id="two" name="two"/>
+            <input 
+              className='custom_checkbox' 
+              type="checkbox" 
+              onChange={handlerCheckbox}
+              value="two"/>
           </div>
-          <button onClick={() => hAppliedFilter(priceMax, star)}  className='applySettings'>Apply</button>
+          <button 
+            onClick={handlerFilter} 
+            className='applySettings'>Apply</button>
         </div>
       </div>
     </div>
+    </>
+    
   )
 }
 

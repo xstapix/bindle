@@ -81,7 +81,7 @@ const SingleHotel = () => {
 					<div className="hotelRoom" key={item.name}>
 						<p className='room_name'>{item.name}</p>
 						<p className='room_info'>Occupancy: <span>{item.maxOccupancy.total}</span></p>
-						<p className='room_info'>Bed Choices:
+						<p className='room_info margin-0_0_7'>Bed Choices:
 						{item.bedChoices.mainOptions.map(bed => (
 							<span key={bed}> {bed}</span>
 						))}

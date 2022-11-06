@@ -3,7 +3,6 @@ import  { useState } from 'react';
 import './Calendar.sass'
 import Calendar from 'react-calendar';
 import { useLocation, useParams } from "react-router-dom";
-// import 'react-calendar/dist/Calendar.css';
 
 const CalendarComponent = () => {
   const {pathname} = useLocation()
@@ -12,14 +11,20 @@ const CalendarComponent = () => {
   const [calendarActive, setCalendarActive] = useState(false)
   
   const handlerCalendar = () => {
-    calendarActive ? setCalendarActive(false) : setCalendarActive(true)
+    if (calendarActive) {
+      setCalendarActive(false)
+      document.body.style.overflow = 'visible'
+    } else {
+      setCalendarActive(true)
+      document.body.style.overflow = 'hidden'
+    }
   }
 
   return (
     <>
       <div 
         onClick={handlerCalendar} 
-        className={ pathname === `${localSearch}` ? 'date-search marginRight' : 'graySearch marginRight'}
+        className={ pathname === `/${localSearch}` ? 'graySearch marginRight' : 'date-search marginRight'}
         id='searchInput'>
         When does it start?
       </div>
@@ -33,10 +38,9 @@ const CalendarComponent = () => {
                 value={value} 
                 locale='en' 
                 selectRange={true}/>
-              <div className="DF_JA_AC">
-                <button className='canselButton'>Cancel</button>
-                <button className='calendarButton'>Apply</button>
-              </div>
+              <button 
+                onClick={handlerCalendar} 
+                className='applySettings'>Apply</button>
             </div>
           </div>
         </div>
