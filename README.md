@@ -1,4 +1,6 @@
 0710
+https://amazing-pika-770979.netlify.app
+https://www.figma.com/file/mTw2Sl0m7UR6S8OU7vTlNE/Bindle-Web-Booking-UI-Kit-(Community)?node-id=6%3A7
 
 # Getting Started with Create React App
 
