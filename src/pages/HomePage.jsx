@@ -5,24 +5,25 @@ import './HomePage.sass';
 import CalendarComponent from '../components/Calendar'
 import Guest from '../components/Guest'
 
+import { setData } from '../store/slice/searchDataSlice';
+import {useDispatch} from 'react-redux'
+
 const HomePage = () => {
   const [searchInput, setSearchInput] = useState('')
   const navigate = useNavigate()
+  const dispatch = useDispatch()
   
   document.title = 'Bindle'
 
-  const handlerSearch = (event) => {
-    const documentSearchInput = document.getElementById('searchInput')
+  const handlerSearch = () => {
+    dispatch(setData({
+      location: searchInput,
+      checkDate: null,
+      guests: null
+    }))
 
-    setSearchInput(event.target.value)
-
-    documentSearchInput.addEventListener('keydown', function(e) {
-      if (e.key === 'Enter') {
-        navigate(`/${e.target.value}`)
-      }
-    })
+    navigate(`/${searchInput}`)
   }
-
 
   return (
     <>
@@ -32,7 +33,7 @@ const HomePage = () => {
           <h1>Discover New Destination</h1>
           <p className='fz-16 fw-Reg lh-24 color-fff TA_C margin-0_0_24'>This modern trend looks nice and all, but we fell into the same trap again.</p>
           <input 
-            onChange={e => handlerSearch(e)}
+            onChange={e => setSearchInput(e.target.value)}
             type="text"
             value={searchInput}
             placeholder='Where are you going?' 
@@ -42,6 +43,11 @@ const HomePage = () => {
             <CalendarComponent/>
             <Guest/>
           </div>
+          <button 
+            onClick={handlerSearch}
+            className='margin-24_0_0 lh-16 color-ffffff fz-13 BG-3A6AD5 br_radius-14 br_radius-284 br-none fw-Reg width-100 padding-15'>
+              Explore Now
+          </button>
         </div>
       </div>
       <main>

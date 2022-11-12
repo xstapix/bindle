@@ -1,7 +1,7 @@
 import './Hotels.sass'
 
 import { useParams, Link } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 import DB from '../exampleHotels.json'
 import SortSetting from '../components/SortSetting'
@@ -13,6 +13,7 @@ const Hotels = () => {
   const {localSearch} = useParams()
   const initialDB = DB.data.body.searchResults.results
   const [hotelsList, setHotelsList] = useState(initialDB)
+  const [searchInput, setSearchInput] = useState(localSearch)
   
   document.title = `Bindle | Hotels in ${localSearch}`
 
@@ -50,8 +51,8 @@ const Hotels = () => {
   //   })
   // }, 3000);
 
-  const handlerFavorite = () => {
-
+  const handlerFavorite = (e) => {
+    console.log(e.target.id);
   }
 
   const handlerAppliedPrice = ({priceMin, priceMax}) => {
@@ -123,7 +124,11 @@ const Hotels = () => {
       <div className='container'>
         <form className='hotels_search'>
           <img alt='search' src='../image/svg/search.svg'/>
-          <input type='text' placeholder='Where are you going?' defaultValue={localSearch}/>
+          <input 
+            onChange={(e) => setSearchInput(e.target.value)} 
+            type='text' 
+            placeholder='Where are you going?' 
+            defaultValue={searchInput}/>
         </form>
         <div className='DF_JS_AC'>
           <CalendarComponent/>
@@ -138,8 +143,8 @@ const Hotels = () => {
         <div className='hotels_list'> 
         {hotelsList.length ? hotelsList.map((item) => (
           <Link to={`/${localSearch}/${item.id}`}>
-            <section key={item.id}>
-              <img onClick={handlerFavorite} id={item.id} className='favorite' alt='favorite' src='../image/svg/favorite_black_24dp.svg'/>
+            <section key={item.id}> 
+              {/* <img onClick={handlerFavorite} id={item.id} className='favorite' alt='favorite' src='../image/svg/favorite_black_24dp.svg'/> */}
               <img className='plug_hotel singleItemInList' alt='hotel' src={item.thumbnailUrl}/>
               <div className='hotel_info'>
                 <p className='hotel_rating'>

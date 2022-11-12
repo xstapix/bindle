@@ -38,9 +38,9 @@ const CalendarComponent = () => {
                 value={value} 
                 locale='en' 
                 selectRange={true}/>
-              <button 
+              {/* <button 
                 onClick={handlerCalendar} 
-                className='applySettings'>Apply</button>
+                className='applySettings'>Apply</button> */}
             </div>
           </div>
         </div>

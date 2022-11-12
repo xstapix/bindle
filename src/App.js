@@ -10,6 +10,7 @@ import { SignInPage } from './pages/SignInPage'
 import { SignUpPage } from './pages/SignUpPage'
 import { Hotels } from './pages/Hotels'
 import { SingleHotel } from './pages/SingleHotel'
+import { Favorites } from './pages/Favorites'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
           <Route path='signin' element={<SignInPage />} />
           <Route path='signup' element={<SignUpPage />} />
           <Route path='account' element={<Account />} />
+          <Route path='favorites' element={<Favorites />} />
           <Route path=':localSearch' element={<Hotels />} />
           <Route path=':localSearch/:IDHotel' element={<SingleHotel />} />
         </Route>

@@ -1,17 +1,49 @@
 import './SingleHotel.sass'
 
+import { getDatabase, ref, set, onValue } from "firebase/database";
+
 import { useParams } from 'react-router-dom'
 
 import HotelData from '../exampleSingleHotel.json'
 import HotelPhoto from '../exampleSingleHotelPhoto.json'
+import {useAuth} from '../hook/useAuth'
+import { useState } from 'react';
 
 const SingleHotel = () => {
 	const {IDHotel} = useParams()
+	const {id} = useAuth()
+	const [hotelLiked, setHotelLiked] = useState('')
 
 	document.title = `${HotelData.data.body.propertyDescription.name}`
 
-	const handleAtAGlance = (e) => {
-		if (e.target.id === 'moreOrder') {
+	const handlerFavorite = () => {
+		const db = getDatabase();
+		const starCountRef = ref(db, 'users/' + id);
+		let data = null
+
+		onValue(starCountRef, (snapshot) => {
+			if (snapshot.exists()) {
+				data = snapshot.val();
+			}
+		});
+
+		if (data) {
+			set(ref(db, 'users/' + id), {
+				favorites: [IDHotel, ...data.favorites]
+			})
+			.then(() => console.log('ok'))
+		} else {
+			set(ref(db, 'users/' + id), {
+				favorites: [IDHotel]
+			})
+			.then(() => console.log('ok'))
+		}
+
+		hotelLiked === '' ? setHotelLiked('hotel_liked') : setHotelLiked(null)
+  }
+
+	const handleAtAGlance = (id) => {
+		if (id === 'moreOrder') {
 			document.getElementById('moreOrderImg').classList.toggle('moreGlance')
 			document.getElementById('dropOrder').classList.toggle('activeAtAGlance')
 		} else {
@@ -32,7 +64,12 @@ const SingleHotel = () => {
 
 	return (
 		<div>
-			<img className='favoriteHotel' alt='favorite' src='../image/svg/favorite_black_24dp.svg'/>
+			<div onClick={handlerFavorite} className="favoriteHotel">
+				<svg className={hotelLiked} xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#fff">
+					<path d="M0 0h24v24H0V0z" fill="none"/>
+					<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+				</svg>
+			</div>
 			<img className='singleHotelPhoto' alt='hotelPhoto' src='../image/hotel.png'/>
 			{HotelData ?
 			<div key={HotelData.data.body.pdpHeader.hotelId}>
@@ -95,7 +132,7 @@ const SingleHotel = () => {
 				</div>
 				<div className='containerMargin'>
 					<div className='atAGlance '>
-						<div onClick={handleAtAGlance} id='moreOrder' className="DF_JS_AC">
+						<div onClick={() => handleAtAGlance('moreOrder')} id='moreOrder' className="DF_JS_AC">
 							<p>Order of residence</p>
 							<img id='moreOrderImg' alt='more' src='../image/svg/more.svg'/>
 						</div>
@@ -109,7 +146,7 @@ const SingleHotel = () => {
 						</div>
 					</div>
 					<div className='atAGlance '>
-						<div onClick={handleAtAGlance} id='moreCheck' className="DF_JS_AC">
+						<div onClick={() => handleAtAGlance('moreCheck')} id='moreCheck' className="DF_JS_AC">
 							<p>Required at check in</p>
 							<img id='moreCheckImg' alt='more' src='../image/svg/more.svg'/>
 						</div>
