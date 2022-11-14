@@ -45,7 +45,7 @@ const Favorites = () => {
           <span className='fz-17 color-696F8C margin-0_0_0_10'>{favoriteList.length}</span>
           <div className="hotels_list margin-40px_0_0">
             {favoriteList.map((item) => (
-            <Link to={`/${item.id}`} key={item.id}>
+            <Link to={`/local/${item.id}`} key={item.id}>
               <section> 
                 <img className='plug_hotel singleItemInList' alt='hotel' src={item.thumbnailUrl}/>
                 <div className='hotel_info'>

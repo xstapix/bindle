@@ -2,7 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   location: null,
-  checkDate: null,
+  checkIn: null,
+  checkOut: null,
   guests: null,
 }
 
@@ -12,7 +13,8 @@ const searchDataSlice = createSlice({
   reducers: {
     setData(state, action) {
       state.location = action.payload.location;
-      state.checkDate = action.payload.checkDate;
+      state.checkIn = action.payload.checkIn;
+      state.checkOut = action.payload.checkOut;
       state.guests = action.payload.guests;
     }
   }

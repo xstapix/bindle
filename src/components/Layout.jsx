@@ -23,14 +23,14 @@ const Layout = () => {
               </div>
             </Link>
             {isAuth ?
-            <div className='profile'>
-              <div>
-                <img className='menu' alt='menu-profile' src='../image/svg/menu.svg'/>
+            <Link to='/account'>
+              <div className='profile'>
+                <div>
+                  <img className='menu' alt='menu-profile' src='../image/svg/menu.svg'/>
+                </div>
+                  <img alt='profile' src='../image/Ellipse 16.png'/>
               </div>
-              <Link to='/account'>
-                <img alt='profile' src='../image/Ellipse 16.png'/>
-              </Link>  
-            </div> :
+            </Link>   :
             <Link to='/signin'>
               <img className='noLogin' alt='profile' src='../image/svg/noLogin.svg'/>
             </Link>}
