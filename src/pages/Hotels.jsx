@@ -51,10 +51,6 @@ const Hotels = () => {
   //   })
   // }, 3000);
 
-  const handlerFavorite = (e) => {
-    console.log(e.target.id);
-  }
-
   const handlerAppliedPrice = ({priceMin, priceMax}) => {
 
     if(priceMin === '') {
@@ -130,10 +126,8 @@ const Hotels = () => {
             placeholder='Where are you going?' 
             defaultValue={searchInput}/>
         </form>
-        <div className='DF_JS_AC'>
-          <CalendarComponent/>
-          <Guest/>
-        </div>
+        <CalendarComponent/>
+        <Guest/>
         <div className='hotels_settings'>
           <SortSetting hAppliedSort={handlerAppliedSort}/>
           <FilterSetting 

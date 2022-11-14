@@ -1,11 +1,11 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate, Link } from "react-router-dom";
 
 import './HomePage.sass';
 import CalendarComponent from '../components/Calendar'
 import Guest from '../components/Guest'
 
-import { setData } from '../store/slice/searchDataSlice';
+import { setData } from '../store/slice/locationSlice';
 import {useDispatch} from 'react-redux'
 
 const HomePage = () => {
@@ -15,13 +15,16 @@ const HomePage = () => {
   
   document.title = 'Bindle'
 
+  // useEffect(() => {
+  //   dispatch(setData({
+  //     location: searchInput
+  //   }))
+  // }, [searchInput])
+
   const handlerSearch = () => {
     dispatch(setData({
-      location: searchInput,
-      checkDate: null,
-      guests: null
+      location: searchInput
     }))
-
     navigate(`/${searchInput}`)
   }
 
@@ -39,14 +42,12 @@ const HomePage = () => {
             placeholder='Where are you going?' 
             className='hello-search'
             id='searchInput'/>
-          <div className='DF_JS_AC'>
-            <CalendarComponent/>
-            <Guest/>
-          </div>
+          <CalendarComponent/>
+          <Guest/>
           <button 
             onClick={handlerSearch}
             className='margin-24_0_0 lh-16 color-ffffff fz-13 BG-3A6AD5 br_radius-14 br_radius-284 br-none fw-Reg width-100 padding-15'>
-              Explore Now
+              Search
           </button>
         </div>
       </div>
