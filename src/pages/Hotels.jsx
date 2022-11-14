@@ -1,5 +1,7 @@
 import './Hotels.sass'
 
+import {useSearch} from '../hook/useSearch'
+
 import { useParams, Link } from 'react-router-dom'
 import { useState } from 'react'
 
@@ -14,6 +16,7 @@ const Hotels = () => {
   const initialDB = DB.data.body.searchResults.results
   const [hotelsList, setHotelsList] = useState(initialDB)
   const [searchInput, setSearchInput] = useState(localSearch)
+
   
   document.title = `Bindle | Hotels in ${localSearch}`
 
@@ -126,8 +129,13 @@ const Hotels = () => {
             placeholder='Where are you going?' 
             defaultValue={searchInput}/>
         </form>
+<<<<<<< HEAD
         <CalendarComponent/>
         <Guest/>
+=======
+          <CalendarComponent/>
+          <Guest/>
+>>>>>>> 11496275475484d0d1d9985206d9b36515b15a03
         <div className='hotels_settings'>
           <SortSetting hAppliedSort={handlerAppliedSort}/>
           <FilterSetting 
@@ -138,7 +146,6 @@ const Hotels = () => {
         {hotelsList.length ? hotelsList.map((item) => (
           <Link to={`/${localSearch}/${item.id}`}>
             <section key={item.id}> 
-              {/* <img onClick={handlerFavorite} id={item.id} className='favorite' alt='favorite' src='../image/svg/favorite_black_24dp.svg'/> */}
               <img className='plug_hotel singleItemInList' alt='hotel' src={item.thumbnailUrl}/>
               <div className='hotel_info'>
                 <p className='hotel_rating'>

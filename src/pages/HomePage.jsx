@@ -10,6 +10,7 @@ import {useDispatch} from 'react-redux'
 
 const HomePage = () => {
   const [searchInput, setSearchInput] = useState('')
+
   const navigate = useNavigate()
   const dispatch = useDispatch()
   
@@ -23,8 +24,11 @@ const HomePage = () => {
 
   const handlerSearch = () => {
     dispatch(setData({
-      location: searchInput
+      location: searchInput,
+      checkDate: null,
+      guests: null
     }))
+
     navigate(`/${searchInput}`)
   }
 
@@ -42,12 +46,14 @@ const HomePage = () => {
             placeholder='Where are you going?' 
             className='hello-search'
             id='searchInput'/>
-          <CalendarComponent/>
-          <Guest/>
+          <div className='DF_JS_AC'>
+            <CalendarComponent/>
+            <Guest/>
+          </div>
           <button 
             onClick={handlerSearch}
             className='margin-24_0_0 lh-16 color-ffffff fz-13 BG-3A6AD5 br_radius-14 br_radius-284 br-none fw-Reg width-100 padding-15'>
-              Search
+              Explore Now
           </button>
         </div>
       </div>
