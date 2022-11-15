@@ -3,40 +3,38 @@ import { useLocation, useParams } from "react-router-dom";
 
 import './Guest.sass'
 
-import { setData } from '../store/slice/searchDataSlice';
+import { setData } from '../store/slice/guestSlice';
 import {useDispatch} from 'react-redux'
-import {useSearch} from '../hook/useSearch'
+import {useGuest} from '../hook/useGuest'
 
 const Guest = () => {
   const {pathname} = useLocation()
   const {localSearch} = useParams()
   const dispatch = useDispatch()
+  const {adults, children, rooms} = useGuest()
 
   const [guestActive, setGuestActive] = useState(false)
-  const [Adults, setAdults] = useState(1)
-  const [Children, setChildren] = useState(0)
-  const [Rooms, setRooms] = useState(1)
+  const [Adults, setAdults] = useState(adults)
+  const [Children, setChildren] = useState(children)
+  const [Rooms, setRooms] = useState(rooms)
 
   const handlerGuest = () => {
     if (guestActive) {
       setGuestActive(false)
       document.body.style.overflow = 'visible'
-      // dispatch(setData({
-      //   guests: {
-      //     'adults': Adults,
-      //     'children': Children,
-      //     'rooms': Rooms
-      //   },
-      // }))
     } else {
       setGuestActive(true)
       document.body.style.overflow = 'hidden'
     }
+    dispatch(setData({
+      adults: Adults,
+      children: Children,
+      rooms: Rooms
+    }))
   }
 
   return (
     <>
-<<<<<<< HEAD
       <div className='DF_JS_AC'>
         <div
           onClick={handlerGuest}
@@ -55,27 +53,8 @@ const Guest = () => {
           id='searchInput'>
           {`Rooms: ${Rooms}`}
         </div>
-=======
-    <div className='DF_JS_AC'>
-      <div
-        onClick={handlerGuest}
-        className={ pathname === `/${localSearch}` ? 'graySearch color-304659 marginRight' : 'date-search marginRight color-757575'}
-        id='searchInput'>
-        {`Abults: ${Adults}`}
       </div>
-      <div
-        onClick={handlerGuest}
-        className={ pathname === `/${localSearch}` ? 'graySearch color-304659 margin-0_2_0' : 'date-search margin-0_2_0 color-757575'}
-        id='searchInput'>
-        {`Children: ${Children}`}
-      </div><div
-        onClick={handlerGuest}
-        className={ pathname === `/${localSearch}` ? 'graySearch color-304659  marginLeft' : 'date-search marginLeft color-757575'}
-        id='searchInput'>
-        {`Rooms: ${Rooms}`}
->>>>>>> 11496275475484d0d1d9985206d9b36515b15a03
-      </div>
-    </div>
+      
 
       <div className={guestActive ? 'S_Active' : 'S_None'}>
         <div className='settingBackground' onClick={handlerGuest}>
@@ -152,7 +131,7 @@ const Guest = () => {
         </div>
       </div>
     </>
-)
+  )
 }
 
 export default Guest

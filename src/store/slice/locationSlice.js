@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  location: null
+  location: 'null'
 }
 
 const locationSlice = createSlice({

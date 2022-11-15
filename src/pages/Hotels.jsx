@@ -1,7 +1,5 @@
 import './Hotels.sass'
 
-import {useSearch} from '../hook/useSearch'
-
 import { useParams, Link } from 'react-router-dom'
 import { useState } from 'react'
 
@@ -129,13 +127,8 @@ const Hotels = () => {
             placeholder='Where are you going?' 
             defaultValue={searchInput}/>
         </form>
-<<<<<<< HEAD
         <CalendarComponent/>
         <Guest/>
-=======
-          <CalendarComponent/>
-          <Guest/>
->>>>>>> 11496275475484d0d1d9985206d9b36515b15a03
         <div className='hotels_settings'>
           <SortSetting hAppliedSort={handlerAppliedSort}/>
           <FilterSetting 
