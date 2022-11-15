@@ -102,7 +102,7 @@ const Guest = () => {
                   </div>
                 </div>
               </div>
-              <div className='DF_JS_AC margin-0_0_24'>
+              <div className='DF_JS_AC'>
                 <p className='fw-Bold fz-17 lh-16 color-304659'>Rooms</p>
                 <div className='DF_JS_AC'>
                   {Rooms === 1 ? <div className='BG-F9FAFC padding-5 DF br_radius-284'>
@@ -123,9 +123,6 @@ const Guest = () => {
                   </div>
                 </div>
               </div>
-              <button 
-                onClick={handlerGuest} 
-                className='applySettings'>Apply</button>
             </div>
           </div>
         </div>

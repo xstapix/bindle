@@ -5,20 +5,10 @@ import './HomePage.sass';
 import CalendarComponent from '../components/Calendar'
 import Guest from '../components/Guest'
 
-import { setData } from '../store/slice/locationSlice';
-import { useDispatch } from 'react-redux';
-
 const HomePage = () => {
-  const dispatch = useDispatch()
   const [searchInput, setSearchInput] = useState('')
 
   const navigate = useNavigate()
-
-  useEffect(() => {
-    dispatch(setData({
-      location: searchInput
-    }))
-  }, [searchInput])
   
   document.title = 'Bindle'
 

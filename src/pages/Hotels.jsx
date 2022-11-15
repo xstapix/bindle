@@ -9,12 +9,12 @@ import FilterSetting from '../components/FilterSetting'
 import CalendarComponent from '../components/Calendar'
 import Guest from '../components/Guest'
 
+
 const Hotels = () => {
   const {localSearch} = useParams()
   const initialDB = DB.data.body.searchResults.results
   const [hotelsList, setHotelsList] = useState(initialDB)
   const [searchInput, setSearchInput] = useState(localSearch)
-
   
   document.title = `Bindle | Hotels in ${localSearch}`
 
