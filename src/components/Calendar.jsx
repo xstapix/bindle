@@ -34,6 +34,12 @@ const CalendarComponent = () => {
         id='searchInput'>
         When does it start?
       </div>
+      <div 
+        onClick={handlerCalendar} 
+        className={ pathname === `/${localSearch}` ? 'graySearch marginRight' : 'date-search marginRight'}
+        id='searchInput'>
+        When does it start?
+      </div>
       
       <div className={calendarActive ? 'S_Active' : 'S_None'}>
         <div className='settingBackground' onClick={handlerCalendar}>
@@ -44,9 +50,6 @@ const CalendarComponent = () => {
                 value={value} 
                 locale='en' 
                 selectRange={true}/>
-              {/* <button 
-                onClick={handlerCalendar} 
-                className='applySettings'>Apply</button> */}
             </div>
           </div>
         </div>
