@@ -37,13 +37,13 @@ const CalendarComponent = () => {
       <div className='DF_JS_AC'>
         <div 
           onClick={handlerCalendar} 
-          className={ pathname === `/${localSearch}` ? 'graySearch marginRight' : 'date-search color-757575 marginRight'}
+          className={ pathname === `/${localSearch}` ? 'graySearch color-304659 marginRight' : 'date-search color-757575 marginRight'}
           id='searchInput'>
           {checkIn ? checkIn : 'When does it start?'}
         </div>
         <div 
           onClick={handlerCalendar} 
-          className={ pathname === `/${localSearch}` ? 'graySearch marginLeft' : 'date-search color-757575 marginLeft'}
+          className={ pathname === `/${localSearch}` ? 'graySearch color-304659 marginLeft' : 'date-search color-757575 marginLeft'}
           id='searchInput'>
           {checkOut ? checkOut : 'When does it start?'}
         </div>
