@@ -1,7 +1,7 @@
 import './Hotels.sass'
 
 import { useParams, Link } from 'react-router-dom'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import DB from '../exampleHotels.json'
 import SortSetting from '../components/SortSetting'
@@ -9,12 +9,16 @@ import FilterSetting from '../components/FilterSetting'
 import CalendarComponent from '../components/Calendar'
 import Guest from '../components/Guest'
 
+import {useAuth} from '../hook/useAuth'
+
 
 const Hotels = () => {
   const {localSearch} = useParams()
+	const {id} = useAuth()
   const initialDB = DB.data.body.searchResults.results
   const [hotelsList, setHotelsList] = useState(initialDB)
   const [searchInput, setSearchInput] = useState(localSearch)
+
   
   document.title = `Bindle | Hotels in ${localSearch}`
 
@@ -51,9 +55,9 @@ const Hotels = () => {
   //     console.log(item.guestReviews.rating);
   //   })
   // }, 3000);
-
+  
   const handlerAppliedPrice = ({priceMin, priceMax}) => {
-
+    
     if(priceMin === '') {
       priceMin = 0
     }
@@ -81,6 +85,7 @@ const Hotels = () => {
     let collectedHotels = []
 
     const appliedStarFilter = (key) => {
+
       if (key === 'five') {
         const newList = initialDB.filter(item => item.starRating === 5)
         collectedHotels = collectedHotels.concat(newList)
@@ -122,6 +127,7 @@ const Hotels = () => {
         <form className='hotels_search'>
           <img alt='search' src='../image/svg/search.svg'/>
           <input 
+          className='color-304659'
             onChange={(e) => setSearchInput(e.target.value)} 
             type='text' 
             placeholder='Where are you going?' 
@@ -138,7 +144,7 @@ const Hotels = () => {
         <div className='hotels_list'> 
         {hotelsList.length ? hotelsList.map((item) => (
           <Link to={`/${localSearch}/${item.id}`}>
-            <section key={item.id}> 
+            <section key={item.id}>
               <img className='plug_hotel singleItemInList' alt='hotel' src={item.thumbnailUrl}/>
               <div className='hotel_info'>
                 <p className='hotel_rating'>
@@ -147,7 +153,7 @@ const Hotels = () => {
                 </p>
                 <h1 className='hotel_name'>{item.name}</h1>
                 <p className='hotel_local'>{item.address.streetAddress} | {item.address.locality} </p>
-                <div>
+                <div className='hotel_booking'>
                   <h1 className='hotel_price'>{item.ratePlan.price.current} / night</h1>
                   <button className='bookNow'>Book Now</button>
                 </div>

@@ -2,44 +2,54 @@ import './SingleHotel.sass'
 
 import { getDatabase, ref, set, onValue } from "firebase/database";
 
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 
 import HotelData from '../exampleSingleHotel.json'
 import HotelPhoto from '../exampleSingleHotelPhoto.json'
 import {useAuth} from '../hook/useAuth'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const SingleHotel = () => {
 	const {IDHotel} = useParams()
-	const {id} = useAuth()
+	const {id, isAuth} = useAuth()
+	const navigate = useNavigate()
 	const [hotelLiked, setHotelLiked] = useState('')
 
-	document.title = `${HotelData.data.body.propertyDescription.name}`
+	const db = getDatabase();
+	const starCountRef = ref(db, 'users/' + id);
+	// let data = null
+	const [data, setData] = useState(null)
 
-	const handlerFavorite = () => {
-		const db = getDatabase();
-		const starCountRef = ref(db, 'users/' + id);
-		let data = null
-
-		onValue(starCountRef, (snapshot) => {
-			if (snapshot.exists()) {
-				data = snapshot.val();
-			}
-		});
-
-		if (data) {
-			set(ref(db, 'users/' + id), {
-				favorites: [IDHotel, ...data.favorites]
-			})
-			.then(() => console.log('ok'))
-		} else {
-			set(ref(db, 'users/' + id), {
-				favorites: [IDHotel]
-			})
-			.then(() => console.log('ok'))
+	useEffect(() => {
+		if (isAuth) {
+			onValue(ref(db, 'users/' + id), (snapshot) => {
+				if (snapshot.exists()) {
+					setData(snapshot.val());
+				}
+			});
 		}
-
-		hotelLiked === '' ? setHotelLiked('hotel_liked') : setHotelLiked(null)
+	}, [])
+	
+	document.title = `${HotelData.data.body.propertyDescription.name}`
+	
+	const handlerFavorite = () => {
+		if (isAuth) {
+			if (data) {
+				set(starCountRef, {
+					favorites: [...new Set([IDHotel, ...data.favorites])]
+				})
+				.then(() => console.log('ok'))	
+			} else {
+				set(starCountRef, {
+					favorites: [IDHotel]
+				})
+				.then(() => console.log('ok'))
+			}
+	
+			hotelLiked === '' ? setHotelLiked('hotel_liked') : setHotelLiked(null)
+		} else {
+			navigate('/signin')
+		}
   }
 
 	const handleAtAGlance = (id) => {
@@ -60,15 +70,26 @@ const SingleHotel = () => {
 	const handleCloseSeeAll = () => {
 		document.getElementById('amenitiesPopUp').classList.toggle('activeAmenitiesPopUp')
 		document.body.style.overflow = 'visible'
-	}
+	} 
 
 	return (
 		<div>
 			<div onClick={handlerFavorite} className="favoriteHotel">
-				<svg className={hotelLiked} xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#fff">
+				{data ? 
+					data.favorites.includes(`${HotelData.data.body.pdpHeader.hotelId}`) ?
+						<svg className='hotel_liked'xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#fff">
+							<path d="M0 0h24v24H0V0z" fill="none"/>
+							<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+						</svg> :
+					<svg className={hotelLiked}xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#fff">
+						<path d="M0 0h24v24H0V0z" fill="none"/>
+						<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+					</svg> :
+				<svg className={hotelLiked}xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#fff">
 					<path d="M0 0h24v24H0V0z" fill="none"/>
 					<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
 				</svg>
+				}
 			</div>
 			<img className='singleHotelPhoto' alt='hotelPhoto' src='../image/hotel.png'/>
 			{HotelData ?

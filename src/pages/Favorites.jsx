@@ -5,8 +5,7 @@ import {useAuth} from '../hook/useAuth'
 
 import './Favorites.sass'
 import DB from '../exampleHotels.json'
-import { useEffect } from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Favorites = () => {
   const initialDB = DB.data.body.searchResults.results
@@ -17,23 +16,22 @@ const Favorites = () => {
   const db = getDatabase();
   const starCountRef = ref(db, 'users/' + id);
 
-  onValue(starCountRef, (snapshot) => { 
-    if (snapshot.exists()) {
-      data = snapshot.val();
-      let newList = []
-      data.favorites.forEach(id => {
-        initialDB.forEach(item => {
-          if (item.id == id) {
-            newList.push(item)
-          }
+  useEffect(() => {
+    onValue(starCountRef, (snapshot) => { 
+      if (snapshot.exists()) {
+        data = snapshot.val();
+        let newList = []
+        data.favorites.forEach(id => {
+          initialDB.forEach(item => {
+            if (item.id == id) {
+              newList.push(item)
+            }
+          })
         })
-      })
-      setTimeout(() => {
         setFavoriteList(newList)
-      }, 200);
-        
-    }
-  });
+      }
+    });
+  },[])
 
 
   return (
@@ -45,7 +43,7 @@ const Favorites = () => {
           <span className='fz-17 color-696F8C margin-0_0_0_10'>{favoriteList.length}</span>
           <div className="hotels_list margin-40px_0_0">
             {favoriteList.map((item) => (
-            <Link to={`/local/${item.id}`} key={item.id}>
+            <Link to={`/${item.address.locality}/${item.id}`} key={item.id}>
               <section> 
                 <img className='plug_hotel singleItemInList' alt='hotel' src={item.thumbnailUrl}/>
                 <div className='hotel_info'>

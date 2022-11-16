@@ -39,13 +39,13 @@ const CalendarComponent = () => {
           onClick={handlerCalendar} 
           className={ pathname === `/${localSearch}` ? 'graySearch color-304659 marginRight' : 'date-search color-757575 marginRight'}
           id='searchInput'>
-          {checkIn ? checkIn : 'When does it start?'}
+          {checkIn ? checkIn : 'Check In'}
         </div>
         <div 
           onClick={handlerCalendar} 
           className={ pathname === `/${localSearch}` ? 'graySearch color-304659 marginLeft' : 'date-search color-757575 marginLeft'}
           id='searchInput'>
-          {checkOut ? checkOut : 'When does it start?'}
+          {checkOut ? checkOut : 'Check Out'}
         </div>
       </div>
       
