@@ -36,7 +36,7 @@ const HomePage = () => {
           <button 
             onClick={handlerSearch}
             className='margin-24_0_0 lh-16 color-ffffff fz-13 BG-3A6AD5 br_radius-14 br_radius-284 br-none fw-Reg width-100 padding-15'>
-              Explore Now
+              Search
           </button>
         </div>
       </div>
