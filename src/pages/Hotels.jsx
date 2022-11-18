@@ -56,66 +56,57 @@ const Hotels = () => {
   //   })
   // }, 3000);
   
-  const handlerAppliedPrice = ({priceMin, priceMax}) => {
-    
-    if(priceMin === '') {
-      priceMin = 0
-    }
-
-    if(priceMax === '') {
-      priceMax = 0
-    }
-
+  const handlerAppliedFilter = ({priceMin, priceMax, starList}) => {
+    let collectedHotels = []
+  
     if (priceMax === 0 & priceMin === 0) {
       console.log('return initialDB');
       setHotelsList(initialDB)
-    } else if (priceMin > priceMax) {
-      const newList = initialDB.filter(item => 
-        item.ratePlan.price.exactCurrent >= priceMin)
-        setHotelsList(newList)
     } else {
       const newList = initialDB.filter(item => 
         (item.ratePlan.price.exactCurrent >= priceMin) & 
         (item.ratePlan.price.exactCurrent <= priceMax))
         setHotelsList(newList)
     }
-  }
-
-  const handlerAppliedStar = (starList) => {
-    let collectedHotels = []
-
-    const appliedStarFilter = (key) => {
-
+    
+    const searchStar = (key) => {
       if (key === 'five') {
-        const newList = initialDB.filter(item => item.starRating === 5)
+        const newList = hotelsList.filter(item => item.starRating === 5)
         collectedHotels = collectedHotels.concat(newList)
       }
       if (key === 'four') {
-        const newList = initialDB.filter(item => item.starRating === 4)
+        const newList = hotelsList.filter(item => item.starRating === 4)
         collectedHotels = collectedHotels.concat(newList)
       }
       if (key === 'three') {
-        const newList = initialDB.filter(item => item.starRating === 3)
+        const newList = hotelsList.filter(item => item.starRating === 3)
         collectedHotels = collectedHotels.concat(newList)
       }
       if (key === 'two') {
-        const newList = initialDB.filter(item => item.starRating === 2)
+        const newList = hotelsList.filter(item => item.starRating === 2)
         collectedHotels = collectedHotels.concat(newList)
       }
     }
 
     if (Object.values(starList).includes(true)) {
-
       for (const key in starList) {
         if(starList[key]) {
-          appliedStarFilter(key)
+          searchStar(key)
         }
       }
       setHotelsList(collectedHotels)
-    } else {
-      setHotelsList(initialDB)
-    }
+    } 
+  } 
+
+  const handlerAppliedPrice = ({priceMin, priceMax}) => {
   }
+
+  // const handlerAppliedStar = (starList) => {
+
+
+  //     setHotelsList(initialDB)
+  //   }
+  // }
 
   const handlerAppliedSort = () => {
 
@@ -138,8 +129,7 @@ const Hotels = () => {
         <div className='hotels_settings'>
           <SortSetting hAppliedSort={handlerAppliedSort}/>
           <FilterSetting 
-            hAppliedPrice={handlerAppliedPrice} 
-            hAppliedStar={handlerAppliedStar}/>
+            hAppliedFilter={handlerAppliedFilter}/>
         </div>
         <div className='hotels_list'> 
         {hotelsList.length ? hotelsList.map((item) => (

@@ -1,9 +1,11 @@
-import { useEffect } from 'react'
-import {useState} from 'react'
+import { useEffect, useState } from 'react'
 
-const FilterSetting = ({hAppliedPrice, hAppliedStar}) => {
-  const [priceMax, setPriceMax] = useState('')
-  const [priceMin, setPriceMin] = useState('')
+import MultiRangeSlider from "../components/MultiRangeSlider";
+
+
+const FilterSetting = ({hAppliedFilter}) => {
+  const [priceMax, setPriceMax] = useState(100)
+  const [priceMin, setPriceMin] = useState(0)
   const [starList, setStarList] = useState({
     five: false,
     four: false,
@@ -11,12 +13,6 @@ const FilterSetting = ({hAppliedPrice, hAppliedStar}) => {
     two: false})
   const [filterActive, setFilterActive] = useState(false)
 
-  useEffect(() => {
-    hAppliedPrice({priceMin, priceMax})
-  }, [priceMin, priceMax])
-
-  
-  
   const handlerFilter = () => {
     if (filterActive) {
       setFilterActive(false)
@@ -28,15 +24,14 @@ const FilterSetting = ({hAppliedPrice, hAppliedStar}) => {
   }
 
   const handlerReset = () => {
-    setPriceMax('')
-    setPriceMin('')
+    setPriceMax(0)
+    setPriceMin(0)
   }
 
   const handlerCheckbox = (e) => {
     const newList = starList
     newList[e.target.value] = e.target.checked 
     setStarList(newList)
-    hAppliedStar(starList)
   }
 
   return (
@@ -53,20 +48,14 @@ const FilterSetting = ({hAppliedPrice, hAppliedStar}) => {
           </div>
           <div className='priseS'>
             <p>Price</p>
-            <div className='DF_JS_AC'>
-              <input 
-                onChange={e => setPriceMin(e.target.value)}
-                type='number'
-                placeholder='Of'
-                value={priceMin}
-                className='graySearch marginRight'/>
-              <input
-                onChange={e => setPriceMax(e.target.value)}
-                type='number'
-                placeholder='To'
-                value={priceMax}
-                className='graySearch marginLeft'/>
-            </div>
+            <MultiRangeSlider
+              min={0}
+              max={100}
+              onChange={({ min, max }) => {
+                setPriceMax(max)
+                setPriceMin(min)
+              }}
+            />
           </div>
           <p className='paragraph'>Property class</p>
           <div className='starProperty'>
@@ -121,7 +110,10 @@ const FilterSetting = ({hAppliedPrice, hAppliedStar}) => {
               value="two"/>
           </div>
           <button 
-            onClick={handlerFilter} 
+            onClick={() => {
+              handlerFilter()
+              hAppliedFilter({priceMax, priceMin, starList})
+            }} 
             className='applySettings'>Apply</button>
         </div>
       </div>
