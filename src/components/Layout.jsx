@@ -28,7 +28,7 @@ const Layout = () => {
                 <div>
                   <img className='menu' alt='menu-profile' src='../image/svg/menu.svg'/>
                 </div>
-                  <img alt='profile' src='../image/Ellipse 16.png'/>
+                  <img className='profile_photo_Size24' alt='profile' src='../image/photo_ava.svg'/>
               </div>
             </Link>   :
             <Link to='/signin'>

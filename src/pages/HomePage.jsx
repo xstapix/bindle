@@ -188,7 +188,7 @@ const HomePage = () => {
         <div className='recommended'>
           <section>
             <img className='plug_hotel' alt='hotel' src='./image/Image.png'/>
-            <p className='hotel_rating'>
+            <p className='hotel_rating margin-10_0_0'>
               <img className='start_rating' alt='star' src='./image/svg/Star 5.svg'/>
               4.60 (280)</p>
             <h1 className='hotel_name'>Luxury 3 Bedroom Apartment at Epicentrum</h1>
@@ -197,7 +197,7 @@ const HomePage = () => {
           </section>
           <section>
             <img className='plug_hotel' alt='hotel' src='./image/Image.png'/>
-            <p className='hotel_rating'>
+            <p className='hotel_rating margin-10_0_0'>
               <img className='start_rating' alt='star' src='./image/svg/Star 5.svg'/>
               4.60 (280)</p>
             <h1 className='hotel_name'>Luxury 3 Bedroom Apartment at Epicentrum</h1>

@@ -1,7 +1,7 @@
 import './Hotels.sass'
 
 import { useParams, Link } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 import DB from '../exampleHotels.json'
 import SortSetting from '../components/SortSetting'
@@ -9,12 +9,9 @@ import FilterSetting from '../components/FilterSetting'
 import CalendarComponent from '../components/Calendar'
 import Guest from '../components/Guest'
 
-import {useAuth} from '../hook/useAuth'
-
 
 const Hotels = () => {
   const {localSearch} = useParams()
-	const {id} = useAuth()
   const initialDB = DB.data.body.searchResults.results
   const [hotelsList, setHotelsList] = useState(initialDB)
   const [searchInput, setSearchInput] = useState(localSearch)
@@ -58,32 +55,27 @@ const Hotels = () => {
   
   const handlerAppliedFilter = ({priceMin, priceMax, starList}) => {
     let collectedHotels = []
-  
-    if (priceMax === 0 & priceMin === 0) {
-      console.log('return initialDB');
-      setHotelsList(initialDB)
-    } else {
-      const newList = initialDB.filter(item => 
-        (item.ratePlan.price.exactCurrent >= priceMin) & 
-        (item.ratePlan.price.exactCurrent <= priceMax))
-        setHotelsList(newList)
-    }
+    const List = initialDB.filter(item => 
+      (item.ratePlan.price.exactCurrent >= priceMin) & 
+      (item.ratePlan.price.exactCurrent <= priceMax))
+    
+    // setHotelsList(newList)
     
     const searchStar = (key) => {
       if (key === 'five') {
-        const newList = hotelsList.filter(item => item.starRating === 5)
+        const newList = List.filter(item => item.starRating === 5)
         collectedHotels = collectedHotels.concat(newList)
       }
       if (key === 'four') {
-        const newList = hotelsList.filter(item => item.starRating === 4)
+        const newList = List.filter(item => item.starRating === 4)
         collectedHotels = collectedHotels.concat(newList)
       }
       if (key === 'three') {
-        const newList = hotelsList.filter(item => item.starRating === 3)
+        const newList = List.filter(item => item.starRating === 3)
         collectedHotels = collectedHotels.concat(newList)
       }
       if (key === 'two') {
-        const newList = hotelsList.filter(item => item.starRating === 2)
+        const newList = List.filter(item => item.starRating === 2)
         collectedHotels = collectedHotels.concat(newList)
       }
     }
@@ -95,18 +87,9 @@ const Hotels = () => {
         }
       }
       setHotelsList(collectedHotels)
-    } 
+    } else setHotelsList(List)
+
   } 
-
-  const handlerAppliedPrice = ({priceMin, priceMax}) => {
-  }
-
-  // const handlerAppliedStar = (starList) => {
-
-
-  //     setHotelsList(initialDB)
-  //   }
-  // }
 
   const handlerAppliedSort = () => {
 
@@ -145,7 +128,7 @@ const Hotels = () => {
                 <p className='hotel_local'>{item.address.streetAddress} | {item.address.locality} </p>
                 <div className='hotel_booking'>
                   <h1 className='hotel_price'>{item.ratePlan.price.current} / night</h1>
-                  <button className='bookNow'>Book Now</button>
+                  <button className='bookNow'>Show Now</button>
                 </div>
               </div>
             </section>

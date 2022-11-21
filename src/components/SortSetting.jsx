@@ -23,11 +23,11 @@ const SortSetting = (hAppliedSort) => {
             <img onClick={handlerSort} className='arrowLeft' alt='black' src='../image/svg/close.svg'/>
             <p className='filterS_name sortMargin'>Sort By</p>
             <div className='starProperty'>
-              <label htmlFor='LowtoHight'>Prise: Low to Hight</label>
+              <label htmlFor='LowtoHight'>Price: Low to Hight</label>
               <input className='custom_checkbox' type="radio" id="LowtoHight"/>
             </div>
             <div className='starProperty'>
-              <label htmlFor='HighttoLow'>Prise: Hight to Low</label>
+              <label htmlFor='HighttoLow'>Price: Hight to Low</label>
               <input className='custom_checkbox' type="radio" id="HighttoLow"/>
             </div>
             <div className='starProperty'>

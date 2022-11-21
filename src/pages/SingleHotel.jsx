@@ -98,11 +98,11 @@ const SingleHotel = () => {
     const currentTouch = e.touches[0].clientX
     const diff = touchDown - currentTouch
 
-    if (diff > 5) {
+    if (diff > 7) {
 			setOffset(offset - window.screen.width)
     }
 
-    if (diff < -5) {
+    if (diff < -7) {
 			if (offset !== 0) {
 				setOffset(offset + window.screen.width)
 			}
@@ -185,23 +185,8 @@ const SingleHotel = () => {
 					</p>
 					))}
 				</div>
-				<div className='containerMargin'>
-				{HotelData.data.body.roomsAndRates.rooms.map(item => (
-					<div className="hotelRoom" key={item.name}>
-						<p className='room_name'>{item.name}</p>
-						<p className='room_info'>Occupancy: <span>{item.maxOccupancy.total}</span></p>
-						<p className='room_info margin-0_0_7'>Bed Choices:
-						{item.bedChoices.mainOptions.map(bed => (
-							<span key={bed}> {bed}</span>
-						))}
-						</p>
-						{item.additionalInfo.details.amenities.slice(0, 5).map(amenit => (
-							<p className='room_amenit' key={amenit}>{amenit}</p>
-						))}
-						<button className='roomBookNow'>Book Now</button>
-					</div>
-				))}
-				</div>
+				{/* <div className='containerMargin'>
+				</div> */}
 				<div className='containerMargin'>
 					<div className='atAGlance '>
 						<div onClick={() => handleAtAGlance('moreOrder')} id='moreOrder' className="DF_JS_AC">
