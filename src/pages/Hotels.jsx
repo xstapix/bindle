@@ -1,6 +1,6 @@
 import './Hotels.sass'
 
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
 import DB from '../exampleHotels.json'
@@ -8,18 +8,16 @@ import SortSetting from '../components/SortSetting'
 import FilterSetting from '../components/FilterSetting'
 import CalendarComponent from '../components/Calendar'
 import Guest from '../components/Guest'
+import {useAuth} from '../hook/useAuth'
 
 
 const Hotels = () => {
   const {localSearch} = useParams()
 	const {id} = useAuth()
+  const navigate = useNavigate()
   const initialDB = DB.data.body.searchResults.results
   const [hotelsList, setHotelsList] = useState(initialDB)
   const [searchInput, setSearchInput] = useState(localSearch)
-
-  useEffect(() => {
-    console.log(hotelsList)
-  }, [hotelsList])
 
   document.title = `Bindle | Hotels in ${localSearch}`
 
@@ -63,7 +61,7 @@ const Hotels = () => {
       (item.ratePlan.price.exactCurrent >= priceMin) & 
       (item.ratePlan.price.exactCurrent <= priceMax))
     
-    // setHotelsList(newList)
+    setHotelsList(List)
     
     const searchStar = (key) => {
       if (key === 'five') {
@@ -94,17 +92,32 @@ const Hotels = () => {
     } 
   } 
 
-  const handlerAppliedPrice = ({priceMin, priceMax}) => {
+  const handlerAppliedSort = (sortList) => {
+    let newList
+
+    for (const key in sortList) {
+      if(sortList[key]) {
+        switch (key) {
+          case 'LH':
+            newList = hotelsList.sort((a, b) => a.ratePlan.price.exactCurrent - b.ratePlan.price.exactCurrent)
+            break;
+          case 'HL':
+            newList = hotelsList.sort((a, b) => b.ratePlan.price.exactCurrent - a.ratePlan.price.exactCurrent)
+            break;
+          case 'D':
+            newList = hotelsList.sort((a, b) => b.starRating - a.starRating)
+            break;
+          case 'U':
+            newList = hotelsList.sort((a, b) => a.starRating - b.starRating)
+            break;
+        
+          default:
+            break;
+        }
+      }
+    }
+    setHotelsList([...newList])
   }
-
-  // const handlerAppliedStar = (starList) => {
-
-
-  //     setHotelsList(initialDB)
-  //   }
-  // }
-
-  const handlerAppliedSort = () => {}
 
   const handlerSearch = () => {
     navigate(`/${searchInput}`)

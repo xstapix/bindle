@@ -42,12 +42,6 @@ const SortSetting = ({hAppliedSort}) => {
           <div className='container'>
             <p className='filterS_name sortMargin'>Sort By</p>
             <div className='starProperty'>
-              <label htmlFor='LowtoHight'>Price: Low to Hight</label>
-              <input className='custom_checkbox' type="radio" id="LowtoHight"/>
-            </div>
-            <div className='starProperty'>
-              <label htmlFor='HighttoLow'>Price: Hight to Low</label>
-              <input className='custom_checkbox' type="radio" id="HighttoLow"/>
               <p>Prise: Low to Hight</p>
               <input 
                 onClick={handleCheckbox} 

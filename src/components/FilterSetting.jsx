@@ -24,11 +24,6 @@ const FilterSetting = ({hAppliedFilter}) => {
     }
   }
 
-  const handlerReset = () => {
-    setPriceMax(0)
-    setPriceMin(100)
-  }
-
   const handlerCheckbox = (e) => {
     const newList = starList
     newList[e.target.value] = e.target.checked 
