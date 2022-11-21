@@ -1,8 +1,14 @@
 import React from 'react'
 import { useState } from 'react'
 
-const SortSetting = (hAppliedSort) => {
+const SortSetting = ({hAppliedSort}) => {
   const [sortActive, setSortActive] = useState(false)
+  const [sortList, setSortList] = useState({
+    LH: false,
+    HL: false,
+    D: false,
+    U: false
+  })
 
   const handlerSort = () => {
     if (sortActive) {
@@ -13,6 +19,20 @@ const SortSetting = (hAppliedSort) => {
       document.body.style.overflow = 'hidden'
     }
   }
+
+  const handleCheckbox = (e) => {
+    const newList = sortList
+
+    for (const key in sortList) {
+      if(key !== e.target.id) {
+        document.getElementById(`${key}`).checked = false;
+        newList[key] = false
+      } else newList[key] = true
+    }
+
+    setSortList(newList);
+  }
+
   return (
     <>
       <img onClick={handlerSort} className='setting' alt='sort' src='../image/svg/sort.svg'/>
@@ -20,7 +40,6 @@ const SortSetting = (hAppliedSort) => {
         <div onClick={handlerSort} className='settingBackground'></div>
         <div className='sortS'>
           <div className='container'>
-            <img onClick={handlerSort} className='arrowLeft' alt='black' src='../image/svg/close.svg'/>
             <p className='filterS_name sortMargin'>Sort By</p>
             <div className='starProperty'>
               <label htmlFor='LowtoHight'>Price: Low to Hight</label>
@@ -29,19 +48,46 @@ const SortSetting = (hAppliedSort) => {
             <div className='starProperty'>
               <label htmlFor='HighttoLow'>Price: Hight to Low</label>
               <input className='custom_checkbox' type="radio" id="HighttoLow"/>
+              <p>Prise: Low to Hight</p>
+              <input 
+                onClick={handleCheckbox} 
+                className='custom_checkbox' 
+                type="checkbox" 
+                value="LH"
+                id='LH'/>
             </div>
             <div className='starProperty'>
-              <label htmlFor='down'>Property class: down</label>
-              <input className='custom_checkbox' type="radio" id="down"/>
+              <p>Prise: Hight to Low</p>
+              <input 
+                onClick={handleCheckbox} 
+                className='custom_checkbox' 
+                type="checkbox" 
+                value="HL"
+                id='HL'/>
             </div>
             <div className='starProperty'>
-              <label htmlFor='up'>Property class: up</label>
-              <input className='custom_checkbox' type="radio" id="up"/>
+              <p>Stars: highest first</p>
+              <input 
+                onClick={handleCheckbox} 
+                className='custom_checkbox' 
+                type="checkbox" 
+                value="D"
+                id='D'/>
+            </div>
+            <div className='starProperty'>
+              <p>Stars: lowest first</p>
+              <input
+                onClick={handleCheckbox} 
+                className='custom_checkbox' 
+                type="checkbox" 
+                value="U"
+                id='U'/>
             </div>
             <button 
               onClick={() => {
                 handlerSort()
-                hAppliedSort()}}
+                hAppliedSort(sortList)
+              }}
               className='applySettings'>Apply</button>
           </div>
         </div>
