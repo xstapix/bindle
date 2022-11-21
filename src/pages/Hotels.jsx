@@ -1,6 +1,6 @@
 import './Hotels.sass'
 
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
 import DB from '../exampleHotels.json'
@@ -15,11 +15,16 @@ import {useAuth} from '../hook/useAuth'
 const Hotels = () => {
   const {localSearch} = useParams()
 	const {id} = useAuth()
+  const navigate = useNavigate()
+
   const initialDB = DB.data.body.searchResults.results
   const [hotelsList, setHotelsList] = useState(initialDB)
   const [searchInput, setSearchInput] = useState(localSearch)
 
-  
+  useEffect(() => {
+    console.log(hotelsList)
+  }, [hotelsList])
+
   document.title = `Bindle | Hotels in ${localSearch}`
 
   // const [DB, setDB] = useState()
@@ -96,20 +101,42 @@ const Hotels = () => {
       }
       setHotelsList(collectedHotels)
     } 
-  } 
-
-  const handlerAppliedPrice = ({priceMin, priceMax}) => {
   }
 
-  // const handlerAppliedStar = (starList) => {
+  const handlerAppliedSort = (sortList) => {
+    let newList
+    for (const key in sortList) {
+      if(sortList[key]) {
+        switch (key) {
+          case 'LH':
+            newList = hotelsList.sort((a,b) => a.ratePlan.price.exactCurrent - b.ratePlan.price.exactCurrent)
+            setHotelsList([...newList]);
+            
+            break;
+          case 'HL':
+            newList = hotelsList.sort((a,b) => b.ratePlan.price.exactCurrent - a.ratePlan.price.exactCurrent)
+            setHotelsList([...newList])
+            break;
 
+          case 'D':
+            newList = hotelsList.sort((a,b) => b.starRating - a.starRating)
+            setHotelsList([...newList])
+            break;
 
-  //     setHotelsList(initialDB)
-  //   }
-  // }
+          case 'U':
+            newList = hotelsList.sort((a,b) => a.starRating - b.starRating)
+            setHotelsList([...newList])
+            break;
+        
+          default:
+            break;
+        }
+      }
+    }
+  }
 
-  const handlerAppliedSort = () => {
-
+  const handlerSearch = () => {
+    navigate(`/${searchInput}`)
   }
 
   return (
@@ -118,7 +145,7 @@ const Hotels = () => {
         <form className='hotels_search'>
           <img alt='search' src='../image/svg/search.svg'/>
           <input 
-          className='color-304659'
+            className='w-100 color-304659'
             onChange={(e) => setSearchInput(e.target.value)} 
             type='text' 
             placeholder='Where are you going?' 
@@ -126,13 +153,19 @@ const Hotels = () => {
         </form>
         <CalendarComponent/>
         <Guest/>
+        <button 
+          onClick={handlerSearch}
+          className='margin-24_0_0 lh-16 color-ffffff fz-13 BG-3A6AD5 br_radius-14 br_radius-284 br-none fw-Reg width-100 padding-15'>
+            Search
+        </button>
         <div className='hotels_settings'>
-          <SortSetting hAppliedSort={handlerAppliedSort}/>
+          <SortSetting 
+            hAppliedSort={handlerAppliedSort}/>
           <FilterSetting 
             hAppliedFilter={handlerAppliedFilter}/>
         </div>
         <div className='hotels_list'> 
-        {hotelsList.length ? hotelsList.map((item) => (
+        {hotelsList ? hotelsList.map((item) => (
           <Link to={`/${localSearch}/${item.id}`}>
             <section key={item.id}>
               <img className='plug_hotel singleItemInList' alt='hotel' src={item.thumbnailUrl}/>

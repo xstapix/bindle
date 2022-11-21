@@ -10,7 +10,8 @@ const FilterSetting = ({hAppliedFilter}) => {
     five: false,
     four: false,
     three: false,
-    two: false})
+    two: false
+  })
   const [filterActive, setFilterActive] = useState(false)
 
   const handlerFilter = () => {
@@ -25,7 +26,7 @@ const FilterSetting = ({hAppliedFilter}) => {
 
   const handlerReset = () => {
     setPriceMax(0)
-    setPriceMin(0)
+    setPriceMin(100)
   }
 
   const handlerCheckbox = (e) => {
@@ -41,11 +42,7 @@ const FilterSetting = ({hAppliedFilter}) => {
       <div onClick={handlerFilter} className='settingBackground'></div>
       <div className='filterS'>
         <div className='container'>
-          <div className='filter_header'>
-            <img onClick={handlerFilter} alt='black' src='../image/svg/close.svg'/>
-            <p className='filterS_name'>Filter</p>
-            <p className='filter_reset' onClick={handlerReset}>Reset</p>
-          </div>
+          <p className='filterS_name'>Filter</p>
           <div className='priseS'>
             <p>Price</p>
             <MultiRangeSlider
