@@ -19,25 +19,59 @@ const HomePage = () => {
   return (
     <>
       <div className='background'></div>
+      <div className='hello_gallary'>
+        <div className='hello_gallary-container'>
+          <div className="hello_gallary-position">
+            <div>
+              <div className="first"></div>
+              <div className="second"></div>
+            </div>
+            <div className="three"></div>
+          </div>
+        </div>
+      </div>
       <div className='hello'>
         <div className='container'>
-          <h1>Discover New Destination</h1>
-          <p className='fz-16 fw-Reg lh-24 color-fff TA_C margin-0_0_24'>This modern trend looks nice and all, but we fell into the same trap again.</p>
-          <input 
-            onChange={e => setSearchInput(e.target.value)}
-            type="text"
-            value={searchInput}
-            placeholder='Where are you going?' 
-            className='hello-search'
-            id='searchInput'/>
-          
-          <CalendarComponent/>
-          <Guest/>
-          <button 
-            onClick={handlerSearch}
-            className='margin-24_0_0 lh-16 color-ffffff fz-13 BG-3A6AD5 br_radius-14 br_radius-284 br-none fw-Reg width-100 padding-15'>
-              Search
-          </button>
+          <div className="block-408">
+            <h1>Discover New Destination</h1>
+            <p className='little_text'>This modern trend looks nice and all, but we fell into the same trap again.</p>
+          </div>
+          <div className="search_desk">
+            <div>
+              <p className='location'>Location</p>
+              <input 
+                onChange={e => setSearchInput(e.target.value)}
+                type="text"
+                value={searchInput}
+                placeholder='Your destination?' 
+                className='hello-search'/>
+            </div>
+            
+            <CalendarComponent/>
+            <Guest/>
+            <button 
+              onClick={handlerSearch}
+              className='button_search_desk'>
+                Explore Now
+            </button>
+          </div>
+          <div className="search_mobil">
+            <input 
+              onChange={e => setSearchInput(e.target.value)}
+              type="text"
+              value={searchInput}
+              placeholder='Where are you going?' 
+              className='hello-search'
+              id='searchInput'/>
+            
+            <CalendarComponent/>
+            <Guest/>
+            <button 
+              onClick={handlerSearch}
+              className='margin-24_0_0 lh-16 color-ffffff fz-13 BG-3A6AD5 br_radius-14 br_radius-284 br-none fw-Reg width-100 padding-15'>
+                Search
+            </button>
+          </div>
         </div>
       </div>
       <main>

@@ -1,110 +1,128 @@
 $fontBold: 700
 $fontRegular: 400
 $fontSizeHeaders: 40px
+
+.calendar_mobil
+  display: none
+
+.calendar_desk
+  cursor: pointer
+
+.date_text-desk
+  margin: 0 8px 4px 0
+  font-weight: $fontRegular
+  font-size: 20px
+  line-height: 24px
+  color: #304659
   
 @media (max-width: 428px) 
-  .graySearch
-    width: 100%
-    padding: 10px 12px
-    margin: 5px 0 0
-    background: #F9FAFC
-    border: 1px solid #C1C4D6
-    box-shadow: 0px 4.82171px 5.62532px rgba(67, 83, 138, 0.06)
-    text-align: center
-    font-weight: $fontRegular
-    font-size: 13px
-    line-height: 14px
+  .calendar_mobil
+    display: block
+  .calendar_desk
+    display: none
 
-  .date-search
-    width: 100%
-    height: 34px
-    padding: 10px 12px
-    margin: 5px 0 0
-    box-shadow: 0px 4.82171px 5.62532px rgba(67, 83, 138, 0.06)
-    border: none
-    background-color: #fff
-    text-align: center
-    font-weight: $fontRegular
-    font-size: 13px
-    line-height: 14px
+.graySearch
+  width: 100%
+  padding: 10px 12px
+  margin: 5px 0 0
+  background: #F9FAFC
+  border: 1px solid #C1C4D6
+  box-shadow: 0px 4.82171px 5.62532px rgba(67, 83, 138, 0.06)
+  text-align: center
+  font-weight: $fontRegular
+  font-size: 13px
+  line-height: 14px
 
-  .color-757575
-    color: #757575
+.date-search
+  width: 100%
+  height: 34px
+  padding: 10px 12px
+  margin: 5px 0 0
+  box-shadow: 0px 4.82171px 5.62532px rgba(67, 83, 138, 0.06)
+  border: none
+  background-color: #fff
+  text-align: center
+  font-weight: $fontRegular
+  font-size: 13px
+  line-height: 14px
 
-  .rotate90SVG
-    transform: rotate(90deg)
+.color-757575
+  color: #757575
 
-  .rotate270SVG
-    transform: rotate(270deg)
+.rotate90SVG
+  transform: rotate(90deg)
 
-  .react-calendar__navigation
-    display: flex
-    margin: 0 0 24px
-    border: none
-    background-color: #fff
+.rotate270SVG
+  transform: rotate(270deg)
 
-  .react-calendar__navigation__label
-    border: none
-    background-color: #fff
-    font-weight: $fontBold
-    font-size: 17px
-    line-height: 24px
-    color: #304659
+.react-calendar__navigation
+  display: flex
+  margin: 0 0 24px
+  border: none
+  background-color: #fff
 
-  .react-calendar__navigation__arrow
-    width: 34px
-    height: 34px
-    font-size: 15px
-    border: none
-    background-color: #fff
+.react-calendar__navigation__label
+  border: none
+  background-color: #fff
+  font-weight: $fontBold
+  font-size: 17px
+  line-height: 24px
+  color: #304659
 
-  .react-calendar__month-view__weekdays
-    margin: 0 0 15px
-    text-align: center
-    font-weight: $fontRegular
-    font-size: 15px
-    line-height: 24px
-    color: #304659
+.react-calendar__navigation__arrow
+  width: 34px
+  height: 34px
+  font-size: 15px
+  border: none
+  background-color: #fff
 
-  .react-calendar__tile
-    height: 28px
-    margin: 0 0 19px
-    border: none
-    background-color: #fff
-    font-weight: $fontRegular
-    font-size: 15px
-    line-height: 24px
-    color: #304659
+.react-calendar__month-view__weekdays
+  margin: 0 0 15px
+  text-align: center
+  font-weight: $fontRegular
+  font-size: 15px
+  line-height: 24px
+  color: #304659
 
-  .react-calendar__tile--active
-    width: 28px
-    background-color: #3A6AD5
-    color: #fff
-    border-radius: 0
+.react-calendar__tile
+  height: 28px
+  margin: 0 0 19px
+  border: none
+  background-color: #fff
+  font-weight: $fontRegular
+  font-size: 15px
+  line-height: 24px
+  color: #304659
 
-  .react-calendar__month-view__days__day--neighboringMonth
-    color: #BDBDBD
+.react-calendar__tile--active
+  width: 28px
+  background-color: #3A6AD5
+  color: #fff
+  border-radius: 0
 
-  .DF_JA_AC
-    display: flex
-    justify-content: space-around
-    align-items: center
+.react-calendar__month-view__days__day--neighboringMonth
+  color: #BDBDBD
 
-  .calendarButton
-    padding: 12px 34px
-    background: #3A6AD5
-    border: none
-    border-radius: 2.84px
-    font-weight: $fontBold
-    font-size: 14px
-    line-height: 16px
-    color: #fff
+.DF_JA_AC
+  display: flex
+  justify-content: space-around
+  align-items: center
 
-  .canselButton
-    padding: 12px 34px
-    background: #fff
-    border: none
-    font-weight: $fontBold
-    font-size: 14px
-    line-height: 16px
-    color: #696F8C
+.calendarButton
+  padding: 12px 34px
+  background: #3A6AD5
+  border: none
+  border-radius: 2.84px
+  font-weight: $fontBold
+  font-size: 14px
+  line-height: 16px
+  color: #fff
+
+.canselButton
+  padding: 12px 34px
+  background: #fff
+  border: none
+  font-weight: $fontBold
+  font-size: 14px
+  line-height: 16px
+  color: #696F8C

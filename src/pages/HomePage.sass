@@ -2,9 +2,107 @@ $fontBold: 700
 $fontRegular: 400
 $fontSizeHeaders: 40px
 
+.hello
+  position: absolute
+  top: 23vh
+  margin: auto
+  width: 100%
+  
+.hello h1
+  font-size: 64px
+  font-weight: 700
+  line-height: 72px
+  color: #FFFFFF
+  margin: 0 0 31px
+
+.hello_gallary
+  position: absolute
+  top: 15vh
+  width: 100%
+
+.hello_gallary-container
+  position: relative
+  max-width: 1300px
+  margin: 0 auto
+
+.hello_gallary-position
+  display: flex
+  position: absolute
+  right: 0
+  padding: 0 24px
+
+.first
+  width: 381px
+  height: 197px
+  background: url('../image/gallery/Rectangle-2.png')
+  background-size: cover
+
+.second
+  width: 381px
+  height: 307px
+  margin: 32px 0 0 
+  background: url('../image/gallery/Rectangle.png')
+  background-size: cover
+
+.three
+  width: 325px
+  height: 518px
+  margin: 52px 0 0 32px
+  background: url('../image/gallery/Rectangle-1.png')
+  background-size: cover
+
+.block-408
+  width: 408px
+
+.little_text
+  font-weight: $fontRegular
+  font-size: 18px
+  line-height: 24px
+
+  color: #FFFFFF
+
+.search_mobil
+  display: none
+
+.search_desk
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: space-between
+  max-width: 774px
+  padding: 15px 16px 15px 28px
+  margin: 32px 0 0
+  background-color: #ffff
+  box-shadow: 0px 12px 14px rgba(67, 83, 138, 0.06)
+  border-radius: 30px
+
+.button_search_desk
+  background: #3A6AD5
+  border-radius: 16px
+  border: none
+  padding: 24px 32px
+  font-weight: $fontBold
+  font-size: 18px
+  line-height: 24px
+  color: #ffff
+
+.location
+  font-weight: $fontRegular
+  font-size: 20px
+  line-height: 24px
+  color: #304659
+  margin: 0 0 8px
+
+
 @media (max-width: 428px) 
   .list-stays::-webkit-scrollbar, .more_travel::-webkit-scrollbar, .gallery::-webkit-scrollbar, .recommended::-webkit-scrollbar, .amenityBody::-webkit-scrollbar
     width: 0
+
+  .block-408
+    width: 100%
+
+  .hello_gallary
+    display: none
 
   .container
     padding: 31px 28px
@@ -29,16 +127,13 @@ $fontSizeHeaders: 40px
     text-align: center
     margin: 0 0 24px
 
-  .fz-16
+  .little_text
     font-size: 16px
-  .fw-Reg
     font-weight: $fontRegular
-  .lh-24
     line-height: 24px
-  .color-fff
     color: #FFFFFF
-  .TA_C
     text-align: center
+    margin: 0 0 24px
 
   .hello-search
     width: 100%
@@ -50,6 +145,11 @@ $fontSizeHeaders: 40px
     background-repeat: no-repeat
     background-size: 15px
     background-position: 12px 14px
+
+  .search_mobil
+    display: block
+  .search_desk
+    display: none
 
   .marginRight
     border-radius: 12.0543px 0 0 12.0543px
