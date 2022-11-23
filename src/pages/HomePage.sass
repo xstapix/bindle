@@ -93,6 +93,62 @@ $fontSizeHeaders: 40px
   color: #304659
   margin: 0 0 8px
 
+.table_of_contents
+  margin: 72px 0 8px
+  font-weight: $fontBold
+  font-size: 40px
+  line-height: 48px
+  color: #304659
+
+.list-stays
+  max-width: 1300px
+  margin: 54px auto 0 !important
+  padding: 10px 24px
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  grid-gap: 24px
+  margin: 10px 0 40px 31px
+
+.list-stays a
+  width: 312px
+
+.list-stays section
+  width: 312px
+  display: inline-flex
+  align-items: center
+  background: #F9FAFC
+  border: 0.711017px solid #C1C4D6
+  border-radius: 14.2203px
+  padding: 11px 0 11px 21px
+
+.plug
+  width: 96px
+  height: 96px
+
+.place-text
+  margin: 0 0 0 16px
+
+.place-text h1
+  font-size: 32px
+  font-weight: $fontBold
+  line-height: 40px
+  color: #304659
+
+.place-text p
+  font-weight: $fontRegular
+  font-size: 18px
+  line-height: 24px
+  color: #696F8C
+
+.more_travel, .recommended, .gallery
+  display: flex
+  max-width: 1300px
+  margin: 0 auto
+  padding: 10px 24px
+
+.more_travel section
+  margin: 0 24px 0 0
+  text-align: center
 
 @media (max-width: 428px) 
   .list-stays::-webkit-scrollbar, .more_travel::-webkit-scrollbar, .gallery::-webkit-scrollbar, .recommended::-webkit-scrollbar, .amenityBody::-webkit-scrollbar
@@ -164,11 +220,9 @@ $fontSizeHeaders: 40px
 
   .borderR-12
     border-radius: 12.0543px
-
-  main
-    margin: 40px 0 0
     
   .table_of_contents
+    margin: 0
     font-size: 20px  
     line-height: 24px
     color: #304659
@@ -179,11 +233,15 @@ $fontSizeHeaders: 40px
     color: #696F8C
 
   .list-stays
+    margin: 0 !important
     display: grid
     grid-template-columns: 1fr 1fr 1fr
     grid-gap: 24px
     overflow: scroll
     margin: 10px 0 40px 31px
+
+  .list-stays a
+    width: 222px
 
   .list-stays section
     width: 222px
@@ -198,6 +256,9 @@ $fontSizeHeaders: 40px
     width: 68px
     height: 68px
     margin: 0 11px 0 0
+
+  .place-text
+    margin: 0
   
   .place-text h1
     font-size: 20px
@@ -211,9 +272,7 @@ $fontSizeHeaders: 40px
     color: #696F8C
 
   .more_travel, .recommended, .gallery
-    display: flex
     overflow: scroll
-    margin: 10px 0 40px 31px
 
   .more_travel section
     margin: 0 24px 0 0

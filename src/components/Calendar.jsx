@@ -20,11 +20,10 @@ const CalendarComponent = () => {
   const handlerCalendar = () => {
     if (calendarActive) {
       setCalendarActive(false)
-      document.body.style.overflow = 'visible'
+      // document.body.style.overflow = 'visible'
     } else {
-      
       setCalendarActive(true)
-      document.body.style.overflow = 'hidden'
+      // document.body.style.overflow = 'hidden'
     }
     dispatch(setData({
       checkIn: value[0].toLocaleDateString(),
@@ -42,6 +41,19 @@ const CalendarComponent = () => {
           </svg>
         </div>
         <div className='color-696F8C'>When does it start?</div>
+        <div className={calendarActive ? 'S_Active' : 'S_None'}>
+          <div className='settingBackground' onClick={handlerCalendar}>
+            <div className="filterS" onClick={(event) => event.stopPropagation()}>
+              <div className='container'>
+                <Calendar 
+                  onChange={onChange} 
+                  value={value} 
+                  locale='en' 
+                  selectRange={true}/>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div className="calendar_mobil">
         <div className='DF_JS_AC'>
@@ -58,17 +70,16 @@ const CalendarComponent = () => {
             {checkOut ? checkOut : 'Check Out'}
           </div>
         </div>
-      </div>
-      
-      <div className={calendarActive ? 'S_Active' : 'S_None'}>
-        <div className='settingBackground' onClick={handlerCalendar}>
-          <div className="filterS" onClick={(event) => event.stopPropagation()}>
-            <div className='container'>
-              <Calendar 
-                onChange={onChange} 
-                value={value} 
-                locale='en' 
-                selectRange={true}/>
+        <div className={calendarActive ? 'S_Active' : 'S_None'}>
+          <div className='settingBackground' onClick={handlerCalendar}>
+            <div className="filterS" onClick={(event) => event.stopPropagation()}>
+              <div className='container'>
+                <Calendar 
+                  onChange={onChange} 
+                  value={value} 
+                  locale='en' 
+                  selectRange={true}/>
+              </div>
             </div>
           </div>
         </div>
