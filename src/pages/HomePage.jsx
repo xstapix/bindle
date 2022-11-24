@@ -179,7 +179,7 @@ const HomePage = () => {
           <div className='tile'>
             <section style={{gridArea: 'East'}}>
               <Link to='/East Coast'>
-                <img alt='popular' src='./image/popular/Rectangle 22.png'/>
+                <img alt='popular' src='./image/popular/Image.jpg'/>
                 <div className='blure'>
                   <h1>East Coast, America</h1>
                   <p>146,786 properties</p>
@@ -188,7 +188,7 @@ const HomePage = () => {
             </section>
             <section style={{gridArea: 'Chicago'}}>
               <Link to='/Chicago'>
-                <img alt='popular' src='./image/popular/Rectangle 9.png'/>
+                <img alt='popular' src='./image/popular/Image1.jpg'/>
                 <div className='blure'>
                   <h1>Chicago, America</h1>
                   <p>146,786 properties</p>
@@ -197,7 +197,7 @@ const HomePage = () => {
             </section>
             <section style={{gridArea: 'Texas'}}>
               <Link to='/Texas'>
-                <img alt='popular' src='./image/popular/Rectangle 17.png'/>
+                <img alt='popular' src='./image/popular/Image2.jpg'/>
                 <div className='blure'>
                   <h1>Texas, America</h1>
                   <p>146,786 properties</p>
@@ -206,7 +206,7 @@ const HomePage = () => {
             </section>
             <section style={{gridArea: 'Florida'}}>
               <Link to='/Florida'>
-                <img alt='popular' src='./image/popular/Rectangle 30.png'/>
+                <img alt='popular' src='./image/popular/Image3.jpg'/>
                 <div className='blure'>
                   <h1>Florida, America</h1>
                   <p>146,786 properties</p>
@@ -220,6 +220,24 @@ const HomePage = () => {
           <p className='text'>Because you viewed vacation homes in this city</p>
         </div>
         <div className='recommended'>
+          <section>
+            <img className='plug_hotel' alt='hotel' src='./image/Image.png'/>
+            <p className='hotel_rating margin-10_0_0'>
+              <img className='start_rating' alt='star' src='./image/svg/Star 5.svg'/>
+              4.60 (280)</p>
+            <h1 className='hotel_name'>Luxury 3 Bedroom Apartment at Epicentrum</h1>
+            <p className='hotel_local'>Entire house | Florida</p>
+            <h1 className='hotel_price'>$ 350/ night</h1>
+          </section>
+          <section>
+            <img className='plug_hotel' alt='hotel' src='./image/Image.png'/>
+            <p className='hotel_rating margin-10_0_0'>
+              <img className='start_rating' alt='star' src='./image/svg/Star 5.svg'/>
+              4.60 (280)</p>
+            <h1 className='hotel_name'>Luxury 3 Bedroom Apartment at Epicentrum</h1>
+            <p className='hotel_local'>Entire house | Florida</p>
+            <h1 className='hotel_price'>$ 350/ night</h1>
+          </section>
           <section>
             <img className='plug_hotel' alt='hotel' src='./image/Image.png'/>
             <p className='hotel_rating margin-10_0_0'>
@@ -265,10 +283,10 @@ const HomePage = () => {
         <div className='container'>
           <section className='callForRegistration'>
             <h1>Get the best discounts for your family vacation.</h1>
-            <div>
-              <p><img className='check' alt='check' src='./image/svg/bi_check-circle.svg'/>Best discounts ever</p>
-              <p><img className='check' alt='check' src='./image/svg/bi_check-circle.svg'/>Free offers</p>
-              <p><img className='check' alt='check' src='./image/svg/bi_check-circle.svg'/>Fast & secure payments</p>
+            <div className='DF margin-32_0_0'>
+              <div className='checkStr'><img className='check' alt='check' src='./image/svg/bi_check-circle.svg'/><p>Best discounts ever</p></div>
+              <div className='checkStr'><img className='check' alt='check' src='./image/svg/bi_check-circle.svg'/><p>Free offers</p></div>
+              <div className='checkStr'><img className='check' alt='check' src='./image/svg/bi_check-circle.svg'/><p>Fast & secure payments</p></div>
             </div>
             <Link to='/signup'>
               <button className='signUpNow'>Sign Up Now</button>
