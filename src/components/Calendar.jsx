@@ -59,13 +59,13 @@ const CalendarComponent = () => {
         <div className='DF_JS_AC'>
           <div 
             onClick={handlerCalendar} 
-            className={ pathname === `/${localSearch}` ? 'graySearch color-304659 marginRight' : 'date-search color-757575 marginRight'}
+            className={ localSearch ? 'graySearch color-304659 marginRight' : 'date-search color-757575 marginRight'}
             id='searchInput'>
             {checkIn ? checkIn : 'Check In'}
           </div>
           <div 
             onClick={handlerCalendar} 
-            className={ pathname === `/${localSearch}` ? 'graySearch color-304659 marginLeft' : 'date-search color-757575 marginLeft'}
+            className={ localSearch ? 'graySearch color-304659 marginLeft' : 'date-search color-757575 marginLeft'}
             id='searchInput'>
             {checkOut ? checkOut : 'Check Out'}
           </div>
@@ -79,6 +79,9 @@ const CalendarComponent = () => {
                   value={value} 
                   locale='en' 
                   selectRange={true}/>
+                  <button 
+                    onClick={() => handlerCalendar()}
+                    className='applySettings'>Apply</button>
               </div>
             </div>
           </div>

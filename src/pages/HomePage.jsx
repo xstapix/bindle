@@ -82,7 +82,7 @@ const HomePage = () => {
         <div className='list-stays'>
           <Link to='/Florida'>
             <section>
-              <img className='plug' alt='stays' src='./image/stays/Rectangle 23.png'/>
+              <img className='plug' alt='stays' src='./image/stays/Image23.jpg'/>
               <div className='place-text'>
                 <h1>Florida</h1>
                 <p>156,786 properties</p>
@@ -91,7 +91,7 @@ const HomePage = () => {
           </Link>
           <Link to='/Texas'>
             <section> 
-              <img className='plug' alt='stays' src='./image/stays/Rectangle 25.png'/>
+              <img className='plug' alt='stays' src='./image/stays/Image25.jpg'/>
               <div className='place-text'>
                 <h1>Texas</h1>
                 <p>156,786 properties</p>
@@ -100,7 +100,7 @@ const HomePage = () => {
           </Link>
           <Link to='/Miami'>
             <section>
-              <img className='plug' alt='stays' src='./image/stays/Rectangle 26.png'/>
+              <img className='plug' alt='stays' src='./image/stays/Image26.jpg'/>
               <div className='place-text'>
                 <h1>Miami</h1>
                 <p>156,786 properties</p>
@@ -109,7 +109,7 @@ const HomePage = () => {
           </Link>
           <Link to='/Chicago'>
             <section> 
-              <img className='plug' alt='stays' src='./image/stays/Rectangle 27.png'/>
+              <img className='plug' alt='stays' src='./image/stays/Image27.jpg'/>
               <div className='place-text'>
                 <h1>Chicago</h1>
                 <p>156,786 properties</p>
@@ -118,7 +118,7 @@ const HomePage = () => {
           </Link>
           <Link to='/New York'>
             <section>
-              <img className='plug' alt='stays' src='./image/stays/Rectangle 22.png'/>
+              <img className='plug' alt='stays' src='./image/stays/Image22.jpg'/>
               <div className='place-text'>
                 <h1>New York</h1>
                 <p>156,786 properties</p>
@@ -127,7 +127,7 @@ const HomePage = () => {
           </Link>
           <Link to='/Toronto'>
             <section> 
-              <img className='plug' alt='stays' src='./image/stays/Rectangle 24.png'/>
+              <img className='plug' alt='stays' src='./image/stays/Image24.jpg'/>
               <div className='place-text'>
                 <h1>Toronto</h1>
                 <p>156,786 properties</p>

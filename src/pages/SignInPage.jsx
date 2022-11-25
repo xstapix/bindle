@@ -113,7 +113,7 @@ const SignInPage = () => {
         
         <div className='footer_line'></div>
        
-        <p className='havenotAcc'>Don’t have an account? <Link className="signup" to='/signup'>Sign up</Link></p>
+        <p className='havenotAcc'>Don’t have an account? <Link className="signup" to='/signup'>Create account</Link></p>
       </div>
     </div>
   )

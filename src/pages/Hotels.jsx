@@ -1,25 +1,19 @@
-import './Hotels.sass'
 
-import { useParams, Link, useNavigate } from 'react-router-dom'
+
+import { useParams} from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
-import DB from '../exampleHotels.json'
-import SortSetting from '../components/SortSetting'
-import FilterSetting from '../components/FilterSetting'
-import CalendarComponent from '../components/Calendar'
-import Guest from '../components/Guest'
-import {useAuth} from '../hook/useAuth'
+import HotelsDesk from '../components/HotelsDesk'
+import HotelsMobil from '../components/HotelsMobil'
 
+import DB from '../exampleHotels.json'
 
 const Hotels = () => {
   const {localSearch} = useParams()
-	const {id} = useAuth()
-  const navigate = useNavigate()
   const initialDB = DB.data.body.searchResults.results
   const [hotelsList, setHotelsList] = useState(initialDB)
-  const [searchInput, setSearchInput] = useState(localSearch)
-
-  document.title = `Bindle | Hotels in ${localSearch}`
+  
+  const screenW = window.screen.width
 
   // const [DB, setDB] = useState()
   
@@ -119,58 +113,21 @@ const Hotels = () => {
     setHotelsList([...newList])
   }
 
-  const handlerSearch = () => {
-    navigate(`/${searchInput}`)
-  }
+  document.title = `Bindle | Hotels in ${localSearch}`
 
   return (
-    <div className='hotels'>
-      <div className='container'>
-        <form className='hotels_search'>
-          <img alt='search' src='../image/svg/search.svg'/>
-          <input 
-            className='w-100 color-304659'
-            onChange={(e) => setSearchInput(e.target.value)} 
-            type='text' 
-            placeholder='Where are you going?' 
-            defaultValue={searchInput}/>
-        </form>
-        <CalendarComponent/>
-        <Guest/>
-        <button 
-          onClick={handlerSearch}
-          className='margin-24_0_0 lh-16 color-ffffff fz-13 BG-3A6AD5 br_radius-14 br_radius-284 br-none fw-Reg width-100 padding-15'>
-            Search
-        </button>
-        <div className='hotels_settings'>
-          <SortSetting 
-            hAppliedSort={handlerAppliedSort}/>
-          <FilterSetting 
-            hAppliedFilter={handlerAppliedFilter}/>
-        </div>
-        <div className='hotels_list'> 
-        {hotelsList ? hotelsList.map((item) => (
-          <Link to={`/${localSearch}/${item.id}`}>
-            <section key={item.id}>
-              <img className='plug_hotel singleItemInList' alt='hotel' src={item.thumbnailUrl}/>
-              <div className='hotel_info'>
-                <p className='hotel_rating'>
-                  <img className='start_rating' alt='star' src='../image/svg/Star 5.svg'/>
-                  {item.starRating} ({item.guestReviews.total})
-                </p>
-                <h1 className='hotel_name'>{item.name}</h1>
-                <p className='hotel_local'>{item.address.streetAddress} | {item.address.locality} </p>
-                <div className='hotel_booking'>
-                  <h1 className='hotel_price'>{item.ratePlan.price.current} / night</h1>
-                  <button className='bookNow'>Show Now</button>
-                </div>
-              </div>
-            </section>
-          </Link>
-        )) : <p className='NothingFound'>Nothing found</p>}
-        </div>
-      </div>
-    </div>
+    <>
+      {screenW > 428 ? 
+        <HotelsDesk
+          propHandlerAppliedFilter={handlerAppliedFilter}
+          propHandlerAppliedSort={handlerAppliedSort}
+          propHotelsList={hotelsList}/> : 
+        <HotelsMobil 
+          propHandlerAppliedFilter={handlerAppliedFilter}
+          propHandlerAppliedSort={handlerAppliedSort}
+          propHotelsList={hotelsList}/>
+      }
+    </>
   )
 }
 

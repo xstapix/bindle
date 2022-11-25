@@ -24,7 +24,7 @@ const Guest = () => {
       document.body.style.overflow = 'visible'
     } else {
       setGuestActive(true)
-      // document.body.style.overflow = 'hidden'
+      document.body.style.overflow = 'hidden'
     }
     dispatch(setData({
       adults: Adults,
@@ -121,18 +121,19 @@ const Guest = () => {
         <div className='DF_JS_AC'>
           <div
             onClick={handlerGuest}
-            className={ pathname === `/${localSearch}` ? 'graySearch color-304659 marginRight' : 'date-search marginRight color-757575'}
+            className={ localSearch ? 'graySearch color-304659 marginRight' : 'date-search marginRight color-757575'}
             id='searchInput'>
             {`Abults: ${Adults}`}
           </div>
           <div
             onClick={handlerGuest}
-            className={ pathname === `/${localSearch}` ? 'graySearch color-304659 margin-0_2_0' : 'date-search margin-0_2_0 color-757575'}
+            className={ localSearch ? 'graySearch color-304659 margin-0_2_0' : 'date-search margin-0_2_0 color-757575'}
             id='searchInput'>
             {`Children: ${Children}`}
-          </div><div
+          </div>
+          <div
             onClick={handlerGuest}
-            className={ pathname === `/${localSearch}` ? 'graySearch color-304659  marginLeft' : 'date-search marginLeft color-757575'}
+            className={ localSearch ? 'graySearch color-304659  marginLeft' : 'date-search marginLeft color-757575'}
             id='searchInput'>
             {`Rooms: ${Rooms}`}
           </div>
@@ -204,6 +205,10 @@ const Guest = () => {
                     </div>
                   </div>
                 </div>
+                
+                <button 
+                  onClick={() => handlerGuest()}
+                  className='applySettings'>Apply</button>
               </div>
             </div>
           </div>

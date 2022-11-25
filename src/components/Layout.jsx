@@ -30,7 +30,7 @@ const Layout = () => {
                 </div>
                   <img className='profile_photo_Size24' alt='profile' src='../image/photo_ava.svg'/>
               </div>
-            </Link>   :
+            </Link> :
             <Link to='/signin'>
               <img className='noLogin' alt='profile' src='../image/svg/noLogin.svg'/>
             </Link>}
