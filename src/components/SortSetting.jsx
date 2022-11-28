@@ -83,11 +83,16 @@ const SortSetting = ({hAppliedSort}) => {
                 value="U"
                 id='U'/>
             </div>
-            {window.screen.width >= 800 ? <></> 
+            {window.screen.width >= 800 ? 
+            <button 
+              onClick={() => {
+                hAppliedSort(sortList)
+              }} 
+              className='applySettings'>Apply</button>
             : <button 
               onClick={() => {
                 handlerSort()
-                handlerSort(sortList)
+                hAppliedSort(sortList)
               }} 
               className='applySettings'>Apply</button>
             }

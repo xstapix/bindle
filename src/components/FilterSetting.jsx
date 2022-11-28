@@ -39,9 +39,7 @@ const FilterSetting = ({hAppliedFilter}) => {
 
   return (
     <>
-    {window.screen.width >= 800 ? <></> :
     <img onClick={handlerFilter} className='setting filter' alt='filter' src='../image/svg/tune.svg'/>
-    }
     <div className={filterActive ? 'S_Active' : 'S_None'} id='filter'>
       <div onClick={handlerFilter} className='settingBackground'></div>
       <div className='filterS'>
@@ -110,8 +108,14 @@ const FilterSetting = ({hAppliedFilter}) => {
               onChange={handlerCheckbox}
               value="two"/>
           </div>
-          {window.screen.width >= 800 ? <></> 
-          : <button 
+          {window.screen.width >= 800 ? 
+          <button 
+          onClick={() => {
+            hAppliedFilter({priceMax, priceMin, starList})
+          }} 
+          className='applySettings cursorP'>Apply</button> 
+          : 
+          <button 
             onClick={() => {
               handlerFilter()
               hAppliedFilter({priceMax, priceMin, starList})

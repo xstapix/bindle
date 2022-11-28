@@ -37,8 +37,7 @@ const HomePage = () => {
             <p className='little_text'>This modern trend looks nice and all, but we fell into the same trap again.</p>
           </div>
           <div className="search_desk">
-            <div>
-              <p className='location'>Location</p>
+            <div className='DF'>
               <input 
                 onChange={e => setSearchInput(e.target.value)}
                 type="text"
@@ -46,7 +45,6 @@ const HomePage = () => {
                 placeholder='Your destination?' 
                 className='hello-search'/>
             </div>
-            
             <CalendarComponent/>
             <Guest/>
             <button 
@@ -171,7 +169,7 @@ const HomePage = () => {
         <div className='container'>
           <div className='popular'>
             <h1 className='table_of_contents'>Popular Destinations</h1>
-            <button className='explore_all'>
+            <button className='explore_all cursorP'>
               <p>Explore All</p>
               <img alt='Explore All' src='./image/svg/arrow-right.svg'/>
             </button>

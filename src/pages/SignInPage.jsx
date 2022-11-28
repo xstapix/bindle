@@ -108,7 +108,7 @@ const SignInPage = () => {
 
         {errorSignInWithEmail ? <p style={{color: '#FF5E60'}}>Incorrect credentials</p> : <></>}
         {(!passError && !emailError) ? 
-          <button className='button_signin button_signin-active' onClick={handleSignIn}>Sign In</button>
+          <button className='button_signin button_signin-active cursorP' onClick={handleSignIn}>Sign In</button>
         : <button className='button_signin button_signin-disable'>Sign In</button>}
         
         <div className='footer_line'></div>
