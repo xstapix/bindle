@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 
 import MultiRangeSlider from "../components/MultiRangeSlider";
 
+import './FilterSort.sass'
 
 const FilterSetting = ({hAppliedFilter}) => {
   const [priceMax, setPriceMax] = useState(100)
@@ -13,6 +14,12 @@ const FilterSetting = ({hAppliedFilter}) => {
     two: false
   })
   const [filterActive, setFilterActive] = useState(false)
+
+  useEffect(() => {
+    if (window.screen.width >= 800) {
+      setFilterActive(true)
+    }
+  }, []) 
 
   const handlerFilter = () => {
     if (filterActive) {
@@ -32,7 +39,9 @@ const FilterSetting = ({hAppliedFilter}) => {
 
   return (
     <>
+    {window.screen.width >= 800 ? <></> :
     <img onClick={handlerFilter} className='setting filter' alt='filter' src='../image/svg/tune.svg'/>
+    }
     <div className={filterActive ? 'S_Active' : 'S_None'} id='filter'>
       <div onClick={handlerFilter} className='settingBackground'></div>
       <div className='filterS'>
@@ -101,12 +110,14 @@ const FilterSetting = ({hAppliedFilter}) => {
               onChange={handlerCheckbox}
               value="two"/>
           </div>
-          <button 
+          {window.screen.width >= 800 ? <></> 
+          : <button 
             onClick={() => {
               handlerFilter()
               hAppliedFilter({priceMax, priceMin, starList})
             }} 
             className='applySettings'>Apply</button>
+          }
         </div>
       </div>
     </div>

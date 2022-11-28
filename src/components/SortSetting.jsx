@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const SortSetting = ({hAppliedSort}) => {
   const [sortActive, setSortActive] = useState(false)
@@ -9,6 +9,12 @@ const SortSetting = ({hAppliedSort}) => {
     D: false,
     U: false
   })
+
+  useEffect(() => {
+    if (window.screen.width >= 800) {
+      setSortActive(true)
+    }
+  }, [])
 
   const handlerSort = () => {
     if (sortActive) {
@@ -77,12 +83,14 @@ const SortSetting = ({hAppliedSort}) => {
                 value="U"
                 id='U'/>
             </div>
-            <button 
+            {window.screen.width >= 800 ? <></> 
+            : <button 
               onClick={() => {
                 handlerSort()
-                hAppliedSort(sortList)
-              }}
+                handlerSort(sortList)
+              }} 
               className='applySettings'>Apply</button>
+            }
           </div>
         </div>
       </div>

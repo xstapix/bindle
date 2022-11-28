@@ -51,7 +51,7 @@ const HotelsMobil = ({propHandlerAppliedFilter, propHandlerAppliedSort, propHote
               <div className='hotel_info'>
                 <p className='hotel_rating'>
                   <img className='start_rating' alt='star' src='../image/svg/Star 5.svg'/>
-                  {item.starRating} ({item.guestReviews.total})
+                  {item.guestReviews.unformattedRating} ({item.guestReviews.total})
                 </p>
                 <h1 className='hotel_name'>{item.name}</h1>
                 <p className='hotel_local'>{item.address.streetAddress} | {item.address.locality} </p>

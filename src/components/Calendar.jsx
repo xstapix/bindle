@@ -20,10 +20,14 @@ const CalendarComponent = () => {
   const handlerCalendar = () => {
     if (calendarActive) {
       setCalendarActive(false)
-      // document.body.style.overflow = 'visible'
+      if (window.screen.width <= 428) {
+        document.body.style.overflow = 'visible'
+      }
     } else {
       setCalendarActive(true)
-      // document.body.style.overflow = 'hidden'
+      if (window.screen.width <= 428) {
+        document.body.style.overflow = 'hidden'
+      }
     }
     dispatch(setData({
       checkIn: value[0].toLocaleDateString(),
@@ -43,7 +47,7 @@ const CalendarComponent = () => {
         <div className='color-696F8C'>When does it start?</div>
         <div className={calendarActive ? 'S_Active' : 'S_None'}>
           <div className='settingBackground' onClick={handlerCalendar}>
-            <div className="filterS" onClick={(event) => event.stopPropagation()}>
+            <div className="calendarS" onClick={(event) => event.stopPropagation()}>
               <div className='container'>
                 <Calendar 
                   onChange={onChange} 
