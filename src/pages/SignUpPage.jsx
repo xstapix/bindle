@@ -77,7 +77,7 @@ const SignUpPage = () => {
     <div className='signIn'>
       <h1 className='signIn_hello'>Get Started!</h1>
       <p className='signIn_text'>Let’s create your account</p>
-      <div className='container'>
+      <div className='container' style={{maxWidth:500}}>
         {(emailActive && emailError) && <p style={{color: '#FF5E60'}}>{emailError}</p>}
         <input 
           className='inputEmail'
@@ -106,7 +106,7 @@ const SignUpPage = () => {
         {errorCreateUser ? <p style={{color: '#FF5E60'}}>User with this email already exists</p> : <></>}
         {(!passError && !emailError) ? 
           <button className='button_signin button_signin-active cursorP' onClick={handleSignUp}>Sign Up</button>
-        : <button className='button_signin button_signin-disable '>Sign Up</button>}
+        : <button className='button_signin button_signin-disable '>Create account</button>}
         <div className='footer_line'></div>
         <p className='havenotAcc'>Already have an account? <Link className="signup" to='/signin'>Sign in</Link></p>
       </div>

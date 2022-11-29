@@ -7,12 +7,203 @@ $fontSizeHeaders: 40px
   justify-content: space-between
   align-items: center
 
+.flexAmenities
+  display: flex
+
+.favoriteHotel
+  position: absolute
+  top: 119px
+  right: 45px
+  z-index: 11
+  
+.singleHotelPhoto
+  margin: 83px 0 0
+  height: 550px
+  object-fit: cover
+  border-radius: 0px 0px 14.7091px 14.7091px
+
+.EditPadding
+  padding: 24px 28px !important
+
+.margin24
+  margin: 24px 0 !important
+
+.margin10
+  margin: 10px 0 0
+
+.hotelAmenities
+  max-width: 1300px
+  margin: 32px auto
+
+.containerMargin
+  max-width: 1300px
+  margin: 32px auto
+  padding: 0 24px
+
+.seeAllAmenities
+  font-weight: $fontRegular
+  font-size: 14px
+  line-height: 24px
+  color: #3A6AD4
+
+.marginBoby
+  margin: 0 24px
+
+.amenityBody
+  margin: 0 0 0 24px
+
+.amenity
+  display: inline-block
+  flex-shrink: 0
+  margin: 10px 7px 0 0
+  padding: 5px 8px
+  background: #F9FAFC
+  border: 0.711017px solid #C1C4D6
+  border-radius: 14.2203px
+  font-weight: $fontRegular
+  font-size: 14px
+  line-height: 24px
+  color: #696F8C
+
+.whatAroundMargin
+  margin: 0 0 10px
+
+.whatAround
+  font-weight: $fontRegular
+  font-size: 14px
+  line-height: 24px
+  color: #696F8C
+
+.hotelRoom
+  width: 100%
+  padding: 10px
+  background: rgba(58, 106, 213, 0.05)
+  border: 0.71px solid #C1C4D6
+  border-radius: 3px
+
+.room_name
+  font-weight: $fontBold
+  font-size: 14px
+  line-height: 24px
+  color: #304659
+
+.room_info
+  font-weight: $fontRegular
+  font-size: 13px
+  line-height: 24px
+  color: #304659
+
+.room_info span
+  color: #696F8C !important
+
+.room_amenit
+  display: inline-block
+  margin: 0 5px 5px 0
+  padding: 0 9px
+  font-weight: $fontRegular
+  font-size: 12px
+  line-height: 24px
+  background: #FFFFFF
+  border: 0.71px solid #C1C4D6
+  border-radius: 3px
+  color: #696F8C
+
+.margin-0_0_7
+  margin: 0 0 7px
+
+.roomBookNow
+  width: 100%
+  margin: 24px 0 0
+  padding: 9px
+  display: block
+  font-weight: 700
+  font-size: 13px
+  line-height: 16px
+  background: #3A6AD5
+  box-shadow: 0px 5.68814px 11.3763px rgba(58, 106, 213, 0.2)
+  border-radius: 3px
+  border: none
+  color: #FFFFFF
+
+.atAGlance
+  margin: 10px 0 0
+  padding: 8px 15px
+  border: 0.863547px solid #3A6AD5
+  border-radius: 3.30769px
+  font-weight: $fontBold
+  font-size: 14px
+  line-height: 13px
+  color: #304659
+
+.activeAtAGlance
+  display: block !important
+
+.dropDown
+  display: none
+  width: 100%
+  padding: 10px 0 0
+  font-weight: $fontBold
+  font-size: 14px
+  line-height: 13px
+  color: #696F8C
+
+.dropDown p 
+  margin: 7px 0 0
+
+.moreGlance
+  transform: rotate(180deg)
+
+.activeAmenitiesPopUp
+  display: block !important
+
+.amenitiesPopUp
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 102
+  overflow-y: auto
+  display: none
+  width: 100%
+  height: 100vh
+  background-color: #ffffff
+
+.arrowLeft
+  position: absolute
+
+.amenitiesHeader
+  position: relative
+  padding: 24px 32px
+  background-color: #3A6AD5
+
+.rotate90 
+  margin: -4px 0 0
+  transform: rotate(90deg)
+
+.Amenities_name
+  text-align: center
+  font-weight: $fontBold
+  font-size: 17px
+  line-height: 20px
+  color: #fff
+
+.Amenities_body
+  max-width: 1000px
+  margin: 24px auto
+  
+.categoryText
+  margin: 24px 0 0 
+  font-weight: $fontBold
+  font-size: 15px
+  line-height: 24px
+
+.map
+  width: 1220px
+  height: 707px
+  background-color: #9e9e9e
+  
 @media (max-width: 428px)
-  .favoriteHotel
-    position: absolute
-    top: 119px
-    right: 27px
-    z-index: 11
+  .flexAmenities
+    display: block
 
   .hotel_liked
     fill: #FF5E60
@@ -23,171 +214,32 @@ $fontSizeHeaders: 40px
     margin: 95px 0 0
     object-fit: cover
     border-radius: 0px 0px 14.7091px 14.7091px 
-  
-  .EditPadding
-    padding: 24px 28px !important
-  
-  .margin24
-    margin: 24px 0 !important
-
-  .margin10
-    margin: 10px 0 0
-
+ 
   .hotelAmenities
+    width: 100%
     margin: 0 0 24px
 
   .containerMargin
     margin: 24px 32px 0 32px
-  
-  .seeAllAmenities
-    font-weight: $fontRegular
-    font-size: 14px
-    line-height: 24px
-    color: #3A6AD4
+    padding: 0
 
   .marginBoby
     margin: 0 32px
+
+  .Amenities_body
+    width: 100%
+    margin: 24px 32px
 
   .amenityBody
     display: flex
     overflow: scroll
     margin: 0 0 0 32px
 
-  .amenity
-    display: inline-block
-    flex-shrink: 0
-    margin: 10px 7px 0 0
-    padding: 5px 8px
-    background: #F9FAFC
-    border: 0.711017px solid #C1C4D6
-    border-radius: 14.2203px
-    font-weight: $fontRegular
-    font-size: 14px
-    line-height: 24px
-    color: #696F8C
-
-  .whatAroundMargin
-    margin: 0 0 10px
-
-  .whatAround
-    font-weight: $fontRegular
-    font-size: 14px
-    line-height: 24px
-    color: #696F8C
-
-  .hotelRoom
-    width: 100%
-    padding: 10px
-    background: rgba(58, 106, 213, 0.05)
-    border: 0.71px solid #C1C4D6
-    border-radius: 3px
-
-  .room_name
-    font-weight: $fontBold
-    font-size: 14px
-    line-height: 24px
-    color: #304659
-
-  .room_info
-    font-weight: $fontRegular
-    font-size: 13px
-    line-height: 24px
-    color: #304659
-
-  .room_info span
-    color: #696F8C !important
-
-  .room_amenit
-    display: inline-block
-    margin: 0 5px 5px 0
-    padding: 0 9px
-    font-weight: $fontRegular
-    font-size: 12px
-    line-height: 24px
-    background: #FFFFFF
-    border: 0.71px solid #C1C4D6
-    border-radius: 3px
-    color: #696F8C
-
-  .margin-0_0_7
-    margin: 0 0 7px
-
-  .roomBookNow
-    width: 100%
-    margin: 24px 0 0
-    padding: 9px
-    display: block
-    font-weight: 700
-    font-size: 13px
-    line-height: 16px
-    background: #3A6AD5
-    box-shadow: 0px 5.68814px 11.3763px rgba(58, 106, 213, 0.2)
-    border-radius: 3px
-    border: none
-    color: #FFFFFF
-
-  .atAGlance
-    margin: 10px 0 0
-    padding: 8px 15px
-    border: 0.863547px solid #3A6AD5
-    border-radius: 3.30769px
-    font-weight: $fontBold
-    font-size: 14px
-    line-height: 13px
-    color: #304659
-
-  .activeAtAGlance
-    display: block !important
-
-  .dropDown
+  .map
     display: none
-    width: 100%
-    padding: 10px 0 0
-    font-weight: $fontBold
-    font-size: 14px
-    line-height: 13px
-    color: #696F8C
 
-  .dropDown p 
-    margin: 7px 0 0
-
-  .moreGlance
-    transform: rotate(180deg)
-
-  .activeAmenitiesPopUp
-    display: block !important
-
-  .amenitiesPopUp
-    position: fixed
-    top: 0
-    left: 0
-    z-index: 102
-    overflow-y: auto
-    display: none
-    width: 100%
-    height: 100vh
-    background-color: #ffffff
-
-  .amenitiesHeader
-    padding: 24px 32px
-    background-color: #3A6AD5
-
-  .rotate90 
-    margin: -4px 0 0
-    transform: rotate(90deg)
-
-  .Amenities_name
-    text-align: center
-    font-weight: $fontBold
-    font-size: 17px
-    line-height: 20px
-    color: #fff
-
-  .Amenities_body
-    margin: 24px 32px
-    
-  .categoryText
-    margin: 24px 0 0 
-    font-weight: $fontBold
-    font-size: 15px
-    line-height: 24px
+  .favoriteHotel
+    position: absolute
+    top: 119px
+    right: 27px
+    z-index: 11

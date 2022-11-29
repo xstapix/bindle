@@ -37,7 +37,8 @@ const HomePage = () => {
             <p className='little_text'>This modern trend looks nice and all, but we fell into the same trap again.</p>
           </div>
           <div className="search_desk">
-            <div className='DF'>
+            <div>
+              <p className='date_text-desk'>Location</p>
               <input 
                 onChange={e => setSearchInput(e.target.value)}
                 type="text"

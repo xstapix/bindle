@@ -76,16 +76,20 @@ const SingleHotel = () => {
 	const handlerSlider = (id) => {
 		if (id === 'prev') {
 			if (offset !== 0) {
-				setOffset(offset + window.screen.width)
+				if (window.screen.width > 428) {
+					setOffset(offset + 1300)
+				} else setOffset(offset + window.screen.width)
 			}
 		} else {
-			setOffset(offset - window.screen.width)
+			if (window.screen.width > 428) {
+				setOffset(offset - 1300)
+			} else setOffset(offset - window.screen.width)
 		}
 	}
 
 	const handleTouchStart = (e) => {
-    const touchDown = e.touches[0].clientX
-    setTouchPosition(touchDown)
+		const touchDown = e.touches[0].clientX
+		setTouchPosition(touchDown)
 	}
 
 	const handleTouchMove = (e) => {
@@ -113,23 +117,23 @@ const SingleHotel = () => {
 
 	return (
 		<div>
-			<div onClick={handlerFavorite} className="favoriteHotel">
-				{data ? 
-					data.favorites.includes(`${HotelData.data.body.pdpHeader.hotelId}`) ?
-						<svg className='hotel_liked'xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#fff">
+				<div onClick={handlerFavorite} className="favoriteHotel cursorP">
+					{data ? 
+						data.favorites.includes(`${HotelData.data.body.pdpHeader.hotelId}`) ?
+							<svg className='hotel_liked'xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#fff">
+								<path d="M0 0h24v24H0V0z" fill="none"/>
+								<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+							</svg> :
+						<svg className={hotelLiked}xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#fff">
 							<path d="M0 0h24v24H0V0z" fill="none"/>
 							<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
 						</svg> :
-					<svg className={hotelLiked}xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#fff">
+					<svg className={hotelLiked} xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#fff">
 						<path d="M0 0h24v24H0V0z" fill="none"/>
 						<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-					</svg> :
-				<svg className={hotelLiked} xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#fff">
-					<path d="M0 0h24v24H0V0z" fill="none"/>
-					<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-				</svg>
-				}
-			</div>
+					</svg>
+					}
+				</div>
 			<section onTouchStart={handleTouchStart} onTouchMove={handleTouchMove}>
 				<div onClick={() => handlerSlider('prev')} className="prev"></div>
 				<Carousel activeSlide={offset}>
@@ -138,81 +142,106 @@ const SingleHotel = () => {
 						key={item.imageId} 
 						className='singleHotelPhoto' 
 						alt='hotelPhoto' 
-						src={item.baseUrl.replace('{size}', 'z')}/>
+						src={item.baseUrl.replace('{size}', 'w')}/>
 						))}
 				</Carousel>
 				<div onClick={() =>handlerSlider('next')} className="next"></div>
 			</section>
 			{HotelData ?
 			<div key={HotelData.data.body.pdpHeader.hotelId}>
-				<div className='containerMargin'>
-					<h1 className='hotel_name'>{HotelData.data.body.propertyDescription.name}</h1>
-					<div className='DF_JS_AC'>
-						<p className='hotel_local margin10'>{HotelData.data.body.propertyDescription.address.addressLine1} | {HotelData.data.body.propertyDescription.address.cityName}</p>
-						<p className='hotel_rating margin10'>
-							<img className='start_rating ' alt='star' src='../image/svg/Star 5.svg'/>
-							{HotelData.data.body.propertyDescription.starRating} ({HotelData.data.body.guestReviews.brands.total})
-						</p>
-					</div>
-					<div className='footer_line margin24'></div>
-				</div>
-				<div className='hotelAmenities'>
-					<div className='DF_JS_AC marginBoby'>
-						<p className='hotel_name'>Amenities</p>
-						<p onClick={handleSeeAll} className='seeAllAmenities'>See All</p>
-					</div>
-					<div className='amenityBody'>
-					{HotelData.data.body.overview.overviewSections[0].content.map(item => (
-						<p className='amenity' key={item}>
-							{item}
-						</p>
-					))}
-					</div>
-				</div>
-				<div className='containerMargin'>
-					<p className='hotel_name'>For families</p>
-					{HotelData.data.body.overview.overviewSections[1].content.map(item => (
-					<p className='amenity' key={item}>
-						{item}
-					</p>
-					))}
-				</div>
-				<div className='containerMargin'>
-					<p className='hotel_name whatAroundMargin'>What’s around</p>
-					{HotelData.data.body.overview.overviewSections[2].content.map(item => (
-					<p className='whatAround' key={item}>
-						{item}
-					</p>
-					))}
-				</div>
-				{/* <div className='containerMargin'>
-				</div> */}
-				<div className='containerMargin'>
-					<div className='atAGlance '>
-						<div onClick={() => handleAtAGlance('moreOrder')} id='moreOrder' className="DF_JS_AC">
-							<p>Order of residence</p>
-							<img id='moreOrderImg' alt='more' src='../image/svg/more.svg'/>
+
+				<div className='flexAmenities' style={{maxWidth: 1300, margin: '0 auto'}}>
+					<div>
+						<div className='containerMargin'>
+							{window.screen.width > 428 ? 
+							<div className='flexAmenities'>
+								<div className='hotel_info w-100' style={{padding: 0}}>
+									<h1 className='desk_hotel_name'>{HotelData.data.body.propertyDescription.name}</h1>
+									<p className='desk_hotel_local'>{HotelData.data.body.propertyDescription.address.addressLine1} | {HotelData.data.body.propertyDescription.address.cityName}</p>
+								</div>
+								<div className="hotel_info" style={{padding: 0}}>
+									<p className='desk_hotel_rating'>
+										<img className='start_rating' alt='star' src='../image/svg/Star 5.svg'/>
+										{HotelData.data.body.guestReviews.brands.rating} ({HotelData.data.body.guestReviews.brands.total})
+									</p>
+									<div className="DeskGood">
+										<p>{HotelData.data.body.guestReviews.brands.badgeText}</p>
+									</div>
+									<p className='nights' style={{width: '100%'}}>6 nights, 2 adults</p>
+									<p className='total_prise'>$ 3,848</p>
+								</div>
+							</div>
+							: <>
+							<h1 className='hotel_name'>{HotelData.data.body.propertyDescription.name}</h1>
+							<div className='DF_JS_AC'>
+								<p className='hotel_local margin10'>{HotelData.data.body.propertyDescription.address.addressLine1} | {HotelData.data.body.propertyDescription.address.cityName}</p>
+								<p className='hotel_rating margin10'>
+									<img className='start_rating ' alt='star' src='../image/svg/Star 5.svg'/>
+									{HotelData.data.body.propertyDescription.starRating} ({HotelData.data.body.guestReviews.brands.total})
+								</p>
+							</div>
+							</>}
+							
+							<div className='footer_line margin24'></div>
 						</div>
-						<div id="dropOrder" className='dropDown'>
-						{HotelData.data.body.atAGlance.keyFacts.requiredAtCheckIn.map(check => (
-							<p key={check}>{check}</p>
-						))}
-						{HotelData.data.body.atAGlance.travellingOrInternet.travelling.pets.map(check => (
-							<p key={check}>{check}</p>
-						))}
+						<div className='hotelAmenities'>
+							<div className='DF_JS_AC marginBoby'>
+								<p className='hotel_name'>Amenities</p>
+								<p onClick={handleSeeAll} className='seeAllAmenities cursorP'>See All</p>
+							</div>
+							<div className='amenityBody'>
+							{HotelData.data.body.overview.overviewSections[0].content.map(item => (
+								<p className='amenity' key={item}>
+									{item}
+								</p>
+							))}
+							</div>
 						</div>
-					</div>
-					<div className='atAGlance '>
-						<div onClick={() => handleAtAGlance('moreCheck')} id='moreCheck' className="DF_JS_AC">
-							<p>Required at check in</p>
-							<img id='moreCheckImg' alt='more' src='../image/svg/more.svg'/>
-						</div>
-						<div id="dropCheck" className='dropDown'>
-							{HotelData.data.body.atAGlance.keyFacts.arrivingLeaving.map(check => (
-								<p key={check}>{check}</p>
+						<div className='containerMargin'>
+							<p className='hotel_name'>For families</p>
+							{HotelData.data.body.overview.overviewSections[1].content.map(item => (
+							<p className='amenity' key={item}>
+								{item}
+							</p>
 							))}
 						</div>
+						<div className='containerMargin'>
+							<p className='hotel_name whatAroundMargin'>What’s around</p>
+							{HotelData.data.body.overview.overviewSections[2].content.map(item => (
+							<p className='whatAround' key={item}>
+								{item}
+							</p>
+							))}
+						</div>
+						<div className='containerMargin'>
+							<div className='atAGlance cursorP'>
+								<div onClick={() => handleAtAGlance('moreOrder')} id='moreOrder' className="DF_JS_AC">
+									<p>Order of residence</p>
+									<img id='moreOrderImg' alt='more' src='../image/svg/more.svg'/>
+								</div>
+								<div id="dropOrder" className='dropDown'>
+								{HotelData.data.body.atAGlance.keyFacts.requiredAtCheckIn.map(check => (
+									<p key={check}>{check}</p>
+								))}
+								{HotelData.data.body.atAGlance.travellingOrInternet.travelling.pets.map(check => (
+									<p key={check}>{check}</p>
+								))}
+								</div>
+							</div>
+							<div className='atAGlance cursorP'>
+								<div onClick={() => handleAtAGlance('moreCheck')} id='moreCheck' className="DF_JS_AC">
+									<p>Required at check in</p>
+									<img id='moreCheckImg' alt='more' src='../image/svg/more.svg'/>
+								</div>
+								<div id="dropCheck" className='dropDown'>
+									{HotelData.data.body.atAGlance.keyFacts.arrivingLeaving.map(check => (
+										<p key={check}>{check}</p>
+									))}
+								</div>
+							</div>
+						</div>
 					</div>
+					<div className="map">Map</div>
 				</div>
 				<div id='amenitiesPopUp' className="amenitiesPopUp">
 					<div className="amenitiesHeader">

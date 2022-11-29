@@ -78,7 +78,7 @@ const SignInPage = () => {
     <div className='signIn'>
       <h1 className='signIn_hello'>Hello Again!</h1>
       <p className='signIn_text'>We're glad to see you</p>
-      <div className='container'>
+      <div className='container' style={{maxWidth:500}}>
         {(emailActive && emailError) && <p style={{color: '#FF5E60'}}>{emailError}</p>}
         <input 
           className='inputEmail'

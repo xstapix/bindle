@@ -6,7 +6,7 @@ const Carousel = ({activeSlide, children} ) => {
 
   useEffect(() => {
     setSlide(
-      Children.map(children, (child) => {
+      Children.map(children, (child) => { 
         return cloneElement(child, {
           style: {
             maxWidth: '100%',
