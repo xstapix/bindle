@@ -88,7 +88,7 @@ const SortSetting = ({hAppliedSort}) => {
               onClick={() => {
                 hAppliedSort(sortList)
               }} 
-              className='applySettings'>Apply</button>
+              className='applySettings cursorP'>Apply</button>
             : <button 
               onClick={() => {
                 handlerSort()

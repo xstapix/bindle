@@ -1,4 +1,4 @@
-import  { useState } from 'react';
+import  { useEffect, useState } from 'react';
 
 import './Calendar.sass'
 import Calendar from 'react-calendar';
@@ -34,6 +34,12 @@ const CalendarComponent = () => {
     }))
   } 
 
+  // document.addEventListener('click', (event) => {
+  //   if (event.target.id !== 'calendar') {
+  //     handlerCalendar()
+  //   }
+  // })
+
   return (
     <>
     {(localSearch && window.screen.width > 428) ? 
@@ -68,35 +74,35 @@ const CalendarComponent = () => {
           </div>
         </div>
       </div>
-      : <div onClick={handlerCalendar} className='calendar_desk'>
-        <div className='DF cursorP'>
-          <p className='date_text-desk'>Date</p>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.96967 8.21967C5.26256 7.92678 5.73744 7.92678 6.03033 8.21967L11.8232 14.0126C11.9209 14.1102 12.0791 14.1102 12.1768 14.0126L17.9697 8.21967C18.2626 7.92678 18.7374 7.92678 19.0303 8.21967C19.3232 8.51256 19.3232 8.98744 19.0303 9.28033L13.2374 15.0732C12.554 15.7566 11.446 15.7566 10.7626 15.0732L4.96967 9.28033C4.67678 8.98744 4.67678 8.51256 4.96967 8.21967Z" fill="#FF6647"/>
-          </svg>
-        </div>
-        <div className='color-696F8C cursorP'>
-          {checkOut ? 
-            <>
-              <p>In: {checkIn}</p> 
-              <p>Out: {checkOut}</p>
-            </> : 
-            'When does it start?'}
-        </div>
-        <div className={calendarActive ? 'S_Active' : 'S_None'}>
-          <div className='settingBackground' onClick={handlerCalendar}>
-            <div className="calendarS" onClick={(event) => event.stopPropagation()}>
-              <div className='container'>
-                <Calendar 
-                  onChange={onChange} 
-                  value={value} 
-                  locale='en' 
-                  selectRange={true}/>
+      : <div onClick={handlerCalendar} className='calendar_desk' id='calendar'>
+          <div className='DF cursorP' id='calendar'>
+            <p className='date_text-desk' id='calendar'>Date</p>
+            <svg id='calendar' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M4.96967 8.21967C5.26256 7.92678 5.73744 7.92678 6.03033 8.21967L11.8232 14.0126C11.9209 14.1102 12.0791 14.1102 12.1768 14.0126L17.9697 8.21967C18.2626 7.92678 18.7374 7.92678 19.0303 8.21967C19.3232 8.51256 19.3232 8.98744 19.0303 9.28033L13.2374 15.0732C12.554 15.7566 11.446 15.7566 10.7626 15.0732L4.96967 9.28033C4.67678 8.98744 4.67678 8.51256 4.96967 8.21967Z" fill="#FF6647"/>
+            </svg>
+          </div>
+          <div className='color-696F8C cursorP' id='calendar'>
+            {checkOut ? 
+              <>
+                <p id='calendar'>In: {checkIn}</p> 
+                <p id='calendar'>Out: {checkOut}</p>
+              </> : 
+              'When does it start?'}
+          </div>
+          <div className={calendarActive ? 'S_Active' : 'S_None'}>
+            <div className='settingBackground' onClick={handlerCalendar}>
+              <div className="calendarS" onClick={(event) => event.stopPropagation()}>
+                <div className='container'>
+                  <Calendar 
+                    onChange={onChange} 
+                    value={value} 
+                    locale='en' 
+                    selectRange={true}/>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
     }
       <div className="calendar_mobil">
         <div className='DF_JS_AC'>

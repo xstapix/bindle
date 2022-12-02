@@ -1,6 +1,6 @@
 import './SingleHotel.sass'
 import { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, useLocation } from 'react-router-dom'
 
 import { getDatabase, ref, set, onValue } from "firebase/database";
 import Carousel from '../components/Carousel';
@@ -8,14 +8,17 @@ import Carousel from '../components/Carousel';
 import HotelData from '../exampleSingleHotel.json'
 import HotelPhoto from '../exampleSingleHotelPhoto.json'
 import {useAuth} from '../hook/useAuth'
+import { useCheckDate } from '../hook/useCheckDate'
 
 const SingleHotel = () => {
 	const {IDHotel} = useParams()
+	const locationData = useLocation()
 	const {id, isAuth} = useAuth()
 	const navigate = useNavigate()
 	const [hotelLiked, setHotelLiked] = useState('')
 	const [offset, setOffset] = useState(0)
 	const [touchPosition, setTouchPosition] = useState(null)
+	const {checkIn, checkOut} = useCheckDate() 
 
 	const db = getDatabase();
 	const starCountRef = ref(db, 'users/' + id);
@@ -115,6 +118,15 @@ const SingleHotel = () => {
     setTouchPosition(null)
 	}
 
+	let nights
+	if (checkOut) {
+		if (checkOut.split('/')[1] > checkIn.split('/')[1]) {
+			nights = checkOut.split('/')[1] - checkIn.split('/')[1];
+		} else {
+			nights = checkIn.split('/')[1] - checkOut.split('/')[1];
+		}
+	}
+
 	return (
 		<div>
 				<div onClick={handlerFavorite} className="favoriteHotel cursorP">
@@ -135,8 +147,7 @@ const SingleHotel = () => {
 					}
 				</div>
 			<section onTouchStart={handleTouchStart} onTouchMove={handleTouchMove}>
-				<div onClick={() => handlerSlider('prev')} className="prev"></div>
-				<Carousel activeSlide={offset}>
+				<Carousel>
 					{HotelPhoto.hotelImages.map(item => (
 						<img 
 						key={item.imageId} 
@@ -145,7 +156,6 @@ const SingleHotel = () => {
 						src={item.baseUrl.replace('{size}', 'w')}/>
 						))}
 				</Carousel>
-				<div onClick={() =>handlerSlider('next')} className="next"></div>
 			</section>
 			{HotelData ?
 			<div key={HotelData.data.body.pdpHeader.hotelId}>
@@ -167,8 +177,13 @@ const SingleHotel = () => {
 									<div className="DeskGood">
 										<p>{HotelData.data.body.guestReviews.brands.badgeText}</p>
 									</div>
-									<p className='nights' style={{width: '100%'}}>6 nights, 2 adults</p>
-									<p className='total_prise'>$ 3,848</p>
+									{checkOut ? 
+									<>
+									<p className='nights' style={{width: '100%'}}> {nights} nights, 2 adults</p>
+									<p className='total_prise'>$ {locationData.state}</p>
+									</>
+									: <></>
+									}
 								</div>
 							</div>
 							: <>
@@ -245,7 +260,7 @@ const SingleHotel = () => {
 				</div>
 				<div id='amenitiesPopUp' className="amenitiesPopUp">
 					<div className="amenitiesHeader">
-						<div onClick={handleCloseSeeAll} className="arrowLeft rotate90">
+						<div onClick={handleCloseSeeAll} className="arrowLeft rotate90 cursorP">
 							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M12 15.3748L6 9.3748L7.075 8.2998L12 13.2498L16.925 8.3248L18 9.3998L12 15.3748Z" fill="#fff"/>
 							</svg>
