@@ -1,6 +1,6 @@
 import './SingleHotel.sass'
 import { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, useLocation } from 'react-router-dom'
 
 import { getDatabase, ref, set, onValue } from "firebase/database";
 import Carousel from '../components/Carousel';
@@ -8,14 +8,15 @@ import Carousel from '../components/Carousel';
 import HotelData from '../exampleSingleHotel.json'
 import HotelPhoto from '../exampleSingleHotelPhoto.json'
 import {useAuth} from '../hook/useAuth'
+import { useCheckDate } from '../hook/useCheckDate'
 
 const SingleHotel = () => {
 	const {IDHotel} = useParams()
 	const {id, isAuth} = useAuth()
+	const {checkIn, checkOut} = useCheckDate() 
 	const navigate = useNavigate()
 	const [hotelLiked, setHotelLiked] = useState('')
-	const [offset, setOffset] = useState(0)
-	const [touchPosition, setTouchPosition] = useState(null)
+	const localData = useLocation()
 
 	const db = getDatabase();
 	const starCountRef = ref(db, 'users/' + id);
@@ -30,6 +31,16 @@ const SingleHotel = () => {
 			});
 		}
 	}, []) 
+
+	let nights
+
+	if (checkOut) {
+		if (checkOut.split('.')[0] > checkIn.split('.')[0]) {
+			nights = checkOut.split('.')[0] - checkIn.split('.')[0]; 
+		} else {
+			nights = checkIn.split('.')[0] - checkOut.split('.')[0];
+		}
+	}
 	
 	document.title = `${HotelData.data.body.propertyDescription.name}`
 	
@@ -73,70 +84,27 @@ const SingleHotel = () => {
 		document.body.style.overflow = 'visible'
 	} 
 
-	const handlerSlider = (id) => {
-		if (id === 'prev') {
-			if (offset !== 0) {
-				if (window.screen.width > 428) {
-					setOffset(offset + 1300)
-				} else setOffset(offset + window.screen.width)
-			}
-		} else {
-			if (window.screen.width > 428) {
-				setOffset(offset - 1300)
-			} else setOffset(offset - window.screen.width)
-		}
-	}
-
-	const handleTouchStart = (e) => {
-		const touchDown = e.touches[0].clientX
-		setTouchPosition(touchDown)
-	}
-
-	const handleTouchMove = (e) => {
-    const touchDown = touchPosition
-
-    if(touchDown === null) {
-        return
-    }
-
-    const currentTouch = e.touches[0].clientX
-    const diff = touchDown - currentTouch
-
-    if (diff > 7) {
-			setOffset(offset - window.screen.width)
-    }
-
-    if (diff < -7) {
-			if (offset !== 0) {
-				setOffset(offset + window.screen.width)
-			}
-    }
-
-    setTouchPosition(null)
-	}
-
 	return (
 		<div>
-				<div onClick={handlerFavorite} className="favoriteHotel cursorP">
-					{data ? 
-						data.favorites.includes(`${HotelData.data.body.pdpHeader.hotelId}`) ?
-							<svg className='hotel_liked'xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#fff">
-								<path d="M0 0h24v24H0V0z" fill="none"/>
-								<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-							</svg> :
-						<svg className={hotelLiked}xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#fff">
+			<div onClick={handlerFavorite} className="favoriteHotel cursorP">
+				{data ? 
+					data.favorites.includes(`${HotelData.data.body.pdpHeader.hotelId}`) ?
+						<svg className='hotel_liked'xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#fff">
 							<path d="M0 0h24v24H0V0z" fill="none"/>
 							<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
 						</svg> :
-					<svg className={hotelLiked} xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#fff">
+					<svg className={hotelLiked}xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#fff">
 						<path d="M0 0h24v24H0V0z" fill="none"/>
 						<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-					</svg>
-					}
-				</div>
-			<section onTouchStart={handleTouchStart} onTouchMove={handleTouchMove}>
-				<div onClick={() => handlerSlider('prev')} className="prev"></div>
-				<Carousel activeSlide={offset}>
+					</svg> :
+				<svg className={hotelLiked} xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#fff">
+					<path d="M0 0h24v24H0V0z" fill="none"/>
+					<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+				</svg>
+				}
+			</div>
+			<section >
+				<Carousel>
 					{HotelPhoto.hotelImages.map(item => (
 						<img 
 						key={item.imageId} 
@@ -145,11 +113,9 @@ const SingleHotel = () => {
 						src={item.baseUrl.replace('{size}', 'w')}/>
 						))}
 				</Carousel>
-				<div onClick={() =>handlerSlider('next')} className="next"></div>
 			</section>
 			{HotelData ?
 			<div key={HotelData.data.body.pdpHeader.hotelId}>
-
 				<div className='flexAmenities' style={{maxWidth: 1300, margin: '0 auto'}}>
 					<div>
 						<div className='containerMargin'>
@@ -159,16 +125,22 @@ const SingleHotel = () => {
 									<h1 className='desk_hotel_name'>{HotelData.data.body.propertyDescription.name}</h1>
 									<p className='desk_hotel_local'>{HotelData.data.body.propertyDescription.address.addressLine1} | {HotelData.data.body.propertyDescription.address.cityName}</p>
 								</div>
-								<div className="hotel_info" style={{padding: 0}}>
-									<p className='desk_hotel_rating'>
-										<img className='start_rating' alt='star' src='../image/svg/Star 5.svg'/>
-										{HotelData.data.body.guestReviews.brands.rating} ({HotelData.data.body.guestReviews.brands.total})
-									</p>
-									<div className="DeskGood">
-										<p>{HotelData.data.body.guestReviews.brands.badgeText}</p>
+								<div style={{width: 130}}>
+									<div className="hotel_info" style={{padding: 0}}>
+										<p className='desk_hotel_rating'>
+											<img className='start_rating' alt='star' src='../image/svg/Star 5.svg'/>
+											{HotelData.data.body.guestReviews.brands.rating} ({HotelData.data.body.guestReviews.brands.total})
+										</p>
+										<div className="DeskGood">
+											<p>{HotelData.data.body.guestReviews.brands.badgeText}</p>
+										</div>
+										{checkOut ? 
+										<>
+											<p className='nights' style={{width: '100%'}}>{nights} nights, 2 adults</p>
+											<p className='total_prise'>$ {localData.state}</p>
+										</>
+										: <></>}
 									</div>
-									<p className='nights' style={{width: '100%'}}>6 nights, 2 adults</p>
-									<p className='total_prise'>$ 3,848</p>
 								</div>
 							</div>
 							: <>
@@ -245,7 +217,7 @@ const SingleHotel = () => {
 				</div>
 				<div id='amenitiesPopUp' className="amenitiesPopUp">
 					<div className="amenitiesHeader">
-						<div onClick={handleCloseSeeAll} className="arrowLeft rotate90">
+						<div onClick={handleCloseSeeAll} className="arrowLeft rotate90 cursorP">
 							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M12 15.3748L6 9.3748L7.075 8.2998L12 13.2498L16.925 8.3248L18 9.3998L12 15.3748Z" fill="#fff"/>
 							</svg>

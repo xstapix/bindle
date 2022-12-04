@@ -12,9 +12,14 @@
   
 .next,.prev
   position: absolute
-  top: 80px
-  width: 50%
-  height: 550px
+  top: 50%
+  padding: 15px
+  background-color: #0000007a
+
+.next svg,.prev svg
+  width: 30px
+  height: 30px
+  fill: #fff
 
 .next
   right: 0
@@ -22,6 +27,7 @@
 .prev
   left: 0
   z-index: 10
+  transform: rotate(180deg)
 
 @media (max-width: 428px) 
   .main-carousel-container
@@ -32,11 +38,8 @@
     top: 97px
     width: 50%
     height: 260px
+    background-color: #00000000
 
-  // .next
-  //   right: 0
-
-  // .prev
-  //   left: 0
-  //   z-index: 10
+  .next svg,.prev svg
+    display: none
   
