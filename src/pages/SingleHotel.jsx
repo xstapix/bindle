@@ -17,8 +17,6 @@ const SingleHotel = () => {
 	const {checkIn, checkOut} = useCheckDate() 
 	const navigate = useNavigate()
 	const [hotelLiked, setHotelLiked] = useState('')
-	const [offset, setOffset] = useState(0)
-	const [touchPosition, setTouchPosition] = useState(null)
 
 	const db = getDatabase();
 	const starCountRef = ref(db, 'users/' + id);
@@ -86,48 +84,6 @@ const SingleHotel = () => {
 		document.body.style.overflow = 'visible'
 	} 
 
-	const handlerSlider = (id) => {
-		if (id === 'prev') {
-			if (offset !== 0) {
-				if (window.screen.width > 428) {
-					setOffset(offset + 1300)
-				} else setOffset(offset + window.screen.width)
-			}
-		} else {
-			if (window.screen.width > 428) {
-				setOffset(offset - 1300)
-			} else setOffset(offset - window.screen.width)
-		}
-	}
-
-	const handleTouchStart = (e) => {
-		const touchDown = e.touches[0].clientX
-		setTouchPosition(touchDown)
-	}
-
-	const handleTouchMove = (e) => {
-    const touchDown = touchPosition
-
-    if(touchDown === null) {
-        return
-    }
-
-    const currentTouch = e.touches[0].clientX
-    const diff = touchDown - currentTouch
-
-    if (diff > 7) {
-			setOffset(offset - window.screen.width)
-    }
-
-    if (diff < -7) {
-			if (offset !== 0) {
-				setOffset(offset + window.screen.width)
-			}
-    }
-
-    setTouchPosition(null)
-	}
-
 	return (
 		<div>
 			<div onClick={handlerFavorite} className="favoriteHotel cursorP">
@@ -147,9 +103,8 @@ const SingleHotel = () => {
 					</svg>
 				}
 			</div>
-			<section onTouchStart={handleTouchStart} onTouchMove={handleTouchMove}>
-				<div onClick={() => handlerSlider('prev')} className="prev"></div>
-				<Carousel activeSlide={offset}>
+			<section>
+				<Carousel>
 					{HotelPhoto.hotelImages.map(item => (
 						<img 
 						key={item.imageId} 
@@ -158,7 +113,6 @@ const SingleHotel = () => {
 						src={item.baseUrl.replace('{size}', 'w')}/>
 						))}
 				</Carousel>
-				<div onClick={() =>handlerSlider('next')} className="next"></div>
 			</section>
 			{HotelData ?
 			<div key={HotelData.data.body.pdpHeader.hotelId}>
@@ -187,8 +141,6 @@ const SingleHotel = () => {
 										</>
 										: <></>}
 									</div>
-									<p className='nights' style={{width: '100%'}}>6 nights, 2 adults</p>
-									<p className='total_prise'>$ 3,848</p>
 								</div>
 							</div>
 							: <>
