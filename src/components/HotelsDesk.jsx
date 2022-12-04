@@ -3,6 +3,7 @@ import './HotelsDesk.sass'
 import { useState } from 'react'
 import { useParams, useNavigate, Link } from 'react-router-dom'
 import { useCheckDate } from '../hook/useCheckDate'
+import { useGuest } from '../hook/useGuest'
 
 import SortSetting from '../components/SortSetting'
 import FilterSetting from '../components/FilterSetting'
@@ -11,23 +12,14 @@ import Guest from '../components/Guest'
 
 const HotelsDesk = ({propHandlerAppliedFilter, propHandlerAppliedSort, propHotelsList}) => {
 	const {checkIn, checkOut} = useCheckDate() 
+	const {adults, children} = useGuest() 
 	const navigate = useNavigate()
   const {localSearch} = useParams()
   const [searchInput, setSearchInput] = useState(localSearch)
-	
-	let nights
 
   const handlerSearch = () => {
     navigate(`/${searchInput}`)
   }
-
-	if (checkOut) {
-		if (checkOut.split('.')[0] > checkIn.split('.')[0]) {
-			nights = checkOut.split('.')[0] - checkIn.split('.')[0]; 
-		} else {
-			nights = checkIn.split('.')[0] - checkOut.split('.')[0];
-		}
-	}
 
   return (
     <div className='hotels'>
@@ -60,7 +52,7 @@ const HotelsDesk = ({propHandlerAppliedFilter, propHandlerAppliedSort, propHotel
 						<p className='direction'>Direction: {localSearch}</p>
 						<p className='found'>Found {propHotelsList.length} hotels</p>
 						{propHotelsList ? propHotelsList.map((item) => (
-							<Link to={`/${localSearch}/${item.id}`} state={Math.round(nights * item.ratePlan.price.exactCurrent)}>
+							<Link to={`/${localSearch}/${item.id}`}>
 								<section key={item.id}>
 										<img className='desk_plug_hotel singleItemInList' alt='hotel' src={item.thumbnailUrl}/>
 										<div className='hotel_info w-100'>
@@ -68,25 +60,21 @@ const HotelsDesk = ({propHandlerAppliedFilter, propHandlerAppliedSort, propHotel
 											<p className='desk_hotel_local'>{item.address.streetAddress} | {item.address.locality} </p>
 										</div>
 										<div className="hotel_info">
-											<div style={{width: 130}}>
-												<p className='desk_hotel_rating'>
-													<img className='start_rating' alt='star' src='../image/svg/Star 5.svg'/>
-													{item.guestReviews.unformattedRating} ({item.guestReviews.total})
-												</p>
-												{item.guestReviews.badgeText ?
-													<div className="DeskGood">
-														<p>{item.guestReviews.badgeText}</p>
-													</div> : <></>
-												}
-												{checkOut ? 
-													<>
-														<p className='nights'>{nights} nights, 2 adults</p>
-														<p className='total_prise'>$ {Math.round(nights * item.ratePlan.price.exactCurrent)}</p> 
-														<div className='show_now'>Show Now</div>
-													</>
-												: <div className='show_now' style={{margin: '121px 0 0'}}>Show Now</div>}
-											</div>
+											<p className='desk_hotel_rating'>
+												<img className='start_rating' alt='star' src='../image/svg/Star 5.svg'/>
+												{item.guestReviews.unformattedRating} ({item.guestReviews.total})
+											</p>
+											{item.guestReviews.badgeText ?
+												<div className="DeskGood">
+													<p>{item.guestReviews.badgeText}</p>
+												</div> : <></>
+											}
+											<p className='nights'>6 nights, 2 adults</p>
+											<p className='total_prise'>$ 3,848</p>
+											<div className='show_now'>Show Now</div>
 										</div>
+										<div className='show_now' style={{margin: '121px 0 0'}}>Show Now</div>
+									</div>
 								</section>
 							</Link>
 						)) : <p className='NothingFound'>Nothing found</p>}

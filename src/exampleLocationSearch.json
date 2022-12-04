@@ -1,0 +1,208 @@
+{
+    "term": "spain",
+    "moresuggestions": 10,
+    "autoSuggestInstance": null,
+    "trackingID": "2466faef060c4ecd952377ce7d60af37",
+    "misspellingfallback": false,
+    "suggestions": [
+      {
+        "group": "CITY_GROUP",
+        "entities": [
+          {
+            "geoId": "2198",
+            "destinationId": "457987",
+            "landmarkCityDestinationId": null,
+            "type": "CITY",
+            "redirectPage": "DEFAULT_PAGE",
+            "latitude": 40.416784,
+            "longitude": -3.703795,
+            "searchDetail": null,
+            "caption": "Madrid, Community of Madrid, <span class='highlighted'>Spain</span>",
+            "name": "Madrid"
+          },
+          {
+            "geoId": "6220952",
+            "destinationId": "1747049",
+            "landmarkCityDestinationId": null,
+            "type": "NEIGHBORHOOD",
+            "redirectPage": "DEFAULT_PAGE",
+            "latitude": 41.382208620304056,
+            "longitude": 2.1744360813955574,
+            "searchDetail": null,
+            "caption": "Downtown Barcelona, Barcelona, Catalonia, <span class='highlighted'>Spain</span>",
+            "name": "Downtown Barcelona"
+          },
+          {
+            "geoId": "3312",
+            "destinationId": "447112",
+            "landmarkCityDestinationId": null,
+            "type": "CITY",
+            "redirectPage": "DEFAULT_PAGE",
+            "latitude": 37.38619,
+            "longitude": -5.99198,
+            "searchDetail": null,
+            "caption": "Seville, Andalusia, <span class='highlighted'>Spain</span>",
+            "name": "Seville"
+          },
+          {
+            "geoId": "602653",
+            "destinationId": "1641629",
+            "landmarkCityDestinationId": null,
+            "type": "REGION",
+            "redirectPage": "DEFAULT_PAGE",
+            "latitude": 39.020008,
+            "longitude": 1.482148,
+            "searchDetail": null,
+            "caption": "Ibiza Island, Balearic Islands, <span class='highlighted'>Spain</span>",
+            "name": "Ibiza Island"
+          },
+          {
+            "geoId": "513",
+            "destinationId": "444495",
+            "landmarkCityDestinationId": null,
+            "type": "CITY",
+            "redirectPage": "DEFAULT_PAGE",
+            "latitude": 41.384988,
+            "longitude": 2.174263,
+            "searchDetail": null,
+            "caption": "Barcelona, Barcelona, Catalonia, <span class='highlighted'>Spain</span>",
+            "name": "Barcelona"
+          },
+          {
+            "geoId": "602317",
+            "destinationId": "1635356",
+            "landmarkCityDestinationId": null,
+            "type": "REGION",
+            "redirectPage": "DEFAULT_PAGE",
+            "latitude": 39.695271,
+            "longitude": 3.017569,
+            "searchDetail": null,
+            "caption": "Mallorca Island, <span class='highlighted'>Spain</span>",
+            "name": "Mallorca Island"
+          },
+          {
+            "geoId": "312",
+            "destinationId": "444849",
+            "landmarkCityDestinationId": null,
+            "type": "CITY",
+            "redirectPage": "DEFAULT_PAGE",
+            "latitude": 36.720591,
+            "longitude": -4.421847,
+            "searchDetail": null,
+            "caption": "Málaga, Andalusia, <span class='highlighted'>Spain</span>",
+            "name": "Málaga"
+          },
+          {
+            "geoId": "6047194",
+            "destinationId": "445723",
+            "landmarkCityDestinationId": null,
+            "type": "REGION",
+            "redirectPage": "DEFAULT_PAGE",
+            "latitude": 28.291563,
+            "longitude": -16.629131,
+            "searchDetail": null,
+            "caption": "Tenerife, Canary Islands, <span class='highlighted'>Spain</span>",
+            "name": "Tenerife"
+          },
+          {
+            "geoId": "553248631822337314",
+            "destinationId": "10789818",
+            "landmarkCityDestinationId": null,
+            "type": "NEIGHBORHOOD",
+            "redirectPage": "DEFAULT_PAGE",
+            "latitude": 40.417007,
+            "longitude": -3.703565,
+            "searchDetail": null,
+            "caption": "Madrid Centro, Madrid, Community of Madrid, <span class='highlighted'>Spain</span>",
+            "name": "Madrid Centro"
+          },
+          {
+            "geoId": "6047134",
+            "destinationId": "1634202",
+            "landmarkCityDestinationId": null,
+            "type": "REGION",
+            "redirectPage": "DEFAULT_PAGE",
+            "latitude": 27.920219,
+            "longitude": -15.547438,
+            "searchDetail": null,
+            "caption": "Gran Canaria, Canary Islands, <span class='highlighted'>Spain</span>",
+            "name": "Gran Canaria"
+          },
+          {
+            "geoId": "6023506",
+            "destinationId": "1641625",
+            "landmarkCityDestinationId": null,
+            "type": "REGION",
+            "redirectPage": "DEFAULT_PAGE",
+            "latitude": 42.275528,
+            "longitude": 3.017571,
+            "searchDetail": null,
+            "caption": "Costa Brava, <span class='highlighted'>Spain</span>",
+            "name": "Costa Brava"
+          },
+          {
+            "geoId": "5776",
+            "destinationId": "454344",
+            "landmarkCityDestinationId": null,
+            "type": "CITY",
+            "redirectPage": "DEFAULT_PAGE",
+            "latitude": 36.50996,
+            "longitude": -4.88413,
+            "searchDetail": null,
+            "caption": "Marbella, Andalusia, <span class='highlighted'>Spain</span>",
+            "name": "Marbella"
+          }
+        ]
+      },
+      {
+        "group": "HOTEL_GROUP",
+        "entities": []
+      },
+      {
+        "group": "LANDMARK_GROUP",
+        "entities": []
+      },
+      {
+        "group": "TRANSPORT_GROUP",
+        "entities": [
+          {
+            "geoId": "5129026",
+            "destinationId": "439721",
+            "landmarkCityDestinationId": null,
+            "type": "AIRPORT",
+            "redirectPage": "DEFAULT_PAGE",
+            "latitude": 41.302897,
+            "longitude": 2.076833,
+            "searchDetail": null,
+            "caption": "Barcelona, <span class='highlighted'>Spain</span> (BCN-Barcelona Intl.)",
+            "name": "Barcelona (BCN-Barcelona Intl.)"
+          },
+          {
+            "geoId": "5915209",
+            "destinationId": "1649727",
+            "landmarkCityDestinationId": null,
+            "type": "AIRPORT",
+            "redirectPage": "DEFAULT_PAGE",
+            "latitude": 38.876356,
+            "longitude": 1.368005,
+            "searchDetail": null,
+            "caption": "Ibiza, <span class='highlighted'>Spain</span> (IBZ)",
+            "name": "Ibiza (IBZ)"
+          },
+          {
+            "geoId": "4473165",
+            "destinationId": "439723",
+            "landmarkCityDestinationId": null,
+            "type": "AIRPORT",
+            "redirectPage": "DEFAULT_PAGE",
+            "latitude": 40.468064,
+            "longitude": -3.568577,
+            "searchDetail": null,
+            "caption": "Madrid, <span class='highlighted'>Spain</span> (MAD-Adolfo Suarez Madrid-Barajas)",
+            "name": "Madrid (MAD-Adolfo Suarez Madrid-Barajas)"
+          }
+        ]
+      }
+    ],
+    "geocodeFallback": false
+  }

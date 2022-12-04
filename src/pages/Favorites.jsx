@@ -2,20 +2,19 @@ import { getDatabase, ref, onValue } from "firebase/database";
 
 import { Link } from 'react-router-dom'
 import {useAuth} from '../hook/useAuth'
-import { useCheckDate } from '../hook/useCheckDate'
-import { useGuest } from "../hook/useGuest";
 
 import './Favorites.sass'
 import DB from '../exampleHotels.json'
 import { useState, useEffect } from "react";
 
 const Favorites = () => {
+  const {checkIn, checkOut} = useCheckDate() 
+	const {adults, children} = useGuest() 
   const initialDB = DB.data.body.searchResults.results
   const [favoriteList, setFavoriteList] = useState()
 	const {id} = useAuth()
-  const {checkIn, checkOut} = useCheckDate() 
-  const {adults} = useGuest() 
   let data = null
+  let nights
  
   const db = getDatabase();
   const starCountRef = ref(db, 'users/' + id);
@@ -37,16 +36,6 @@ const Favorites = () => {
     });
   },[])
 
-  let nights
-
-  if (checkOut) {
-		if (checkOut.split('.')[0] > checkIn.split('.')[0]) {
-			nights = checkOut.split('.')[0] - checkIn.split('.')[0]; 
-		} else {
-			nights = checkIn.split('.')[0] - checkOut.split('.')[0];
-		}
-	}
-
   return (
     <div className='hotels'>
       <div className='container'>
@@ -66,24 +55,18 @@ const Favorites = () => {
 											<p className='desk_hotel_local'>{item.address.streetAddress} | {item.address.locality} </p>
 										</div>
 										<div className="hotel_info">
-											<div style={{width: 130}}>
-												<p className='desk_hotel_rating'>
-													<img className='start_rating' alt='star' src='../image/svg/Star 5.svg'/>
-													{item.guestReviews.unformattedRating} ({item.guestReviews.total})
-												</p>
-												{item.guestReviews.badgeText ?
-													<div className="DeskGood">
-														<p>{item.guestReviews.badgeText}</p>
-													</div> : <></>
-												}
-												{checkOut ? 
-													<>
-														<p className='nights'>{nights} nights, {adults} adults</p>
-														<p className='total_prise'>$ {Math.round(nights * item.ratePlan.price.exactCurrent)}</p> 
-														<div className='show_now'>Show Now</div>
-													</>
-												: <div className='show_now' style={{margin: '121px 0 0'}}>Show Now</div>}
-											</div>
+											<p className='desk_hotel_rating'>
+												<img className='start_rating' alt='star' src='../image/svg/Star 5.svg'/>
+												{item.guestReviews.unformattedRating} ({item.guestReviews.total})
+											</p>
+											{item.guestReviews.badgeText ?
+												<div className="DeskGood">
+													<p>{item.guestReviews.badgeText}</p>
+												</div> : <></>
+											}
+											<p className='nights'>6 nights, 2 adults</p>
+											<p className='total_prise'>$ 3,848</p>
+											<div className='show_now'>Show Now</div>
 										</div>
 								</section>
 							</Link>
