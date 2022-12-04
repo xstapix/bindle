@@ -73,8 +73,8 @@ const HotelsDesk = ({propHandlerAppliedFilter, propHandlerAppliedSort, propHotel
 											<p className='total_prise'>$ 3,848</p>
 											<div className='show_now'>Show Now</div>
 										</div>
-										<div className='show_now' style={{margin: '121px 0 0'}}>Show Now</div>
-									</div>
+										{/* <div className='show_now' style={{margin: '121px 0 0'}}>Show Now</div> */}
+									{/* </div> */}
 								</section>
 							</Link>
 						)) : <p className='NothingFound'>Nothing found</p>}

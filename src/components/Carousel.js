@@ -18,11 +18,11 @@ const Carousel = ({children} ) => {
   }, [])
 
   return (
-    <div className='main-carousel-container' onTouchStart={handleTouchStart} onTouchMove={handleTouchMove}>
+    <div className='main-carousel-container' >
       <div className='window'>
         <div className='all-sliders-container'
         style={{
-          transform: `translateX(${activeSlide}px)`
+          transform: `translateX(}px)`
         }}>
           {slide}
         </div>

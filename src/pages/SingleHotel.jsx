@@ -1,6 +1,6 @@
 import './SingleHotel.sass'
 import { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, useLocation } from 'react-router-dom'
 
 import { getDatabase, ref, set, onValue } from "firebase/database";
 import Carousel from '../components/Carousel';
@@ -8,6 +8,7 @@ import Carousel from '../components/Carousel';
 import HotelData from '../exampleSingleHotel.json'
 import HotelPhoto from '../exampleSingleHotelPhoto.json'
 import {useAuth} from '../hook/useAuth'
+import { useCheckDate } from '../hook/useCheckDate';
 
 const SingleHotel = () => {
 	const {IDHotel} = useParams()
@@ -182,7 +183,7 @@ const SingleHotel = () => {
 										{checkOut ? 
 										<>
 											<p className='nights' style={{width: '100%'}}>{nights} nights, 2 adults</p>
-											<p className='total_prise'>$ {localData.state}</p>
+											<p className='total_prise'>$ {locationData.state}</p>
 										</>
 										: <></>}
 									</div>

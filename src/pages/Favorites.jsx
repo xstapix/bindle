@@ -2,6 +2,8 @@ import { getDatabase, ref, onValue } from "firebase/database";
 
 import { Link } from 'react-router-dom'
 import {useAuth} from '../hook/useAuth'
+import { useCheckDate } from "../hook/useCheckDate";
+import { useGuest } from "../hook/useGuest";
 
 import './Favorites.sass'
 import DB from '../exampleHotels.json'
