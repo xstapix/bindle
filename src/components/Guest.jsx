@@ -1,5 +1,5 @@
-import {useState} from 'react'
-import { useLocation, useParams } from "react-router-dom";
+import React, {useState} from 'react'
+import { useParams } from "react-router-dom";
 
 import './Guest.sass'
 
@@ -8,7 +8,6 @@ import {useDispatch} from 'react-redux'
 import {useGuest} from '../hook/useGuest'
 
 const Guest = () => {
-  const {pathname} = useLocation()
   const {localSearch} = useParams()
   const dispatch = useDispatch()
   const {adults, children, rooms} = useGuest()
@@ -51,6 +50,8 @@ const Guest = () => {
       })
     }
   }
+
+  console.log('guest');
 
   return (
     <>
@@ -335,10 +336,8 @@ const Guest = () => {
           </div>
         </div>
       </div>
-      
-
     </>
   )
 }
 
-export default Guest
+export default React.memo(Guest)

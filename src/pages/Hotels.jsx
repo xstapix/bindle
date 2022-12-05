@@ -111,6 +111,8 @@ const Hotels = () => {
     setHotelsList([...newList])
   }
 
+  console.log('hotels Main');
+
   document.title = `Bindle | Hotels in ${localSearch}`
 
   return (
