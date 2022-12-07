@@ -24,10 +24,10 @@ const HotelsDesk = ({propHandlerAppliedFilter, propHandlerAppliedSort, propHotel
 	let nights
 
 	if (checkOut) {
-		if (checkOut.split('.')[0] > checkIn.split('.')[0]) {
-			nights = checkOut.split('.')[0] - checkIn.split('.')[0]; 
+		if (checkOut.split('/')[1] > checkIn.split('/')[1]) {
+			nights = checkOut.split('/')[1] - checkIn.split('/')[1]; 
 		} else {
-			nights = checkIn.split('.')[0] - checkOut.split('.')[0];
+			nights = checkIn.split('/')[1] - checkOut.split('/')[1];
 		}
 	}
 
