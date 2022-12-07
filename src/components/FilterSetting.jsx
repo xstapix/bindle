@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import MultiRangeSlider from "../components/MultiRangeSlider";
 
@@ -130,4 +130,4 @@ const FilterSetting = ({hAppliedFilter}) => {
   )
 }
 
-export default FilterSetting
+export default React.memo(FilterSetting)

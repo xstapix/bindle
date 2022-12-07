@@ -1,6 +1,6 @@
 import './HotelsDesk.sass'
 
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { useParams, useNavigate, Link } from 'react-router-dom'
 import { useCheckDate } from '../hook/useCheckDate'
 import { useGuest } from '../hook/useGuest'
@@ -12,7 +12,7 @@ import Guest from '../components/Guest'
 
 const HotelsDesk = ({propHandlerAppliedFilter, propHandlerAppliedSort, propHotelsList}) => {
 	const {checkIn, checkOut} = useCheckDate() 
-	const {adults, children} = useGuest() 
+	const {adults} = useGuest() 
 	const navigate = useNavigate()
   const {localSearch} = useParams()
   const [searchInput, setSearchInput] = useState(localSearch)
@@ -25,11 +25,13 @@ const HotelsDesk = ({propHandlerAppliedFilter, propHandlerAppliedSort, propHotel
 
 	if (checkOut) {
 		if (checkOut.split('/')[1] > checkIn.split('/')[1]) {
-			nights = checkOut.split('/')[1] - checkIn.split('/')[1]; 
+			nights = checkOut.split('/')[1] - checkIn.split('/')[1];
 		} else {
 			nights = checkIn.split('/')[1] - checkOut.split('/')[1];
 		}
 	}
+
+	console.log('hotelsDesk');
 
   return (
     <div className='hotels'>
@@ -61,7 +63,7 @@ const HotelsDesk = ({propHandlerAppliedFilter, propHandlerAppliedSort, propHotel
 					<div className='hotels_list'>
 						<p className='direction'>Direction: {localSearch}</p>
 						<p className='found'>Found {propHotelsList.length} hotels</p>
-						{propHotelsList ? propHotelsList.map((item) => (
+						{propHotelsList.length > 0 ? propHotelsList.map((item) => (
 							<Link to={`/${localSearch}/${item.id}`} state={Math.round(nights * item.ratePlan.price.exactCurrent)}>
 								<section key={item.id}>
 									<img className='desk_plug_hotel singleItemInList' alt='hotel' src={item.thumbnailUrl}/>
@@ -82,7 +84,7 @@ const HotelsDesk = ({propHandlerAppliedFilter, propHandlerAppliedSort, propHotel
 												}
 												{checkOut ? 
 													<>
-														<p className='nights'>{nights} nights, {adults} adults</p>
+														<p className='nights'>{nights} nights, 2 adults</p>
 														<p className='total_prise'>$ {Math.round(nights * item.ratePlan.price.exactCurrent)}</p> 
 														<div className='show_now'>Show Now</div>
 													</>

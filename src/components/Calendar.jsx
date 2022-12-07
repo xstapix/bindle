@@ -1,4 +1,4 @@
-import  { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import './Calendar.sass'
 import Calendar from 'react-calendar';
@@ -48,6 +48,8 @@ const CalendarComponent = () => {
     }
   }
 
+  console.log('calendar');
+
   return (
     <>
     {(localSearch && window.screen.width > 428) ? 
@@ -70,7 +72,7 @@ const CalendarComponent = () => {
         </div>
         <div className={calendarActive ? 'S_Active' : 'S_None'}>
           <div className='settingBackground' onClick={handlerCalendar}>
-            <div className="calendarS" onClick={(event) => event.stopPropagation()} style={{bottom: -230, left: 320, width: 400}}>
+            <div className="calendarS" onClick={(event) => event.stopPropagation()} style={{top: 140, left: 320, width: 400}}>
               <div className='container'>
                 <Calendar 
                   onChange={onChange} 
@@ -149,4 +151,4 @@ const CalendarComponent = () => {
   )
 }
 
-export default CalendarComponent
+export default React.memo(CalendarComponent)
