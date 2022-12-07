@@ -82,7 +82,7 @@ const HotelsDesk = ({propHandlerAppliedFilter, propHandlerAppliedSort, propHotel
 												}
 												{checkOut ? 
 													<>
-														<p className='nights'>{nights} nights, 2 adults</p>
+														<p className='nights'>{nights} nights, {adults} adults</p>
 														<p className='total_prise'>$ {Math.round(nights * item.ratePlan.price.exactCurrent)}</p> 
 														<div className='show_now'>Show Now</div>
 													</>
