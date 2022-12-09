@@ -44,19 +44,19 @@ const HotelsMobil = ({propHandlerAppliedFilter, propHandlerAppliedSort, propHote
             hAppliedFilter={propHandlerAppliedFilter}/>
         </div>
         <div className='hotels_list'> 
-        {propHotelsList ? propHotelsList.map((item) => (
-          <Link to={`/${localSearch}/${item.id}`}>
-            <section key={item.id}>
-              <img className='plug_hotel singleItemInList' alt='hotel' src={item.thumbnailUrl}/>
+        {propHotelsList.length > 0 ? propHotelsList.map((item) => (
+          <Link to={`/${localSearch}/${item.hotel_id}`}>
+            <section key={item.hotel_id}>
+              <img className='plug_hotel singleItemInList' alt='hotel' src={item.main_photo_url.replace('/square60/', '/square300/')}/>
               <div className='hotel_info'>
                 <p className='hotel_rating'>
                   <img className='start_rating' alt='star' src='../image/svg/Star 5.svg'/>
-                  {item.guestReviews.unformattedRating} ({item.guestReviews.total})
+                  {item.review_score} ({item.review_nr})
                 </p>
-                <h1 className='hotel_name'>{item.name}</h1>
-                <p className='hotel_local'>{item.address.streetAddress} | {item.address.locality} </p>
+                <h1 className='hotel_name'>{item.hotel_name}</h1>
+                <p className='hotel_local'>{item.address} | {item.city_trans} </p>
                 <div className='hotel_booking'>
-                  <h1 className='hotel_price'>{item.ratePlan.price.current} / night</h1>
+                  <h1 className='hotel_price'>$ {item.price_breakdown.all_inclusive_price}</h1>
                   <button className='bookNow'>Show Now</button>
                 </div>
               </div>

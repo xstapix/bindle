@@ -7,6 +7,7 @@ import Guest from '../components/Guest'
 
 const HomePage = () => {
   const [searchInput, setSearchInput] = useState('')
+  const [successLoading, setSuccessLoading] = useState(false)
 
   const navigate = useNavigate()
   
@@ -15,9 +16,14 @@ const HomePage = () => {
   const handlerSearch = () => {
     navigate(`/${searchInput}`)
   }
+  
+  window.addEventListener('load', (event) => {
+    setSuccessLoading(true)
+  })
 
   return (
     <>
+    {/* {successLoading ? <> */}
       <div className='background'></div>
       <div className='hello_gallary'>
         <div className='hello_gallary-container'>
@@ -293,6 +299,8 @@ const HomePage = () => {
           </section>
         </div>
       </main>
+      {/* </>
+      : 'loading'} */}
     </>
   )
 }

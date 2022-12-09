@@ -84,6 +84,8 @@ const SingleHotel = () => {
 		document.body.style.overflow = 'visible'
 	} 
 
+	console.log(locationData);
+
 	return (
 		<div>
 			<section style={{position: 'relative'}}>
@@ -137,7 +139,7 @@ const SingleHotel = () => {
 										{checkOut ? 
 										<>
 											<p className='nights' style={{width: '100%'}}>{nights} nights, 2 adults</p>
-											<p className='total_prise'>$ {locationData.state}</p>
+											{/* <p className='total_prise'>$ {locationData.state}</p> */}
 										</>
 										: <></>}
 									</div>
@@ -217,7 +219,7 @@ const SingleHotel = () => {
 				</div>
 				<div id='amenitiesPopUp' className="amenitiesPopUp">
 					<div className="amenitiesHeader">
-						<div onClick={handleCloseSeeAll} className="arrowLeft rotate90">
+						<div onClick={handleCloseSeeAll} className="arrowLeft rotate90 cursorP">
 							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M12 15.3748L6 9.3748L7.075 8.2998L12 13.2498L16.925 8.3248L18 9.3998L12 15.3748Z" fill="#fff"/>
 							</svg>
