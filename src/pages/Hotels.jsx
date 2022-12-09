@@ -4,48 +4,61 @@ import { useEffect, useState } from 'react'
 import HotelsDesk from '../components/HotelsDesk'
 import HotelsMobil from '../components/HotelsMobil'
 
-import DB from '../exampleHotels.json'
+import { useCheckDate } from '../hook/useCheckDate'
 
 const Hotels = () => {
   const {localSearch} = useParams()
-  const initialDB = DB.data.body.searchResults.results
-  const [hotelsList, setHotelsList] = useState(initialDB)
+  const [initialDB, setInitialDB] = useState(null)
+  const [hotelsList, setHotelsList] = useState(null)
+	const {checkIn, checkOut} = useCheckDate() 
   
   const screenW = window.screen.width
-
-  // const [DB, setDB] = useState()
   
-  // if(!DB) return <>Loading...</>
+  useEffect(() => {
+    const options = {
+      method: 'GET',
+      headers: {
+        'X-RapidAPI-Key': '534f1377f4msha36408bd2db5f20p1a7ef7jsn6556c9dca6f8',
+        'X-RapidAPI-Host': 'apidojo-booking-v1.p.rapidapi.com'
+      }
+    }
 
-  // useEffect(() => {
-  //   const options = {
-  //     method: 'GET',
-  //     headers: {
-  //       'X-RapidAPI-Key': '534f1377f4msha36408bd2db5f20p1a7ef7jsn6556c9dca6f8',
-  //       'X-RapidAPI-Host': 'hotels4.p.rapidapi.com'
-  //     }
-  //   };
+    setInitialDB(null)
     
-  //   let destinationId
-    
-  //   fetch('https://hotels4.p.rapidapi.com/locations/v2/search?query=new%20york&locale=en_US&currency=USD', options)
-  //     .then(response => response.json())
-  //     .then(response => {
-  //       destinationId = response.suggestions[0].entities[0].destinationId
-  //       fetch(`https://hotels4.p.rapidapi.com/properties/list?destinationId=${destinationId}&pageNumber=1&pageSize=25&checkIn=2022-05-05&checkOut=2022-05-10&adults1=1&sortOrder=PRICE&locale=en_US&currency=USD`, options)
-  //         .then(response => response.json())
-  //         .then(response => setDB(response.data.body.searchResults.results))
-  //         .catch(err => console.error(err))})
-  //     .catch(err => console.error(err));
-    
-  // }, [])
+    fetch('https://6392fd90ab513e12c5ff47f0.mockapi.io/location', options) // change on https://apidojo-booking-....
+      .then(response => response.json())
+      .then(response => {
+        let localResult = []
 
-  // setTimeout(() => {
-  //   DB.map(item => {
-  //     console.log(item.id);
-  //     console.log(item.guestReviews.rating);
-  //   })
-  // }, 3000);
+        // for(const item of response){
+        //   let dest_ids = item.dest_id 
+        //   fetch(`https://apidojo-booking-v1.p.rapidapi.com/properties/list?offset=0&arrival_date=2022-12-14&departure_date=2022-12-19&guest_qty=1&dest_ids=${dest_ids}&room_qty=1&search_type=city&children_qty=2&children_age=5%2C7&search_id=none&price_filter_currencycode=USD&order_by=popularity&languagecode=en-us&travel_purpose=leisure`, options)
+        //   .then(response => response.json())
+        //     .then(response => {
+        //       localResult = localResult.concat(response.result)
+        //     })
+        //     .catch(err => console.error(err));
+        // };
+        fetch(`https://6392fd90ab513e12c5ff47f0.mockapi.io/properties`)
+          .then(response => response.json())
+            .then(response => {
+              setInitialDB(response);
+            })
+            .catch(err => console.error(err));
+
+        // setTimeout(() => {
+        //   setInitialDB(localResult);
+        // }, 3000);
+    })
+    .catch(err => console.error(err));
+
+    console.log('fetch');
+
+  }, [localSearch])
+
+  useEffect(() => {
+    setHotelsList(initialDB)
+  }, [initialDB])
   
   const handlerAppliedFilter = ({priceMin, priceMax, starList}) => {
     let collectedHotels = []
@@ -117,6 +130,7 @@ const Hotels = () => {
 
   return (
     <>
+    {hotelsList ?  <>
       {screenW > 428 ? 
         <HotelsDesk
           propHandlerAppliedFilter={handlerAppliedFilter}
@@ -126,7 +140,13 @@ const Hotels = () => {
           propHandlerAppliedFilter={handlerAppliedFilter}
           propHandlerAppliedSort={handlerAppliedSort}
           propHotelsList={hotelsList}/>
-      }
+      } </> 
+    : <>
+        <div className='hotels'>
+          Loading...
+        </div>
+      </>
+    }
     </>
   )
 }

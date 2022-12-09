@@ -64,35 +64,37 @@ const HotelsDesk = ({propHandlerAppliedFilter, propHandlerAppliedSort, propHotel
 						<p className='direction'>Direction: {localSearch}</p>
 						<p className='found'>Found {propHotelsList.length} hotels</p>
 						{propHotelsList.length > 0 ? propHotelsList.map((item) => (
-							<Link to={`/${localSearch}/${item.id}`} state={Math.round(nights * item.ratePlan.price.exactCurrent)}>
-								<section key={item.id}>
-									<img className='desk_plug_hotel singleItemInList' alt='hotel' src={item.thumbnailUrl}/>
-									<div className='hotel_info w-100'>
-										<h1 className='desk_hotel_name'>{item.name}</h1>
-										<p className='desk_hotel_local'>{item.address.streetAddress} | {item.address.locality} </p>
+							<section key={item.hotel_id}>
+								<Link style={{height: 220}} to={`/${localSearch}/${item.hotel_id}`} state={item}>
+									<img className='desk_plug_hotel singleItemInList' alt='hotel' src={item.main_photo_url.replace('/square60/', '/square300/')}/>
+								</Link>
+								<div className='hotel_info w-100'>
+									<h1 className='desk_hotel_name'>{item.hotel_name}</h1>
+									<p className='desk_hotel_local'>{item.address} | {item.city_trans} </p>
+								</div>
+								<div className="hotel_info">
+									<div style={{width: 130}}>
+										<p className='desk_hotel_rating'>
+											<img className='start_rating' alt='star' src='../image/svg/Star 5.svg'/>
+											{item.review_score} ({item.review_nr})
+										</p>
+										{item.review_score_word ?
+											<div className="DeskGood">
+												<p>{item.review_score_word}</p>
+											</div> : <></>
+										}
+										{checkOut ? 
+											<>
+												<p className='nights'>{nights} nights, {adults} adults</p>
+												<p className='total_prise'>$ {item.price_breakdown.all_inclusive_price}</p> 
+												<Link to={`/${localSearch}/${item.hotel_id}`} state={item}>
+													<div className='show_now'>Show Now</div>
+												</Link>
+											</>
+										: <div className='show_now' style={{margin: '121px 0 0'}}>Show Now</div>}
 									</div>
-									<div className="hotel_info">
-										<div style={{width: 130}}>
-												<p className='desk_hotel_rating'>
-													<img className='start_rating' alt='star' src='../image/svg/Star 5.svg'/>
-													{item.guestReviews.unformattedRating} ({item.guestReviews.total})
-												</p>
-												{item.guestReviews.badgeText ?
-													<div className="DeskGood">
-														<p>{item.guestReviews.badgeText}</p>
-													</div> : <></>
-												}
-												{checkOut ? 
-													<>
-														<p className='nights'>{nights} nights, 2 adults</p>
-														<p className='total_prise'>$ {Math.round(nights * item.ratePlan.price.exactCurrent)}</p> 
-														<div className='show_now'>Show Now</div>
-													</>
-												: <div className='show_now' style={{margin: '121px 0 0'}}>Show Now</div>}
-											</div>
-										</div>
-								</section>
-							</Link>
+								</div>
+							</section>
 						)) : <p className='NothingFound'>Nothing found</p>}
 					</div>
 				</div>
