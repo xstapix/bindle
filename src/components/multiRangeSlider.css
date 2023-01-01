@@ -31,7 +31,7 @@
   .slider {
     position: relative;
     width: 100%;
-    margin: 44px 0 0;
+    margin: 50px 0 0;
   }
   .thumb {
     pointer-events: none;
@@ -123,4 +123,3 @@
   pointer-events: all;
   position: relative;
 }
-/* } */

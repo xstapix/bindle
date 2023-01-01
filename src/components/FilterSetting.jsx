@@ -31,11 +31,11 @@ const FilterSetting = ({hAppliedFilter}) => {
     }
   }
 
-  const handlerCheckbox = (e) => {
-    const newList = starList
-    newList[e.target.value] = e.target.checked 
-    setStarList(newList)
-  }
+  // const handlerCheckbox = (e) => {
+  //   const newList = starList
+  //   newList[e.target.value] = e.target.checked 
+  //   setStarList(newList)
+  // }
 
   return (
     <>
@@ -49,14 +49,14 @@ const FilterSetting = ({hAppliedFilter}) => {
             <p>Price</p>
             <MultiRangeSlider
               min={0}
-              max={100}
+              max={20000}
               onChange={({ min, max }) => {
                 setPriceMax(max)
                 setPriceMin(min)
               }}
             />
           </div>
-          <p className='paragraph'>Property class</p>
+          {/* <p className='paragraph'>Property class</p>
           <div className='starProperty'>
             <label htmlFor='five'>
               <img alt='star' src='../image/svg/Star 5.svg'/>
@@ -107,13 +107,13 @@ const FilterSetting = ({hAppliedFilter}) => {
               type="checkbox" 
               onChange={handlerCheckbox}
               value="two"/>
-          </div>
+          </div> */}
           {window.screen.width >= 800 ? 
-          <button 
-          onClick={() => {
-            hAppliedFilter({priceMax, priceMin, starList})
-          }} 
-          className='applySettings cursorP'>Apply</button> 
+            <button 
+            onClick={() => {
+              hAppliedFilter({priceMax, priceMin, starList})
+            }} 
+            className='applySettings cursorP'>Apply</button> 
           : 
           <button 
             onClick={() => {

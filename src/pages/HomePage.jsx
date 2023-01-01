@@ -4,26 +4,32 @@ import { useNavigate, Link } from "react-router-dom";
 import './HomePage.sass';
 import CalendarComponent from '../components/Calendar'
 import Guest from '../components/Guest'
+import {useCheckDate} from '../hook/useCheckDate'
 
 const HomePage = () => {
   const [searchInput, setSearchInput] = useState('')
-  const [successLoading, setSuccessLoading] = useState(false)
+  const [checkDateErr, setCheckDateErr] = useState(false)
+  const {checkIn, checkOut} = useCheckDate()
 
   const navigate = useNavigate()
   
   document.title = 'Bindle'
 
   const handlerSearch = () => {
-    navigate(`/${searchInput}`)
+    // if (checkOut) {
+      navigate(`/${searchInput}`)
+    //   setCheckDateErr(false)
+    // } else {
+    //   setCheckDateErr(true)
+    // }
   }
-  
-  window.addEventListener('load', (event) => {
-    setSuccessLoading(true)
-  })
+
+  const handleDateErr = (status) => {
+    setCheckDateErr(status)
+  }
 
   return (
     <>
-    {/* {successLoading ? <> */}
       <div className='background'></div>
       <div className='hello_gallary'>
         <div className='hello_gallary-container'>
@@ -52,7 +58,7 @@ const HomePage = () => {
                 placeholder='Your destination?' 
                 className='hello-search'/>
             </div>
-            <CalendarComponent/>
+            <CalendarComponent dateErr={checkDateErr} setDateErr={handleDateErr}/>
             <Guest/>
             <button 
               onClick={handlerSearch}
@@ -299,8 +305,6 @@ const HomePage = () => {
           </section>
         </div>
       </main>
-      {/* </>
-      : 'loading'} */}
     </>
   )
 }

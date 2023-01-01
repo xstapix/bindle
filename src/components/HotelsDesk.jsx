@@ -10,7 +10,7 @@ import FilterSetting from '../components/FilterSetting'
 import CalendarComponent from '../components/Calendar'
 import Guest from '../components/Guest'
 
-const HotelsDesk = ({propHandlerAppliedFilter, propHandlerAppliedSort, propHotelsList}) => {
+const HotelsDesk = ({propHandlerAppliedFilter, propHandlerAppliedSort, propHotelsList, propFilterRange}) => {
 	const {checkIn, checkOut} = useCheckDate() 
 	const {adults} = useGuest() 
 	const navigate = useNavigate()
@@ -24,14 +24,12 @@ const HotelsDesk = ({propHandlerAppliedFilter, propHandlerAppliedSort, propHotel
 	let nights
 
 	if (checkOut) {
-		if (checkOut.split('/')[1] > checkIn.split('/')[1]) {
-			nights = checkOut.split('/')[1] - checkIn.split('/')[1];
+		if (checkOut.split('.')[0] > checkIn.split('.')[0]) {
+			nights = checkOut.split('.')[0] - checkIn.split('.')[0]; 
 		} else {
-			nights = checkIn.split('/')[1] - checkOut.split('/')[1];
+			nights = checkIn.split('.')[0] - checkOut.split('.')[0];
 		}
 	}
-
-	console.log('hotelsDesk');
 
   return (
     <div className='hotels'>
@@ -86,12 +84,12 @@ const HotelsDesk = ({propHandlerAppliedFilter, propHandlerAppliedSort, propHotel
 										{checkOut ? 
 											<>
 												<p className='nights'>{nights} nights, {adults} adults</p>
-												<p className='total_prise'>$ {item.price_breakdown.all_inclusive_price}</p> 
-												<Link to={`/${localSearch}/${item.hotel_id}`} state={item}>
-													<div className='show_now'>Show Now</div>
+												<p className='total_prise'>{item.price_breakdown} {item.price_breakdown.all_inclusive_price}</p> 
+												<Link to={`/${localSearch}/${item.hotel_id.currency}`} state={item}>
+													<div className='show_now cursorP'>Show Now</div>
 												</Link>
 											</>
-										: <div className='show_now' style={{margin: '121px 0 0'}}>Show Now</div>}
+										: <div className='show_now cursorP' style={{margin: '121px 0 0'}}>Show Now</div>}
 									</div>
 								</div>
 							</section>

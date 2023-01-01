@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import './Calendar.sass'
 import Calendar from 'react-calendar';
@@ -8,7 +8,7 @@ import { setData } from '../store/slice/checkDateSlice';
 import {useDispatch} from 'react-redux'
 import {useCheckDate} from '../hook/useCheckDate'
 
-const CalendarComponent = () => {
+const CalendarComponent = ({dateErr, setDateErr}) => {
   const {localSearch} = useParams()
   const dispatch = useDispatch()
   const {checkIn, checkOut} = useCheckDate()
@@ -22,33 +22,36 @@ const CalendarComponent = () => {
       if (window.screen.width <= 428) {
         document.body.style.overflow = 'visible'
       }
+      setDateErr(false)
     } else {
       setCalendarActive(true)
       if (window.screen.width <= 428) {
         document.body.style.overflow = 'hidden'
       }
     }
+
     dispatch(setData({
-      checkIn: value[0].toLocaleDateString(),
-      checkOut: value[1].toLocaleDateString(),
+      checkIn: value[0].toLocaleDateString().split('.').reverse().join('-'),
+      checkOut: value[1].toLocaleDateString().split('.').reverse().join('-'),
     }))
   } 
+
 
   if (window.screen.width > 428) {
     if(calendarActive) {
       document.addEventListener('click', (event) => {
         if (event.target.id !== 'calendar') {
           setCalendarActive(false)
+          setDateErr(false)
+
           dispatch(setData({
-            checkIn: value[0].toLocaleDateString(),
-            checkOut: value[1].toLocaleDateString(),
+            checkIn: value[0].toLocaleDateString().split('.').reverse().join('-'),
+            checkOut: value[1].toLocaleDateString().split('.').reverse().join('-'),
           }))
         }
       })
     }
   }
-
-  console.log('calendar');
 
   return (
     <>
@@ -98,7 +101,9 @@ const CalendarComponent = () => {
               <p id='calendar'>In: {checkIn}</p> 
               <p id='calendar'>Out: {checkOut}</p>
             </> : 
-            'When does it start?'}
+            <p id='calendar'>When does it start?</p>}
+
+          {dateErr ? <p style={{color: '#FF5E60'}}>Please enter dates</p> : <></>}
         </div>
         <div className={calendarActive ? 'S_Active' : 'S_None'}>
           <div className='settingBackground' onClick={handlerCalendar}>

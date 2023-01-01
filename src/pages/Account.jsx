@@ -17,15 +17,6 @@ const Account = () => {
         <img className='account_profile_photo' alt='profile' src='../image/photo_ava.svg'/>
       </div>
         <div className='account_pints'>
-          <Link to='/personalData'>
-            <section>
-              <div>
-                <img className='pint_bcg' alt='pint_icon' src='../image/svg/noLogin.svg'/>
-                <p className='account_pints_text'>Personal Data</p>
-              </div>
-              <img alt='arrow_right' src='../image/svg/chevron_right_black_24dp.svg'/>
-            </section>
-          </Link>
           <Link to='/favorites'>
             <section>
               <div>

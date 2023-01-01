@@ -8,7 +8,7 @@ import { useCheckDate } from '../hook/useCheckDate'
 
 const Hotels = () => {
   const {localSearch} = useParams()
-  const [initialDB, setInitialDB] = useState(null)
+  const [initialDB, setInitialDB] = useState()
   const [hotelsList, setHotelsList] = useState(null)
 	const {checkIn, checkOut} = useCheckDate() 
   
@@ -23,36 +23,54 @@ const Hotels = () => {
       }
     }
 
+    let arrival_date
+    let departure_date
+
+    if (checkOut) {
+      arrival_date = checkIn
+      departure_date = checkOut
+    } else {
+      let newDate = new Date().toLocaleDateString()
+      let day = newDate.split('.')[0]
+
+      day =+ Number(day) + 1
+      arrival_date = newDate.split('.')
+      arrival_date[0] = day
+
+      day =+ Number(day) + 2
+      departure_date = newDate.split('.')
+      departure_date[0] = day
+      console.log(departure_date.reverse().join('-'));
+    }
+
     setInitialDB(null)
-    
-    fetch('https://6392fd90ab513e12c5ff47f0.mockapi.io/location', options) // change on https://apidojo-booking-....
+
+    fetch(`https://6392fd90ab513e12c5ff47f0.mockapi.io/location`, options) // change on `https://apidojo-booking-v1.p.rapidapi.com/locations/auto-complete?text=${localSearch}&languagecode=en-us`
       .then(response => response.json())
       .then(response => {
         let localResult = []
 
         // for(const item of response){
         //   let dest_ids = item.dest_id 
-        //   fetch(`https://apidojo-booking-v1.p.rapidapi.com/properties/list?offset=0&arrival_date=2022-12-14&departure_date=2022-12-19&guest_qty=1&dest_ids=${dest_ids}&room_qty=1&search_type=city&children_qty=2&children_age=5%2C7&search_id=none&price_filter_currencycode=USD&order_by=popularity&languagecode=en-us&travel_purpose=leisure`, options)
+        //   fetch(`https://apidojo-booking-v1.p.rapidapi.com/properties/list?offset=0&arrival_date=${arrival_date}&departure_date=${departure_date}&guest_qty=1&dest_ids=${dest_ids}&room_qty=1&search_type=city&children_qty=2&children_age=5%2C7&search_id=none&price_filter_currencycode=USD&order_by=popularity&languagecode=en-us&travel_purpose=leisure`, options)
         //   .then(response => response.json())
-        //     .then(response => {
-        //       localResult = localResult.concat(response.result)
-        //     })
-        //     .catch(err => console.error(err));
+        //   .then(response => {
+        //     localResult = localResult.concat(response.result)
+        //   })
+        //   .catch(err => console.error(err));
         // };
         fetch(`https://6392fd90ab513e12c5ff47f0.mockapi.io/properties`)
           .then(response => response.json())
-            .then(response => {
-              setInitialDB(response);
-            })
-            .catch(err => console.error(err));
+          .then(response => {
+            setInitialDB(response); 
+          })
+          .catch(err => console.error(err));
 
         // setTimeout(() => {
         //   setInitialDB(localResult);
         // }, 3000);
     })
     .catch(err => console.error(err));
-
-    console.log('fetch');
 
   }, [localSearch])
 
@@ -63,38 +81,38 @@ const Hotels = () => {
   const handlerAppliedFilter = ({priceMin, priceMax, starList}) => {
     let collectedHotels = []
     const List = initialDB.filter(item => 
-      (item.ratePlan.price.exactCurrent >= priceMin) & 
-      (item.ratePlan.price.exactCurrent <= priceMax))
+      (item.price_breakdown.all_inclusive_price >= priceMin) & 
+      (item.price_breakdown.all_inclusive_price <= priceMax))
     
     setHotelsList(List)
     
-    const searchStar = (key) => {
-      if (key === 'five') {
-        const newList = List.filter(item => item.starRating === 5)
-        collectedHotels = collectedHotels.concat(newList)
-      }
-      if (key === 'four') {
-        const newList = List.filter(item => item.starRating === 4)
-        collectedHotels = collectedHotels.concat(newList)
-      }
-      if (key === 'three') {
-        const newList = List.filter(item => item.starRating === 3)
-        collectedHotels = collectedHotels.concat(newList)
-      }
-      if (key === 'two') {
-        const newList = List.filter(item => item.starRating === 2)
-        collectedHotels = collectedHotels.concat(newList)
-      }
-    }
+    // const searchStar = (key) => {
+    //   if (key === 'five') {
+    //     const newList = List.filter(item => item.starRating === 5)
+    //     collectedHotels = collectedHotels.concat(newList)
+    //   }
+    //   if (key === 'four') {
+    //     const newList = List.filter(item => item.starRating === 4)
+    //     collectedHotels = collectedHotels.concat(newList)
+    //   }
+    //   if (key === 'three') {
+    //     const newList = List.filter(item => item.starRating === 3)
+    //     collectedHotels = collectedHotels.concat(newList)
+    //   }
+    //   if (key === 'two') {
+    //     const newList = List.filter(item => item.starRating === 2)
+    //     collectedHotels = collectedHotels.concat(newList)
+    //   }
+    // }
 
-    if (Object.values(starList).includes(true)) {
-      for (const key in starList) {
-        if(starList[key]) {
-          searchStar(key)
-        }
-      }
-      setHotelsList(collectedHotels)
-    } 
+    // if (Object.values(starList).includes(true)) {
+    //   for (const key in starList) {
+    //     if(starList[key]) {
+    //       searchStar(key)
+    //     }
+    //   }
+    //   setHotelsList(collectedHotels)
+    // } 
   } 
 
   const handlerAppliedSort = (sortList) => {
@@ -104,16 +122,16 @@ const Hotels = () => {
       if(sortList[key]) {
         switch (key) {
           case 'LH':
-            newList = hotelsList.sort((a, b) => a.ratePlan.price.exactCurrent - b.ratePlan.price.exactCurrent)
+            newList = hotelsList.sort((a, b) => a.price_breakdown.all_inclusive_price - b.price_breakdown.all_inclusive_price)
             break;
           case 'HL':
-            newList = hotelsList.sort((a, b) => b.ratePlan.price.exactCurrent - a.ratePlan.price.exactCurrent)
+            newList = hotelsList.sort((a, b) => b.price_breakdown.all_inclusive_price - a.price_breakdown.all_inclusive_price)
             break;
           case 'D':
-            newList = hotelsList.sort((a, b) => b.starRating - a.starRating)
+            newList = hotelsList.sort((a, b) => b.review_score - a.review_score)
             break;
           case 'U':
-            newList = hotelsList.sort((a, b) => a.starRating - b.starRating)
+            newList = hotelsList.sort((a, b) => a.review_score - b.review_score)
             break;
         
           default:
@@ -123,8 +141,6 @@ const Hotels = () => {
     }
     setHotelsList([...newList])
   }
-
-  console.log('hotels Main');
 
   document.title = `Bindle | Hotels in ${localSearch}`
 
@@ -141,11 +157,12 @@ const Hotels = () => {
           propHandlerAppliedSort={handlerAppliedSort}
           propHotelsList={hotelsList}/>
       } </> 
-    : <>
-        <div className='hotels'>
-          Loading...
+    : 
+      <div className='loadingModal'>
+        <div className='container'>
+          <p className='logo_effect fw-Bold fz-27'>Looking for suitable hotels</p>
         </div>
-      </>
+      </div>
     }
     </>
   )

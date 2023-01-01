@@ -1,0 +1,3364 @@
+{
+  "is_beach_ufi": 6,
+  "recommended_filters": [
+    {
+      "generic_id": "room_facility::11",
+      "name": "Air conditioning"
+    },
+    {
+      "generic_id": "facility::2",
+      "name": "Parking"
+    },
+    {
+      "name": "Very Good: 8+",
+      "generic_id": "reviewscorebuckets::80"
+    },
+    {
+      "name": "Pet friendly",
+      "generic_id": "facility::4"
+    },
+    {
+      "name": "Family rooms",
+      "generic_id": "facility::28"
+    }
+  ],
+  "search_id": "ed88c1c5fd1670603770c4cf8aa6fbd2172:1:121",
+  "has_low_availability": "",
+  "base_filters": [
+    {
+      "irene_resp_id": "pri",
+      "iconfont": "pricetag",
+      "id": "price_category",
+      "layout": {
+        "is_collapsed": 0,
+        "is_collapsable": 0,
+        "collapsed_count": 5
+      },
+      "title": "Your budget (for 1 night)",
+      "type": "multiple_union",
+      "is_group": 1,
+      "categories": [
+        {
+          "style_for_count": 0,
+          "selected": 0,
+          "display_format": "%LOWER% - %UPPER%",
+          "to": 100,
+          "count": 2,
+          "from": 50,
+          "name": "US$50 - US$100 ",
+          "id": "price_category::100"
+        },
+        {
+          "style_for_count": 0,
+          "display_format": "%LOWER% - %UPPER%",
+          "selected": 0,
+          "to": 150,
+          "from": 100,
+          "count": 2,
+          "name": "US$100 - US$150 ",
+          "id": "price_category::150"
+        },
+        {
+          "style_for_count": 0,
+          "display_format": "%LOWER% - %UPPER%",
+          "selected": 0,
+          "to": 200,
+          "from": 150,
+          "count": 13,
+          "name": "US$150 - US$200 ",
+          "id": "price_category::200"
+        },
+        {
+          "style_for_count": 0,
+          "selected": 0,
+          "display_format": "%LOWER% + ",
+          "to": 0,
+          "count": 73,
+          "from": 200,
+          "name": "US$200 + ",
+          "id": "price_category::250"
+        }
+      ],
+      "any_text": "No price range selected"
+    },
+    {
+      "is_group": 1,
+      "categories": [
+        {
+          "id": "mealplan::breakfast_included",
+          "popular": 1,
+          "selected": 0,
+          "name": "Breakfast Included",
+          "popular_rank": 1,
+          "style_for_count": 0,
+          "count": 17
+        },
+        {
+          "id": "facility::2",
+          "popular_rank": 2,
+          "popular": 1,
+          "name": "Parking",
+          "selected": 0,
+          "count": 72,
+          "style_for_count": 0
+        },
+        {
+          "id": "facility::4",
+          "style_for_count": 0,
+          "count": 37,
+          "popular": 1,
+          "name": "Pet friendly",
+          "selected": 0,
+          "popular_rank": 3
+        },
+        {
+          "id": "reviewscorebuckets::80",
+          "popular": 1,
+          "name": "Very Good: 8+",
+          "selected": 0,
+          "popular_rank": 7,
+          "style_for_count": 0,
+          "count": 42
+        },
+        {
+          "id": "facility::28",
+          "count": 36,
+          "name": "Family rooms",
+          "popular": 1,
+          "popular_rank": 8,
+          "experiment_tracking_data": {
+            "track_on_select": [
+              {
+                "type": 1,
+                "value": 1,
+                "experiment_tag": "families_app_family_rooms_blackout"
+              }
+            ]
+          },
+          "style_for_count": 0,
+          "selected": 0
+        },
+        {
+          "id": "room_facility::11",
+          "selected": 0,
+          "popular": 1,
+          "name": "Air conditioning",
+          "popular_rank": 9,
+          "style_for_count": 0,
+          "count": 81
+        },
+        {
+          "popular_rank": 11,
+          "name": "Resorts",
+          "popular": 1,
+          "selected": 0,
+          "count": 16,
+          "style_for_count": 0,
+          "id": "property_type::206"
+        },
+        {
+          "name": "Duval",
+          "popular": 1,
+          "selected": 0,
+          "popular_rank": 12,
+          "style_for_count": 0,
+          "count": 29,
+          "id": "district::4301"
+        }
+      ],
+      "any_text": "No rating selected",
+      "type": "multiple_intersection",
+      "title": "Popular Filters",
+      "layout": {
+        "collapsed_count": 5,
+        "is_collapsable": 0,
+        "is_collapsed": 0
+      },
+      "id": "popular",
+      "iconfont": "aconfirmation",
+      "irene_resp_id": "popular"
+    },
+    {
+      "irene_resp_id": "fc",
+      "iconfont": "aconfirmation",
+      "id": "free_cancellation",
+      "layout": {
+        "collapsed_count": 5,
+        "is_collapsed": 0,
+        "is_collapsable": 0
+      },
+      "title": "Free cancellation ",
+      "type": "single_option",
+      "any_text": null,
+      "categories": [
+        {
+          "selected": 0,
+          "name": "Free Cancellation",
+          "count": 15,
+          "style_for_count": 0,
+          "id": "free_cancellation::1"
+        }
+      ],
+      "is_group": 1
+    },
+    {
+      "layout": {
+        "collapsed_count": 5,
+        "is_collapsed": 0,
+        "is_collapsable": 0
+      },
+      "id": "health_and_hygiene",
+      "iconfont": null,
+      "irene_resp_id": "health_and_hygiene",
+      "categories": [
+        {
+          "name": "Properties that take health & safety measures",
+          "selected": 0,
+          "style_for_count": 0,
+          "count": 57,
+          "id": "health_and_hygiene::1"
+        }
+      ],
+      "is_group": 1,
+      "any_text": null,
+      "type": "single_option",
+      "title": "Properties with additional health & safety measures"
+    },
+    {
+      "layout": {
+        "is_collapsable": 0,
+        "is_collapsed": 0,
+        "collapsed_count": 5
+      },
+      "iconfont": "acstar",
+      "id": "class",
+      "irene_resp_id": "class",
+      "categories": [
+        {
+          "selected": 0,
+          "name": "Unrated",
+          "style_for_count": 0,
+          "count": 4,
+          "id": "class::0"
+        },
+        {
+          "id": "class::2",
+          "style_for_count": 0,
+          "count": 8,
+          "name": "2 stars",
+          "selected": 0
+        },
+        {
+          "count": 37,
+          "style_for_count": 0,
+          "name": "3 stars",
+          "selected": 0,
+          "id": "class::3"
+        },
+        {
+          "id": "class::4",
+          "style_for_count": 0,
+          "count": 31,
+          "name": "4 stars",
+          "selected": 0
+        },
+        {
+          "selected": 0,
+          "name": "5 stars",
+          "count": 2,
+          "style_for_count": 0,
+          "id": "class::5"
+        }
+      ],
+      "any_text": "No stars selected",
+      "is_group": 1,
+      "type": "multiple_union",
+      "title": "Star Rating"
+    },
+    {
+      "title": "Property Type",
+      "type": "multiple_union",
+      "categories": [
+        {
+          "selected": 0,
+          "name": "Family-Friendly Properties",
+          "style_for_count": 0,
+          "count": 27,
+          "id": "family_friendly_property::1"
+        },
+        {
+          "selected": 0,
+          "name": "Hotels",
+          "count": 26,
+          "style_for_count": 0,
+          "id": "property_type::204"
+        },
+        {
+          "style_for_count": 0,
+          "count": 25,
+          "name": "Vacation Homes",
+          "selected": 0,
+          "id": "property_type::220"
+        },
+        {
+          "id": "property_type::206",
+          "style_for_count": 0,
+          "count": 16,
+          "name": "Resorts",
+          "popular": 1,
+          "selected": 0,
+          "popular_rank": 11
+        },
+        {
+          "id": "property_type::201",
+          "name": "Apartments",
+          "selected": 0,
+          "count": 6,
+          "style_for_count": 0
+        },
+        {
+          "id": "property_type::205",
+          "count": 4,
+          "style_for_count": 0,
+          "name": "Motels",
+          "selected": 0
+        },
+        {
+          "id": "property_type::216",
+          "selected": 0,
+          "name": "Guesthouses",
+          "count": 3,
+          "style_for_count": 0
+        },
+        {
+          "count": 2,
+          "style_for_count": 0,
+          "name": "Bed and Breakfasts",
+          "selected": 0,
+          "id": "property_type::208"
+        }
+      ],
+      "is_group": 1,
+      "any_text": "No property type selected",
+      "irene_resp_id": "ht_id",
+      "iconfont": "homecrop",
+      "id": "property_type",
+      "layout": {
+        "collapsed_count": 5,
+        "is_collapsed": 1,
+        "is_collapsable": 1
+      }
+    },
+    {
+      "categories": [
+        {
+          "name": "24-hour front desk",
+          "selected": 0,
+          "style_for_count": 0,
+          "count": 31,
+          "id": "facility::8"
+        },
+        {
+          "count": 4,
+          "style_for_count": 0,
+          "selected": 0,
+          "name": "Airport shuttle",
+          "id": "facility::17"
+        },
+        {
+          "selected": 0,
+          "name": "Airport shuttle (free)",
+          "style_for_count": 0,
+          "count": 2,
+          "id": "facility::139"
+        },
+        {
+          "id": "facility::72",
+          "count": 11,
+          "style_for_count": 0,
+          "name": "BBQ facilities",
+          "selected": 0
+        },
+        {
+          "id": "facility::182",
+          "count": 18,
+          "style_for_count": 0,
+          "name": "Electric vehicle charging station",
+          "selected": 0
+        },
+        {
+          "id": "facility::25",
+          "count": 30,
+          "style_for_count": 0,
+          "selected": 0,
+          "name": "Facilities for disabled guests"
+        },
+        {
+          "selected": 0,
+          "style_for_count": 0,
+          "experiment_tracking_data": {
+            "track_on_select": [
+              {
+                "experiment_tag": "families_app_family_rooms_blackout",
+                "type": 1,
+                "value": 1
+              }
+            ]
+          },
+          "popular_rank": 8,
+          "popular": 1,
+          "name": "Family rooms",
+          "count": 36,
+          "id": "facility::28"
+        },
+        {
+          "id": "facility::11",
+          "selected": 0,
+          "name": "Fitness center",
+          "count": 30,
+          "style_for_count": 0
+        },
+        {
+          "id": "facility::46",
+          "selected": 0,
+          "name": "Free parking",
+          "style_for_count": 0,
+          "count": 44
+        },
+        {
+          "id": "facility::107",
+          "popular_rank": 14,
+          "popular": 1,
+          "selected": 0,
+          "name": "Free WiFi",
+          "count": 73,
+          "style_for_count": 0
+        },
+        {
+          "name": "Non-smoking rooms",
+          "selected": 0,
+          "count": 56,
+          "style_for_count": 0,
+          "id": "facility::16"
+        },
+        {
+          "count": 72,
+          "style_for_count": 0,
+          "popular_rank": 2,
+          "popular": 1,
+          "name": "Parking",
+          "selected": 0,
+          "id": "facility::2"
+        },
+        {
+          "popular_rank": 3,
+          "popular": 1,
+          "name": "Pet friendly",
+          "selected": 0,
+          "count": 37,
+          "style_for_count": 0,
+          "id": "facility::4"
+        },
+        {
+          "id": "facility::3",
+          "name": "Restaurant",
+          "selected": 0,
+          "count": 26,
+          "style_for_count": 0
+        },
+        {
+          "name": "Room service",
+          "selected": 0,
+          "style_for_count": 0,
+          "count": 16,
+          "id": "facility::5"
+        },
+        {
+          "selected": 0,
+          "name": "Smoking Rooms",
+          "style_for_count": 0,
+          "count": 5,
+          "id": "room_smoking::999999"
+        },
+        {
+          "id": "facility::54",
+          "name": "Spa",
+          "selected": 0,
+          "count": 7,
+          "style_for_count": 0
+        },
+        {
+          "id": "facility::433",
+          "selected": 0,
+          "name": "Swimming pool",
+          "style_for_count": 0,
+          "count": 71
+        }
+      ],
+      "is_group": 1,
+      "any_text": "No facilities selected",
+      "experiment_tracking_data": {
+        "track_on_view": [
+          {
+            "type": 0,
+            "value": 1,
+            "experiment_tag": "families_app_family_rooms_blackout"
+          }
+        ]
+      },
+      "title": "Facilities",
+      "type": "multiple_intersection",
+      "id": "facility",
+      "iconfont": "frontdesk",
+      "layout": {
+        "collapsed_count": 5,
+        "is_collapsable": 1,
+        "is_collapsed": 1
+      },
+      "irene_resp_id": "hotelfacility"
+    },
+    {
+      "any_text": "No Preference",
+      "categories": [
+        {
+          "selected": 0,
+          "name": "Less than 1 km",
+          "style_for_count": 0,
+          "count": 38,
+          "id": "distance::1000"
+        },
+        {
+          "id": "distance::3000",
+          "style_for_count": 0,
+          "count": 50,
+          "selected": 0,
+          "name": "Less than 3 km"
+        },
+        {
+          "id": "distance::5000",
+          "style_for_count": 0,
+          "count": 71,
+          "selected": 0,
+          "name": "Less than 5 km"
+        }
+      ],
+      "is_group": 1,
+      "type": "multiple_single_selection",
+      "title": "Distance from city center",
+      "layout": {
+        "collapsed_count": 5,
+        "is_collapsed": 0,
+        "is_collapsable": 0
+      },
+      "id": "distance",
+      "iconfont": null,
+      "irene_resp_id": "distance"
+    },
+    {
+      "categories": [
+        {
+          "id": "BeachAccessFacilityFilter::0",
+          "name": "Private beach",
+          "selected": 0,
+          "count": 8,
+          "style_for_count": 0
+        },
+        {
+          "selected": 0,
+          "name": "Beachfront",
+          "style_for_count": 0,
+          "count": 7,
+          "id": "BeachAccessFacilityFilter::1"
+        },
+        {
+          "id": "BeachAccessFacilityFilter::2",
+          "name": "Less than 1/2 mile",
+          "selected": 0,
+          "count": 48,
+          "style_for_count": 0
+        },
+        {
+          "selected": 0,
+          "name": "Less than 1 mile",
+          "style_for_count": 0,
+          "count": 71,
+          "id": "BeachAccessFacilityFilter::3"
+        },
+        {
+          "id": "BeachAccessFacilityFilter::4",
+          "style_for_count": 0,
+          "count": 78,
+          "name": "Less than 2 miles",
+          "selected": 0
+        }
+      ],
+      "is_group": 1,
+      "any_text": null,
+      "type": "multiple_union",
+      "title": "Beach Access",
+      "layout": {
+        "is_collapsable": 0,
+        "is_collapsed": 0,
+        "collapsed_count": 5
+      },
+      "iconfont": null,
+      "id": "BeachAccessFacilityFilter",
+      "irene_resp_id": "BeachAccessFacilityFilter"
+    },
+    {
+      "irene_resp_id": "mealplan",
+      "id": "mealplan",
+      "iconfont": "restaurants",
+      "layout": {
+        "collapsed_count": 5,
+        "is_collapsed": 0,
+        "is_collapsable": 0
+      },
+      "title": "Meals",
+      "type": "multiple_union",
+      "is_group": 1,
+      "categories": [
+        {
+          "popular": 1,
+          "name": "Breakfast Included",
+          "selected": 0,
+          "popular_rank": 1,
+          "style_for_count": 0,
+          "count": 17,
+          "id": "mealplan::breakfast_included"
+        },
+        {
+          "id": "mealplan::999",
+          "name": "Kitchen amenities",
+          "selected": 0,
+          "style_for_count": 0,
+          "count": 48
+        }
+      ],
+      "any_text": "Any meal options"
+    },
+    {
+      "is_group": 1,
+      "categories": [
+        {
+          "id": "popular_activities::447",
+          "count": 32,
+          "style_for_count": 0,
+          "name": "Bicycle rental",
+          "selected": 0
+        },
+        {
+          "count": 30,
+          "style_for_count": 0,
+          "name": "Fitness center",
+          "selected": 0,
+          "id": "popular_activities::11"
+        },
+        {
+          "style_for_count": 0,
+          "count": 24,
+          "name": "Golf course (within 2 miles)",
+          "selected": 0,
+          "id": "popular_activities::12"
+        },
+        {
+          "name": "Fishing",
+          "selected": 0,
+          "count": 23,
+          "style_for_count": 0,
+          "id": "popular_activities::19"
+        },
+        {
+          "id": "popular_activities::63",
+          "selected": 0,
+          "name": "Hot tub/Jacuzzi",
+          "style_for_count": 0,
+          "count": 23
+        },
+        {
+          "name": "Snorkeling",
+          "selected": 0,
+          "count": 21,
+          "style_for_count": 0,
+          "id": "popular_activities::90"
+        }
+      ],
+      "any_text": null,
+      "title": "Fun Things To Do",
+      "type": "multiple_union",
+      "id": "popular_activities",
+      "iconfont": null,
+      "layout": {
+        "collapsed_count": 6,
+        "is_collapsable": 0,
+        "is_collapsed": 0
+      },
+      "irene_resp_id": "popular_activities"
+    },
+    {
+      "iconfont": "hotel",
+      "id": "chaincode",
+      "layout": {
+        "collapsed_count": 5,
+        "is_collapsable": 1,
+        "is_collapsed": 1
+      },
+      "irene_resp_id": "chaincode",
+      "is_group": 1,
+      "categories": [
+        {
+          "style_for_count": 0,
+          "count": 1,
+          "selected": 0,
+          "name": "Autograph Collection",
+          "id": "chaincode::2542"
+        },
+        {
+          "name": "Crowne Plaza Hotels & Resorts",
+          "selected": 0,
+          "count": 1,
+          "style_for_count": 0,
+          "id": "chaincode::1071"
+        },
+        {
+          "name": "Curio Collection by Hilton",
+          "selected": 0,
+          "count": 1,
+          "style_for_count": 0,
+          "id": "chaincode::4381"
+        },
+        {
+          "count": 1,
+          "style_for_count": 0,
+          "selected": 0,
+          "name": "Doubletree by Hilton",
+          "id": "chaincode::1984"
+        },
+        {
+          "selected": 0,
+          "name": "Fairfield Inn",
+          "count": 2,
+          "style_for_count": 0,
+          "id": "chaincode::2188"
+        },
+        {
+          "id": "chaincode::1851",
+          "style_for_count": 0,
+          "count": 1,
+          "selected": 0,
+          "name": "Hampton Inn"
+        },
+        {
+          "style_for_count": 0,
+          "count": 1,
+          "selected": 0,
+          "name": "Hilton Garden Inn",
+          "id": "chaincode::2117"
+        },
+        {
+          "name": "Hyatt",
+          "selected": 0,
+          "count": 1,
+          "style_for_count": 0,
+          "id": "chaincode::1696"
+        },
+        {
+          "selected": 0,
+          "name": "Hyatt Residence Club",
+          "style_for_count": 0,
+          "count": 3,
+          "id": "chaincode::3634"
+        },
+        {
+          "selected": 0,
+          "name": "Kimpton Hotels",
+          "count": 3,
+          "style_for_count": 0,
+          "id": "chaincode::7076"
+        },
+        {
+          "count": 1,
+          "style_for_count": 0,
+          "selected": 0,
+          "name": "Marriott Hotels & Resorts",
+          "id": "chaincode::1080"
+        },
+        {
+          "name": "Waldorf Astoria Hotels & Resorts",
+          "selected": 0,
+          "style_for_count": 0,
+          "count": 1,
+          "id": "chaincode::2154"
+        }
+      ],
+      "any_text": "No chain selected",
+      "title": "Chain",
+      "type": "multiple_union"
+    },
+    {
+      "type": "multiple_single_selection",
+      "title": "Review Score",
+      "categories": [
+        {
+          "id": "reviewscorebuckets::50",
+          "selected": 0,
+          "name": "Fair: 5+",
+          "count": 69,
+          "style_for_count": 0
+        },
+        {
+          "count": 69,
+          "style_for_count": 0,
+          "name": "Pleasant: 6+",
+          "selected": 0,
+          "id": "reviewscorebuckets::60"
+        },
+        {
+          "id": "reviewscorebuckets::70",
+          "style_for_count": 0,
+          "count": 68,
+          "selected": 0,
+          "name": "Good: 7+"
+        },
+        {
+          "popular": 1,
+          "selected": 0,
+          "name": "Very Good: 8+",
+          "popular_rank": 7,
+          "style_for_count": 0,
+          "count": 42,
+          "id": "reviewscorebuckets::80"
+        },
+        {
+          "id": "reviewscorebuckets::90",
+          "name": "Wonderful: 9+",
+          "selected": 0,
+          "style_for_count": 0,
+          "count": 11
+        },
+        {
+          "style_for_count": 0,
+          "count": 8,
+          "selected": 0,
+          "name": "No rating",
+          "id": "reviewscorebuckets::999"
+        }
+      ],
+      "any_text": "No score selected",
+      "is_group": 1,
+      "irene_resp_id": "review_score",
+      "layout": {
+        "is_collapsed": 1,
+        "is_collapsable": 1,
+        "collapsed_count": 5
+      },
+      "id": "reviewscorebuckets",
+      "iconfont": "reviews"
+    },
+    {
+      "irene_resp_id": "roomfacility",
+      "layout": {
+        "is_collapsable": 1,
+        "is_collapsed": 1,
+        "collapsed_count": 5
+      },
+      "iconfont": "bath",
+      "id": "room_facility",
+      "type": "multiple_intersection",
+      "title": "Room Facilities",
+      "categories": [
+        {
+          "id": "room_facility::38",
+          "count": 69,
+          "style_for_count": 0,
+          "name": "Private bathroom",
+          "selected": 0
+        },
+        {
+          "popular": 1,
+          "selected": 0,
+          "name": "Air conditioning",
+          "popular_rank": 9,
+          "style_for_count": 0,
+          "count": 81,
+          "id": "room_facility::11"
+        },
+        {
+          "id": "room_facility::75",
+          "count": 43,
+          "style_for_count": 0,
+          "name": "Flat-screen TV",
+          "selected": 0
+        },
+        {
+          "style_for_count": 0,
+          "count": 26,
+          "selected": 0,
+          "name": "Bathtub",
+          "id": "room_facility::5"
+        },
+        {
+          "id": "room_facility::17",
+          "style_for_count": 0,
+          "count": 35,
+          "name": "Balcony",
+          "selected": 0
+        },
+        {
+          "id": "room_facility::999",
+          "selected": 0,
+          "name": "Kitchen/Kitchenette",
+          "count": 48,
+          "style_for_count": 0
+        },
+        {
+          "id": "room_facility::998",
+          "count": 68,
+          "style_for_count": 0,
+          "selected": 0,
+          "name": "Coffee/Tea maker"
+        },
+        {
+          "id": "room_facility::34",
+          "name": "Washing machine",
+          "selected": 0,
+          "count": 25,
+          "style_for_count": 0
+        },
+        {
+          "id": "room_facility::108",
+          "style_for_count": 0,
+          "count": 13,
+          "name": "Ocean view",
+          "selected": 0
+        },
+        {
+          "id": "room_facility::81",
+          "count": 21,
+          "style_for_count": 0,
+          "name": "View",
+          "selected": 0
+        },
+        {
+          "id": "room_facility::20",
+          "style_for_count": 0,
+          "count": 4,
+          "name": "Spa tub",
+          "selected": 0
+        },
+        {
+          "selected": 0,
+          "name": "Terrace",
+          "count": 4,
+          "style_for_count": 0,
+          "id": "room_facility::123"
+        },
+        {
+          "id": "room_facility::93",
+          "count": 3,
+          "style_for_count": 0,
+          "name": "Private pool",
+          "selected": 0
+        },
+        {
+          "style_for_count": 0,
+          "count": 40,
+          "name": "Patio",
+          "selected": 0,
+          "id": "room_facility::37"
+        },
+        {
+          "count": 4,
+          "style_for_count": 0,
+          "name": "Soundproof",
+          "selected": 0,
+          "id": "room_facility::79"
+        },
+        {
+          "selected": 0,
+          "name": "Electric kettle",
+          "style_for_count": 0,
+          "count": 2,
+          "id": "room_facility::86"
+        },
+        {
+          "id": "room_facility::120",
+          "selected": 0,
+          "name": "Coffee machine",
+          "count": 31,
+          "style_for_count": 0
+        }
+      ],
+      "is_group": 1,
+      "any_text": "No room facilities selected"
+    },
+    {
+      "iconfont": null,
+      "id": "twin_double_bed",
+      "layout": {
+        "collapsed_count": 5,
+        "is_collapsable": 0,
+        "is_collapsed": 0
+      },
+      "irene_resp_id": "tdb",
+      "is_group": 1,
+      "categories": [
+        {
+          "id": "twin_double_bed::2",
+          "selected": 0,
+          "name": "2 single beds",
+          "count": 6,
+          "style_for_count": 0
+        },
+        {
+          "count": 81,
+          "style_for_count": 0,
+          "name": "Double bed",
+          "selected": 0,
+          "id": "twin_double_bed::3"
+        }
+      ],
+      "any_text": "Select bed type",
+      "title": "Bed Preference",
+      "type": "multiple_union"
+    },
+    {
+      "is_group": 1,
+      "categories": [
+        {
+          "id": "district::10694",
+          "style_for_count": 0,
+          "count": 44,
+          "name": "Guests' Favorite Area",
+          "selected": 0
+        },
+        {
+          "count": 15,
+          "style_for_count": 0,
+          "name": "Best areas outside center",
+          "selected": 0,
+          "id": "district::9999997"
+        },
+        {
+          "id": "district::17224",
+          "count": 46,
+          "style_for_count": 0,
+          "selected": 0,
+          "name": "Downtown Key West"
+        },
+        {
+          "count": 29,
+          "style_for_count": 0,
+          "popular_rank": 12,
+          "name": "Duval",
+          "popular": 1,
+          "selected": 0,
+          "id": "district::4301"
+        }
+      ],
+      "any_text": "No district selected",
+      "type": "multiple_union",
+      "title": "District",
+      "layout": {
+        "collapsed_count": 5,
+        "is_collapsed": 0,
+        "is_collapsable": 0
+      },
+      "id": "district",
+      "iconfont": "marker",
+      "irene_resp_id": "di"
+    }
+  ],
+  "page_loading_threshold": 10,
+  "search_radius": 0,
+  "copyright": [],
+  "primary_count": 82,
+  "result": [
+    {
+      "review_score": 7,
+      "default_wishlist_name": "Key West",
+      "district": "",
+      "accommodation_type": 206,
+      "is_mobile_deal": 1,
+      "block_ids": [
+        "28423905_227654675_0_0_0"
+      ],
+      "price_breakdown": {
+        "gross_price": "153.00",
+        "currency": "USD",
+        "has_fine_print_charges": 1,
+        "sum_excluded_raw": 56.25,
+        "has_tax_exceptions": 0,
+        "all_inclusive_price": 209.25,
+        "has_incalculable_charges": 0
+      },
+      "country_trans": "United States of America",
+      "bwallet": {
+        "hotel_eligibility": 0
+      },
+      "main_photo_id": 255058036,
+      "native_ads_tracking": "",
+      "district_id": 0,
+      "children_not_allowed": 0,
+      "address_trans": "3101 North Roosevelt Boulevard",
+      "class_is_estimated": 0,
+      "mobile_discount_percentage": 17,
+      "hotel_facilities": "137,160,423,487,176,488,146,305,455,184,161,422,25,55,185,304,15,7,419,426,401,158,129,135,61,462,457,119,222,3,458,198,203,200,19,109,28,221,449,110,484,76,461,223,220,186,439,404,447,107,425,301,47,451,436,2,450,453,69,433,145,12,405,467,196,468,302,452,459,96,199,118,91,464,124,81,78,16,445,133,224,418,114,82,14,408,104,90,8",
+      "latitude": 24.5684829479876,
+      "preferred": 1,
+      "wishlist_count": 0,
+      "checkin": {
+        "until": "",
+        "from": "16:00"
+      },
+      "hotel_include_breakfast": 0,
+      "currencycode": "USD",
+      "price_is_final": 0,
+      "deals": {
+        "deal_events_killswitch": 0,
+        "deal_attributes": {},
+        "deals_available": {}
+      },
+      "badges": [
+        {
+          "text": "Mobile-only price",
+          "id": "mobile_price",
+          "badge_variant": "constructive"
+        }
+      ],
+      "city_trans": "Key West",
+      "cc_required": 1,
+      "has_swimming_pool": 1,
+      "districts": "",
+      "cc1": "us",
+      "city_name_en": "Key West (Florida)",
+      "min_total_price": 153,
+      "is_city_center": 0,
+      "hotel_name": "Ibis Bay Resort",
+      "checkout": {
+        "until": "11:00",
+        "from": ""
+      },
+      "updated_checkout": null,
+      "is_genius_deal": 0,
+      "class": 3,
+      "url": "https://www.booking.com/hotel/us/ibis-bay-resort.html",
+      "ufi": 20022831,
+      "id": "property_card_284239",
+      "accommodation_type_name": "Resorts",
+      "city_in_trans": "in Key West",
+      "extended": 0,
+      "in_best_district": 0,
+      "soldout": 0,
+      "cant_book": 0,
+      "is_free_cancellable": 0,
+      "main_photo_url": "https://cf.bstatic.com/xdata/images/hotel/square60/255058036.jpg?k=16504935625bbd2ee6ac4edfc4c41892172763f677bdb4edd93bc8e7c002bcf7&o=",
+      "city": "Key West (Florida)",
+      "is_no_prepayment_block": 0,
+      "review_nr": 2196,
+      "preferred_plus": 0,
+      "is_smart_deal": 0,
+      "is_geo_rate": "",
+      "address": "3101 North Roosevelt Boulevard",
+      "distance_to_cc": "3.60",
+      "review_score_word": "Good",
+      "hotel_id": 284239,
+      "native_ads_cpc": 0,
+      "hotel_has_vb_boost": 0,
+      "countrycode": "us",
+      "updated_checkin": null,
+      "distance": "3.58",
+      "matching_units_configuration": {
+        "matching_units_common_config": {
+          "unit_type_id": 9,
+          "localized_area": null
+        }
+      },
+      "currency_code": "USD",
+      "default_language": "en",
+      "urgency_room_msg": "Room with Two Double Beds",
+      "zip": "FL 33040",
+      "type": "property_card",
+      "timezone": "America/New_York",
+      "genius_discount_percentage": 0,
+      "native_ad_id": "",
+      "review_recommendation": "",
+      "selected_review_topic": null,
+      "hotel_name_trans": "Ibis Bay Resort",
+      "longitude": -81.7694002389908
+    },
+    {
+      "has_swimming_pool": 1,
+      "price_is_final": 0,
+      "deals": {
+        "deal_events_killswitch": 0,
+        "deal_attributes": {},
+        "deals_available": {}
+      },
+      "city_trans": "Key West",
+      "cc_required": 1,
+      "badges": [],
+      "currencycode": "USD",
+      "wishlist_count": 0,
+      "preferred": 1,
+      "hotel_include_breakfast": 0,
+      "checkin": {
+        "from": "16:00",
+        "until": ""
+      },
+      "districts": "",
+      "city_name_en": "Key West (Florida)",
+      "cc1": "us",
+      "is_city_center": 0,
+      "min_total_price": 164.25,
+      "is_genius_deal": 0,
+      "updated_checkout": null,
+      "checkout": {
+        "from": "",
+        "until": "11:00"
+      },
+      "hotel_name": "The Gates Hotel Key West",
+      "class": 4,
+      "city_in_trans": "in Key West",
+      "accommodation_type_name": "Hotels",
+      "id": "property_card_1310412",
+      "ufi": 20022831,
+      "url": "https://www.booking.com/hotel/us/the-gates-key-west.html",
+      "default_wishlist_name": "Key West",
+      "review_score": 7,
+      "district": "",
+      "is_mobile_deal": 0,
+      "accommodation_type": 204,
+      "country_trans": "United States of America",
+      "price_breakdown": {
+        "currency": "USD",
+        "gross_price": 164.25,
+        "has_tax_exceptions": 0,
+        "all_inclusive_price": 229.78,
+        "has_incalculable_charges": 0,
+        "has_fine_print_charges": 1,
+        "sum_excluded_raw": 65.53
+      },
+      "block_ids": [
+        "131041202_352738368_0_0_0"
+      ],
+      "bwallet": {
+        "hotel_eligibility": 0
+      },
+      "address_trans": "3820 N Roosevelt Blvd, Key West, FL 33040",
+      "native_ads_tracking": "",
+      "children_not_allowed": 0,
+      "district_id": 0,
+      "main_photo_id": 183872235,
+      "mobile_discount_percentage": 0,
+      "class_is_estimated": 0,
+      "latitude": 24.5715106844355,
+      "hotel_facilities": "445,16,443,81,124,200,492,441,494,505,3,119,222,499,506,104,28,111,4,442,407,109,14,134,446,489,223,80,493,502,8,495,47,301,411,163,160,107,447,439,448,186,48,161,182,195,410,184,20,305,2,23,436,51,403,25,433,435,218,158,498,199,497,96,22,426,7,11,304,185",
+      "updated_checkin": null,
+      "hotel_has_vb_boost": 0,
+      "countrycode": "us",
+      "matching_units_configuration": {
+        "matching_units_common_config": {
+          "localized_area": null,
+          "unit_type_id": 13
+        }
+      },
+      "currency_code": "USD",
+      "distance": "5.08",
+      "default_language": "xu",
+      "urgency_room_msg": "Standard Queen Room with Two Queen Beds",
+      "type": "property_card",
+      "timezone": "America/New_York",
+      "zip": "FL 33040",
+      "genius_discount_percentage": 0,
+      "hotel_name_trans": "The Gates Hotel Key West",
+      "selected_review_topic": null,
+      "review_recommendation": "",
+      "native_ad_id": "",
+      "longitude": -81.7541991349182,
+      "cant_book": 0,
+      "soldout": 0,
+      "in_best_district": 0,
+      "extended": 0,
+      "main_photo_url": "https://cf.bstatic.com/xdata/images/hotel/square60/183872235.jpg?k=355440c3639fc5ba20cb9e30baf4cc248b693928fe35fe0097f7e3b2e21eb81c&o=",
+      "is_free_cancellable": 1,
+      "city": "Key West (Florida)",
+      "review_nr": 1045,
+      "is_no_prepayment_block": 0,
+      "is_geo_rate": "",
+      "is_smart_deal": 0,
+      "preferred_plus": 0,
+      "review_score_word": "Good",
+      "native_ads_cpc": 0,
+      "hotel_id": 1310412,
+      "address": "3820 N Roosevelt Blvd, Key West, FL 33040",
+      "distance_to_cc": "5.10"
+    },
+    {
+      "mobile_discount_percentage": 0,
+      "class_is_estimated": 0,
+      "latitude": 24.5692720833507,
+      "hotel_facilities": "198,457,26,499,222,119,492,441,82,494,129,78,65,462,445,124,443,81,502,76,63,8,504,490,220,9,80,111,109,449,253,506,28,221,5,436,2,23,182,161,453,48,450,305,455,184,20,447,439,179,448,301,163,108,451,47,107,434,160,49,15,7,11,304,118,158,498,117,96,497,22,145,433,12,435,143,51,468,25,467,456",
+      "address_trans": "3852 North Roosevelt Boulevard",
+      "children_not_allowed": 0,
+      "native_ads_tracking": "",
+      "district_id": 0,
+      "main_photo_id": 58486362,
+      "block_ids": [
+        "7986205_348636792_0_41_0"
+      ],
+      "price_breakdown": {
+        "sum_excluded_raw": 47.38,
+        "has_fine_print_charges": 1,
+        "has_incalculable_charges": 0,
+        "all_inclusive_price": 201.38,
+        "has_tax_exceptions": 0,
+        "gross_price": "154.00",
+        "currency": "USD"
+      },
+      "country_trans": "United States of America",
+      "bwallet": {
+        "hotel_eligibility": 0
+      },
+      "default_wishlist_name": "Key West",
+      "review_score": 7.7,
+      "district": "",
+      "is_mobile_deal": 0,
+      "accommodation_type": 204,
+      "class": 3,
+      "city_in_trans": "in Key West",
+      "accommodation_type_name": "Hotels",
+      "id": "property_card_79862",
+      "ufi": 20022831,
+      "url": "https://www.booking.com/hotel/us/dikey-west-key-west-florida.html",
+      "is_city_center": 0,
+      "min_total_price": 154,
+      "is_genius_deal": 0,
+      "updated_checkout": null,
+      "checkout": {
+        "from": "",
+        "until": "11:00"
+      },
+      "hotel_name": "Fairfield Inn & Suites by Marriott Key West at The Keys Collection",
+      "districts": "",
+      "city_name_en": "Key West (Florida)",
+      "cc1": "us",
+      "badges": [],
+      "deals": {
+        "deal_attributes": {},
+        "deal_events_killswitch": 0,
+        "deals_available": {}
+      },
+      "price_is_final": 0,
+      "city_trans": "Key West",
+      "cc_required": 1,
+      "wishlist_count": 0,
+      "checkin": {
+        "until": "",
+        "from": "16:00"
+      },
+      "preferred": 1,
+      "hotel_include_breakfast": 1,
+      "currencycode": "USD",
+      "is_geo_rate": "",
+      "is_smart_deal": 0,
+      "preferred_plus": 0,
+      "hotel_id": 79862,
+      "review_score_word": "Good",
+      "native_ads_cpc": 0,
+      "distance_to_cc": "5.15",
+      "address": "3852 North Roosevelt Boulevard",
+      "city": "Key West (Florida)",
+      "review_nr": 2207,
+      "is_no_prepayment_block": 1,
+      "main_photo_url": "https://cf.bstatic.com/xdata/images/hotel/square60/58486362.jpg?k=b789c8f349cb55b61c6647a7d5a690c4a79edff6531dd85b4969697997adc10e&o=",
+      "is_free_cancellable": 1,
+      "cant_book": 0,
+      "soldout": 0,
+      "extended": 0,
+      "in_best_district": 0,
+      "hotel_name_trans": "Fairfield Inn & Suites by Marriott Key West at The Keys Collection",
+      "selected_review_topic": null,
+      "native_ad_id": "",
+      "review_recommendation": "",
+      "longitude": -81.7527168989182,
+      "type": "property_card",
+      "timezone": "America/New_York",
+      "zip": "FL 33040",
+      "genius_discount_percentage": 0,
+      "default_language": "en",
+      "urgency_room_msg": "Standard Queen Room with Two Queen Beds",
+      "updated_checkin": null,
+      "hotel_has_vb_boost": 0,
+      "countrycode": "us",
+      "currency_code": "USD",
+      "matching_units_configuration": {
+        "matching_units_common_config": {
+          "unit_type_id": 4,
+          "localized_area": null
+        }
+      },
+      "distance": "5.11"
+    },
+    {
+      "is_city_center": 0,
+      "min_total_price": 175.5,
+      "is_genius_deal": 0,
+      "updated_checkout": null,
+      "checkout": {
+        "until": "11:00",
+        "from": ""
+      },
+      "hotel_name": "24 North Hotel Key West",
+      "class": 4,
+      "city_in_trans": "in Key West",
+      "accommodation_type_name": "Hotels",
+      "ufi": 20022831,
+      "id": "property_card_1526608",
+      "url": "https://www.booking.com/hotel/us/24-north-key-west.html",
+      "has_swimming_pool": 1,
+      "city_trans": "Key West",
+      "deals": {
+        "deals_available": {},
+        "deal_events_killswitch": 0,
+        "deal_attributes": {}
+      },
+      "price_is_final": 0,
+      "cc_required": 1,
+      "badges": [],
+      "currencycode": "USD",
+      "wishlist_count": 0,
+      "preferred": 1,
+      "hotel_include_breakfast": 0,
+      "checkin": {
+        "until": "",
+        "from": "16:00"
+      },
+      "districts": "",
+      "city_name_en": "Key West (Florida)",
+      "cc1": "us",
+      "address_trans": "3820 North Roosevelt Boulevard",
+      "native_ads_tracking": "",
+      "children_not_allowed": 0,
+      "district_id": 0,
+      "main_photo_id": 140113974,
+      "mobile_discount_percentage": 0,
+      "class_is_estimated": 0,
+      "latitude": 24.572019394923,
+      "hotel_facilities": "454,304,15,49,7,426,497,498,158,143,435,25,403,487,488,305,184,455,195,161,48,160,163,495,484,6,502,461,446,460,109,442,111,28,506,449,457,119,222,458,3,494,203,441,485,135,443,219,462,11,452,117,459,22,199,96,118,433,145,467,456,468,436,2,450,182,453,448,439,447,107,108,301,451,47,8,493,80,136,489,14,104,253,499,505,492,91,124,464,81,16,445",
+      "default_wishlist_name": "Key West",
+      "review_score": 7,
+      "district": "",
+      "is_mobile_deal": 0,
+      "accommodation_type": 204,
+      "block_ids": [
+        "152660802_352738402_0_0_0"
+      ],
+      "price_breakdown": {
+        "has_fine_print_charges": 1,
+        "sum_excluded_raw": 66.94,
+        "has_tax_exceptions": 0,
+        "all_inclusive_price": 242.44,
+        "has_incalculable_charges": 0,
+        "gross_price": "175.50",
+        "currency": "USD"
+      },
+      "country_trans": "United States of America",
+      "bwallet": {
+        "hotel_eligibility": 0
+      },
+      "timezone": "America/New_York",
+      "type": "property_card",
+      "zip": "FL 33040",
+      "genius_discount_percentage": 0,
+      "hotel_name_trans": "24 North Hotel Key West",
+      "selected_review_topic": null,
+      "review_recommendation": "",
+      "native_ad_id": "",
+      "longitude": -81.7550911857361,
+      "updated_checkin": null,
+      "countrycode": "us",
+      "hotel_has_vb_boost": 0,
+      "matching_units_configuration": {
+        "matching_units_common_config": {
+          "localized_area": null,
+          "unit_type_id": 13
+        }
+      },
+      "currency_code": "USD",
+      "distance": "5.03",
+      "default_language": "xu",
+      "urgency_room_msg": "Standard Queen Room with Two Queen Beds",
+      "city": "Key West (Florida)",
+      "review_nr": 1203,
+      "is_no_prepayment_block": 0,
+      "is_geo_rate": "",
+      "is_smart_deal": 0,
+      "preferred_plus": 0,
+      "hotel_id": 1526608,
+      "review_score_word": "Good",
+      "native_ads_cpc": 0,
+      "distance_to_cc": "5.05",
+      "address": "3820 North Roosevelt Boulevard",
+      "cant_book": 0,
+      "soldout": 0,
+      "in_best_district": 0,
+      "extended": 0,
+      "main_photo_url": "https://cf.bstatic.com/xdata/images/hotel/square60/140113974.jpg?k=40e4f270c0ee9c8e2f455a67266ab89ad2cfdd4a4d24f5e01032ef8a90b65aa3&o=",
+      "is_free_cancellable": 1
+    },
+    {
+      "timezone": "America/New_York",
+      "type": "property_card",
+      "zip": "FL 33040",
+      "genius_discount_percentage": 0,
+      "selected_review_topic": null,
+      "hotel_name_trans": "Hampton Inn Key West FL",
+      "native_ad_id": "",
+      "review_recommendation": "",
+      "longitude": -81.749085187912,
+      "updated_checkin": null,
+      "hotel_has_vb_boost": 0,
+      "countrycode": "us",
+      "matching_units_configuration": {
+        "matching_units_common_config": {
+          "unit_type_id": 4,
+          "localized_area": null
+        }
+      },
+      "currency_code": "USD",
+      "distance": "5.09",
+      "default_language": "en",
+      "urgency_room_msg": "Queen Room with Two Queen Beds and Pool View",
+      "city": "Key West (Florida)",
+      "is_no_prepayment_block": 0,
+      "review_nr": 1336,
+      "is_geo_rate": "",
+      "preferred_plus": 0,
+      "is_smart_deal": 0,
+      "native_ads_cpc": 0,
+      "review_score_word": "Excellent",
+      "hotel_id": 181220,
+      "distance_to_cc": "5.10",
+      "address": "3755 South Roosevelt Boulevard",
+      "cant_book": 0,
+      "extended": 0,
+      "in_best_district": 0,
+      "soldout": 0,
+      "main_photo_url": "https://cf.bstatic.com/xdata/images/hotel/square60/262986953.jpg?k=6bd3afdcbd6f14736e298720f995665f0792bb9697d480b0a52c8ddee697fc25&o=",
+      "is_free_cancellable": 0,
+      "min_total_price": 259,
+      "is_city_center": 0,
+      "updated_checkout": null,
+      "is_genius_deal": 0,
+      "hotel_name": "Hampton Inn Key West FL",
+      "checkout": {
+        "until": "11:00",
+        "from": ""
+      },
+      "class": 3,
+      "accommodation_type_name": "Hotels",
+      "has_free_parking": 1,
+      "city_in_trans": "in Key West",
+      "url": "https://www.booking.com/hotel/us/best-western-key-ambassador-resort-inn.html",
+      "id": "property_card_181220",
+      "ufi": 20022831,
+      "deals": {
+        "deals_available": {},
+        "deal_events_killswitch": 0,
+        "deal_attributes": {}
+      },
+      "price_is_final": 0,
+      "city_trans": "Key West",
+      "badges": [],
+      "cc_required": 1,
+      "has_swimming_pool": 1,
+      "wishlist_count": 0,
+      "hotel_include_breakfast": 1,
+      "preferred": 1,
+      "checkin": {
+        "until": "",
+        "from": "16:00"
+      },
+      "currencycode": "USD",
+      "districts": "",
+      "city_name_en": "Key West (Florida)",
+      "cc1": "us",
+      "district_id": 0,
+      "native_ads_tracking": "",
+      "children_not_allowed": 0,
+      "address_trans": "3755 South Roosevelt Boulevard",
+      "main_photo_id": 262986953,
+      "class_is_estimated": 0,
+      "mobile_discount_percentage": 0,
+      "latitude": 24.5548863534623,
+      "hotel_facilities": "51,25,467,433,422,46,118,117,419,459,22,199,96,49,452,7,108,163,301,47,451,425,107,420,160,478,48,453,305,450,184,455,195,488,487,436,2,449,104,28,253,437,479,486,4,474,460,109,220,80,110,8,16,462,124,464,81,91,200,483,3,458,457,119",
+      "review_score": 8.6,
+      "default_wishlist_name": "Key West",
+      "district": "",
+      "accommodation_type": 204,
+      "is_mobile_deal": 0,
+      "price_breakdown": {
+        "gross_price": "259.00",
+        "currency": "USD",
+        "has_fine_print_charges": 1,
+        "sum_excluded_raw": 66.12,
+        "all_inclusive_price": 325.12,
+        "has_incalculable_charges": 0,
+        "has_tax_exceptions": 0
+      },
+      "country_trans": "United States of America",
+      "block_ids": [
+        "18122030_342550102_2_1_0"
+      ],
+      "bwallet": {
+        "hotel_eligibility": 0
+      }
+    },
+    {
+      "latitude": 24.5701075612795,
+      "hotel_facilities": "447,478,179,439,448,301,163,47,451,107,44,160,5,488,436,487,2,23,182,453,48,450,305,455,184,20,145,433,12,143,51,25,467,456,15,7,452,11,304,426,96,199,459,22,91,496,129,440,16,462,65,445,464,124,443,198,3,458,457,499,119,483,505,485,494,43,460,474,14,109,449,506,104,28,479,502,63,6,461,495,8,446,489,223",
+      "class_is_estimated": 0,
+      "mobile_discount_percentage": 0,
+      "native_ads_tracking": "",
+      "children_not_allowed": 0,
+      "district_id": 0,
+      "address_trans": "3850 North Roosevelt Boulevard",
+      "main_photo_id": 169100400,
+      "bwallet": {
+        "hotel_eligibility": 0
+      },
+      "price_breakdown": {
+        "currency": "USD",
+        "gross_price": "179.00",
+        "has_tax_exceptions": 0,
+        "all_inclusive_price": 229.5,
+        "has_incalculable_charges": 0,
+        "has_fine_print_charges": 1,
+        "sum_excluded_raw": "50.50"
+      },
+      "block_ids": [
+        "18257009_112429261_2_2_0"
+      ],
+      "country_trans": "United States of America",
+      "accommodation_type": 204,
+      "is_mobile_deal": 0,
+      "district": "",
+      "review_score": 7.2,
+      "default_wishlist_name": "Key West",
+      "accommodation_type_name": "Hotels",
+      "city_in_trans": "in Key West",
+      "url": "https://www.booking.com/hotel/us/hilton-garden-inn-key-west.html",
+      "ufi": 20022831,
+      "id": "property_card_182570",
+      "class": 4,
+      "updated_checkout": null,
+      "is_genius_deal": 0,
+      "hotel_name": "Hilton Garden Inn Key West / The Keys Collection",
+      "checkout": {
+        "until": "11:00",
+        "from": ""
+      },
+      "min_total_price": 179,
+      "is_city_center": 0,
+      "city_name_en": "Key West (Florida)",
+      "cc1": "us",
+      "districts": "",
+      "badges": [],
+      "deals": {
+        "deals_available": {},
+        "deal_attributes": {},
+        "deal_events_killswitch": 0
+      },
+      "price_is_final": 0,
+      "city_trans": "Key West",
+      "cc_required": 1,
+      "has_swimming_pool": 1,
+      "wishlist_count": 0,
+      "preferred": 1,
+      "hotel_include_breakfast": 0,
+      "currencycode": "USD",
+      "checkin": {
+        "until": "",
+        "from": "16:00"
+      },
+      "native_ads_cpc": 0,
+      "review_score_word": "Good",
+      "hotel_id": 182570,
+      "distance_to_cc": "5.15",
+      "address": "3850 North Roosevelt Boulevard",
+      "is_geo_rate": "",
+      "preferred_plus": 0,
+      "is_smart_deal": 0,
+      "is_no_prepayment_block": 1,
+      "review_nr": 1693,
+      "city": "Key West (Florida)",
+      "main_photo_url": "https://cf.bstatic.com/xdata/images/hotel/square60/169100400.jpg?k=7f0daacaffb5f230451a1d52f2059171a486da5b31d6bfd36ca1acc4d4e03775&o=",
+      "is_free_cancellable": 1,
+      "cant_book": 0,
+      "in_best_district": 0,
+      "extended": 0,
+      "soldout": 0,
+      "longitude": -81.7530682682991,
+      "selected_review_topic": null,
+      "hotel_name_trans": "Hilton Garden Inn Key West / The Keys Collection",
+      "native_ad_id": "",
+      "review_recommendation": "",
+      "genius_discount_percentage": 0,
+      "type": "property_card",
+      "timezone": "America/New_York",
+      "zip": "FL 33040",
+      "urgency_room_msg": "Queen Room with Two Queen Beds",
+      "default_language": "en",
+      "currency_code": "USD",
+      "matching_units_configuration": {
+        "matching_units_common_config": {
+          "unit_type_id": 4,
+          "localized_area": null
+        }
+      },
+      "distance": "5.12",
+      "updated_checkin": null,
+      "hotel_has_vb_boost": 0,
+      "countrycode": "us"
+    },
+    {
+      "class_is_estimated": 0,
+      "mobile_discount_percentage": 29.6,
+      "hotel_facilities": "199,96,426,419,158,424,422,433,467,51,468,436,488,5,195,455,450,305,453,72,447,107,425,47,451,301,163,110,136,446,220,109,14,472,4,221,104,28,449,222,119,457,418,224,198,458,471,91,81,135,124,464,462,445,78,16",
+      "latitude": 24.5573224163463,
+      "main_photo_id": 31905237,
+      "native_ads_tracking": "",
+      "district_id": 17224,
+      "children_not_allowed": 0,
+      "address_trans": "820 White Street",
+      "price_breakdown": {
+        "gross_price": 266.41,
+        "currency": "USD",
+        "has_fine_print_charges": 1,
+        "sum_excluded_raw": "53.30",
+        "all_inclusive_price": 319.71,
+        "has_incalculable_charges": 0,
+        "has_tax_exceptions": 0
+      },
+      "block_ids": [
+        "52087210_270152841_2_1_0"
+      ],
+      "country_trans": "United States of America",
+      "bwallet": {
+        "hotel_eligibility": 0
+      },
+      "default_wishlist_name": "Key West",
+      "review_score": 7.8,
+      "district": "Downtown Key West",
+      "accommodation_type": 204,
+      "is_mobile_deal": 1,
+      "class": 3,
+      "url": "https://www.booking.com/hotel/us/820-whitestreet.html",
+      "ufi": 20022831,
+      "id": "property_card_520872",
+      "accommodation_type_name": "Hotels",
+      "city_in_trans": "in Key West",
+      "min_total_price": 266.41,
+      "is_city_center": 0,
+      "hotel_name": "The Palms Hotel",
+      "checkout": {
+        "from": "08:00",
+        "until": "11:00"
+      },
+      "updated_checkout": null,
+      "is_genius_deal": 0,
+      "districts": "17224",
+      "cc1": "us",
+      "city_name_en": "Key West (Florida)",
+      "wishlist_count": 0,
+      "preferred": 1,
+      "checkin": {
+        "from": "15:00",
+        "until": "22:00"
+      },
+      "hotel_include_breakfast": 1,
+      "currencycode": "USD",
+      "deals": {
+        "deals_available": {},
+        "deal_attributes": {},
+        "deal_events_killswitch": 0
+      },
+      "price_is_final": 0,
+      "badges": [
+        {
+          "text": "Mobile-only price",
+          "id": "mobile_price",
+          "badge_variant": "constructive"
+        }
+      ],
+      "city_trans": "Key West",
+      "cc_required": 1,
+      "has_swimming_pool": 1,
+      "preferred_plus": 0,
+      "is_smart_deal": 0,
+      "is_geo_rate": "",
+      "address": "820 White Street",
+      "distance_to_cc": "1.00",
+      "hotel_id": 520872,
+      "review_score_word": "Good",
+      "native_ads_cpc": 0,
+      "city": "Key West (Florida)",
+      "is_no_prepayment_block": 0,
+      "review_nr": 1414,
+      "is_free_cancellable": 0,
+      "main_photo_url": "https://cf.bstatic.com/xdata/images/hotel/square60/31905237.jpg?k=002bfc7e759be2dc9a7e50bd8f3c7b0764e8ea7ffb55840b845bcf825400bc1e&o=",
+      "in_best_district": 0,
+      "extended": 0,
+      "soldout": 0,
+      "cant_book": 0,
+      "review_recommendation": "",
+      "native_ad_id": "",
+      "selected_review_topic": null,
+      "hotel_name_trans": "The Palms Hotel",
+      "longitude": -81.7922007521496,
+      "zip": "FL 33040",
+      "type": "property_card",
+      "timezone": "America/New_York",
+      "genius_discount_percentage": 0,
+      "default_language": "en",
+      "urgency_room_msg": "Bi Level Attic Suite",
+      "hotel_has_vb_boost": 0,
+      "countrycode": "us",
+      "updated_checkin": null,
+      "distance": "0.98",
+      "matching_units_configuration": {
+        "matching_units_common_config": {
+          "unit_type_id": 13,
+          "localized_area": null
+        }
+      },
+      "currency_code": "USD"
+    },
+    {
+      "zip": "FL 33040",
+      "type": "property_card",
+      "timezone": "America/New_York",
+      "genius_discount_percentage": 0,
+      "review_recommendation": "",
+      "native_ad_id": "",
+      "hotel_name_trans": "Southwinds Motel",
+      "selected_review_topic": null,
+      "longitude": -81.7943246662617,
+      "countrycode": "us",
+      "hotel_has_vb_boost": 0,
+      "updated_checkin": null,
+      "distance": "0.57",
+      "currency_code": "USD",
+      "matching_units_configuration": {
+        "matching_units_common_config": {
+          "localized_area": null,
+          "unit_type_id": 4
+        }
+      },
+      "default_language": "en",
+      "urgency_room_msg": "Queen Room with Two Queen Beds",
+      "city": "Key West (Florida)",
+      "review_nr": 1511,
+      "is_no_prepayment_block": 1,
+      "is_smart_deal": 0,
+      "preferred_plus": 0,
+      "is_geo_rate": "",
+      "distance_to_cc": "0.60",
+      "address": "1321 Simonton Street",
+      "review_score_word": "Very Good",
+      "native_ads_cpc": 0,
+      "hotel_id": 247917,
+      "soldout": 0,
+      "in_best_district": 0,
+      "extended": 0,
+      "cant_book": 0,
+      "is_free_cancellable": 1,
+      "main_photo_url": "https://cf.bstatic.com/xdata/images/hotel/square60/404027018.jpg?k=8f5244d70a5ec7fa61fcfd2a9e5fdd1a4139a08582bb5257eb81ab1820cf8828&o=",
+      "is_city_center": 0,
+      "min_total_price": 199,
+      "checkout": {
+        "until": "11:00",
+        "from": "08:00"
+      },
+      "hotel_name": "Southwinds Motel",
+      "is_genius_deal": 0,
+      "updated_checkout": null,
+      "class": 2,
+      "id": "property_card_247917",
+      "ufi": 20022831,
+      "url": "https://www.booking.com/hotel/us/ocean-breeze-inn.html",
+      "city_in_trans": "in Key West",
+      "accommodation_type_name": "Motels",
+      "wishlist_count": 0,
+      "preferred": 1,
+      "currencycode": "USD",
+      "hotel_include_breakfast": 0,
+      "checkin": {
+        "until": "",
+        "from": "16:00"
+      },
+      "has_swimming_pool": 1,
+      "city_trans": "Key West",
+      "deals": {
+        "deals_available": {},
+        "deal_events_killswitch": 0,
+        "deal_attributes": {}
+      },
+      "price_is_final": 0,
+      "cc_required": 1,
+      "badges": [],
+      "districts": "17224",
+      "cc1": "us",
+      "city_name_en": "Key West (Florida)",
+      "main_photo_id": 404027018,
+      "address_trans": "1321 Simonton Street",
+      "district_id": 17224,
+      "native_ads_tracking": "",
+      "children_not_allowed": 0,
+      "mobile_discount_percentage": 0,
+      "class_is_estimated": 0,
+      "hotel_facilities": "485,458,198,222,119,457,462,78,16,135,124,464,91,220,80,461,8,449,486,104,109,460,453,161,455,195,305,450,488,2,487,451,47,163,301,160,459,22,96,7,454,468,456,467,433,164",
+      "latitude": 24.5486297414336,
+      "review_score": 8.1,
+      "default_wishlist_name": "Key West",
+      "district": "Downtown Key West",
+      "is_mobile_deal": 0,
+      "accommodation_type": 205,
+      "block_ids": [
+        "24791702_93013963_0_0_0"
+      ],
+      "price_breakdown": {
+        "has_fine_print_charges": 1,
+        "sum_excluded_raw": 47.38,
+        "all_inclusive_price": 246.38,
+        "has_incalculable_charges": 0,
+        "has_tax_exceptions": 0,
+        "gross_price": "199.00",
+        "currency": "USD"
+      },
+      "country_trans": "United States of America",
+      "bwallet": {
+        "hotel_eligibility": 0
+      }
+    },
+    {
+      "default_wishlist_name": "Key West",
+      "review_score": 8.6,
+      "district": "Downtown Key West",
+      "is_mobile_deal": 0,
+      "accommodation_type": 204,
+      "block_ids": [
+        "26155303_237342617_3_1_0"
+      ],
+      "price_breakdown": {
+        "has_incalculable_charges": 0,
+        "all_inclusive_price": 256.61,
+        "has_tax_exceptions": 0,
+        "sum_excluded_raw": 68.51,
+        "has_fine_print_charges": 1,
+        "currency": "USD",
+        "gross_price": "188.10"
+      },
+      "country_trans": "United States of America",
+      "bwallet": {
+        "hotel_eligibility": 0
+      },
+      "address_trans": "830 Truman Avenue",
+      "native_ads_tracking": "",
+      "children_not_allowed": 0,
+      "district_id": 17224,
+      "main_photo_id": 109664845,
+      "mobile_discount_percentage": 20.9,
+      "class_is_estimated": 0,
+      "latitude": 24.5537885107987,
+      "hotel_facilities": "91,462,16,78,135,81,464,124,222,119,111,109,449,28,104,461,8,110,484,80,447,451,47,108,163,301,160,425,107,2,436,48,161,182,184,455,305,450,46,12,433,422,170,468,51,456,25,452,158,96,426",
+      "has_swimming_pool": 1,
+      "price_is_final": 0,
+      "deals": {
+        "deal_events_killswitch": 0,
+        "deal_attributes": {},
+        "deals_available": {}
+      },
+      "city_trans": "Key West",
+      "badges": [
+        {
+          "text": "Mobile-only price",
+          "badge_variant": "constructive",
+          "id": "mobile_price"
+        }
+      ],
+      "cc_required": 1,
+      "preferred": 0,
+      "wishlist_count": 0,
+      "hotel_include_breakfast": 1,
+      "checkin": {
+        "from": "16:00",
+        "until": "00:00"
+      },
+      "currencycode": "USD",
+      "districts": "17224",
+      "city_name_en": "Key West (Florida)",
+      "cc1": "us",
+      "is_city_center": 0,
+      "min_total_price": 188.1,
+      "is_genius_deal": 0,
+      "updated_checkout": null,
+      "checkout": {
+        "until": "11:00",
+        "from": ""
+      },
+      "hotel_name": "Silver Palms Inn",
+      "class": 3,
+      "city_in_trans": "in Key West",
+      "accommodation_type_name": "Hotels",
+      "has_free_parking": 1,
+      "id": "property_card_261553",
+      "ufi": 20022831,
+      "url": "https://www.booking.com/hotel/us/silver-palms-inn.html",
+      "cant_book": 0,
+      "soldout": 0,
+      "in_best_district": 0,
+      "extended": 0,
+      "main_photo_url": "https://cf.bstatic.com/xdata/images/hotel/square60/109664845.jpg?k=9fb945d638385fb75fba8f18eb84ef8f608d04e22e1d3c354af2dcb662203c85&o=",
+      "is_free_cancellable": 1,
+      "city": "Key West (Florida)",
+      "review_nr": 2238,
+      "is_no_prepayment_block": 1,
+      "is_geo_rate": "",
+      "is_smart_deal": 0,
+      "preferred_plus": 0,
+      "native_ads_cpc": 0,
+      "review_score_word": "Excellent",
+      "hotel_id": 261553,
+      "address": "830 Truman Avenue",
+      "distance_to_cc": "0.55",
+      "updated_checkin": null,
+      "hotel_has_vb_boost": 0,
+      "countrycode": "us",
+      "matching_units_configuration": {
+        "matching_units_common_config": {
+          "unit_type_id": 4,
+          "localized_area": null
+        }
+      },
+      "currency_code": "USD",
+      "distance": "0.53",
+      "default_language": "en",
+      "urgency_room_msg": "Classic Double Queen with City View and Balcony ",
+      "timezone": "America/New_York",
+      "type": "property_card",
+      "zip": "FL 33040",
+      "genius_discount_percentage": 0,
+      "hotel_name_trans": "Silver Palms Inn",
+      "selected_review_topic": null,
+      "native_ad_id": "",
+      "review_recommendation": "",
+      "longitude": -81.7947927117347
+    },
+    {
+      "is_free_cancellable": 1,
+      "main_photo_url": "https://cf.bstatic.com/xdata/images/hotel/square60/39578746.jpg?k=ea76f50d056e4afa62ca1c98a20601af1277db2332356df553ff2b0bc36af35d&o=",
+      "extended": 0,
+      "in_best_district": 0,
+      "soldout": 0,
+      "cant_book": 0,
+      "address": "2400 North Roosevelt Boulevard",
+      "distance_to_cc": "2.60",
+      "native_ads_cpc": 0,
+      "review_score_word": "Good",
+      "hotel_id": 265903,
+      "preferred_plus": 0,
+      "is_smart_deal": 0,
+      "is_geo_rate": "",
+      "is_no_prepayment_block": 1,
+      "review_nr": 1256,
+      "city": "Key West (Florida)",
+      "urgency_room_msg": "Standard Room with Two Double Beds",
+      "default_language": "en",
+      "distance": "2.59",
+      "matching_units_configuration": {
+        "matching_units_common_config": {
+          "unit_type_id": 4,
+          "localized_area": null
+        }
+      },
+      "currency_code": "USD",
+      "countrycode": "us",
+      "hotel_has_vb_boost": 0,
+      "updated_checkin": null,
+      "longitude": -81.7767950892448,
+      "native_ad_id": "",
+      "review_recommendation": "",
+      "selected_review_topic": null,
+      "hotel_name_trans": "Fairfield Inn & Suites by Marriott Key West",
+      "genius_discount_percentage": 0,
+      "zip": "FL 33040",
+      "timezone": "America/New_York",
+      "type": "property_card",
+      "bwallet": {
+        "hotel_eligibility": 0
+      },
+      "price_breakdown": {
+        "gross_price": "189.00",
+        "currency": "USD",
+        "sum_excluded_raw": 51.75,
+        "has_fine_print_charges": 1,
+        "has_incalculable_charges": 0,
+        "all_inclusive_price": 240.75,
+        "has_tax_exceptions": 0
+      },
+      "country_trans": "United States of America",
+      "block_ids": [
+        "26590301_350276108_0_1_0"
+      ],
+      "accommodation_type": 204,
+      "is_mobile_deal": 0,
+      "review_score": 7.4,
+      "district": "",
+      "default_wishlist_name": "Key West",
+      "hotel_facilities": "51,468,456,127,467,46,145,433,424,118,96,199,22,117,11,451,47,301,108,44,107,425,447,439,448,186,453,20,450,2,436,253,104,408,444,465,489,80,493,8,504,490,445,65,78,16,81,464,124,91,496,492,505,499,25,422,170,435,143,498,497,7,49,304,185,163,423,434,420,160,48,161,195,455,184,305,488,23,449,213,437,506,28,463,472,111,109,442,134,446,188,220,187,223,461,502,484,110,495,462,440,443,129,471,200,485,203,198,3,222,119,457",
+      "latitude": 24.5624319319705,
+      "class_is_estimated": 0,
+      "mobile_discount_percentage": 0,
+      "main_photo_id": 39578746,
+      "children_not_allowed": 0,
+      "native_ads_tracking": "",
+      "district_id": 0,
+      "address_trans": "2400 North Roosevelt Boulevard",
+      "cc1": "us",
+      "city_name_en": "Key West (Florida)",
+      "districts": "",
+      "hotel_include_breakfast": 0,
+      "wishlist_count": 0,
+      "preferred": 1,
+      "currencycode": "USD",
+      "checkin": {
+        "from": "15:00",
+        "until": ""
+      },
+      "badges": [],
+      "deals": {
+        "deal_attributes": {},
+        "deal_events_killswitch": 0,
+        "deals_available": {}
+      },
+      "price_is_final": 0,
+      "city_trans": "Key West",
+      "cc_required": 1,
+      "has_swimming_pool": 1,
+      "url": "https://www.booking.com/hotel/us/fairfield-inn-suites-key-west.html",
+      "id": "property_card_265903",
+      "ufi": 20022831,
+      "accommodation_type_name": "Hotels",
+      "has_free_parking": 1,
+      "city_in_trans": "in Key West",
+      "class": 3,
+      "hotel_name": "Fairfield Inn & Suites by Marriott Key West",
+      "checkout": {
+        "until": "11:00",
+        "from": ""
+      },
+      "updated_checkout": null,
+      "is_genius_deal": 0,
+      "min_total_price": 189,
+      "is_city_center": 0
+    },
+    {
+      "genius_discount_percentage": 0,
+      "timezone": "America/New_York",
+      "type": "property_card",
+      "zip": "FL 33040",
+      "longitude": -81.7732384800911,
+      "hotel_name_trans": "Parrot Key Hotel & Villas",
+      "selected_review_topic": null,
+      "review_recommendation": "",
+      "native_ad_id": "",
+      "matching_units_configuration": {
+        "matching_units_common_config": {
+          "unit_type_id": 9,
+          "localized_area": null
+        }
+      },
+      "currency_code": "USD",
+      "distance": "3.09",
+      "updated_checkin": null,
+      "countrycode": "us",
+      "hotel_has_vb_boost": 0,
+      "urgency_room_msg": "Queen Room with Two Queen Beds and Garden View",
+      "default_language": "en",
+      "review_nr": 1362,
+      "is_no_prepayment_block": 0,
+      "city": "Key West (Florida)",
+      "review_score_word": "Very Good",
+      "native_ads_cpc": 0,
+      "hotel_id": 183050,
+      "address": "2801 North Roosevelt Boulevard",
+      "distance_to_cc": "3.10",
+      "is_geo_rate": "",
+      "is_smart_deal": 0,
+      "preferred_plus": 0,
+      "cant_book": 0,
+      "soldout": 0,
+      "in_best_district": 0,
+      "extended": 0,
+      "main_photo_url": "https://cf.bstatic.com/xdata/images/hotel/square60/214302711.jpg?k=bf9f3af2b156a62aefd923f04f03ddc193082af530b204cb0a9b095ef613d9da&o=",
+      "is_free_cancellable": 0,
+      "is_genius_deal": 0,
+      "updated_checkout": null,
+      "checkout": {
+        "until": "11:00",
+        "from": ""
+      },
+      "hotel_name": "Parrot Key Hotel & Villas",
+      "is_city_center": 0,
+      "min_total_price": 215.1,
+      "city_in_trans": "in Key West",
+      "accommodation_type_name": "Resorts",
+      "ufi": 20022831,
+      "id": "property_card_183050",
+      "url": "https://www.booking.com/hotel/us/parrot-key-resort.html",
+      "class": 4,
+      "has_swimming_pool": 1,
+      "badges": [
+        {
+          "id": "mobile_price",
+          "badge_variant": "constructive",
+          "text": "Mobile-only price"
+        }
+      ],
+      "deals": {
+        "deals_available": {},
+        "deal_events_killswitch": 0,
+        "deal_attributes": {}
+      },
+      "price_is_final": 0,
+      "city_trans": "Key West",
+      "cc_required": 1,
+      "wishlist_count": 0,
+      "checkin": {
+        "until": "",
+        "from": "16:00"
+      },
+      "preferred": 1,
+      "hotel_include_breakfast": 0,
+      "currencycode": "USD",
+      "city_name_en": "Key West (Florida)",
+      "cc1": "us",
+      "districts": "",
+      "address_trans": "2801 North Roosevelt Boulevard",
+      "native_ads_tracking": "",
+      "children_not_allowed": 0,
+      "district_id": 0,
+      "main_photo_id": 214302711,
+      "latitude": 24.5658862062843,
+      "hotel_facilities": "3,458,198,119,222,457,503,203,485,441,212,462,440,443,461,502,110,484,446,188,220,187,211,109,442,460,449,221,213,28,506,488,23,487,176,161,455,184,195,305,137,179,163,423,160,420,434,7,15,185,454,194,498,158,419,426,422,170,435,169,25,499,205,492,82,65,445,78,16,124,464,8,90,489,444,407,14,147,486,104,253,5,2,189,436,453,20,450,447,448,186,439,451,47,108,301,44,107,425,452,11,52,118,459,199,96,12,69,433,424,468,51,456,405,467",
+      "mobile_discount_percentage": 23.9,
+      "class_is_estimated": 0,
+      "is_mobile_deal": 1,
+      "accommodation_type": 206,
+      "district": "",
+      "review_score": 8.2,
+      "default_wishlist_name": "Key West",
+      "bwallet": {
+        "hotel_eligibility": 0
+      },
+      "block_ids": [
+        "18305002_126025894_2_0_0"
+      ],
+      "price_breakdown": {
+        "has_incalculable_charges": 0,
+        "all_inclusive_price": 289.24,
+        "has_tax_exceptions": 0,
+        "sum_excluded_raw": 74.14,
+        "has_fine_print_charges": 1,
+        "currency": "USD",
+        "gross_price": "215.10"
+      },
+      "country_trans": "United States of America"
+    },
+    {
+      "updated_checkin": null,
+      "hotel_has_vb_boost": 0,
+      "countrycode": "us",
+      "matching_units_configuration": {
+        "matching_units_common_config": {
+          "unit_type_id": 7,
+          "localized_area": null
+        }
+      },
+      "currency_code": "USD",
+      "distance": "0.34",
+      "default_language": "en",
+      "urgency_room_msg": "Queen Room with Twin Bed (Unit C8)",
+      "type": "property_card",
+      "timezone": "America/New_York",
+      "zip": "FL 33040",
+      "genius_discount_percentage": 0,
+      "hotel_name_trans": "Courtney's Place Historic Cottages & Inns",
+      "selected_review_topic": null,
+      "native_ad_id": "",
+      "review_recommendation": "",
+      "longitude": -81.7990522944775,
+      "cant_book": 0,
+      "soldout": 0,
+      "in_best_district": 0,
+      "extended": 0,
+      "main_photo_url": "https://cf.bstatic.com/xdata/images/hotel/square60/37457744.jpg?k=7e63ca44154b134faf073324e3655470afa7a0fa4aafbf8d01928601a3fe730b&o=",
+      "is_free_cancellable": 0,
+      "city": "Key West (Florida)",
+      "review_nr": 1021,
+      "is_no_prepayment_block": 0,
+      "is_geo_rate": "",
+      "is_smart_deal": 0,
+      "preferred_plus": 0,
+      "hotel_id": 508589,
+      "review_score_word": "Wonderful",
+      "native_ads_cpc": 0,
+      "address": "720 Whitmarsh Lane",
+      "distance_to_cc": "0.35",
+      "deals": {
+        "deals_available": {},
+        "deal_events_killswitch": 0,
+        "deal_attributes": {}
+      },
+      "city_trans": "Key West",
+      "price_is_final": 0,
+      "badges": [],
+      "cc_required": 1,
+      "wishlist_count": 0,
+      "preferred": 1,
+      "hotel_include_breakfast": 1,
+      "checkin": {
+        "from": "15:00",
+        "until": "17:00"
+      },
+      "currencycode": "USD",
+      "districts": "17224,4301",
+      "city_name_en": "Key West (Florida)",
+      "cc1": "us",
+      "is_city_center": 0,
+      "min_total_price": 219,
+      "is_genius_deal": 0,
+      "updated_checkout": null,
+      "checkout": {
+        "until": "11:00",
+        "from": ""
+      },
+      "hotel_name": "Courtney's Place Historic Cottages & Inns",
+      "booking_home": {
+        "is_booking_home": 1,
+        "group": "hotels_and_others",
+        "quality_class": 0,
+        "is_single_unit_property": "",
+        "segment": 0
+      },
+      "class": 2,
+      "city_in_trans": "in Key West",
+      "accommodation_type_name": "Guesthouses",
+      "has_free_parking": 1,
+      "ufi": 20022831,
+      "id": "property_card_508589",
+      "url": "https://www.booking.com/hotel/us/courtney-s-place-historic-cottages-inns.html",
+      "district": "Downtown Key West",
+      "review_score": 9,
+      "default_wishlist_name": "Key West",
+      "is_mobile_deal": 0,
+      "accommodation_type": 216,
+      "price_breakdown": {
+        "sum_excluded_raw": 27.38,
+        "has_fine_print_charges": 0,
+        "has_incalculable_charges": 0,
+        "all_inclusive_price": 246.38,
+        "has_tax_exceptions": 0,
+        "gross_price": "219.00",
+        "currency": "USD"
+      },
+      "country_trans": "United States of America",
+      "block_ids": [
+        "50858916_335360327_3_1_0"
+      ],
+      "bwallet": {
+        "hotel_eligibility": 0
+      },
+      "address_trans": "720 Whitmarsh Lane",
+      "native_ads_tracking": "",
+      "children_not_allowed": 0,
+      "district_id": 17224,
+      "main_photo_id": 37457744,
+      "mobile_discount_percentage": 0,
+      "class_is_estimated": 0,
+      "latitude": 24.5543018233171,
+      "hotel_facilities": "418,198,2,222,457,72,161,182,455,305,450,462,451,47,16,160,124,464,107,425,15,180,110,158,80,96,46,4,422,109,460,449,468,456,28,467"
+    },
+    {
+      "bwallet": {
+        "hotel_eligibility": 0
+      },
+      "price_breakdown": {
+        "has_fine_print_charges": 0,
+        "sum_excluded_raw": 76.75,
+        "has_tax_exceptions": 0,
+        "all_inclusive_price": 375.75,
+        "has_incalculable_charges": 0,
+        "gross_price": "299.00",
+        "currency": "USD"
+      },
+      "block_ids": [
+        "71744819_341996222_2_0_0"
+      ],
+      "country_trans": "United States of America",
+      "is_mobile_deal": 0,
+      "accommodation_type": 218,
+      "district": "Downtown Key West",
+      "review_score": 8.4,
+      "default_wishlist_name": "Key West",
+      "latitude": 24.5531672042657,
+      "hotel_facilities": "107,425,160,301,423,451,47,439,186,448,447,450,305,184,455,421,161,453,436,2,488,25,467,51,468,422,433,12,426,419,497,96,459,158,185,454,180,183,15,7,124,135,78,16,462,445,91,496,505,492,457,499,222,224,418,506,104,449,460,14,109,491,4,187,489,446,188,495,110,490,493,461",
+      "mobile_discount_percentage": 0,
+      "class_is_estimated": 0,
+      "address_trans": "725 Truman Avenue",
+      "children_not_allowed": 0,
+      "native_ads_tracking": "",
+      "district_id": 17224,
+      "main_photo_id": 368945881,
+      "city_name_en": "Key West (Florida)",
+      "cc1": "us",
+      "districts": "17224",
+      "has_swimming_pool": 1,
+      "price_is_final": 1,
+      "deals": {
+        "deal_attributes": {},
+        "deal_events_killswitch": 0,
+        "deals_available": {}
+      },
+      "badges": [],
+      "city_trans": "Key West",
+      "cc_required": 1,
+      "wishlist_count": 0,
+      "preferred": 1,
+      "hotel_include_breakfast": 0,
+      "currencycode": "USD",
+      "checkin": {
+        "until": "",
+        "from": "16:00"
+      },
+      "city_in_trans": "in Key West",
+      "accommodation_type_name": "Inns",
+      "ufi": 20022831,
+      "id": "property_card_717448",
+      "url": "https://www.booking.com/hotel/us/key-lime-inn-historic-key-west-inns.html",
+      "class": 4,
+      "is_genius_deal": 0,
+      "updated_checkout": null,
+      "checkout": {
+        "until": "11:00",
+        "from": ""
+      },
+      "hotel_name": "Kimpton Winslow's Bungalows, an IHG Hotel",
+      "is_city_center": 0,
+      "min_total_price": 299,
+      "main_photo_url": "https://cf.bstatic.com/xdata/images/hotel/square60/368945881.jpg?k=635837908b3e75f8f9b580e6a4a6800a599e6b4b9b6e125cacc2aa8e22b85ed3&o=",
+      "is_free_cancellable": 0,
+      "cant_book": 0,
+      "soldout": 0,
+      "in_best_district": 0,
+      "extended": 0,
+      "hotel_id": 717448,
+      "review_score_word": "Very Good",
+      "native_ads_cpc": 0,
+      "address": "725 Truman Avenue",
+      "distance_to_cc": "0.40",
+      "is_geo_rate": "",
+      "is_smart_deal": 0,
+      "preferred_plus": 0,
+      "review_nr": 841,
+      "is_no_prepayment_block": 1,
+      "city": "Key West (Florida)",
+      "urgency_room_msg": "Premium King Room with Patio",
+      "default_language": "en",
+      "matching_units_configuration": {
+        "matching_units_common_config": {
+          "unit_type_id": 5,
+          "localized_area": null
+        }
+      },
+      "currency_code": "USD",
+      "distance": "0.38",
+      "updated_checkin": null,
+      "hotel_has_vb_boost": 0,
+      "countrycode": "us",
+      "longitude": -81.7961651999291,
+      "hotel_name_trans": "Kimpton Winslow's Bungalows, an IHG Hotel",
+      "selected_review_topic": null,
+      "native_ad_id": "",
+      "review_recommendation": "",
+      "genius_discount_percentage": 0,
+      "timezone": "America/New_York",
+      "type": "property_card",
+      "zip": "FL 33040"
+    },
+    {
+      "class": 3,
+      "ufi": 20022831,
+      "id": "property_card_42757",
+      "url": "https://www.booking.com/hotel/us/doubletree-grand-key-resort.html",
+      "city_in_trans": "in Key West",
+      "accommodation_type_name": "Resorts",
+      "is_city_center": 0,
+      "min_total_price": 173,
+      "checkout": {
+        "from": "",
+        "until": "11:00"
+      },
+      "hotel_name": "DoubleTree by Hilton Grand Key Resort",
+      "is_genius_deal": 0,
+      "updated_checkout": null,
+      "districts": "",
+      "cc1": "us",
+      "city_name_en": "Key West (Florida)",
+      "wishlist_count": 0,
+      "checkin": {
+        "until": "23:00",
+        "from": "16:00"
+      },
+      "preferred": 0,
+      "hotel_include_breakfast": 0,
+      "currencycode": "USD",
+      "has_swimming_pool": 1,
+      "cc_required": 1,
+      "deals": {
+        "deal_events_killswitch": 0,
+        "deal_attributes": {},
+        "deals_available": {}
+      },
+      "price_is_final": 1,
+      "city_trans": "Key West",
+      "badges": [],
+      "mobile_discount_percentage": 0,
+      "class_is_estimated": 0,
+      "hotel_facilities": "423,420,160,179,421,48,305,455,184,410,488,176,23,25,422,143,158,426,49,7,304,440,462,135,443,494,203,3,198,457,222,119,449,28,506,479,43,111,460,109,220,6,502,110,495,108,301,47,451,425,44,478,447,448,439,182,453,450,20,5,436,2,128,51,456,433,12,164,459,22,96,452,73,11,16,78,65,445,124,464,81,496,91,483,205,505,499,104,253,139,17,4,474,407,80,489,8",
+      "latitude": 24.5612524316181,
+      "main_photo_id": 71337048,
+      "address_trans": "3990 South Roosevelt Boulevard",
+      "native_ads_tracking": "",
+      "district_id": 0,
+      "children_not_allowed": 0,
+      "price_breakdown": {
+        "gross_price": "173.00",
+        "currency": "USD",
+        "has_fine_print_charges": 0,
+        "sum_excluded_raw": 55.38,
+        "all_inclusive_price": 228.38,
+        "has_incalculable_charges": 0,
+        "has_tax_exceptions": 0
+      },
+      "block_ids": [
+        "4275708_350837289_2_2_0"
+      ],
+      "country_trans": "United States of America",
+      "bwallet": {
+        "hotel_eligibility": 0
+      },
+      "review_score": 7.6,
+      "district": "",
+      "default_wishlist_name": "Key West",
+      "is_mobile_deal": 0,
+      "accommodation_type": 206,
+      "native_ad_id": "",
+      "review_recommendation": "",
+      "hotel_name_trans": "DoubleTree by Hilton Grand Key Resort",
+      "selected_review_topic": null,
+      "longitude": -81.7513181269169,
+      "zip": "FL 33040",
+      "type": "property_card",
+      "timezone": "America/New_York",
+      "genius_discount_percentage": 0,
+      "default_language": "en",
+      "urgency_room_msg": "Queen Room - Non-Smoking",
+      "hotel_has_vb_boost": 0,
+      "countrycode": "us",
+      "updated_checkin": null,
+      "distance": "4.97",
+      "currency_code": "USD",
+      "matching_units_configuration": {
+        "matching_units_common_config": {
+          "unit_type_id": 4,
+          "localized_area": null
+        }
+      },
+      "is_smart_deal": 0,
+      "preferred_plus": 0,
+      "is_geo_rate": "",
+      "distance_to_cc": "5.00",
+      "address": "3990 South Roosevelt Boulevard",
+      "native_ads_cpc": 0,
+      "review_score_word": "Good",
+      "hotel_id": 42757,
+      "city": "Key West (Florida)",
+      "review_nr": 700,
+      "is_no_prepayment_block": 1,
+      "is_free_cancellable": 0,
+      "main_photo_url": "https://cf.bstatic.com/xdata/images/hotel/square60/71337048.jpg?k=2eb4e89cdba3298032ff07520d2ccfbc1af8b908fa98e220907e74c1d6b73621&o=",
+      "soldout": 0,
+      "extended": 0,
+      "in_best_district": 0,
+      "cant_book": 0
+    },
+    {
+      "min_total_price": 207,
+      "is_city_center": 0,
+      "updated_checkout": null,
+      "is_genius_deal": 0,
+      "hotel_name": "Pegasus International Hotel",
+      "checkout": {
+        "from": "",
+        "until": "11:00"
+      },
+      "class": 3,
+      "has_free_parking": 1,
+      "accommodation_type_name": "Hotels",
+      "city_in_trans": "in Key West",
+      "url": "https://www.booking.com/hotel/us/pegasus-international.html",
+      "id": "property_card_285999",
+      "ufi": 20022831,
+      "city_trans": "Key West",
+      "deals": {
+        "deals_available": {},
+        "deal_attributes": {},
+        "deal_events_killswitch": 0
+      },
+      "price_is_final": 0,
+      "badges": [
+        {
+          "text": "Mobile-only price",
+          "id": "mobile_price",
+          "badge_variant": "constructive"
+        }
+      ],
+      "cc_required": 1,
+      "has_swimming_pool": 1,
+      "checkin": {
+        "until": "21:00",
+        "from": "16:00"
+      },
+      "wishlist_count": 0,
+      "preferred": 0,
+      "hotel_include_breakfast": 1,
+      "currencycode": "USD",
+      "districts": "17224,4301",
+      "city_name_en": "Key West (Florida)",
+      "cc1": "us",
+      "native_ads_tracking": "",
+      "district_id": 17224,
+      "children_not_allowed": 0,
+      "address_trans": "501 Southard Street",
+      "main_photo_id": 195334132,
+      "class_is_estimated": 0,
+      "mobile_discount_percentage": 23,
+      "latitude": 24.5550193137546,
+      "hotel_facilities": "118,426,96,15,7,454,468,433,46,12,435,161,48,453,305,450,455,436,2,163,108,301,47,451,107,420,447,448,439,446,80,489,502,493,63,495,484,449,28,104,506,444,460,442,109,492,494,499,457,119,16,462,445,464,124,135",
+      "review_score": 7.6,
+      "district": "Downtown Key West",
+      "default_wishlist_name": "Key West",
+      "accommodation_type": 204,
+      "is_mobile_deal": 1,
+      "block_ids": [
+        "28599903_295963760_2_1_0"
+      ],
+      "price_breakdown": {
+        "has_tax_exceptions": 0,
+        "all_inclusive_price": 257.88,
+        "has_incalculable_charges": 0,
+        "has_fine_print_charges": 1,
+        "sum_excluded_raw": 50.88,
+        "currency": "USD",
+        "gross_price": "207.00"
+      },
+      "country_trans": "United States of America",
+      "bwallet": {
+        "hotel_eligibility": 0
+      },
+      "type": "property_card",
+      "timezone": "America/New_York",
+      "zip": "FL 33040",
+      "genius_discount_percentage": 0,
+      "selected_review_topic": null,
+      "hotel_name_trans": "Pegasus International Hotel",
+      "native_ad_id": "",
+      "review_recommendation": "",
+      "longitude": -81.8019032478333,
+      "updated_checkin": null,
+      "countrycode": "us",
+      "hotel_has_vb_boost": 0,
+      "matching_units_configuration": {
+        "matching_units_common_config": {
+          "unit_type_id": 9,
+          "localized_area": null
+        }
+      },
+      "currency_code": "USD",
+      "distance": "0.50",
+      "default_language": "en",
+      "urgency_room_msg": "Double Room with Two Double Beds",
+      "city": "Key West (Florida)",
+      "is_no_prepayment_block": 0,
+      "review_nr": 896,
+      "is_geo_rate": "",
+      "preferred_plus": 0,
+      "is_smart_deal": 0,
+      "hotel_id": 285999,
+      "review_score_word": "Good",
+      "native_ads_cpc": 0,
+      "address": "501 Southard Street",
+      "distance_to_cc": "0.55",
+      "cant_book": 0,
+      "extended": 0,
+      "in_best_district": 0,
+      "soldout": 0,
+      "main_photo_url": "https://cf.bstatic.com/xdata/images/hotel/square60/195334132.jpg?k=96f433ea28cb2672b7cd13a23efc9c14793ac200e72cdf1912e8736cbb4e00da&o=",
+      "is_free_cancellable": 0
+    },
+    {
+      "hotel_has_vb_boost": 0,
+      "countrycode": "us",
+      "updated_checkin": null,
+      "distance": "1.01",
+      "matching_units_configuration": {
+        "matching_units_common_config": {
+          "localized_area": null,
+          "unit_type_id": 4
+        }
+      },
+      "currency_code": "USD",
+      "default_language": "en",
+      "urgency_room_msg": "2 Queen Island Room",
+      "zip": "FL 33040",
+      "type": "property_card",
+      "timezone": "America/New_York",
+      "genius_discount_percentage": 0,
+      "review_recommendation": "",
+      "native_ad_id": "",
+      "selected_review_topic": null,
+      "hotel_name_trans": "Eden House",
+      "longitude": -81.7965964972973,
+      "extended": 0,
+      "in_best_district": 0,
+      "soldout": 0,
+      "cant_book": 0,
+      "is_free_cancellable": 0,
+      "main_photo_url": "https://cf.bstatic.com/xdata/images/hotel/square60/35927558.jpg?k=22b3d0e34681917fbf5059f5bc0309de099e3e0e14a9578d304ca99b87c9f31c&o=",
+      "city": "Key West (Florida)",
+      "is_no_prepayment_block": 0,
+      "review_nr": 816,
+      "preferred_plus": 0,
+      "is_smart_deal": 0,
+      "is_geo_rate": "",
+      "distance_to_cc": "1.05",
+      "address": "1015 Fleming Street",
+      "review_score_word": "Very Good",
+      "hotel_id": 48475,
+      "native_ads_cpc": 0,
+      "hotel_include_breakfast": 0,
+      "wishlist_count": 0,
+      "preferred": 1,
+      "checkin": {
+        "until": "",
+        "from": "15:00"
+      },
+      "currencycode": "USD",
+      "cc_required": 1,
+      "deals": {
+        "deals_available": {},
+        "deal_attributes": {},
+        "deal_events_killswitch": 0
+      },
+      "price_is_final": 0,
+      "city_trans": "Key West",
+      "badges": [
+        {
+          "text": "Mobile-only price",
+          "badge_variant": "constructive",
+          "id": "mobile_price"
+        }
+      ],
+      "has_swimming_pool": 1,
+      "districts": "17224",
+      "cc1": "us",
+      "city_name_en": "Key West (Florida)",
+      "min_total_price": 231.12,
+      "is_city_center": 0,
+      "hotel_name": "Eden House",
+      "checkout": {
+        "from": "",
+        "until": "11:00"
+      },
+      "updated_checkout": null,
+      "is_genius_deal": 0,
+      "class": 3,
+      "url": "https://www.booking.com/hotel/us/eden-house.html",
+      "id": "property_card_48475",
+      "ufi": 20022831,
+      "accommodation_type_name": "Inns",
+      "has_free_parking": 1,
+      "city_in_trans": "in Key West",
+      "default_wishlist_name": "Key West",
+      "review_score": 8.3,
+      "district": "Downtown Key West",
+      "accommodation_type": 218,
+      "is_mobile_deal": 1,
+      "price_breakdown": {
+        "gross_price": 231.12,
+        "currency": "USD",
+        "sum_excluded_raw": 60.09,
+        "has_fine_print_charges": 1,
+        "has_tax_exceptions": 0,
+        "has_incalculable_charges": 0,
+        "all_inclusive_price": 291.21
+      },
+      "country_trans": "United States of America",
+      "block_ids": [
+        "4847507_363373032_0_0_0"
+      ],
+      "bwallet": {
+        "hotel_eligibility": 0
+      },
+      "main_photo_id": 35927558,
+      "children_not_allowed": 0,
+      "native_ads_tracking": "",
+      "district_id": 17224,
+      "address_trans": "1015 Fleming Street",
+      "class_is_estimated": 0,
+      "mobile_discount_percentage": 25.68,
+      "hotel_facilities": "109,14,221,28,104,449,490,8,90,110,461,63,76,54,446,220,29,91,496,81,135,464,124,462,78,16,61,119,222,159,457,101,198,458,3,82,203,19,170,143,12,46,422,433,69,21,456,467,127,55,51,180,7,11,452,15,96,22,459,158,118,10,447,44,160,425,107,47,451,301,163,108,2,23,436,5,20,455,450,305,453,161",
+      "latitude": 24.5600168107642
+    },
+    {
+      "matching_units_configuration": {
+        "matching_units_common_config": {
+          "unit_type_id": 4,
+          "localized_area": null
+        }
+      },
+      "currency_code": "USD",
+      "distance": "0.07",
+      "updated_checkin": null,
+      "countrycode": "us",
+      "hotel_has_vb_boost": 0,
+      "urgency_room_msg": "Large Room with Two Queen Beds",
+      "default_language": "en",
+      "genius_discount_percentage": 0,
+      "type": "property_card",
+      "timezone": "America/New_York",
+      "zip": "FL 33040",
+      "longitude": -81.7996206879616,
+      "selected_review_topic": null,
+      "hotel_name_trans": "Wicker Guesthouse",
+      "review_recommendation": "",
+      "native_ad_id": "",
+      "cant_book": 0,
+      "extended": 0,
+      "in_best_district": 0,
+      "soldout": 0,
+      "main_photo_url": "https://cf.bstatic.com/xdata/images/hotel/square60/47161076.jpg?k=5e2b194572211202c8d43344f2566d3d3e70c1f25b97386c6b9886e9afd20e44&o=",
+      "is_free_cancellable": 0,
+      "is_no_prepayment_block": 0,
+      "review_nr": 2043,
+      "city": "Key West (Florida)",
+      "native_ads_cpc": 0,
+      "review_score_word": "Good",
+      "hotel_id": 274986,
+      "address": "913 Duval Street",
+      "distance_to_cc": "0.10",
+      "is_geo_rate": "",
+      "preferred_plus": 0,
+      "is_smart_deal": 0,
+      "deals": {
+        "deal_events_killswitch": 0,
+        "deal_attributes": {},
+        "deals_available": {}
+      },
+      "city_trans": "Key West",
+      "price_is_final": 0,
+      "badges": [
+        {
+          "badge_variant": "constructive",
+          "id": "mobile_price",
+          "text": "Mobile-only price"
+        }
+      ],
+      "cc_required": 1,
+      "has_swimming_pool": 1,
+      "checkin": {
+        "until": "21:00",
+        "from": "16:00"
+      },
+      "wishlist_count": 0,
+      "preferred": 1,
+      "hotel_include_breakfast": 1,
+      "currencycode": "USD",
+      "city_name_en": "Key West (Florida)",
+      "cc1": "us",
+      "districts": "17224,4301",
+      "updated_checkout": null,
+      "is_genius_deal": 0,
+      "hotel_name": "Wicker Guesthouse",
+      "checkout": {
+        "from": "",
+        "until": "11:00"
+      },
+      "min_total_price": 246.6,
+      "is_city_center": 0,
+      "accommodation_type_name": "Inns",
+      "has_free_parking": 1,
+      "city_in_trans": "in Key West",
+      "url": "https://www.booking.com/hotel/us/wicker-guesthouse.html",
+      "id": "property_card_274986",
+      "ufi": 20022831,
+      "class": 3,
+      "accommodation_type": 218,
+      "is_mobile_deal": 1,
+      "review_score": 7.9,
+      "default_wishlist_name": "Key West",
+      "district": "Downtown Key West",
+      "bwallet": {
+        "hotel_eligibility": 0
+      },
+      "block_ids": [
+        "27498602_198524083_2_1_0"
+      ],
+      "price_breakdown": {
+        "gross_price": "246.60",
+        "currency": "USD",
+        "has_fine_print_charges": 1,
+        "sum_excluded_raw": 30.82,
+        "has_tax_exceptions": 0,
+        "all_inclusive_price": 277.42,
+        "has_incalculable_charges": 0
+      },
+      "country_trans": "United States of America",
+      "district_id": 17224,
+      "native_ads_tracking": "",
+      "children_not_allowed": 0,
+      "address_trans": "913 Duval Street",
+      "main_photo_id": 47161076,
+      "latitude": 24.5516769663917,
+      "hotel_facilities": "447,404,451,47,301,107,425,2,453,450,12,46,69,433,218,51,468,456,405,467,127,180,118,52,96,459,91,133,65,16,78,81,124,464,56,418,224,82,4,14,215,486,104,90,80,136,9,402,179,163,160,488,72,413,195,410,184,455,305,422,173,170,143,400,25,169,7,194,454,158,401,29,462,61,135,198,119,222,19,62,200,485,203,109,449,28,461,76,110,220",
+      "class_is_estimated": 0,
+      "mobile_discount_percentage": 27.4
+    },
+    {
+      "district": "Downtown Key West",
+      "review_score": 8.6,
+      "default_wishlist_name": "Key West",
+      "is_mobile_deal": 0,
+      "accommodation_type": 205,
+      "price_breakdown": {
+        "currency": "USD",
+        "gross_price": "218.20",
+        "all_inclusive_price": 245.48,
+        "has_incalculable_charges": 0,
+        "has_tax_exceptions": 0,
+        "has_fine_print_charges": 1,
+        "sum_excluded_raw": 27.28
+      },
+      "block_ids": [
+        "34102602_184348123_0_0_0"
+      ],
+      "country_trans": "United States of America",
+      "bwallet": {
+        "hotel_eligibility": 0
+      },
+      "main_photo_id": 5659176,
+      "address_trans": "1320 Simonton Street",
+      "district_id": 17224,
+      "native_ads_tracking": "",
+      "children_not_allowed": 0,
+      "mobile_discount_percentage": 0,
+      "class_is_estimated": 0,
+      "hotel_facilities": "47,451,462,301,16,81,160,135,107,124,464,91,455,184,450,305,458,2,457,449,468,456,104,28,433,109,460,158,96,459,136,22,80,461,452,8",
+      "latitude": 24.5484430995487,
+      "hotel_include_breakfast": 0,
+      "wishlist_count": 0,
+      "preferred": 0,
+      "currencycode": "USD",
+      "checkin": {
+        "from": "15:00",
+        "until": ""
+      },
+      "has_swimming_pool": 1,
+      "deals": {
+        "deals_available": {},
+        "deal_events_killswitch": 0,
+        "deal_attributes": {}
+      },
+      "cc_required": 1,
+      "price_is_final": 0,
+      "city_trans": "Key West",
+      "badges": [],
+      "districts": "17224,4301",
+      "cc1": "us",
+      "city_name_en": "Key West (Florida)",
+      "is_city_center": 0,
+      "min_total_price": 218.2,
+      "checkout": {
+        "until": "11:00",
+        "from": ""
+      },
+      "hotel_name": "Blue Marlin Motel",
+      "is_genius_deal": 0,
+      "updated_checkout": null,
+      "class": 2,
+      "id": "property_card_341026",
+      "ufi": 20022831,
+      "url": "https://www.booking.com/hotel/us/key-west-1320-simonton-street-blue-marlin-motel.html",
+      "city_in_trans": "in Key West",
+      "accommodation_type_name": "Motels",
+      "soldout": 0,
+      "extended": 0,
+      "in_best_district": 0,
+      "cant_book": 0,
+      "is_free_cancellable": 1,
+      "main_photo_url": "https://cf.bstatic.com/xdata/images/hotel/square60/5659176.jpg?k=9e32bf0c7de585e15b42d0d9cc0caf4eca634e03c5858e3afbb4a2f93d105827&o=",
+      "city": "Key West (Florida)",
+      "review_nr": 3568,
+      "is_no_prepayment_block": 0,
+      "is_smart_deal": 0,
+      "preferred_plus": 0,
+      "is_geo_rate": "",
+      "distance_to_cc": "0.50",
+      "address": "1320 Simonton Street",
+      "review_score_word": "Excellent",
+      "hotel_id": 341026,
+      "native_ads_cpc": 0,
+      "countrycode": "us",
+      "hotel_has_vb_boost": 0,
+      "updated_checkin": null,
+      "distance": "0.48",
+      "matching_units_configuration": {
+        "matching_units_common_config": {
+          "localized_area": null,
+          "unit_type_id": 4
+        }
+      },
+      "currency_code": "USD",
+      "default_language": "en",
+      "urgency_room_msg": "Double Room with Two Double Beds",
+      "zip": "FL 33040",
+      "timezone": "America/New_York",
+      "type": "property_card",
+      "genius_discount_percentage": 0,
+      "review_recommendation": "",
+      "native_ad_id": "",
+      "hotel_name_trans": "Blue Marlin Motel",
+      "selected_review_topic": null,
+      "longitude": -81.7955356836319
+    },
+    {
+      "default_wishlist_name": "Key West",
+      "review_score": 8.4,
+      "district": "",
+      "accommodation_type": 204,
+      "is_mobile_deal": 0,
+      "price_breakdown": {
+        "has_fine_print_charges": 1,
+        "sum_excluded_raw": 102.31,
+        "all_inclusive_price": 407.31,
+        "has_incalculable_charges": 0,
+        "has_tax_exceptions": 0,
+        "gross_price": "305.00",
+        "currency": "USD"
+      },
+      "country_trans": "United States of America",
+      "block_ids": [
+        "2183041_354173385_3_42_0"
+      ],
+      "bwallet": {
+        "hotel_eligibility": 0
+      },
+      "main_photo_id": 334767821,
+      "native_ads_tracking": "",
+      "children_not_allowed": 0,
+      "district_id": 0,
+      "address_trans": "2001 South Roosevelt Boulevard",
+      "class_is_estimated": 0,
+      "mobile_discount_percentage": 0,
+      "hotel_facilities": "91,464,124,81,78,16,133,445,82,205,14,465,4,17,253,104,90,8,63,80,425,301,108,47,451,436,2,5,450,20,453,218,424,164,433,12,127,467,456,468,302,11,452,96,199,22,459,118,129,462,219,457,222,119,198,458,3,203,19,109,43,111,28,437,210,449,6,461,209,446,179,420,160,423,163,176,23,488,305,195,184,455,161,421,48,143,422,140,25,454,304,49,15,7,426",
+      "latitude": 24.5525906315065,
+      "preferred": 1,
+      "wishlist_count": 0,
+      "checkin": {
+        "until": "",
+        "from": "16:00"
+      },
+      "hotel_include_breakfast": 0,
+      "currencycode": "USD",
+      "price_is_final": 0,
+      "deals": {
+        "deals_available": {},
+        "deal_events_killswitch": 0,
+        "deal_attributes": {}
+      },
+      "city_trans": "Key West",
+      "badges": [],
+      "cc_required": 1,
+      "has_swimming_pool": 1,
+      "districts": "",
+      "cc1": "us",
+      "city_name_en": "Key West (Florida)",
+      "min_total_price": 305,
+      "is_city_center": 0,
+      "hotel_name": "Margaritaville Beach House Key West",
+      "checkout": {
+        "from": "",
+        "until": "11:00"
+      },
+      "updated_checkout": null,
+      "is_genius_deal": 0,
+      "class": 3,
+      "url": "https://www.booking.com/hotel/us/sheraton-suites-key-west.html",
+      "id": "property_card_21830",
+      "ufi": 20022831,
+      "accommodation_type_name": "Hotels",
+      "city_in_trans": "in Key West",
+      "in_best_district": 0,
+      "extended": 0,
+      "soldout": 0,
+      "cant_book": 0,
+      "is_free_cancellable": 1,
+      "main_photo_url": "https://cf.bstatic.com/xdata/images/hotel/square60/334767821.jpg?k=aace0a8508c200e7fd68f696d252b6f7522cb587b6552a87c362285bafb066f9&o=",
+      "city": "Key West (Florida)",
+      "is_no_prepayment_block": 0,
+      "review_nr": 952,
+      "preferred_plus": 0,
+      "is_smart_deal": 0,
+      "is_geo_rate": "",
+      "distance_to_cc": "2.75",
+      "address": "2001 South Roosevelt Boulevard",
+      "hotel_id": 21830,
+      "review_score_word": "Very Good",
+      "native_ads_cpc": 0,
+      "countrycode": "us",
+      "hotel_has_vb_boost": 0,
+      "updated_checkin": null,
+      "distance": "2.71",
+      "matching_units_configuration": {
+        "matching_units_common_config": {
+          "localized_area": "42",
+          "unit_type_id": 5
+        }
+      },
+      "currency_code": "USD",
+      "default_language": "en",
+      "urgency_room_msg": "Queen Suite",
+      "zip": "FL 33040",
+      "type": "property_card",
+      "timezone": "America/New_York",
+      "genius_discount_percentage": 0,
+      "native_ad_id": "",
+      "review_recommendation": "",
+      "selected_review_topic": null,
+      "hotel_name_trans": "Margaritaville Beach House Key West",
+      "longitude": -81.772498190403
+    },
+    {
+      "accommodation_type_name": "Hotels",
+      "city_in_trans": "in Key West",
+      "url": "https://www.booking.com/hotel/us/truman.html",
+      "ufi": 20022831,
+      "id": "property_card_289642",
+      "class": 3,
+      "updated_checkout": null,
+      "is_genius_deal": 0,
+      "hotel_name": "Truman Hotel",
+      "checkout": {
+        "until": "12:00",
+        "from": ""
+      },
+      "min_total_price": 268.2,
+      "is_city_center": 0,
+      "city_name_en": "Key West (Florida)",
+      "cc1": "us",
+      "districts": "17224,4301",
+      "deals": {
+        "deals_available": {},
+        "deal_events_killswitch": 0,
+        "deal_attributes": {}
+      },
+      "price_is_final": 0,
+      "cc_required": 1,
+      "city_trans": "Key West",
+      "badges": [],
+      "has_swimming_pool": 1,
+      "checkin": {
+        "from": "15:00",
+        "until": ""
+      },
+      "wishlist_count": 0,
+      "preferred": 0,
+      "hotel_include_breakfast": 0,
+      "currencycode": "USD",
+      "latitude": 24.5522393164689,
+      "hotel_facilities": "118,426,96,15,51,25,456,433,181,422,161,48,305,450,455,184,436,2,423,163,301,47,451,107,425,160,80,461,8,449,104,444,460,109,198,418,457,119,222,16,445,462,124,135,81,91",
+      "class_is_estimated": 0,
+      "mobile_discount_percentage": 0,
+      "native_ads_tracking": "",
+      "district_id": 17224,
+      "children_not_allowed": 0,
+      "address_trans": "611 Truman Avenue",
+      "main_photo_id": 33404985,
+      "bwallet": {
+        "hotel_eligibility": 0
+      },
+      "price_breakdown": {
+        "has_fine_print_charges": 0,
+        "sum_excluded_raw": 33.52,
+        "has_tax_exceptions": 0,
+        "all_inclusive_price": 301.72,
+        "has_incalculable_charges": 0,
+        "gross_price": "268.20",
+        "currency": "USD"
+      },
+      "country_trans": "United States of America",
+      "block_ids": [
+        "28964201_134794421_4_0_0"
+      ],
+      "accommodation_type": 204,
+      "is_mobile_deal": 0,
+      "default_wishlist_name": "Key West",
+      "review_score": 8.8,
+      "district": "Downtown Key West",
+      "longitude": -81.7975071072578,
+      "selected_review_topic": null,
+      "hotel_name_trans": "Truman Hotel",
+      "native_ad_id": "",
+      "review_recommendation": "",
+      "genius_discount_percentage": 0,
+      "type": "property_card",
+      "timezone": "America/New_York",
+      "zip": "FL 33040",
+      "urgency_room_msg": "Double Room with Two Double Beds",
+      "default_language": "en",
+      "matching_units_configuration": {
+        "matching_units_common_config": {
+          "unit_type_id": 9,
+          "localized_area": null
+        }
+      },
+      "currency_code": "USD",
+      "distance": "0.21",
+      "updated_checkin": null,
+      "countrycode": "us",
+      "hotel_has_vb_boost": 0,
+      "review_score_word": "Excellent",
+      "hotel_id": 289642,
+      "native_ads_cpc": 0,
+      "address": "611 Truman Avenue",
+      "distance_to_cc": "0.25",
+      "is_geo_rate": "",
+      "preferred_plus": 0,
+      "is_smart_deal": 0,
+      "is_no_prepayment_block": 0,
+      "review_nr": 1944,
+      "city": "Key West (Florida)",
+      "main_photo_url": "https://cf.bstatic.com/xdata/images/hotel/square60/33404985.jpg?k=4061d2356fedd6fb3df9d0214544e3e3895e9b7fd96a243bb5527bd96649e2ba&o=",
+      "is_free_cancellable": 1,
+      "cant_book": 0,
+      "extended": 0,
+      "in_best_district": 0,
+      "soldout": 0
+    }
+  ],
+  "b_max_los_data": {
+    "is_fullon": 0,
+    "default_los": 45,
+    "experiment": "long_stays_android_extend_los_2",
+    "extended_los": 90,
+    "has_extended_los": 1,
+    "max_allowed_los": 90
+  },
+  "applied_filters": [],
+  "sorting": {
+    "options": [
+      {
+        "name": "Distance From Downtown",
+        "loading_message": null,
+        "identifier": "distance"
+      },
+      {
+        "identifier": "popularity",
+        "name": "Popularity",
+        "loading_message": null
+      },
+      {
+        "loading_message": null,
+        "name": "Stars (5 to 0)",
+        "identifier": "class_descending"
+      },
+      {
+        "identifier": "class_ascending",
+        "name": "Stars (0 to 5)",
+        "loading_message": null
+      },
+      {
+        "name": "Guest Review Score",
+        "loading_message": null,
+        "identifier": "bayesian_review_score"
+      },
+      {
+        "loading_message": null,
+        "name": "Price (low to high)",
+        "identifier": "price"
+      }
+    ],
+    "selected_identifier": "popularity"
+  },
+  "total_count_with_filters": 82,
+  "unfiltered_primary_count": 390,
+  "sort": [
+    {
+      "id": "distance",
+      "name": "Distance From Downtown"
+    },
+    {
+      "name": "Popularity",
+      "id": "popularity"
+    },
+    {
+      "id": "class_descending",
+      "name": "Stars (5 to 0)"
+    },
+    {
+      "id": "class_ascending",
+      "name": "Stars (0 to 5)"
+    },
+    {
+      "name": "Guest Review Score",
+      "id": "bayesian_review_score"
+    },
+    {
+      "id": "price",
+      "name": "Price (low to high)"
+    }
+  ],
+  "search_metadata": "last_x_property_ids=289642,hotels_cc1=us",
+  "ranking_version": 5,
+  "unfiltered_count": 390,
+  "map_bounding_box": {
+    "ne_lat": 24.5773647,
+    "sw_lat": 24.5475257445482,
+    "ne_long": -81.7260771989822,
+    "sw_long": -81.8073277983643
+  },
+  "count": 82,
+  "extended_count": 0,
+  "room_distribution": [
+    {
+      "children": [
+        5,
+        7
+      ],
+      "adults": "1"
+    }
+  ]
+}

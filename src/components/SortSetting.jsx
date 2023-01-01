@@ -66,7 +66,7 @@ const SortSetting = ({hAppliedSort}) => {
                 id='HL'/>
             </div>
             <div className='starProperty'>
-              <p>Stars: highest first</p>
+              <p>Review score: highest first</p>
               <input 
                 onClick={handleCheckbox} 
                 className='custom_checkbox' 
@@ -75,7 +75,7 @@ const SortSetting = ({hAppliedSort}) => {
                 id='D'/>
             </div>
             <div className='starProperty'>
-              <p>Stars: lowest first</p>
+              <p>Review score: lowest first</p>
               <input
                 onClick={handleCheckbox} 
                 className='custom_checkbox' 

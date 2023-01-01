@@ -45,7 +45,7 @@ const HotelsMobil = ({propHandlerAppliedFilter, propHandlerAppliedSort, propHote
         </div>
         <div className='hotels_list'> 
         {propHotelsList.length > 0 ? propHotelsList.map((item) => (
-          <Link to={`/${localSearch}/${item.hotel_id}`}>
+          <Link to={`/${localSearch}/${item.hotel_id}`} state={item}>
             <section key={item.hotel_id}>
               <img className='plug_hotel singleItemInList' alt='hotel' src={item.main_photo_url.replace('/square60/', '/square300/')}/>
               <div className='hotel_info'>

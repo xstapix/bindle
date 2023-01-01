@@ -51,8 +51,6 @@ const Guest = () => {
     }
   }
 
-  console.log('guest');
-
   return (
     <>
       {(localSearch && window.screen.width > 428) ? 

@@ -4,25 +4,38 @@ import { useParams, useNavigate, useLocation } from 'react-router-dom'
 
 import { getDatabase, ref, set, onValue } from "firebase/database";
 import Carousel from '../components/Carousel';
+import CalendarComponent from '../components/Calendar'
+import Guest from '../components/Guest'
 
 import HotelData from '../exampleSingleHotel.json'
-import HotelPhoto from '../exampleSingleHotelPhoto.json'
 import {useAuth} from '../hook/useAuth'
+import { useGuest } from '../hook/useGuest'
 import { useCheckDate } from '../hook/useCheckDate';
+import Link from 'react-scroll/modules/components/Link';
 
 const SingleHotel = () => {
 	const {IDHotel} = useParams()
 	const locationData = useLocation()
 	const {id, isAuth} = useAuth()
 	const {checkIn, checkOut} = useCheckDate() 
+	const {adults} = useGuest() 
 	const navigate = useNavigate()
 	const [hotelLiked, setHotelLiked] = useState('')
+	const [photos, setPhotos] = useState(null)
 
 	const db = getDatabase();
 	const starCountRef = ref(db, 'users/' + id);
 	const [data, setData] = useState(null)
 
 	useEffect(() => {
+		const options = {
+			method: 'GET',
+			headers: {
+				'X-RapidAPI-Key': '534f1377f4msha36408bd2db5f20p1a7ef7jsn6556c9dca6f8',
+				'X-RapidAPI-Host': 'apidojo-booking-v1.p.rapidapi.com'
+			}
+		};
+
 		if (isAuth) {
 			onValue(ref(db, 'users/' + id), (snapshot) => {
 				if (snapshot.exists()) {
@@ -30,7 +43,20 @@ const SingleHotel = () => {
 				}
 			});
 		}
-	}, []) 
+
+		fetch(`https://apidojo-booking-v1.p.rapidapi.com/properties/get-hotel-photos?hotel_ids=${IDHotel}&languagecode=en-us`, options)
+			.then(response => response.json())
+			.then(response => setPhotos(response))
+			.catch(err => console.error(err));
+
+		// fetch(`https://6392fd90ab513e12c5ff47f0.mockapi.io/get-hotel-photos`)
+		// 	.then(response => response.json())
+		// 	.then(response => {
+		// 		setPhotos(response[0]);
+		// 	})
+		// 	.catch(err => console.error(err));
+
+	}, [])
 
 	let nights
 
@@ -42,18 +68,18 @@ const SingleHotel = () => {
 		}
 	}
 	
-	document.title = `${HotelData.data.body.propertyDescription.name}`
+	document.title = `${locationData.state.hotel_name}`
 	
 	const handlerFavorite = () => {
 		if (isAuth) {
 			if (data) {
 				set(starCountRef, {
-					favorites: [...new Set([IDHotel, ...data.favorites])]
+					favorites: [...new Set([locationData.state, ...data.favorites])]
 				})
 				.then(() => console.log('ok'))	
 			} else {
 				set(starCountRef, {
-					favorites: [IDHotel]
+					favorites: [locationData.state]
 				})
 				.then(() => console.log('ok'))
 			}
@@ -84,10 +110,10 @@ const SingleHotel = () => {
 		document.body.style.overflow = 'visible'
 	} 
 
-	console.log(locationData);
-
 	return (
 		<div>
+			{photos ? 
+			<>
 			<section style={{position: 'relative'}}>
 				<div onClick={handlerFavorite} className="favoriteHotel cursorP">
 					{data ? 
@@ -107,53 +133,55 @@ const SingleHotel = () => {
 					}
 				</div>
 				<Carousel>
-					{HotelPhoto.hotelImages.map(item => (
+					{photos.data[284239].map(item => (
 						<img 
-						key={item.imageId} 
-						className='singleHotelPhoto' 
-						alt='hotelPhoto' 
-						src={item.baseUrl.replace('{size}', 'w')}/>
-						))}
+							key={item.imageId} 
+							className='singleHotelPhoto' 
+							alt='hotelPhoto' 
+							src={`${photos.url_prefix}${item[4]}`}/>
+					))}
 				</Carousel>
 			</section>
-			{HotelData ?
-			<div key={HotelData.data.body.pdpHeader.hotelId}>
+			
+			<div>
 				<div className='flexAmenities' style={{maxWidth: 1300, margin: '0 auto'}}>
 					<div>
 						<div className='containerMargin'>
 							{window.screen.width > 428 ? 
 							<div className='flexAmenities'>
 								<div className='hotel_info w-100' style={{padding: 0}}>
-									<h1 className='desk_hotel_name'>{HotelData.data.body.propertyDescription.name}</h1>
-									<p className='desk_hotel_local'>{HotelData.data.body.propertyDescription.address.addressLine1} | {HotelData.data.body.propertyDescription.address.cityName}</p>
+									<h1 className='desk_hotel_name'>{locationData.state.hotel_name}</h1>
+									<p className='desk_hotel_local'>{locationData.state.address} | {locationData.state.city_trans}</p>
 								</div>
 								<div style={{width: 130}}>
 									<div className="hotel_info" style={{padding: 0}}>
 										<p className='desk_hotel_rating'>
 											<img className='start_rating' alt='star' src='../image/svg/Star 5.svg'/>
-											{HotelData.data.body.guestReviews.brands.rating} ({HotelData.data.body.guestReviews.brands.total})
+											{locationData.state.review_score} ({locationData.state.review_nr})
 										</p>
 										<div className="DeskGood">
-											<p>{HotelData.data.body.guestReviews.brands.badgeText}</p>
+											<p>{locationData.state.review_score_word}</p>
 										</div>
 										{checkOut ? 
 										<>
-											<p className='nights' style={{width: '100%'}}>{nights} nights, 2 adults</p>
-											{/* <p className='total_prise'>$ {locationData.state}</p> */}
+											<p className='nights' style={{width: '100%'}}>{nights} nights, {adults} adults</p>
+											<p className='total_prise'>{locationData.state.price_breakdown.currency} {locationData.state.price_breakdown.all_inclusive_price}</p>
+											<a target='_blank' href={locationData.state.url} rel="noreferrer" className='show_now cursorP'>Book Now</a>
 										</>
 										: <></>}
 									</div>
 								</div>
 							</div>
-							: <>
-							<h1 className='hotel_name'>{HotelData.data.body.propertyDescription.name}</h1>
-							<div className='DF_JS_AC'>
-								<p className='hotel_local margin10'>{HotelData.data.body.propertyDescription.address.addressLine1} | {HotelData.data.body.propertyDescription.address.cityName}</p>
-								<p className='hotel_rating margin10'>
-									<img className='start_rating ' alt='star' src='../image/svg/Star 5.svg'/>
-									{HotelData.data.body.propertyDescription.starRating} ({HotelData.data.body.guestReviews.brands.total})
-								</p>
-							</div>
+							: 
+							<>
+								<h1 className='hotel_name'>{locationData.state.hotel_name}</h1>
+								<div className='DF_JE'>
+									<p className='hotel_local margin10'>{locationData.state.address} | {locationData.state.city_trans}</p>
+									<p className='hotel_rating margin10'>
+										<img className='start_rating ' alt='star' src='../image/svg/Star 5.svg'/>
+										{locationData.state.review_score} ({locationData.state.review_nr})
+									</p>
+								</div>
 							</>}
 							
 							<div className='footer_line margin24'></div>
@@ -179,14 +207,16 @@ const SingleHotel = () => {
 							</p>
 							))}
 						</div>
-						<div className='containerMargin'>
-							<p className='hotel_name whatAroundMargin'>What’s around</p>
-							{HotelData.data.body.overview.overviewSections[2].content.map(item => (
-							<p className='whatAround' key={item}>
-								{item}
-							</p>
-							))}
+						{window.screen.width > 428 ? <></> 
+						: 
+						<div className="containerMargin totalPriceBox">
+							<div className="DF_JE">
+								<p className='room_info' style={{color: '#304659'}}>Total:</p>
+								<p className='room_info' style={{color: '#3A6AD5'}}>$3,499</p>
+							</div>
+							<a target='_blank' href={locationData.state.url} rel="noreferrer" className="roomBookNow">Book Now</a>
 						</div>
+						}
 						<div className='containerMargin'>
 							<div className='atAGlance cursorP'>
 								<div onClick={() => handleAtAGlance('moreOrder')} id='moreOrder' className="DF_JS_AC">
@@ -215,7 +245,6 @@ const SingleHotel = () => {
 							</div>
 						</div>
 					</div>
-					<div className="map">Map</div>
 				</div>
 				<div id='amenitiesPopUp' className="amenitiesPopUp">
 					<div className="amenitiesHeader">
@@ -239,7 +268,13 @@ const SingleHotel = () => {
 					))}
 					</div>
 				</div>
-			</div> : <>Loading...</>}
+			</div>
+			</> : 
+			<div className='loadingModal'>
+				<div className='container'>
+					<p className='logo_effect fw-Bold fz-27'>Looking for suitable hotels</p>
+				</div>
+			</div>}
 		</div>
 	)
 }
