@@ -44,18 +44,10 @@ const SingleHotel = () => {
 			});
 		}
 
-		fetch(`https://apidojo-booking-v1.p.rapidapi.com/properties/get-hotel-photos?hotel_ids=${IDHotel}&languagecode=en-us`, options)
-			.then(response => response.json())
-			.then(response => setPhotos(response))
-			.catch(err => console.error(err));
-
-		// fetch(`https://6392fd90ab513e12c5ff47f0.mockapi.io/get-hotel-photos`)
+		// fetch(`https://apidojo-booking-v1.p.rapidapi.com/properties/get-hotel-photos?hotel_ids=${IDHotel}&languagecode=en-us`, options)
 		// 	.then(response => response.json())
-		// 	.then(response => {
-		// 		setPhotos(response[0]);
-		// 	})
+		// 	.then(response => setPhotos(response))
 		// 	.catch(err => console.error(err));
-
 	}, [])
 
 	let nights
@@ -117,7 +109,7 @@ const SingleHotel = () => {
 			<section style={{position: 'relative'}}>
 				<div onClick={handlerFavorite} className="favoriteHotel cursorP">
 					{data ? 
-						data.favorites.includes(`${HotelData.data.body.pdpHeader.hotelId}`) ?
+						data.favorites.includes(`${IDHotel}`) ?
 							<svg className='hotel_liked'xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#fff">
 								<path d="M0 0h24v24H0V0z" fill="none"/>
 								<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
@@ -133,7 +125,7 @@ const SingleHotel = () => {
 					}
 				</div>
 				<Carousel>
-					{photos.data[284239].map(item => (
+					{photos.data[IDHotel].map(item => (
 						<img 
 							key={item.imageId} 
 							className='singleHotelPhoto' 
@@ -212,7 +204,7 @@ const SingleHotel = () => {
 						<div className="containerMargin totalPriceBox">
 							<div className="DF_JE">
 								<p className='room_info' style={{color: '#304659'}}>Total:</p>
-								<p className='room_info' style={{color: '#3A6AD5'}}>$3,499</p>
+								<p className='room_info' style={{color: '#3A6AD5'}}>{locationData.state.price_breakdown.currency} {locationData.state.price_breakdown.all_inclusive_price}</p>
 							</div>
 							<a target='_blank' href={locationData.state.url} rel="noreferrer" className="roomBookNow">Book Now</a>
 						</div>

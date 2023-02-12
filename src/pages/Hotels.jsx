@@ -36,39 +36,42 @@ const Hotels = () => {
       day =+ Number(day) + 1
       arrival_date = newDate.split('.')
       arrival_date[0] = day
+      arrival_date = arrival_date.reverse().join('-')
 
       day =+ Number(day) + 2
       departure_date = newDate.split('.')
       departure_date[0] = day
-      console.log(departure_date.reverse().join('-'));
+      departure_date = departure_date.reverse().join('-')
+      console.log(departure_date);
+      console.log(arrival_date);
     }
 
     setInitialDB(null)
 
-    fetch(`https://6392fd90ab513e12c5ff47f0.mockapi.io/location`, options) // change on `https://apidojo-booking-v1.p.rapidapi.com/locations/auto-complete?text=${localSearch}&languagecode=en-us`
+    fetch(`https://apidojo-booking-v1.p.rapidapi.com/locations/auto-complete?text=${localSearch}&languagecode=en-us`, options) // change on `https://apidojo-booking-v1.p.rapidapi.com/locations/auto-complete?text=${localSearch}&languagecode=en-us`
       .then(response => response.json())
       .then(response => {
         let localResult = []
+        console.log(response);
 
-        // for(const item of response){
-        //   let dest_ids = item.dest_id 
-        //   fetch(`https://apidojo-booking-v1.p.rapidapi.com/properties/list?offset=0&arrival_date=${arrival_date}&departure_date=${departure_date}&guest_qty=1&dest_ids=${dest_ids}&room_qty=1&search_type=city&children_qty=2&children_age=5%2C7&search_id=none&price_filter_currencycode=USD&order_by=popularity&languagecode=en-us&travel_purpose=leisure`, options)
-        //   .then(response => response.json())
-        //   .then(response => {
-        //     localResult = localResult.concat(response.result)
-        //   })
-        //   .catch(err => console.error(err));
-        // };
-        fetch(`https://6392fd90ab513e12c5ff47f0.mockapi.io/properties`)
-          .then(response => response.json())
-          .then(response => {
-            setInitialDB(response); 
-          })
-          .catch(err => console.error(err));
+        for(const item of response){
+          setTimeout(() => {
+            
+            let dest_ids = item.dest_id 
+            fetch(`https://apidojo-booking-v1.p.rapidapi.com/properties/list?offset=0&arrival_date=${arrival_date}&departure_date=${departure_date}&guest_qty=1&dest_ids=${dest_ids}&room_qty=1&search_type=city&children_qty=2&children_age=5%2C7&search_id=none&price_filter_currencycode=USD&order_by=popularity&languagecode=en-us&travel_purpose=leisure`, options)
+            .then(response => response.json())
+            .then(response => {
+              localResult = localResult.concat(response.result)
+              console.log(response);
+            })
+            .catch(err => console.error(err));
+          }, 1000);
+        };
 
-        // setTimeout(() => {
-        //   setInitialDB(localResult);
-        // }, 3000);
+        setTimeout(() => {
+          setInitialDB(localResult)
+          console.log(localResult);
+        }, 5000);
     })
     .catch(err => console.error(err));
 

@@ -24,12 +24,14 @@ const HotelsDesk = ({propHandlerAppliedFilter, propHandlerAppliedSort, propHotel
 	let nights
 
 	if (checkOut) {
-		if (checkOut.split('.')[0] > checkIn.split('.')[0]) {
-			nights = checkOut.split('.')[0] - checkIn.split('.')[0]; 
+		if (checkOut.split('-')[2] > checkIn.split('-')[2]) {
+			nights = checkOut.split('-')[2] - checkIn.split('-')[2]; 
 		} else {
-			nights = checkIn.split('.')[0] - checkOut.split('.')[0];
+			nights = checkIn.split('-')[2] - checkOut.split('-')[2];
 		}
 	}
+
+	console.log(propHotelsList);
 
   return (
     <div className='hotels'>
@@ -84,8 +86,8 @@ const HotelsDesk = ({propHandlerAppliedFilter, propHandlerAppliedSort, propHotel
 										{checkOut ? 
 											<>
 												<p className='nights'>{nights} nights, {adults} adults</p>
-												<p className='total_prise'>{item.price_breakdown} {item.price_breakdown.all_inclusive_price}</p> 
-												<Link to={`/${localSearch}/${item.hotel_id.currency}`} state={item}>
+												<p className='total_prise'>{item.price_breakdown.currency} {item.price_breakdown.all_inclusive_price}</p> 
+												<Link to={`/${localSearch}/${item.hotel_id}`} state={item}>
 													<div className='show_now cursorP'>Show Now</div>
 												</Link>
 											</>

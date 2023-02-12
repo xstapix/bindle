@@ -54,22 +54,7 @@ const Layout = () => {
             <p>We offer tailored services for all your traveling needs. Our host are wonderful, ready to accommodate your stay as you enjoy your vacation without worries.</p>
           </article>
           <div className='footer_line'></div>
-          <nav>
-            <p>About us</p>
-            <p>Blog</p>
-            <p>Help center</p>
-            <p>Privacy policy</p>
-            <p>Contact us</p>
-          </nav>
-          <div className='footer_line'></div>
-          <p className='footer_sub'>Subscribe to our newsletter</p>
-          <form className='sub_to_news'>
-            <input type='text' placeholder='Enter your email address'/>
-            <button>
-              <p>Send</p>
-              <img alt='send' src='../image/svg/carbon_send-alt.svg'/>
-            </button>
-          </form>
+          
           <div className='social'>
             <div className='footer_circle'><img alt='social' src='../image/svg/twitter.svg'/></div>
             <div className='footer_circle'><img alt='social' src='../image/svg/facebook.svg'/></div>
