@@ -44,10 +44,10 @@ const SingleHotel = () => {
 			});
 		}
 
-		// fetch(`https://apidojo-booking-v1.p.rapidapi.com/properties/get-hotel-photos?hotel_ids=${IDHotel}&languagecode=en-us`, options)
-		// 	.then(response => response.json())
-		// 	.then(response => setPhotos(response))
-		// 	.catch(err => console.error(err));
+		fetch(`https://apidojo-booking-v1.p.rapidapi.com/properties/get-hotel-photos?hotel_ids=${IDHotel}&languagecode=en-us`, options)
+			.then(response => response.json())
+			.then(response => setPhotos(response))
+			.catch(err => console.error(err));
 	}, [])
 
 	let nights

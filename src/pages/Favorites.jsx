@@ -7,6 +7,7 @@ import { useGuest } from "../hook/useGuest";
 
 import './Favorites.sass'
 import { useState, useEffect } from "react";
+import '../components/HotelsDesk.sass'
 
 const Favorites = () => {
   const {checkIn, checkOut} = useCheckDate() 
@@ -91,7 +92,7 @@ const Favorites = () => {
                   <h1 className='desk_hotel_name'>{item.hotel_name}</h1>
                   <p className='desk_hotel_local'>{item.address} | {item.city_trans} </p>
                 </div>
-                <div className="hotel_info">
+                {/* <div className="hotel_info">
                   <div style={{width: 130}}>
                     <p className='desk_hotel_rating'>
                       <img className='start_rating' alt='star' src='../image/svg/Star 5.svg'/>
@@ -112,7 +113,7 @@ const Favorites = () => {
                       </>
                     : <div className='show_now cursorP' style={{margin: '121px 0 0'}}>Show Now</div>}
                   </div>
-                </div>
+                </div> */}
               </section>
               ))}
             </>
