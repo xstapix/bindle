@@ -12,7 +12,7 @@ const Hotels = () => {
   const [hotelsList, setHotelsList] = useState(null)
 	const {checkIn, checkOut} = useCheckDate() 
   
-  const screenW = window.screen.width
+  const screenW = window.screen.width 
   
   useEffect(() => {
     const options = {
