@@ -217,62 +217,7 @@ const HomePage = () => {
             </section>
           </div>
         </div>
-        <div className='container'>
-          <h1 className='table_of_contents'>Featured homes recommended for you</h1>
-          <p className='text'>Because you viewed vacation homes in this city</p>
-        </div>
-        <div className='recommended'>
-          <section className=''>
-            <Link to='/Florida/489423'>
-              <img className='plug_hotel' alt='hotel' src='https://cf.bstatic.com/xdata/images/hotel/square300/173690762.jpg?k=5a4790375f344986535c265a2e690b36588441d6b86fb3d5f093d564ac26feef&o='/>
-              <p className='hotel_rating margin-10_0_0'>
-                <img className='start_rating' alt='star' src='./image/svg/Star 5.svg'/>
-                6.1 (621)</p>
-              <h1 className='hotel_name'>Baymont by Wyndham Florida City</h1>
-              <p className='hotel_local'>Entire house | Florida</p>
-              <h1 className='hotel_price'>USD 978.76</h1>
-            </Link>
-          </section>
-          <section className=''>
-            <Link to='/Florida/524550'>
-              <img className='plug_hotel' alt='hotel' src='https://cf.bstatic.com/xdata/images/hotel/square300/169822565.jpg?k=7a4a43cb4a575470dc6463cb9dfb3d061ef56043c823de321a2ccb1379ea99f9&o='/>
-              <p className='hotel_rating margin-10_0_0'>
-                <img className='start_rating' alt='star' src='./image/svg/Star 5.svg'/>
-                7.6 (423)</p>
-              <h1 className='hotel_name'>Quality Inn Florida City</h1>
-              <p className='hotel_local'>Entire house | Florida</p>
-              <h1 className='hotel_price'>USD 1186.22</h1>
-            </Link>
-          </section>
-          <section className=''>
-            <Link to='/Florida/255228'>
-              <img className='plug_hotel' alt='hotel' src='https://cf.bstatic.com/xdata/images/hotel/square300/18881582.jpg?k=fbda4d8e3b4902433a572e360841ad34af9c9dbc594c639f89d457c26d8e8062&o='/>
-              <p className='hotel_rating margin-10_0_0'>
-                <img className='start_rating' alt='star' src='./image/svg/Star 5.svg'/>
-                8.2 (444)</p>
-              <h1 className='hotel_name'>Hampton Inn & Suites Homestead Miami South</h1>
-              <p className='hotel_local'>Entire house | Florida</p>
-              <h1 className='hotel_price'>USD 1687.93</h1>
-            </Link>
-          </section>
-          <section>
-            <Link to='/Florida/3735434'>
-              <div>
-
-              <img className='plug_hotel' alt='hotel' src='https://cf.bstatic.com/xdata/images/hotel/square300/248128066.jpg?k=9e678eeb335f5848134e19114044aaa73369a28c3e07f73abc76a7e93c94332c&o='/>
-              <p className='hotel_rating margin-10_0_0'>
-                <img className='start_rating' alt='star' src='./image/svg/Star 5.svg'/>
-                8.4 (562)</p>
-              <h1 className='hotel_name'>Candlewood Suites</h1>
-              </div>
-              <div>
-                
-              <p className='hotel_local'>Entire house | Florida</p>
-              <h1 className='hotel_price'>USD 1348.09</h1>
-              </div>
-            </Link>
-          </section>
-        </div>
+        
         <div className='container'>
           <h1 className='table_of_contents'>Testimonials & Gallery</h1>
         </div>
